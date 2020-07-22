@@ -1,0 +1,81 @@
+# Getting Started {#GettingStarted -}
+
+<h2>Tools You'll Need</h2>
+
+### Excel {-} 
+
+Excel is available on all computer laboratory PC's and can be freely downloaded to personal devices [here](http://www.it.uwa.edu.au/service-catalogue/software/office-365#availability-and-support). You should already feel confident using Excel from your previous units, however if you need further guidance please visit UWA's [LinkedIn Learning](https://www.uwa.edu.au/education/educational-enhancement-unit/strategic-projects/linkedin-learning-at-uwa) resources. 
+
+### R {-}
+
+To get started with R, first download the base R system onto your computer. By itself, this provides a rudimentary console for interacting with the R programming language. For a more user-friendly experience, download the R Studio integrated development environment (IDE). 
+
+- R can be downloaded [here](https://cran.csiro.au)
+- R Studio can be downloaded [here](https://rstudio.com)
+
+#### Terminology {-}
+
+**File types** 
+
+In this unit you will largely be dealing with two kinds of 'R files': 
+
+- R script files (e.g. `Equations.R`) and,
+- R project files (e.g. `Module2Biogeochem.Rproj`) 
+
+R scripts are the raw instructions that tell the R programming language what to do. Meanwhile, an R Project file simply creates an independent workplace environment for you to interact with and manage your scripts. It's wise to create a new R Project file whenever you start working on a new project. 
+
+**Functions and packages**
+
+Just like Excel, you can interact with your data using a variety of *functions* in R. Functions are the tools you use to get the job done. For example, the `plot()` function can be used to create graphs. R is an open source programming language, meaning anyone can create their own functions and bundle them up in a collection known as a *package*. 
+
+**Comments**
+
+All programming languages allow the user to write comments on their code to assist in readability and structure. In R, a comment is defined as a line beginning with a `#`. Any characters written after the `#` are ignored by R and not executed. It's good practice to get into the habit of commenting your R code as it will likely save you (or someone else!) a lot of time later down the track. 
+
+```{r eval=FALSE}
+# This is a comment!
+
+# Create a graph using the plot() function
+plot(my_data,variable1,col="red",ylab="My y-axis label")
+
+# Plot other variables onto the graph using the points() function
+points(my_data,variable2,col="blue")
+points(my_data,variable3,col="green")
+points(my_data,variable4,col="purple")
+
+```
+
+
+```{block2, hint0, type='rmdtip2'}
+To comment multiple lines of code at once in R Studio, press`Command + Shift + C`on MacOS or`Control + Shift + C`on Windows
+```
+
+
+**Further R resources**
+
+- Read the [Introduction to R and Statistics](https://jovial-stonebraker-82b147.netlify.app/) book for a more detailed coverage on the core data visualisation and statistics capabilities in R
+- Access UWA's [LinkedIn Learning](https://www.uwa.edu.au/education/educational-enhancement-unit/strategic-projects/linkedin-learning-at-uwa) portal the learn more about the basics of R 
+- Refer to some handy R cheatsheets   
+  - [R Studio cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+  - [ggplot2 data visualisation cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
+
+### Unzipping files {-}
+
+Many of the module resources found in this workbook are downloaded as 'zipped' (i.e. compressed) files. 'Unzipping' (i.e. extracting) these files is simple. 
+
+On MacOS, simply double click the 'zipped' file:
+<center>
+<video width="100%" height="100%" controls>
+  <source src="images/01-gettingstarted/video1.mp4" type="video/mp4">
+</video>
+</center>
+<br>
+
+On Windows, click 'Extract All' and follow the prompt:
+
+<center>
+<video width="100%" height="100%" controls>
+  <source src="images/01-gettingstarted/video2.mp4" type="video/mp4">
+</video>
+</center>
+<br>

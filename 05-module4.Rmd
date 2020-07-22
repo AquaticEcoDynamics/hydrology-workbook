@@ -1,0 +1,261 @@
+# Module 4: Oceanic pH Calculation {#M4_1 -} 
+
+### Objectives {#M4_2 -}
+
+- Calculate the carbonate species distribution given pH and CO~2~ (gas)
+- Build a double-log plot based on a range of pHs
+- Calculate the pH change and CaCO~3~ solubility given an increased atmospheric CO~2~.
+- Replot other published data for comparison with our data
+
+### Overview {#M4_3 -}
+In this exercise, we create a simple model of the ocean, with a limited number of state variables. We examine the chemical interactions that result from atmospheric CO~2~ gas dissolving in water, along with calcium salts in the ocean fed by erosion of minerals on the land. The key overall process is that dissolved CO~2~ and Ca^2+^ are in equilibrium with solid CaCO3 (limestone).
+
+The major variables are given in Table \@ref(tab:module4-1). Given any two of the variables on the left hand column, the other four can be calculated. 
+
+<center>
+```{r module4-1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+#options(knitr.kable.NA = '')
+module4_1 <- read.csv("tables/module4/module4-1.csv", check.names=FALSE) 
+kable(module4_1, format = "html", escape = F, align = "c", col.names = NULL, caption = "Major variables") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  column_spec(1, width_min = "10em") %>%
+  column_spec(2, width_min = "10em") %>%
+  row_spec(1:6, background = '#ffffff00') %>%
+  scroll_box(width = "525px",
+             fixed_thead = FALSE) 
+```
+</center>
+
+<br>
+
+<center>
+```{r module4pic1, echo=FALSE, fig.cap="CC BY 3.0, https://en.wikipedia.org/w/index.php?curid=32829631", out.width = '70%'}
+knitr::include_graphics("images/05-module4/picture1.jpg")
+```
+</center>
+
+### Exercise 1 {#M4_4 -}
+In the first exercise, we set pH to be 8.3 and atmospheric CO~2~ gas to be 3.5×10^-4^ atmospheres, and calculate the other variables based on these two. CO~2~ gas dissolves in water according to Equation \@ref(eq:module4-1). The dissolved CO~2~ easily dissociates into carbonic acid according to Equation \@ref(eq:module4-2). For simplicity, we will go straight from atmospheric CO~2~ to H~2~CO~3~*, which is the sum of dissolved CO~2~ and carbonic acid, using Equation \@ref(eq:module4-3). 
+
+<center>
+<br>
+\begin{align*}
+{CO}_{2\ \left(\text{gas}\right)}&\rightleftarrows{CO}_{2\ \left(\text{dissolved}\right)}
+(\#eq:module4-1) \\
+{CO}_{2\ \left(\text{dissolved}\right)}+H_2O&\rightleftarrows H_2{CO}_3 
+(\#eq:module4-2) \\
+{CO}_{2\ \left(gas\right)}+H_2O&\rightleftarrows \color{#ED7D31}{H_2CO_3^\ast} \hspace{3em} K_{H} = 3.39×10^{-2} 
+(\#eq:module4-3) \\
+\end{align*}
+</center>
+<br>
+
+The carbonic acid dissociates into a hydrogen ion (H^+^, or proton) and a bicarbonate ion (HCO~3~^-^), according to Equation \@ref(eq:module4-4). The bicarbonate further dissociates into carbonate (CO~3~^2-^) and another hydrogen ion, as shown in Equation \@ref(eq:module4-5). The release of these two hydrogen ions is what creates the acidity of the ocean.
+
+<center>
+<br>
+\begin{align*}
+\color{#ED7D31}{H_2CO_3^\ast} &\rightleftarrows \color{#00B050}{HCO_3^-}+\color{#FF0000}{H^+} \hspace{3em}	K_{1} = 5×10^{-7}	
+(\#eq:module4-4) \\
+\color{#00B050}{HCO_3^{-}} &\rightleftarrows  \color{#5B9BD5}{{CO}_3^{2-}}+\color{#FF0000}{H^+} \hspace{3em}	K_{2} = 5×10^{-11}
+(\#eq:module4-5) \\
+\end{align*}
+</center>
+<br>
+
+
+Total carbon, $C_{T}$, is defined as the sum of these carbonate species. Alkalinity is defined as the sum of the charged carbonate species and the balance of hydrogen ions and hydroxide (OH^-^), as shown in Equations \@ref(eq:module4-6) and \@ref(eq:module4-7). (Remember that alkalinity is the opposite of acidity.)
+
+<center>
+<br>
+\begin{align*}
+C_T&=\left[\color{#00B050}{{HCO}_3^-}\right]+\left[\color{#5B9BD5}{{CO}_3^{2-}}\right]+\left[\color{#ED7D31}{H_2{CO}_3^\ast}\right]
+(\#eq:module4-6) \\
+\left[Alk\right]&=\left[\color{#00B050}{{HCO}_3^-}\right]+2\left[\color{#5B9BD5}{{CO}_3^{2-}}\right]+\left[{OH}^-\right]-\left[\color{#FF0000}{H^+}\right]	
+(\#eq:module4-7) \\
+\end{align*}
+</center>
+<br>
+
+
+The concentration of hydroxide can be found by rearranging Equation \@ref(eq:module4-8) to Equation \@ref(eq:module4-9) and using the dissociation constant of water, KW, and the hydrogen ion concentration.
+
+<center>
+<br>
+\begin{align*}
+[OH^{-}][\color{#FF0000}{H^{+}}] &= K_{W} \hspace{3em} K_{W} = 1×10^{-14}
+(\#eq:module4-8) \\
+[OH^{-}]&=\frac{K_{W}}{[\color{#FF0000}{H^{+}]}}
+(\#eq:module4-9) \\
+\end{align*}
+</center>
+<br>
+
+Open the Excel spreadsheet or R project and examine the tab or script `Initial CO2`. The chemical equations and constants are given to you already. The variables that we are forcing to be constant in Excel are <span style="background-color: #A5A5A5">coloured grey</span>. Enter the equations for Exercise 1 into the <mark>yellow boxes</mark>.
+
+If we assume that calcium ion concentration does not vary much in this system, we can force it to be 5×10^-4^ mol L^-1^. Calcium carbonate (CaCO~3~) precipitation or dissolution is governed by the ratio (\mathrm{\Omega}) of Ca^2+^ concentration and CO~3~^2-^ concentration to the solubility constant, $K_{sp}$, according to Equations \@ref(eq:module4-10) and \@ref(eq:module4-11). If \mathrm{\Omega} is greater than 1, then precipitation is favourable, and conversely, if \mathrm{\Omega} is less than 1, dissolution is favourable. 
+
+<center>
+<br>
+\begin{align*}
+{CO}_3^{2-} &+{Ca}^{2+}\rightleftarrows CaCO_3 \hspace{3em}	K_{sp} = 1\times 10^{-8.4}
+(\#eq:module4-10) \\
+\mathrm{\Omega} &=\frac{[Ca2+][CO32-]}{[K_{sp\space CaCO_{3}}]}
+(\#eq:module4-11) \\
+\end{align*}
+</center>
+<br>
+
+
+Have a good think about this: given these CO~2~ and pH, did your calculations lead to a system that favours CaCO~3~ dissolution or precipitation? 
+
+
+### Exercise 2 {#M4_5 -}
+
+In this exercise you will construct a double-logarithmic plot of this system, holding CO2 constant and varying the pH. Go to the second tab in Excel and copy the equations over from the first tab. Or in R, you can run a *for loop* to calculate the different concentrations for each of the different pHs. Then you will have some of the major variables converted to logarithms. Next you can make an x y scatter plot. If you add the data correctly, you should get a plot that looks like Figure \@ref(fig:module4pic2).
+
+
+Big questions: how similar is this plot to yours? At what pH do the OH^-^ and H^+^ lines cross? Format it nicely, add pK~1~ etc. and upload it to LMS.
+
+<center>
+```{r module4pic2, echo=FALSE, fig.cap="Double logarithmic plot of the equilibrium composition of seawater in our model [@stumm1996]", out.width = '90%'}
+knitr::include_graphics("images/05-module4/picture2.png")
+```
+</center>
+
+### Exercise 3 {#M4_6 -}
+
+This is the cool part. Here we are going to calculate a new pH given an increased atmospheric CO~2~ concentration. Given that we calculated the concentrations of all the other species according to the initial distribution in Exercise 1, we now hold them all constant, while increasing CO~2~ and calculating H^+^ (and therefore pH). This is not simple, because H^+^ concentration is tightly bound up with the concentrations of all other species, and so we cannot simply work backwards from any one equation alone. However, there is a quadratic equation \@ref(eq:module4-12) that we can solve for $H^{+}$ , using a fixed $C_{T}$, rearranged to Equation \@ref(eq:module4-13).
+
+<center>
+<br>
+\begin{align*}
+{\left[\color{#FF0000}{H^+}\right]^2C}_T &=\color{#ED7D31}{H_2{CO}_3^\ast}\left(\left[\color{#FF0000}{H^+}\right]^2+K_1\left[\color{#FF0000}{H^+}\right]+K_1K_2\right)	
+(\#eq:module4-12) \\
+\left[\color{#FF0000}{H^+}\right] &=\sqrt[2]{\frac{\color{#ED7D31}{H_2{CO}_3^\ast}}{C_T}\left(\left[\color{#FF0000}{H^+}\right]^2+K_1\left[\color{#FF0000}{H^+}\right]+K_1K_2\right)}	
+(\#eq:module4-13) \\
+\end{align*}
+</center>
+<br>
+
+
+
+
+
+Solving this quadratic would be fiendishly difficult. Instead, we will use trial and error, otherwise known as our iterative solution. We will do this to find a value for H+ that is the same on both sides of the equation.
+
+Go to the third tab and copy over all of the equations from Exercise 1. The <span style="background-color: #A5A5A5">grey boxes</span> are the values that we will hold constant, and the first guess for H^+^, based on the H^+^ in Exercise 1. You can alter the CO~2~ concentration using the CO~2~ multiplier cell and your rapidly developing Excel and R skills. If you want to double CO~2~ concentration, type 2 into the multiplier cell. If you want to keep it at present levels, type 1. Repeat the calculation of Equation (13) over successive iterations, using the answer from the previous iteration as your guess for the next iteration. Eventually, the difference between your guesses will become very small and you can settle on a constant pH. (This is roughly how equilibrium-solving computer programs solve complex biogeochemical interactions, often with many more interacting variables than this.)
+Don’t forget that your successive iterations, are not time steps, like we had in previous weeks. Rather, they are just guesses at the right number that only exist in the model. Your final answer is the only one that has a real scientific meaning. If you want to determine the pH over a range of CO~2~ concentrations, you will need to repeat the calculation over ~10 rows, and save your results each time.
+
+Big questions: if you increase CO~2~, does the pH rise or fall? Does CaCO~3~ precipitation become more or less favourable if CO~2~ increases?
+
+### Exercise 4 {#M4_7 -}
+
+Last exercise. In this exercise, we will take someone else’s data from a plot and make our own plot.
+
+Go to the [IPCC website](https://archive.ipcc.ch/publications_and_data/ar4/wg1/en/figure-10-24.html) and read about CO~2~ predictions and CaCO~3~ precipitation.
+
+Save their Figure 10.24 as an image file.
+
+Go to the [Plot Digitizer website](https://sourceforge.net/projects/plotdigitizer/files/) and download the program.
+
+Open the IPCC image in Plot Digitizer. The program guides you through the steps you need to take: read the command at the bottom of the screen (for example, “Choose most negative end of X axis”) and click “Done” when you have finished (Figure 2A). It will be easiest if you make a point every 10 years. Save each dataset as a separate csv file and then combine the results in one sheet. If your x axis points line up nicely enough, you can replot the data, for example, as in Figure 2B
+
+Compare these results with your own results. And make any plots that you feel help explain the environmental system behaviour. Big questions: which factors cause the differences between your results and those of the IPCC models?
+
+### Submission {#M4_8 -}
+:::: {.redbox2}
+
+**Submit properly formatted graphs and tables of the following sections of the lab:**
+
+1) Double log plot.
+2) Any number of plots that compare your Exercise 3 results with the IPCC data.
+
+The submission is to be all together in a word doc or PDF format. No screenshots of figures from Excel/Excel spreadsheets to be uploaded.
+
+**General professional formatting guidelines:**
+
+- All figures are to have adequate captions explaining them
+- For graphs, figure captions go below the plot
+- For tables, the caption goes above the table
+- Make sure figures and their text size is readable
+
+**Excel hints:**
+
+- When there is a caption for a plot, you remove the title
+- Remove the plot border and gridlines
+- Make sure both axes have visible lines and tick marks
+- Units need to be noted properly with the axis label - 'Temperature (°C)'
+- Round numbers to be reasonable
+::::
+
+
+
+
+### Appendix – Equation list {-}
+
+<center>
+<br>
+\begin{gather*}
+{CO}_{2(\text{gas})}\rightleftarrows{CO}_{2(\text{dissolved})}	
+(\#eq:module4-14) \\
+{CO}_{2(\text{dissolved})}+H_{2}O\rightleftarrows H_2{CO}_3	
+(\#eq:module4-15) \\
+{CO}_{2(\text{gas})}+H_2O\rightleftarrows \color{#ED7D31}{H_2CO_3^\ast}	\hspace{3em} K_{H} = 3.39×10^{-2}	
+(\#eq:module4-16) \\
+\color{#ED7D31}{H_2CO_3^\ast}\rightleftarrows \color{#00B050}{HCO_3^-}+\color{#FF0000}{H^+} \hspace{3em}	K_{1} = 5×10^{-7}
+(\#eq:module4-17) \\
+\color{#00B050}{HCO_3^-}\rightleftarrows\color{#5B9BD5}{{CO}_3^{2-}}+\color{#FF0000}{H^+}	\hspace{3em} K_{2} = 5×10^{-11}
+(\#eq:module4-18) \\
+C_T=[\color{#00B050}{{HCO}_3^-}]+[\color{#5B9BD5}{{CO}_3^{2-}}]+[\color{#ED7D31}{H_2{CO}_3^\ast}] 
+(\#eq:module4-19) \\
+[Alk]=[\color{#00B050}{{HCO}_3^-}]+2[\color{#5B9BD5}{{CO}_3^{2-}}]+[{OH}^-]-[\color{#FF0000}{H^+}] 
+(\#eq:module4-20) \\
+[{OH}^-][\color{#FF0000}{H^{+}}]=K_{W} \hspace{3em} K_{W} = 1×10^{-14}
+(\#eq:module4-21) \\
+[{OH}^-]=\frac{K_{W}}{[\color{#FF0000}{H+}]}
+(\#eq:module4-22) \\
+{CO}_3^{2-}+{Ca}^{2+}\rightleftarrows CaCO_3	\hspace{3em} K_{sp} = 1\times 10^{-8.4}
+(\#eq:module4-23) \\
+\mathrm{\Omega}=[Ca^{2+}][CO_{3}^{2-}][K_{sp \space CaCO_{3}}]
+(\#eq:module4-24) \\
+{[\color{#FF0000}{H^+}]^2C}_T=\color{#ED7D31}{H_2{CO}_3^\ast}([\color{#FF0000}{H^+}]^2+K_1[\color{#FF0000}{H^+}]+K_1K_2)	
+(\#eq:module4-25) \\
+[\color{#FF0000}{H^+}]=\sqrt[2]{\frac{\color{#ED7D31}{H_2{CO}_3^\ast}}{C_T}([\color{#FF0000}{H^+}]^2+K_1[\color{#FF0000}{H^+}]+K_1K_2)}	
+(\#eq:module4-26) \\
+K_{1} = \frac{[\color{#FF0000}{H^{+}}][\color{#00B050}{HCO_{3}^{-}}]}{[\color{#C45911}{H_{2}CO_{3}]}}
+(\#eq:module4-27) \\
+K_{2} = \frac{[\color{#FF0000}{H^{+}}][\color{#5B9BD5}{CO_{3}^{2-}}]}{[\color{#00B050}{HCO_{3}^{-}]}}
+(\#eq:module4-28) \\
+K_{W} = \frac{[\color{#FF0000}{H^{+}}][OH^{-}]}{[H_{2}O]}
+(\#eq:module4-29) \\
+K_{H} = \frac{[\color{#C45911}{H_{2}CO_{3}}][OH^{-}]}{[CO_{2}]}
+(\#eq:module4-30) \\
+[\color{#ED7D31}{H_{2}CO_{3}^{\ast}}] = K_{H}CO_{2} = C_{T}\alpha_{0}
+(\#eq:module4-31) \\
+[\color{#00B050}{HCO{3}^{-}}] = \frac{K_{1}[\color{#ED7D31}{H_{2}CO_{3}]}}{[\color{#FF0000}{H^{+}}]} = C_{T}\alpha_{1} \text{ CHECK equation!}
+(\#eq:module4-32) \\
+[\color{#5B9BD5}{CO_{3}^{2-}}] = \frac{K_{2}[\color{#00B050}{HCO_{3}^{-}}]}{[\color{#FF0000}{H^{+}}]} = C_{T}\alpha_{2}
+(\#eq:module4-33) \\
+\Omega = \frac{[Ca^{2+}][\color{#5B9BD5}{CO_{3}^{2-}}]}{[K_{sp \space CaCO_{3}}]}
+(\#eq:module4-34) \\
+C_{T} = [HCO_{3}^{-}] + [CO_{3}^{2-}] + [H_{2}CO{3}^{\ast}]
+(\#eq:module4-35) 
+\end{gather*}
+\begin{align*}
+[Alk] &= [HCO_{3}^{-}] + 2[CO_{3}^{2-}] + [OH^{-}] - [H^{+}]
+(\#eq:module4-36) \\
+&= C_{T}(\alpha_{1}+2\alpha_{2})+[OH^{-}]-[H^{+}]
+\end{align*}
+\begin{gather*}
+\alpha_{0} = (1 + \frac{K_{1}}{[\color{#FF0000}{H^{+}}]} + \frac{K_{1}K_{2}}{[\color{#FF0000}{H^{+}}]^{2}})
+(\#eq:module4-37) \\
+\end{gather*}
+</center>
+<br>
+	
+

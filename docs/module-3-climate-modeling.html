@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 3: Climate Modeling | Environmental Dynamics Workbook</title>
+  <meta name="description" content="The online Environmental Dynamics Workbook" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 3: Climate Modeling | Environmental Dynamics Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="The online Environmental Dynamics Workbook" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 3: Climate Modeling | Environmental Dynamics Workbook" />
+  
+  <meta name="twitter:description" content="The online Environmental Dynamics Workbook" />
+  
+
+<meta name="author" content="Giles Knight, Matt Hipsey" />
+
+
+<meta name="date" content="2020-07-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="module-2-biogeochemistry.html"/>
+<link rel="next" href="module-4-oceanic-ph-calculation.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Environmental Dynamics Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="GettingStarted.html"><a href="GettingStarted.html"><i class="fa fa-check"></i>Getting Started</a>
+<ul>
+<li class="chapter" data-level="" data-path="GettingStarted.html"><a href="GettingStarted.html#excel"><i class="fa fa-check"></i>Excel</a></li>
+<li class="chapter" data-level="" data-path="GettingStarted.html"><a href="GettingStarted.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="GettingStarted.html"><a href="GettingStarted.html#unzipping-files"><i class="fa fa-check"></i>Unzipping files</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html"><i class="fa fa-check"></i>Module 1: Modelling in Excel</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#objectives"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#what-is-an-environmental-flow"><i class="fa fa-check"></i>What is an environmental flow?</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#case-study"><i class="fa fa-check"></i>Case study</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#module-resources"><i class="fa fa-check"></i>Module resources</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#exercises"><i class="fa fa-check"></i>Exercises</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-biogeochemistry.html"><a href="module-2-biogeochemistry.html"><i class="fa fa-check"></i>Module 2: Biogeochemistry</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-biogeochemistry.html"><a href="module-2-biogeochemistry.html#objectives3"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="module-2-biogeochemistry.html"><a href="module-2-biogeochemistry.html#modelling-concepts"><i class="fa fa-check"></i>Modelling concepts</a></li>
+<li class="chapter" data-level="" data-path="module-2-biogeochemistry.html"><a href="module-2-biogeochemistry.html#organic-matter-oxidation"><i class="fa fa-check"></i>Organic matter oxidation</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#module-resources"><i class="fa fa-check"></i>Module resources</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#exercises"><i class="fa fa-check"></i>Exercises</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html"><i class="fa fa-check"></i>Module 3: Climate Modeling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#objectives"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html#case-study-1-a-zero-dimensional-energy-balance-model"><i class="fa fa-check"></i>Case Study 1: A “Zero-Dimensional” Energy Balance Model</a></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html#case-study-2-a-quick-fix"><i class="fa fa-check"></i>Case Study 2: A “quick fix”</a></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html#case-study-3-incorporating-greenhouse-gases"><i class="fa fa-check"></i>Case Study 3: Incorporating Greenhouse Gases</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-4-oceanic-ph-calculation.html"><a href="module-4-oceanic-ph-calculation.html"><i class="fa fa-check"></i>Module 4: Oceanic pH Calculation</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#objectives"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="module-4-oceanic-ph-calculation.html"><a href="module-4-oceanic-ph-calculation.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html#exercise-1"><i class="fa fa-check"></i>Exercise 1</a></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html#exercise-2"><i class="fa fa-check"></i>Exercise 2</a></li>
+<li class="chapter" data-level="" data-path="module-3-climate-modeling.html"><a href="module-3-climate-modeling.html#exercise-3"><i class="fa fa-check"></i>Exercise 3</a></li>
+<li class="chapter" data-level="" data-path="module-4-oceanic-ph-calculation.html"><a href="module-4-oceanic-ph-calculation.html#exercise-4"><i class="fa fa-check"></i>Exercise 4</a></li>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="module-4-oceanic-ph-calculation.html"><a href="module-4-oceanic-ph-calculation.html#appendix-equation-list"><i class="fa fa-check"></i>Appendix – Equation list</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-5-catchment-water-balance.html"><a href="module-5-catchment-water-balance.html"><i class="fa fa-check"></i>Module 5: Catchment Water Balance</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-modelling-in-excel.html"><a href="module-1-modelling-in-excel.html#objectives"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="module-5-catchment-water-balance.html"><a href="module-5-catchment-water-balance.html#the-water-balance-approach"><i class="fa fa-check"></i>The water balance approach</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-6-land-use-and-nutrient-management.html"><a href="module-6-land-use-and-nutrient-management.html"><i class="fa fa-check"></i>Module 6: Land Use and Nutrient Management</a></li>
+<li class="chapter" data-level="" data-path="module-7-advection-dispersion.html"><a href="module-7-advection-dispersion.html"><i class="fa fa-check"></i>Module 7: Advection-Dispersion</a></li>
+<li class="chapter" data-level="" data-path="module-8-lake-water-quality-modelling.html"><a href="module-8-lake-water-quality-modelling.html"><i class="fa fa-check"></i>Module 8: Lake Water Quality Modelling</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Environmental Dynamics Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-3-climate-modeling" class="section level1 unnumbered">
+<h1>Module 3: Climate Modeling</h1>
+<h2>
+Energy Balance Models
+</h2>
+<div id="objectives" class="section level3 unnumbered">
+<h3>Objectives</h3>
+<ul>
+<li>To construct a simple energy balance climate model for the earth in Excel</li>
+<li>To understand the role of greenhouse gases, and incorporate them into an energy balance climate model</li>
+</ul>
+</div>
+<div id="case-study-1-a-zero-dimensional-energy-balance-model" class="section level3 unnumbered">
+<h3>Case Study 1: A “Zero-Dimensional” Energy Balance Model</h3>
+<p>Here, we assume that the Earth is a sphere with uniform surface and no differences with latitude and longitude (i.e. everything receives the same amount of solar energy). We also assume that there is a balance, or equilibrium, between incoming short wavelength solar radiation absorbed by the ground and outgoing long wavelength radiation emitted by the ground.
+To simplify the model further, we assume the Earth emits outgoing (longwave) radiation like a “blackbody”, i.e. it is a perfectly efficient radiator - it gives off the maximum amount of radiation that an object of its temperature can emit.</p>
+<center>
+<p><img src="images/04-module3/picture2.png" width="650" /></p>
+</center>
+<div id="outgoing-radiation" class="section level4 unnumbered">
+<h4>Outgoing Radiation</h4>
+<p>The rate of the outgoing radiant energy (Joules per second = Watts) from a blackbody is given by the Stefan-Boltzmann equation:</p>
+<center>
+<span class="math display" id="eq:module3-1">\[\begin{equation}
+E = \sigma T^{4}
+\tag{7}
+\end{equation}\]</span>
+</center>
+<div class="line-block">        <span class="math inline">\(\sigma\)</span>: Stefan-Boltzmann constant (5.67x10<sup>-8</sup>)<br />
+        <span class="math inline">\(T\)</span>: Temperature (in degrees Kelvin)</div>
+<p><br>
+However, for the Earth, this is being emitted over the full surface area of the Earth:</p>
+<center>
+<span class="math display" id="eq:module3-2">\[\begin{equation}
+E_{\text{out}} = \sigma 4\pi r^{2} T^{4}
+\tag{8}
+\end{equation}\]</span>
+</center>
+<div class="line-block">        <span class="math inline">\(r\)</span>: Radius of the Earth (in m)</div>
+</div>
+<div id="incoming-radiation" class="section level4 unnumbered">
+<h4>Incoming Radiation</h4>
+<p>The energy absorbed by the earth is given by the amount of incoming solar radiation which is not reflected due to albedo. However, we have to take into account that solar energy is striking the Earth as a parallel beam of circular cross-section. So this incoming beam of radiation hits only a single “disc” of the Earth’s surface at any one time. This area has a surface area <span class="math inline">\(\pi r^{2}\)</span>.</p>
+<center>
+<span class="math display" id="eq:module3-3">\[\begin{equation}
+E_{\text{abs}} = S\pi r^{2} (1-a)
+\tag{9}
+\end{equation}\]</span>
+</center>
+<div class="line-block">        <span class="math inline">\(S\)</span>: Incoming solar radiation: the “solar constant” (1367 W/m<sup>2</sup>)</div>
+</div>
+<div id="exercises" class="section level4 unnumbered">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li><p>Using the concept of an energy balance (i.e. energy in = energy out), rearrange the equations to find the Earth’s temperature, <span class="math inline">\(T\)</span>.</p></li>
+<li><p>In Excel, construct a simple spreadsheet and fill in the blank cells to calculate the mean temperature of the Earth using the equation from Q1., assuming an albedo of 0.33 (including in °C and °F):</p></li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Parameter
+</th>
+<th style="text-align:center;">
+Value
+</th>
+<th style="text-align:center;">
+Units
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+Solar constant
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+1367
+</td>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+W/m<sup>2</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+Albedo
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+0.33
+</td>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+Stefan-Boltzmann constant
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67E-08
+</td>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+Mean temperature of Earth
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+K
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+Mean temperature of Earth
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+°C
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+Mean temperature of Earth
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+<td style="text-align:center;min-width: 12em; background-color: rgba(255, 255, 255, 0) !important;">
+°F
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<p><br></p>
+
+<div class="rmdtip2">
+<p>Remember: <span class="math inline">\(K = °C + 273.2\)</span> and <span class="math inline">\(°F = 1.8°C + 32\)</span></p>
+</div>
+<div class="line-block">         a) The current mean temperature of the Earth is 288K (15°C). Does this simple model over or under<br />
+             predict the Earth’s temperature? What important factor is missing from this model?</div>
+<p><br>
+3) Test the sensitivity of this model to the choice of albedo. Using values from 0.3 to 0.7, calculate and plot T (°C)</p>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Albedo
+</th>
+<th style="text-align:center;">
+Solar constant
+</th>
+<th style="text-align:center;">
+Assumed Albedo
+</th>
+<th style="text-align:center;">
+Stefan-Boltzmann constant
+</th>
+<th style="text-align:center;">
+T (Celsius)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.3
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+1367
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.33
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67e-08
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.4
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+1367
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.33
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67e-08
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.5
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+1367
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.33
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67e-08
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.6
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+1367
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.33
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67e-08
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.7
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+1367
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.33
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67e-08
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+</div>
+</div>
+<div id="case-study-2-a-quick-fix" class="section level3 unnumbered">
+<h3>Case Study 2: A “quick fix”</h3>
+<p>To try to reduce the error in the model estimates of Earth’s temperature, we can “parameterise” the model using observed or experimentally derived relationships between outgoing radiation and temperature. One such example is:</p>
+<center>
+<span class="math display" id="eq:module3-4">\[\begin{equation}
+E_{\text{out}} = x + yT
+\tag{10}
+\end{equation}\]</span>
+</center>
+<div class="line-block">        <span class="math inline">\(x = 204\)</span> W/m<sup>2</sup><br />
+        <span class="math inline">\(y = 2.17\)</span> W/m<sup>2</sup>/°C</div>
+<p>This gets inputted into the energy balance equation (energy in = energy out) to give:</p>
+<center>
+<span class="math display" id="eq:module3-4">\[\begin{equation}
+\pi r^{2} S (1-a) = 4\pi r^{2}(X+yT)
+\tag{10}
+\end{equation}\]</span>
+</center>
+<div id="exercises-1" class="section level4 unnumbered">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li><p>Solve the above equation for <span class="math inline">\(T\)</span> (note, this time, <span class="math inline">\(T\)</span> is in CELSIUS!)</p></li>
+<li><p>Set up a spreadsheet to estimate T for a range of albedo values. Different amounts of glacial ice cover on the Earth could produce albedos from 0.3 for minimal ice to 0.7 for a complete ice cover (this might seem unrealistic, but geologists have recently found evidence to suggest that the Earth was completely ice-covered during Neoproterozoic time 700 million years ago – a “snowball Earth”!)</p></li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Albedo
+</th>
+<th style="text-align:center;">
+x
+</th>
+<th style="text-align:center;">
+y
+</th>
+<th style="text-align:center;">
+T (Celsius)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.3
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+204
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+2.17
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.4
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+204
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+2.17
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.5
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+204
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+2.17
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.6
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+204
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+2.17
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+0.7
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+204
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+2.17
+</td>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+?
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<div class="line-block">         a) Are your results reasonably close for the present-day Earth mean temperature? What is the<br />
+             sensitivity of this model to small changes in albedo?</div>
+<div class="line-block">         b) Expanding a bit from your model (you might need to consider smaller steps in albedo), at what<br />
+             value of albedo do you think thissimplified Earth would experience strong positive feedback<br />
+             involving ice cover, albedo, and mean temperature, and therefore move rapidly toward “snowball<br />
+             Earth” with albedo = 0.7? Could it ever be deglaciated?</div>
+</div>
+</div>
+<div id="case-study-3-incorporating-greenhouse-gases" class="section level3 unnumbered">
+<h3>Case Study 3: Incorporating Greenhouse Gases</h3>
+<p>This model is a modification of the one described by <span class="citation">Harte (<a href="#ref-harte1988" role="doc-biblioref">1988</a>)</span>. He showed that it is appropriate, based on the physics of radiation (as water is the major absolver of terrestrial radiation), to divide the Earth’s atmosphere into a lower layer (from the surface to 1.8km altitude, containing 20% of the air and 50% of the water vapour) and an upper layer (containing 80% of the air and 50% of the water vapour).</p>
+<p>This time we require three energy-balance equations:</p>
+<ol style="list-style-type: decimal">
+<li>For the Earth-atmosphere system as a whole;</li>
+<li>For the upper layer of the atmosphere;</li>
+<li>For the lower layer of the atmosphere.</li>
+</ol>
+<p>In this model, all energy terms are expressed as long-term average fluxes, all temperatures are absolute. We assume that emissivity =1 except at the surface, and (most importantly) that each of the three systems is in equilibrium.</p>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:325px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:module3-4">Table 1: </span>Energy balance model of Earth’s atmosphere
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Parameter
+</th>
+<th style="text-align:center;">
+Description
+</th>
+<th style="text-align:center;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(S_{\text{av}}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Solar radiation intercepted by Earth (<span class="math inline">\(=\frac{S}{4}\)</span> where <span class="math inline">\(S\)</span> is the solar
+constant of 1370Wm<sup>-2</sup>)
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+342.5 Wm<sup>-2</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(W\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Heat generated from nonrenewable energy sources (fossil fuels + nuclear)
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+0.021 Wm<sup>-2</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(L\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Average latent heat flux from the surface
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+80 Wm<sup>-2</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(H\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Average sensible heat flux at the surface
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+17 Wm<sup>-2</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(\sigma\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Stefan-Boltzmann constant
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+5.67 x10<sup>-8</sup> Wm<sup>-2</sup> deg<sup>-4</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(a_{p}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Planetary albedo
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+0.3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(k_{u}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Fraction of solar radiation absorbed in upper layer of atmosphere
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+0.18
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(k_{l}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Fraction of solar radiation absorbed in upper lower of atmosphere
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+0.075
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(\varepsilon\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Emissivity (<span class="math inline">\(= 1 - \text{reflectivity}\)</span>): the fraction of the infrared radiation emitted by the surface that is absorbed in the atmosphere and then re-emitted
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+0.95
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(F_{u}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Infrared flux from upper layer (use black-body equation)
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(\varepsilon \sigma T_{u}^{4}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(F_{l}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Infrared flux from lower layer (use black-body equation)
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(\varepsilon \sigma T_{l}^{4}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 5em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(F_{s}\)</span>
+</td>
+<td style="text-align:center;min-width: 15em; background-color: rgba(255, 255, 255, 0) !important;">
+Infrared flux from surface (use black-body equation)
+</td>
+<td style="text-align:center;min-width: 13em; background-color: rgba(255, 255, 255, 0) !important;">
+<span class="math inline">\(\varepsilon \sigma T_{s}^{4}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<p><br></p>
+<div id="exercise-1" class="section level4 unnumbered">
+<h4>Exercise 1</h4>
+<p>Using the chart above, draw the model yourself by hand, incorporating all fluxes.</p>
+<p>We can now formulate the three energy-balance equations needed:</p>
+<p><strong>Energy-balance for the Earth-atmosphere system as a whole:</strong></p>
+<p>Energy enters the Earth–atmosphere system from above at the rate <span class="math inline">\(S\)</span> and from below at the rate <span class="math inline">\(W\)</span> (heat generated from nonrenewable energy sources: nuclear and fossil fuels).
+Energy leaves these the system by three routes:</p>
+<ol style="list-style-type: decimal">
+<li>Reflected solar radiation: <span class="math inline">\(a_{p}S\)</span>;</li>
+<li>Thermal radiation from the top of the atmosphere: <span class="math inline">\(\sigma T_{u}^{4}\)</span>; and</li>
+<li>The portion of thermal radiation from the surface that is not absorbed in the atmosphere: <span class="math inline">\((1 − \varepsilon)\sigma T_{s}^{4}\)</span>.</li>
+</ol>
+<p>Here:
+<span class="math inline">\(\varepsilon\)</span> is the fraction of surface radiation absorbed in the atmosphere (emissivity),
+<span class="math inline">\(\sigma\)</span> is the Stefan-Boltzmann constant, and
+<span class="math inline">\(T_{u}\)</span> is the surface temperature (absolute). Thus, the energy balance for the whole system is:</p>
+<br>
+<center>
+<span class="math display" id="eq:module3-5">\[\begin{equation}
+S + W = a_{p}S + \sigma T_{u}^{4} (1 − \varepsilon)\sigma T_{s}^{4}
+\tag{11}
+\end{equation}\]</span>
+</center>
+<p><br></p>
+<p><strong>Energy-balance for the upper layer of the atmosphere:</strong></p>
+<p>The upper atmospheric layer absorbs a fraction, <span class="math inline">\(k_{u}\)</span>, of the solar radiation that strikes it and also receives:</p>
+<ol style="list-style-type: decimal">
+<li>Energy radiated <strong>upward</strong> from the lower layer: <span class="math inline">\(\sigma T_{l}^{4}\)</span>, and</li>
+<li>One-half of the latent heat that accompanies evaporation from the surface (because this layer holds one-half the atmospheric water vapour): <span class="math inline">\(0.5L\)</span>.
+The upper layer loses energy by thermal radiation upward to outer space <strong>and</strong> downward to the lower layer. Thus, the energy balance for the upper layer is:</li>
+</ol>
+<br>
+<center>
+<span class="math display" id="eq:module3-6">\[\begin{equation}
+k_{u} + \sigma T_{l}^{4} + 0.5L = 2\sigma T_{u}^{4}
+\tag{12}
+\end{equation}\]</span>
+</center>
+<p><br></p>
+<p><strong>Energy-balance for the lower layer of the atmosphere:</strong></p>
+<p>Energy enters the lower atmospheric layer from above as absorption of a fraction, <span class="math inline">\(k_{l}\)</span>, of the solar radiation that enters it and as thermal radiation from the upper layer: <span class="math inline">\(\sigma T_{u}^{4}\)</span>. From below, energy enters from:</p>
+<ol style="list-style-type: decimal">
+<li>The absorbed portion of thermal radiation from the surface: <span class="math inline">\(\varepsilon \sigma T_{s}^{4}\)</span>;</li>
+<li>one-half the latent-heat flux from the surface: <span class="math inline">\(0.5L\)</span>;</li>
+<li>The sensible-heat flux from the surface, <span class="math inline">\(H\)</span>; and</li>
+<li>The anthropogenic heat flux: <span class="math inline">\(W\)</span>
+.
+Energy is lost from this layer by upward and downward radiation. The energy balance for the lower layer is therefore:</li>
+</ol>
+<br>
+<center>
+<span class="math display" id="eq:module3-7">\[\begin{equation}
+k_{l}S + \sigma T_{u}^{4} + \varepsilon \sigma T_{s}^{4} + 0.5L + H + W = 2\sigma T_{l}^{4}
+\tag{13}
+\end{equation}\]</span>
+</center>
+<p><br></p>
+</div>
+<div id="exercise-2" class="section level4 unnumbered">
+<h4>Exercise 2</h4>
+<p><strong>Solve these equations to find a formula for surface temperature <span class="math inline">\(T_{s}\)</span>:</strong></p>
+<p>Equations <a href="module-3-climate-modeling.html#eq:module3-5">(11)</a> to <a href="module-3-climate-modeling.html#eq:module3-7">(13)</a> are a system of three equations in three unknowns: the temperatures <span class="math inline">\(T_{l}\)</span>, <span class="math inline">\(T_{u}\)</span>, and <span class="math inline">\(T_{s}\)</span>. The other quantities are parameters whose values must be given. The values of temperatures can be found via the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Solve Equation <a href="module-3-climate-modeling.html#eq:module3-5">(11)</a> for <span class="math inline">\(T_{u}\)</span> in terms of <span class="math inline">\(T_{s}\)</span> and parameters.</li>
+<li>Solve Equation <a href="module-3-climate-modeling.html#eq:module3-6">(12)</a> for <span class="math inline">\(T_{l}\)</span> in terms of <span class="math inline">\(T_{u}\)</span> and parameters.</li>
+<li>Substitute the results of step 1 into the results of step 2 to give an equation for <span class="math inline">\(T_{l}\)</span> in terms of <span class="math inline">\(T_{s}\)</span> and parameters.</li>
+<li>Solve Equation <a href="module-3-climate-modeling.html#eq:module3-7">(13)</a> for <span class="math inline">\(T_{s}\)</span> in terms <span class="math inline">\(T_{l}\)</span>, <span class="math inline">\(T_{u}\)</span>, and parameters.</li>
+<li>Put the results of steps 1 and 3 into the results of step 4 and simplify to give the equation for <span class="math inline">\(T_{s}\)</span> as a function of parameters:</li>
+</ol>
+<br>
+<center>
+<span class="math display" id="eq:module3-8">\[\begin{equation}
+T_{s} = [\frac{(3-3a_{p}-2k_{u}-k_{l})S-1.5L-H+2W}{(3-2\varepsilon)\sigma}]^{\frac{1}{4}}
+\tag{14}
+\end{equation}\]</span>
+</center>
+<p><br></p>
+
+<div class="rmdnote2">
+Show your workings!
+</div>
+<p><br></p>
+<p>Using the values given in Table <a href="module-3-climate-modeling.html#tab:module3-4">1</a>, what value do you derive for <span class="math inline">\(T_{s}\)</span>?</p>
+<p>How close is this to the actual value of 290K?</p>
+</div>
+<div id="exercise-3" class="section level4 unnumbered">
+<h4>Exercise 3</h4>
+<p>Using Excel, test the sensitivity of this model to albedo. Compare your findings to those found in part 1 (A plot of <span class="math inline">\(T_{s}\)</span> for values of albedo between 0.3 and 0.7 might help here).</p>
+</div>
+</div>
+<div id="submission" class="section level3 unnumbered">
+<h3>Submission</h3>
+<div class="redbox2">
+<p><strong>Submit properly formatted graphs and tables of the following sections of the lab:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Clear photograph or page scan of your <strong>hand drawn conceptual model</strong> of the <em>Harte 1-D Energy Balance Model</em>, including key explaining the terms.</li>
+<li>Clear photograph or page scan of your handwritten workings of the <em>Harte Model</em> calculations, with a clear answer of <span class="math inline">\(T_{s}\)</span>, the Earth’s temperature.</li>
+<li><strong>Summary plot</strong> from Exercise 1, 2 &amp; 3 assessing albedo and temperature of the three models, with a brief explanation of less than 150 words of which model you prefer.</li>
+</ol>
+<p>The submission is to be all together in a word doc or PDF format. No screenshots of figures from Excel/Excel spreadsheets to be uploaded.</p>
+<p><strong>General professional formatting guidelines:</strong></p>
+<ul>
+<li>All figures are to have adequate captions explaining them</li>
+<li>For graphs, figure captions go below the plot</li>
+<li>For tables, the caption goes above the table</li>
+<li>Make sure figures and their text size is readable</li>
+</ul>
+<p><strong>Excel hints:</strong></p>
+<ul>
+<li>When there is a caption for a plot, you remove the title</li>
+<li>Remove the plot border and gridlines</li>
+<li>Make sure both axes have visible lines and tick marks</li>
+<li>Units need to be noted properly with the axis label - ‘Temperature (°C)’</li>
+<li>Round numbers to be reasonable</li>
+</ul>
+</div>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-harte1988">
+<p>Harte, John. 1988. <em>Consider a Spherical Cow: A Course in Environmental Problem Solving</em>. University Science Books.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-2-biogeochemistry.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-4-oceanic-ph-calculation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

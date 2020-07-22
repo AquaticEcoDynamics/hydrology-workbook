@@ -1,0 +1,31 @@
+# Module 5: Catchment Water Balance {#M5_1 -}
+
+### Objectives {#M5_2 -}
+
+To understand a simple multi-store catchment water balance model and implement within Excel. Using the supplied parameters and input data, run the model and plot the variability in key hydrological pathways.
+
+### The water balance approach {#M5_3 -}
+
+A water balance equation can be used to describe the flow of water in and out of a “system”. A system can be one of several hydrological domains depending on the context, such as a column of soil or a catchment basin. In the context of catchment, we assume the catchment area has a known ‘average’ depth, and the amount of soil is the catchment area multiplied by the depth. We treat this soil volume as our catchment ‘bucket’, and then estimate the inputs (rainfall) and outputs (evapotranspiration, runoff and baseflow).
+
+Based on our understanding of soil physics, flow processes and transpiration, we can further partition water within the bucket into different sub-compartments. In this exercise we assume the catchment bucket can include a saturated and unsaturated layer, and even an optional deeper groundwater system.
+
+The water balance assumes an initial amount of water and then we sequentially estimate the fluxes of water as outlined in the below conceptual diagram.
+
+<center>
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%',out.height='100%'}
+library(ggplot2)
+library(lubridate)
+library(plotly)
+library(dplyr)
+evap <- read.csv("plots/module5/evap.csv")
+evap$Date <- as.Date(evap$Date,format = "%d/%m/%y")
+plot <- ggplot(data=evap, aes(x=Date, y=Evaporation, group=1)) +
+  geom_line(colour= "#3182bd", size = 1.2) + xlab("Time (year)") + ylab("Potential evaporation (m day<sup>-1</sup>)") + 
+              theme_bw()
+ggplotly(plot) %>%
+  config(displaylogo = FALSE) 
+
+
+```
+</center>
