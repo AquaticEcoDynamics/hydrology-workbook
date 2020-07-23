@@ -1,4 +1,6 @@
 bookdown::gitbook:
+  includes:
+    in_header: "includes/hypothesis.html"
   css: css/style.css
   config:
     toc:
