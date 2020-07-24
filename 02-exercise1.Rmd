@@ -79,26 +79,6 @@ where in this method $A_{i}$  is the area between isohyets $P_{i}$ and $P_{i+1}$
 
 You are given the measured data for each rainfall gauge in Table \@ref(tab:table2). Calculate the arithmetic mean and write this in your summary table (Table \@ref(tab:table1)). Next work out the ADR based on the other two methods. Then choose an appropriate runoff coefficient and calculate the stream discharge at the bottom of the catchment (<span style="color: red;"><b>8 marks</b></span>). 
 
-```{r table1, echo=FALSE, message=FALSE, warning=FALSE}
-library(knitr)
-library(kableExtra)
-options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
-table1 <- read.csv("tables/exercise1/table1.csv", check.names=FALSE)
-kable(table1,"html", escape = F, align = rep('c', 5), caption = "ADR and catchment discharge using three different rainfall averaging methods.",
-      bootstrap_options = "hover") %>%
-  kable_styling(table1, bootstrap_options = "hover", "striped", 
-                full_width = F, position = "center",
-                font_size = 12) %>%
-  column_spec(1, width_min = "7em") %>%
-  column_spec(2, width_min = "7em") %>%
-  column_spec(3, width_min = "7em") %>%
-  column_spec(4, width_min = "7em") %>%
-  column_spec(5, width_min = "7em") %>%
-  row_spec(1:3, background = 'white') %>%
-  scroll_box(width = "100%",
-             fixed_thead = FALSE) 
-```
-<br>
 <center>
 ```{r image1, echo=FALSE, fig.cap="Catchment map, station locations, and isohyetal map for a storm event. Isoheytal map corresponds to rainfall total over a 24hr period.", out.width = '80%'}
 knitr::include_graphics("images/exercise1/image1.jpg")
@@ -161,6 +141,28 @@ kable(table3,"html", escape = F, align = rep('c'), caption = "Iso-hyetal method 
   column_spec(5, width_min = "10em") %>%
   row_spec(1:7, background = 'white') %>%
   row_spec(8, background = 'lightgrey') %>%
+  scroll_box(width = "100%",
+             fixed_thead = FALSE) 
+```
+
+#### Calculate Catchment Discharge {#E1_12 -}
+
+```{r table1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
+table1 <- read.csv("tables/exercise1/table1.csv", check.names=FALSE)
+kable(table1,"html", escape = F, align = rep('c', 5), caption = "ADR and catchment discharge using three different rainfall averaging methods.",
+      bootstrap_options = "hover") %>%
+  kable_styling(table1, bootstrap_options = "hover", "striped", 
+                full_width = F, position = "center",
+                font_size = 12) %>%
+  column_spec(1, width_min = "7em") %>%
+  column_spec(2, width_min = "7em") %>%
+  column_spec(3, width_min = "7em") %>%
+  column_spec(4, width_min = "7em") %>%
+  column_spec(5, width_min = "7em") %>%
+  row_spec(1:3, background = 'white') %>%
   scroll_box(width = "100%",
              fixed_thead = FALSE) 
 ```

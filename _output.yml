@@ -9,7 +9,7 @@ bookdown::gitbook:
         <li><a href="./"><b>Hydrology Workbook</b></a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    download: [["Exercise_1A.pdf", "Exercise 1A Answer Sheet"], ["book2.pdf", "Exercise 1B Answer Sheet"]]
+    download: [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"]]
     search: yes
     fontsettings:
       theme: white
