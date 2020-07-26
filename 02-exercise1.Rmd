@@ -92,7 +92,12 @@ knitr::include_graphics("images/exercise1/image1.jpg")
 #### Thiessen Polygons: Sketch the polygons {#E1_9 -}
 
 To construct the Thiessen polygons, first draw dashed straight lines between the gauges. Next, find the mid-points of each of these lines and draw another solid line, perpendicular to the dashed line. These solid lines drawn perpendicular to the dashed lines will meet to form irregular polygons 
-
+<center>
+<video width="85%" height="85%" controls>
+  <source src="images/exercise1/video2.mp4" type="video/mp4">
+</video>
+</center>
+<br>
 <center>
 ```{r image2, echo=FALSE, fig.cap="Gridded map for polygon construction and area estimates.", out.width = '80%'}
 knitr::include_graphics("images/exercise1/image2.jpg")
