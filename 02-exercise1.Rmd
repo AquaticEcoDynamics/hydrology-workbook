@@ -62,7 +62,7 @@ The average depth of rainfall (ADR) over the entire catchment can be calculated 
 \end{equation}
 </center>
 
-Where $A_{i}$  is the polygon area (km^2^), $P_{i}$ is the rainfall (mm) corresponding to the $i$ polygon, and $\sum{iA_{i}}$ is the catchment area (km^2^).
+Where $A_{i}$  is the polygon area (km^2^), $P_{i}$ is the rainfall (mm) corresponding to the $i$ polygon, and $\sum{A_{i}}$ is the catchment area (km^2^).
 
 #### Isohyetal Method Method {#E1_7 -}
 
@@ -81,7 +81,7 @@ where in this method $A_{i}$  is the area between isohyets $P_{i}$ and $P_{i+1}$
 
 You are given the measured data for each rainfall gauge in Table \@ref(tab:table2). Calculate the arithmetic mean and write this in your summary table (Table \@ref(tab:table1)). Next work out the ADR based on the other two methods. 
 
-Once we have computed ADR, we can now estimate the likley amount of runoff. Remember the relationship between rainfall and discharge as outlined in the lecture. You'll need to choose an appropriate runoff coefficient, and calculate the stream discharge at the bottom of the catchment - rember to watch out for unit conversions! (<span style="color: red;"><b>8 marks</b></span>). 
+Once we have computed ADR, we can now estimate the likely amount of runoff. Remember the relationship between rainfall and discharge as outlined in the lecture. You'll need to choose an appropriate runoff coefficient, and calculate the stream discharge at the bottom of the catchment - rember to watch out for unit conversions! (<span style="color: red;"><b>8 marks</b></span>). 
 
 <center>
 ```{r image1, echo=FALSE, fig.cap="Catchment map, station locations, and isohyetal map for a storm event. Isoheytal map corresponds to rainfall total over a 24hr period.", out.width = '80%'}
