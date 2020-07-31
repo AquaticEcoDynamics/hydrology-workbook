@@ -24,7 +24,7 @@
 <meta name="author" content="Giles Knight, Matt Hipsey" />
 
 
-<meta name="date" content="2020-07-27" />
+<meta name="date" content="2020-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -82,6 +82,14 @@
 <li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_4"><i class="fa fa-check"></i>Methods</a></li>
 <li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_8"><i class="fa fa-check"></i>Activity</a></li>
 <li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_12"><i class="fa fa-check"></i>Part 2: Rainfall and Runoff Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_13"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_14"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_15"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_16"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_17"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -641,91 +649,994 @@ Isohyets
 <li>Limitations, assumptions and sources of error (<span style="color: red;"><b>4 marks</b></span>):</li>
 <li>Based on this study I would recommend (<span style="color: red;"><b>3 marks</b></span>):</li>
 </ul>
-<!-- ## Part 2: Rainfall and Runoff Data Analysis {#E1_12 -} -->
-<!-- ### Introduction {#E1_13 -} -->
-<!-- The previous exercise focussed on estimating rainfall and runoff at catchment scales during a storm event.  This focussed on catchment scale rainfall and processes.  In this exercise we will examine the nature of rainfall data and use some simple statistics to describe these data.  We then look at how rainfall may be changing over time and how it varies over space across Western Australia.  After that we explore how different modes of climate variability affect annual rainfall.  Lastly, we look at the relationships between rainfall and runoff.  To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time. -->
-<!-- Throughout the exercise we should remember that rainfall will be influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:image6)).  We will examine these during this exercise. -->
-<!-- <center> -->
-<!-- ```{r image6, echo=FALSE, fig.cap="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net).", out.width = '80%'} -->
-<!-- knitr::include_graphics("images/exercise1/image6.png") -->
-<!-- ``` -->
-<!-- </center> -->
-<!-- ### Objectives {#E1_14 -} -->
-<!-- By the end of this activity, you should: -->
-<!-- 1) Be able to source rainfall data, understand the nature of that data and describe it using simple statistics in Excel. -->
-<!-- 2) Understand how and why rainfall may be changing over time and use statistics and regression to test hypothesis. -->
-<!-- 3) Know how different modes of climate variability such as IOD and ENSO affect annual rainfall.  -->
-<!-- 4) Determine the relationships between rainfall and runoff to evaluate the nature of the relationship between rainfall and discharge.  -->
-<!-- ### Statistical Properties of Rainfall Data {#E1_15 -} -->
-<!-- Individually (make sure you have at least one person per station but you can have more than one if needed). Start by downloading the daily rainfall data for your site from the [Bureau of Meteorology](http://www.bom.gov.au/climate/data/) web site.  Use the site ID to get the data as below. -->
-<!-- <center> -->
-<!-- <video width="100%" height="100%" controls> -->
-<!--   <source src="images/exercise1/video1.mp4" type="video/mp4"> -->
-<!-- </video> -->
-<!-- </center> -->
-<!-- Download and extract the zipped file to get a CSV file that can be opened in Excel. -->
-<!-- First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>).  -->
-<!-- Describe the main features of this data set. What is the most appropriate type of graph for rainfall data? (<span style="color: red;"><b>3 marks</b></span>) -->
-<!-- Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>).  -->
-<!-- What are the main features of this annual data set? What variability can you see? (<span style="color: red;"><b>2 marks</b></span>) -->
-<!-- Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools->Add-ins->Analysis ToolPack*). -->
-<!-- Copy the results here and complete Table 1 for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? (<span style="color: red;"><b>4 marks</b></span>) -->
-<!-- Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? (<span style="color: red;"><b>2 marks</b></span>) -->
-<!-- Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select **Month** and **Rainfall** amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>2 marks</b></span>).  -->
-<!-- How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)? (<span style="color: red;"><b>2 marks</b></span>) -->
-<!-- <center> -->
-<!-- ```{r table4, echo=FALSE, message=FALSE, warning=FALSE} -->
-<!-- library(knitr) -->
-<!-- library(kableExtra) -->
-<!-- options(kableExtra.html.bsTable = F, knitr.kable.NA = '') -->
-<!-- table4 <- read.csv("tables/exercise1/table4.csv", check.names=FALSE) -->
-<!-- kable(table4,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.", -->
-<!--       bootstrap_options = "hover") %>% -->
-<!--   kable_styling(table1, bootstrap_options = "hover", "striped",  -->
-<!--                 full_width = F, position = "center", -->
-<!--                 font_size = 12) %>% -->
-<!--   column_spec(1, width_min = "10em") %>% -->
-<!--   column_spec(2, width_min = "10em") %>% -->
-<!--   column_spec(3, width_min = "10em") %>% -->
-<!--   column_spec(4, width_min = "10em") %>% -->
-<!--   column_spec(5, width_min = "10em") %>% -->
-<!--   column_spec(6, width_min = "10em") %>% -->
-<!--   row_spec(1:25, background = 'white') %>% -->
-<!--   scroll_box(width = "100%", -->
-<!--              fixed_thead = FALSE)  -->
-<!-- ``` -->
-<!-- </center> -->
-<!-- ### Temporal trends in rainfall {#E1_16 -} -->
-<!-- Calculate the trend in rainfall for the last 5 years.  Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet.  Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION.  Input the data range. Select “Line Fit Plots”.  What did you find and what were you expecting?  Is this long enough for a reliable trend?  Is the relationship really linear – discuss? (<span style="color: red;"><b>3 marks</b></span>) -->
-<!-- Calculate the trend in rainfall for all years available at the site.  Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet.  Select the all years of data and INSERT a SCATTER plot.  Add a trend line and “display the equation” on the chart.  Add the Pearson correlation coefficient (r^2^) value as well.  Add the information for your site into Table 2 (and insert the other class data when you can). (<span style="color: red;"><b>2 marks</b></span>) -->
-<!-- <center> -->
-<!-- ```{r table5, echo=FALSE, message=FALSE, warning=FALSE} -->
-<!-- library(knitr) -->
-<!-- library(kableExtra) -->
-<!-- options(kableExtra.html.bsTable = F, knitr.kable.NA = '') -->
-<!-- table5 <- read.csv("tables/exercise1/table5.csv", check.names=FALSE) -->
-<!-- kable(table5,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.", -->
-<!--       bootstrap_options = "hover") %>% -->
-<!--   kable_styling(table1, bootstrap_options = "hover", "striped",  -->
-<!--                 full_width = F, position = "center", -->
-<!--                 font_size = 12) %>% -->
-<!--   column_spec(1, width_min = "9em") %>% -->
-<!--   column_spec(2, width_min = "9em") %>% -->
-<!--   column_spec(3, width_min = "9em") %>% -->
-<!--   column_spec(4, width_min = "9em") %>% -->
-<!--   column_spec(5, width_min = "9em") %>% -->
-<!--   column_spec(6, width_min = "9em") %>% -->
-<!--   row_spec(1:25, background = 'white') %>% -->
-<!--   scroll_box(width = "100%", -->
-<!--              fixed_thead = FALSE)  -->
-<!-- ``` -->
-<!-- </center> -->
-<!-- What hypothesis can we make about changes in rainfall amount over time?  How do we frame the hypothesis?  What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into table 2. (<span style="color: red;"><b>5 marks</b></span>) -->
-<!-- Break into small groups of about 5 and discuss the results of Table 2.  Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope.  Are there statistically significant changes in rainfall?  Are they consistent across WA?  What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>) -->
-<!-- ### Temporal trends in rainfall {#E1_17 -} -->
-<!-- Take the information in Table 1 and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site.  When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes).  What spatial patterns might you expect and what do you notice?  What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span> marks) -->
+</div>
+</div>
+<div id="E1_12" class="section level2 unnumbered">
+<h2>Part 2: Rainfall and Runoff Data Analysis</h2>
+<div id="E1_13" class="section level3 unnumbered">
+<h3>Introduction</h3>
+<p>The previous exercise focussed on estimating rainfall and runoff at catchment scales during a storm event. This focussed on catchment scale rainfall and processes. In this exercise we will examine the nature of rainfall data and use some simple statistics to describe these data. We then look at how rainfall may be changing over time and how it varies over space across Western Australia. After that we explore how different modes of climate variability affect annual rainfall. Lastly, we look at the relationships between rainfall and runoff. To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.</p>
+<p>Throughout the exercise we should remember that rainfall will be influenced by a number of processes that operate on different space and time scales (see Figure <a href="E1-1.html#fig:image6">5</a>). We will examine these during this exercise.</p>
+<center>
+<div class="figure"><span id="fig:image6"></span>
+<img src="images/exercise1/image6.png" alt="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net)." width="80%" />
+<p class="caption">
+Figure 5: A guide to the timescales applicable to weather, climate variability and climate change <a href="www.pacificclimatefutures.net">Pacific Climate Futures</a>.
+</p>
+</div>
+</center>
+</div>
+<div id="E1_14" class="section level3 unnumbered">
+<h3>Objectives</h3>
+<p>By the end of this activity, you should:</p>
+<ol style="list-style-type: decimal">
+<li>Be able to source rainfall data, understand the nature of that data and describe it using simple statistics in Excel.</li>
+<li>Understand how and why rainfall may be changing over time and use statistics and regression to test hypothesis.</li>
+<li>Know how different modes of climate variability such as IOD and ENSO affect annual rainfall.</li>
+<li>Determine the relationships between rainfall and runoff to evaluate the nature of the relationship between rainfall and discharge.</li>
+</ol>
+</div>
+<div id="E1_15" class="section level3 unnumbered">
+<h3>Statistical Properties of Rainfall Data</h3>
+<ol style="list-style-type: decimal">
+<li>Individually (make sure you have at least one person per station but you can have more than one if needed). Start by downloading the daily rainfall data for your site from the <a href="http://www.bom.gov.au/climate/data/">Bureau of Meteorology</a> web site. Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel.</li>
+</ol>
+<center>
+<video width="100%" height="100%" controls>
+<source src="images/exercise1/video1.mp4" type="video/mp4">
+</video>
+</center>
+<ol start="2" style="list-style-type: decimal">
+<li><p>First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>). Describe the main features of this data set. What is the most appropriate type of graph for rainfall data? (<span style="color: red;"><b>3 marks</b></span>)</p></li>
+<li><p>Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>). What are the main features of this annual data set? What variability can you see? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
+<li><p>Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to <em>Tools-&gt;Add-ins-&gt;Analysis ToolPack</em>).
+Copy the results here and complete Table 1 for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? (<span style="color: red;"><b>4 marks</b></span>)</p></li>
+<li><p>Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
+<li><p>Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select <strong>Month</strong> and <strong>Rainfall</strong> amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>2 marks</b></span>).
+How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table4">Table 4: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Station
+</th>
+<th style="text-align:center;">
+Station ID
+</th>
+<th style="text-align:center;">
+Years
+</th>
+<th style="text-align:center;">
+Mean
+</th>
+<th style="text-align:center;">
+SD
+</th>
+<th style="text-align:center;">
+Min / Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Swanbourne
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9215
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Perth
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9225
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Perth Airport
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9021
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Bickley
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9240
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Mundaring
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9030
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Chidlow
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9007
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Northam
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10111
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Kellerberrin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10073
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Merredin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10092
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Kalgoorlie-Boulder
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+12038
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Leonora
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+12241
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Cape Leeuwin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9518
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Busselton
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9515
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Geraldton Town
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+8050
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Carnarvon
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+6011
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Exmouth Gulf
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+5004
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Broome
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+3003
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Wyndham
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+1006
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Bridgetown Comparison
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9510
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Wagin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10647
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Hyden
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10568
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Albany
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9500
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Esperance Downs
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9631
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Manjimup
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9573
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Narrogin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10614
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+</div>
+<div id="E1_16" class="section level3 unnumbered">
+<h3>Temporal trends in rainfall</h3>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Calculate the trend in rainfall for the <strong>last 5 years.</strong> Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range. Select “<strong>Line Fit Plots</strong>”. What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear – discuss? (<span style="color: red;"><b>3 marks</b></span>)</p></li>
+<li><p>Calculate the trend in rainfall for <strong>all</strong> years available at the site. Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the all years of data and INSERT a SCATTER plot. Add a trend line and “<strong>display the equation</strong>” on the chart. Add the Pearson correlation coefficient (r<sup>2</sup>) value as well. Add the information for your site into Table 2 (and insert the other class data when you can). (<span style="color: red;"><b>2 marks</b></span>)</p></li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table5">Table 5: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Station
+</th>
+<th style="text-align:center;">
+Station ID
+</th>
+<th style="text-align:center;">
+Years of data
+</th>
+<th style="text-align:center;">
+Sign of trend
+</th>
+<th style="text-align:center;">
+Trend rate (mm/decade)
+</th>
+<th style="text-align:center;">
+T-value
+</th>
+<th style="text-align:center;">
+Significance (p value)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Swanbourne
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9215
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Perth
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9225
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Perth Airport
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9021
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Bickley
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9240
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Mundaring
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9030
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Chidlow
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9007
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Northam
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10111
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Kellerberrin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10073
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Merredin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10092
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Kalgoorlie-Boulder
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+12038
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Leonora
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+12241
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Cape Leeuwin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9518
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Busselton
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9515
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Geraldton Town
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+8050
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Carnarvon
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+6011
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Exmouth Gulf
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+5004
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Broome
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+3003
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Wyndham
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+1006
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Bridgetown Comparison
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9510
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Wagin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10647
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Hyden
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10568
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Albany
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9500
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Esperance Downs
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9631
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Manjimup
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9573
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Narrogin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10614
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>What hypothesis can we make about changes in rainfall amount over time? How do we frame the hypothesis? What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into table 2. (<span style="color: red;"><b>5 marks</b></span>)</p></li>
+<li><p>Break into small groups of about 5 and discuss the results of Table 2. Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>)</p></li>
+</ol>
+</div>
+<div id="E1_17" class="section level3 unnumbered">
+<h3>Spatial patterns in rainfall</h3>
+<ol start="11" style="list-style-type: decimal">
+<li>Take the information in Table 1 and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site. When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span>)</li>
+</ol>
+<center>
+<img src="images/exercise1/image7.png" width="90%" />
+</center>
 <!-- ### Interannual variability in rainfall {#E1_18 -} -->
-<!-- Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO)).  -->
+<!-- 12) Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO)). -->
 <!-- Other indicators of temporal variability (look for cyclic patterns).  Does rainfall correlate with known modes of climate variability (i.e. IOD and ENSO using the Southern Oscillation Index (SOI)). SOI is calculated as follows. -->
 <!-- <center> -->
 <!-- \begin{equation} -->
@@ -736,9 +1647,41 @@ Isohyets
 <!-- Where: -->
 <!-- - $P_{\text{diff}}$ = (average Tahiti MSLP for the month) - (average Darwin MSLP for the month) -->
 <!-- - $P_{\text{diffav}}$ = long term average of $P_{\text{diff}}$ for the month in question, and -->
-<!-- - $SD(P_{\text{diff}})$ = long term standard deciation of $P_{\text{diff}}$ for the month in question.  -->
+<!-- - $SD(P_{\text{diff}})$ = long term standard deciation of $P_{\text{diff}}$ for the month in question. -->
 <!-- IOD is calculated by anomalous Sea Surface Temperature gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin. -->
-<!-- We will use the extremely useful Climate Explorer for the next section.  First you will need to register so you can save data series.  Access the rainfall from the previous site that you used in the previous section.  Click on “**Monthly Station Data**” (right hand menu) and search for your station and “**get data**”.  Make a name to save the data (the default should be fine).  Click “**Add to list**”. -->
+<!-- We will use the extremely useful [Climate Explorer](https://climexp.knmi.nl/start.cgi?id=someone@somewhere) for the next section.  First you will need to register so you can save data series.  Access the rainfall from the previous site that you used in the previous section.  Click on “**Monthly Station Data**” (right hand menu) and search for your station and “**get data**”.  Make a name to save the data (the default should be fine).  Click “**Add to list**”. -->
+<!-- Now get the first climate index for the IOD called the DMI. Go to “**Monthly climate indices**” and then select DMI. Note any trend and variability in the index. -->
+<!-- To correlate the index and rainfall select “**Correlate with other time series**”. And tick your previously saved rainfall timeseries and then press “**Correlate**” and copy the results into Table 3. -->
+<!-- <center> -->
+<!-- ```{r table6, echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- library(knitr) -->
+<!-- library(kableExtra) -->
+<!-- options(kableExtra.html.bsTable = F, knitr.kable.NA = '') -->
+<!-- table6 <- read.csv("tables/exercise1/table6.csv", check.names=FALSE) -->
+<!-- kable(table6,"html", escape = F, align = rep('c', 5), caption = "Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations (<span style='color:red'><b>1 mark</b></span>).", -->
+<!--       bootstrap_options = "hover") %>% -->
+<!--   kable_styling(table1, bootstrap_options = "hover", "striped", -->
+<!--                 full_width = F, position = "center", -->
+<!--                 font_size = 12) %>% -->
+<!--   column_spec(1, width_min = "12em") %>% -->
+<!--   column_spec(2, width_min = "12em") %>% -->
+<!--   column_spec(3, width_min = "12em") %>% -->
+<!--   column_spec(4, width_min = "12em") %>% -->
+<!--   column_spec(5, width_min = "12em") %>% -->
+<!--   row_spec(1:12, background = 'white') %>% -->
+<!--   scroll_box(width = "100%", -->
+<!--              fixed_thead = FALSE) -->
+<!-- ``` -->
+<!-- </center> -->
+<!-- Break into small groups of about 5 and discuss the results of your correlations. Choose a new rapporteur to report back at the end of the discussion. Highlight any months that have a significant p-value (<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA? (<span style="color: red;"><b>6 marks</b></span>) -->
+<!-- ### Relationship between rainfall and runoff {#E1_18 -} -->
+<!-- Examine the relationship between annual rainfall and annual Runoff. Go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this tool to locate a gauging station near your rainfall site. You should find something similar to below. Go to “**Pre-computed reports**”. Click on “**Total Annual Discharge report**”. Ensure you have 10-20 years of available data for this exercise. -->
+<!-- <center> -->
+<!-- <video width="85%" height="85%" controls> -->
+<!--   <source src="images/exercise1/video3.mp4" type="video/mp4"> -->
+<!-- </video> -->
+<!-- </center> -->
+<!-- Plot a scatter plot of discharge and annual rainfall, add a line to the chart. Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. What are the relationships between rainfall and discharge? Are they linear or non- linear and why? Are they consistent across WA? (<span style="color: red;"><b>4 marks</b></span>) -->
 
 </div>
 </div>
