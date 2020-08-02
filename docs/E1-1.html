@@ -24,7 +24,7 @@
 <meta name="author" content="Giles Knight, Matt Hipsey" />
 
 
-<meta name="date" content="2020-07-31" />
+<meta name="date" content="2020-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,7 @@ Figure 1: A depth of rain (<span class="math inline">\(P\)</span>, mm/day) is fa
 <p>Where <span class="math inline">\(A_{i}\)</span> is the polygon area (km<sup>2</sup>), <span class="math inline">\(P_{i}\)</span> is the rainfall (mm) corresponding to the <span class="math inline">\(i\)</span> polygon, and <span class="math inline">\(\sum{A_{i}}\)</span> is the catchment area (km<sup>2</sup>).</p>
 </div>
 <div id="E1_7" class="section level4 unnumbered">
-<h4>Isohyetal Method Method</h4>
+<h4>Isohyetal Method</h4>
 <p>The average depth of rainfall over the entire catchment can be calculated using:</p>
 <center>
 <span class="math display" id="eq:exercise1-2">\[\begin{equation}
@@ -687,12 +687,12 @@ Figure 5: A guide to the timescales applicable to weather, climate variability a
 </video>
 </center>
 <ol start="2" style="list-style-type: decimal">
-<li><p>First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>). Describe the main features of this data set. What is the most appropriate type of graph for rainfall data? (<span style="color: red;"><b>3 marks</b></span>)</p></li>
-<li><p>Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>). What are the main features of this annual data set? What variability can you see? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
+<li><p>First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit on your answer sheet (<span style="color: red;"><b>1 mark</b></span>). Describe the main features of this data set. What is the most appropriate type of graph for rainfall data? (<span style="color: red;"><b>3 marks</b></span>)</p></li>
+<li><p>Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet (<span style="color: red;"><b>1 mark</b></span>). What are the main features of this annual data set? What variability can you see? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
 <li><p>Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to <em>Tools-&gt;Add-ins-&gt;Analysis ToolPack</em>).
-Copy the results here and complete Table 1 for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? (<span style="color: red;"><b>4 marks</b></span>)</p></li>
+Copy the results here and complete Table <a href="E1-1.html#tab:table4">4</a> for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? (<span style="color: red;"><b>4 marks</b></span>)</p></li>
 <li><p>Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
-<li><p>Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select <strong>Month</strong> and <strong>Rainfall</strong> amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>2 marks</b></span>).
+<li><p>Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select <strong>Month</strong> and <strong>Rainfall</strong> amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet (<span style="color: red;"><b>2 marks</b></span>).
 How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)? (<span style="color: red;"><b>2 marks</b></span>)</p></li>
 </ol>
 <center>
@@ -1133,7 +1133,7 @@ Narrogin
 <h3>Temporal trends in rainfall</h3>
 <ol start="7" style="list-style-type: decimal">
 <li><p>Calculate the trend in rainfall for the <strong>last 5 years.</strong> Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range. Select “<strong>Line Fit Plots</strong>”. What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear – discuss? (<span style="color: red;"><b>3 marks</b></span>)</p></li>
-<li><p>Calculate the trend in rainfall for <strong>all</strong> years available at the site. Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the all years of data and INSERT a SCATTER plot. Add a trend line and “<strong>display the equation</strong>” on the chart. Add the Pearson correlation coefficient (r<sup>2</sup>) value as well. Add the information for your site into Table 2 (and insert the other class data when you can). (<span style="color: red;"><b>2 marks</b></span>)</p></li>
+<li><p>Calculate the trend in rainfall for <strong>all</strong> years available at the site. Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the all years of data and INSERT a SCATTER plot. Add a trend line and “<strong>display the equation</strong>” on the chart. Add the Pearson correlation coefficient (r<sup>2</sup>) value as well. Add the information for your site into Table <a href="E1-1.html#tab:table5">5</a> (and insert the other class data when you can). (<span style="color: red;"><b>2 marks</b></span>)</p></li>
 </ol>
 <center>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
@@ -1623,14 +1623,14 @@ Narrogin
 </center>
 <p><br></p>
 <ol start="9" style="list-style-type: decimal">
-<li><p>What hypothesis can we make about changes in rainfall amount over time? How do we frame the hypothesis? What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into table 2. (<span style="color: red;"><b>5 marks</b></span>)</p></li>
-<li><p>Break into small groups of about 5 and discuss the results of Table 2. Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>)</p></li>
+<li><p>What hypothesis can we make about changes in rainfall amount over time? How do we frame the hypothesis? What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into Table <a href="E1-1.html#tab:table5">5</a>. (<span style="color: red;"><b>5 marks</b></span>)</p></li>
+<li><p>Break into small groups of about 5 and discuss the results of Table <a href="E1-1.html#tab:table5">5</a>. Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>)</p></li>
 </ol>
 </div>
 <div id="E1_17" class="section level3 unnumbered">
 <h3>Spatial patterns in rainfall</h3>
 <ol start="11" style="list-style-type: decimal">
-<li>Take the information in Table 1 and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site. When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span>)</li>
+<li>Take the information in Table <a href="E1-1.html#tab:table4">4</a> and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site. When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span>)</li>
 </ol>
 <center>
 <img src="images/exercise1/image7.png" width="90%" />

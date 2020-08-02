@@ -64,7 +64,7 @@ The average depth of rainfall (ADR) over the entire catchment can be calculated 
 
 Where $A_{i}$  is the polygon area (km^2^), $P_{i}$ is the rainfall (mm) corresponding to the $i$ polygon, and $\sum{A_{i}}$ is the catchment area (km^2^).
 
-#### Isohyetal Method Method {#E1_7 -}
+#### Isohyetal Method {#E1_7 -}
 
 The average depth of rainfall over the entire catchment can be calculated using:
 
@@ -218,17 +218,17 @@ By the end of this activity, you should:
 </video>
 </center>
 
-2) First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>). Describe the main features of this data set. What is the most appropriate type of graph for rainfall data? (<span style="color: red;"><b>3 marks</b></span>)
+2) First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit on your answer sheet (<span style="color: red;"><b>1 mark</b></span>). Describe the main features of this data set. What is the most appropriate type of graph for rainfall data? (<span style="color: red;"><b>3 marks</b></span>)
 
-3) Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>1 mark</b></span>). What are the main features of this annual data set? What variability can you see? (<span style="color: red;"><b>2 marks</b></span>)
+3) Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet (<span style="color: red;"><b>1 mark</b></span>). What are the main features of this annual data set? What variability can you see? (<span style="color: red;"><b>2 marks</b></span>)
 
 
 4) Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools->Add-ins->Analysis ToolPack*).
-Copy the results here and complete Table 1 for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? (<span style="color: red;"><b>4 marks</b></span>)
+Copy the results here and complete Table \@ref(tab:table4) for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? (<span style="color: red;"><b>4 marks</b></span>)
 
 5) Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? (<span style="color: red;"><b>2 marks</b></span>)
 
-6) Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select **Month** and **Rainfall** amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit here in your answers (<span style="color: red;"><b>2 marks</b></span>).
+6) Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select **Month** and **Rainfall** amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet (<span style="color: red;"><b>2 marks</b></span>).
 How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)? (<span style="color: red;"><b>2 marks</b></span>)
 
 <center>
@@ -258,7 +258,7 @@ kable(table4,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 7) Calculate the trend in rainfall for the **last 5 years.**  Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet.  Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION.  Input the data range. Select “**Line Fit Plots**”.  What did you find and what were you expecting?  Is this long enough for a reliable trend?  Is the relationship really linear – discuss? (<span style="color: red;"><b>3 marks</b></span>)
 
-8) Calculate the trend in rainfall for **all** years available at the site.  Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet.  Select the all years of data and INSERT a SCATTER plot.  Add a trend line and “**display the equation**” on the chart.  Add the Pearson correlation coefficient (r^2^) value as well.  Add the information for your site into Table 2 (and insert the other class data when you can). (<span style="color: red;"><b>2 marks</b></span>)
+8) Calculate the trend in rainfall for **all** years available at the site.  Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet.  Select the all years of data and INSERT a SCATTER plot.  Add a trend line and “**display the equation**” on the chart.  Add the Pearson correlation coefficient (r^2^) value as well.  Add the information for your site into Table \@ref(tab:table5) (and insert the other class data when you can). (<span style="color: red;"><b>2 marks</b></span>)
 
 <center>
 ```{r table5, echo=FALSE, message=FALSE, warning=FALSE}
@@ -284,13 +284,13 @@ kable(table5,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 </center>
 <br>
 
-9) What hypothesis can we make about changes in rainfall amount over time?  How do we frame the hypothesis?  What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into table 2. (<span style="color: red;"><b>5 marks</b></span>)
+9) What hypothesis can we make about changes in rainfall amount over time?  How do we frame the hypothesis?  What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into Table \@ref(tab:table5). (<span style="color: red;"><b>5 marks</b></span>)
 
-10) Break into small groups of about 5 and discuss the results of Table 2.  Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope.  Are there statistically significant changes in rainfall?  Are they consistent across WA?  What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>)
+10) Break into small groups of about 5 and discuss the results of Table \@ref(tab:table5).  Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope.  Are there statistically significant changes in rainfall?  Are they consistent across WA?  What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>)
 
 ### Spatial patterns in rainfall {#E1_17 -}
 
-11) Take the information in Table 1 and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site.  When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes).  What spatial patterns might you expect and what do you notice?  What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span>)
+11) Take the information in Table \@ref(tab:table4) and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site.  When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes).  What spatial patterns might you expect and what do you notice?  What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span>)
 
 <center>
 ```{r image7, echo=FALSE, fig.cap="", out.width = '90%'}
