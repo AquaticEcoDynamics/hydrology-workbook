@@ -154,7 +154,7 @@ kable(table3,"html", escape = F, align = rep('c'), caption = "Iso-hyetal method 
              fixed_thead = FALSE) 
 ```
 
-#### Calculate Catchment Discharge {#E1_12 -}
+#### Calculate Catchment Discharge {#E1_11 -}
 
 ```{r table1, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
@@ -176,7 +176,7 @@ kable(table1,"html", escape = F, align = rep('c', 5), caption = "ADR and catchme
              fixed_thead = FALSE) 
 ```
 
-### Conclusions  {#E1_11 -}
+### Conclusions  {#E1_12 -}
 
 What conclusions can you draw from these results? You should always go back to your original objectives (or aims) and see what you have learnt from your analysis. Do this now and briefly summarise the aims of this exercise, your conclusions after doing this analysis, the limitations of your approach, and any recommendations. 
 
@@ -185,9 +185,9 @@ What conclusions can you draw from these results? You should always go back to y
 - Limitations, assumptions and sources of error (<span style="color: red;"><b>4 marks</b></span>):
 - Based on this study I would recommend (<span style="color: red;"><b>3 marks</b></span>):
 
-## Part 2: Rainfall and Runoff Data Analysis {#E1_12 -}
+## Part 2: Rainfall and Runoff Data Analysis {#E1_13 -}
 
-### Introduction {#E1_13 -}
+### Introduction {#E1_14 -}
 
 The previous exercise focussed on estimating rainfall and runoff at catchment scales during a storm event.  This focussed on catchment scale rainfall and processes.  In this exercise we will examine the nature of rainfall data and use some simple statistics to describe these data.  We then look at how rainfall may be changing over time and how it varies over space across Western Australia.  After that we explore how different modes of climate variability affect annual rainfall.  Lastly, we look at the relationships between rainfall and runoff.  To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.
 
@@ -199,7 +199,7 @@ knitr::include_graphics("images/exercise1/image6.png")
 ```
 </center>
 
-### Objectives {#E1_14 -}
+### Objectives {#E1_15 -}
 
 By the end of this activity, you should:
 
@@ -208,7 +208,7 @@ By the end of this activity, you should:
 3) Know how different modes of climate variability such as IOD and ENSO affect annual rainfall.
 4) Determine the relationships between rainfall and runoff to evaluate the nature of the relationship between rainfall and discharge.
 
-### Statistical Properties of Rainfall Data {#E1_15 -}
+### Statistical Properties of Rainfall Data {#E1_16 -}
 
 1) Individually (make sure you have at least one person per station but you can have more than one if needed). Start by downloading the daily rainfall data for your site from the [Bureau of Meteorology](http://www.bom.gov.au/climate/data/) web site.  Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel.
 
@@ -254,7 +254,7 @@ kable(table4,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 ```
 </center>
 
-### Temporal trends in rainfall {#E1_16 -}
+### Temporal trends in rainfall {#E1_17 -}
 
 7) Calculate the trend in rainfall for the **last 5 years.**  Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet.  Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION.  Input the data range. Select “**Line Fit Plots**”.  What did you find and what were you expecting?  Is this long enough for a reliable trend?  Is the relationship really linear – discuss? (<span style="color: red;"><b>3 marks</b></span>)
 
@@ -288,7 +288,7 @@ kable(table5,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 10) Break into small groups of about 5 and discuss the results of Table \@ref(tab:table5).  Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope.  Are there statistically significant changes in rainfall?  Are they consistent across WA?  What may be causing the changes? (<span style="color: red;"><b>5 marks</b></span>)
 
-### Spatial patterns in rainfall {#E1_17 -}
+### Spatial patterns in rainfall {#E1_18 -}
 
 11) Take the information in Table \@ref(tab:table4) and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site.  When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes).  What spatial patterns might you expect and what do you notice?  What may be causing these spatial patterns? (<span style="color: red;"><b>6 marks</b></span>)
 
