@@ -298,65 +298,94 @@ knitr::include_graphics("images/exercise1/image7.png")
 ```
 </center>
 
-<!-- ### Interannual variability in rainfall {#E1_18 -} -->
+### Interannual variability in rainfall {#E1_19 -}
 
-<!-- 12) Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO)). -->
+Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO)).
 
-<!-- Other indicators of temporal variability (look for cyclic patterns).  Does rainfall correlate with known modes of climate variability (i.e. IOD and ENSO using the Southern Oscillation Index (SOI)). SOI is calculated as follows. -->
+Other indicators of temporal variability (look for cyclic patterns).  Does rainfall correlate with known modes of climate variability (i.e. IOD and ENSO using the Southern Oscillation Index (SOI)). SOI is calculated as follows.
 
-<!-- <center> -->
-<!-- \begin{equation} -->
-<!-- \text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})} -->
-<!-- (\#eq:exercise-3) -->
-<!-- \end{equation} -->
-<!-- </center> -->
+<center>
+\begin{equation}
+\text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
+(\#eq:exercise-3)
+\end{equation}
+</center>
 
-<!-- Where: -->
+Where:
 
-<!-- - $P_{\text{diff}}$ = (average Tahiti MSLP for the month) - (average Darwin MSLP for the month) -->
-<!-- - $P_{\text{diffav}}$ = long term average of $P_{\text{diff}}$ for the month in question, and -->
-<!-- - $SD(P_{\text{diff}})$ = long term standard deciation of $P_{\text{diff}}$ for the month in question. -->
+- $P_{\text{diff}}$ = (average Tahiti MSLP for the month) - (average Darwin MSLP for the month)
+- $P_{\text{diffav}}$ = long term average of $P_{\text{diff}}$ for the month in question, and
+- $SD(P_{\text{diff}})$ = long term standard deciation of $P_{\text{diff}}$ for the month in question.
 
-<!-- IOD is calculated by anomalous Sea Surface Temperature gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin. -->
+IOD is calculated by anomalous Sea Surface Temperature gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin.
 
-<!-- We will use the extremely useful [Climate Explorer](https://climexp.knmi.nl/start.cgi?id=someone@somewhere) for the next section.  First you will need to register so you can save data series.  Access the rainfall from the previous site that you used in the previous section.  Click on “**Monthly Station Data**” (right hand menu) and search for your station and “**get data**”.  Make a name to save the data (the default should be fine).  Click “**Add to list**”. -->
+We will use the extremely useful [Climate Explorer](https://climexp.knmi.nl/start.cgi?id=someone@somewhere) for the next section.  First you will need to register so you can save data series.  Access the rainfall from the previous site that you used in the previous section. Click on “**Monthly Station Data**” (right hand menu), select "precipitation" from the "GHCN-M (all)" column, search for your station (e.g. type BROOME in the "Select stations" section), and then press "Get stations". If the selection works you will see relevant stations listed, and then click “**get data**”. You will then see graphs and options for further integrating the data. Make a name to save the data (the default should be fine). Click “**Add to list**”.
 
-<!-- Now get the first climate index for the IOD called the DMI. Go to “**Monthly climate indices**” and then select DMI. Note any trend and variability in the index. -->
+<center>
+<video width="85%" height="85%" controls>
+  <source src="images/exercise1/video4.mp4" type="video/mp4">
+</video>
+</center>
 
-<!-- To correlate the index and rainfall select “**Correlate with other time series**”. And tick your previously saved rainfall timeseries and then press “**Correlate**” and copy the results into Table 3. -->
+Now get the first climate index for the IOD called the DMI. Go to “**Monthly climate indices**” and then select DMI. Note any trend and variability in the index.
 
-<!-- <center> -->
-<!-- ```{r table6, echo=FALSE, message=FALSE, warning=FALSE} -->
-<!-- library(knitr) -->
-<!-- library(kableExtra) -->
-<!-- options(kableExtra.html.bsTable = F, knitr.kable.NA = '') -->
-<!-- table6 <- read.csv("tables/exercise1/table6.csv", check.names=FALSE) -->
-<!-- kable(table6,"html", escape = F, align = rep('c', 5), caption = "Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations (<span style='color:red'><b>1 mark</b></span>).", -->
-<!--       bootstrap_options = "hover") %>% -->
-<!--   kable_styling(table1, bootstrap_options = "hover", "striped", -->
-<!--                 full_width = F, position = "center", -->
-<!--                 font_size = 12) %>% -->
-<!--   column_spec(1, width_min = "12em") %>% -->
-<!--   column_spec(2, width_min = "12em") %>% -->
-<!--   column_spec(3, width_min = "12em") %>% -->
-<!--   column_spec(4, width_min = "12em") %>% -->
-<!--   column_spec(5, width_min = "12em") %>% -->
-<!--   row_spec(1:12, background = 'white') %>% -->
-<!--   scroll_box(width = "100%", -->
-<!--              fixed_thead = FALSE) -->
-<!-- ``` -->
-<!-- </center> -->
+To correlate the index and rainfall select “**Correlate with other time series**”. And tick your previously saved rainfall timeseries and then press “**Correlate**” and copy the results into Table \@ref(tab:table6).
 
-<!-- Break into small groups of about 5 and discuss the results of your correlations. Choose a new rapporteur to report back at the end of the discussion. Highlight any months that have a significant p-value (<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA? (<span style="color: red;"><b>6 marks</b></span>) -->
+<center>
+<video width="85%" height="85%" controls>
+  <source src="images/exercise1/video5.mp4" type="video/mp4">
+</video>
+</center>
 
-<!-- ### Relationship between rainfall and runoff {#E1_18 -} -->
+<br>
 
-<!-- Examine the relationship between annual rainfall and annual Runoff. Go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this tool to locate a gauging station near your rainfall site. You should find something similar to below. Go to “**Pre-computed reports**”. Click on “**Total Annual Discharge report**”. Ensure you have 10-20 years of available data for this exercise. -->
+<center>
+```{r table6, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
+table6 <- read.csv("tables/exercise1/table6.csv", check.names=FALSE)
+kable(table6,"html", escape = F, align = rep('c', 5), caption = "Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations (<span style='color:red'><b>1 mark</b></span>).",
+      bootstrap_options = "hover") %>%
+  kable_styling(table1, bootstrap_options = "hover", "striped",
+                full_width = F, position = "center",
+                font_size = 12) %>%
+  column_spec(1, width_min = "12em") %>%
+  column_spec(2, width_min = "12em") %>%
+  column_spec(3, width_min = "12em") %>%
+  column_spec(4, width_min = "12em") %>%
+  column_spec(5, width_min = "12em") %>%
+  row_spec(1:12, background = 'white') %>%
+  scroll_box(width = "100%",
+             fixed_thead = FALSE)
+```
+</center>
 
-<!-- <center> -->
-<!-- <video width="85%" height="85%" controls> -->
-<!--   <source src="images/exercise1/video3.mp4" type="video/mp4"> -->
-<!-- </video> -->
-<!-- </center> -->
+<br>
 
-<!-- Plot a scatter plot of discharge and annual rainfall, add a line to the chart. Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. What are the relationships between rainfall and discharge? Are they linear or non- linear and why? Are they consistent across WA? (<span style="color: red;"><b>4 marks</b></span>) -->
+12) Break into small groups of about 5 and discuss the results of your correlations. Choose a new rapporteur to report back at the end of the discussion. Highlight any months that have a significant p-value (<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA? (<span style="color: red;"><b>6 marks</b></span>)
+
+We can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using reanalysis information). Click on “**Monthly observations**” and go to **Precipitation CRU TS 0.5**.
+
+<center>
+<video width="85%" height="85%" controls>
+  <source src="images/exercise1/video6.mp4" type="video/mp4">
+</video>
+</center>
+
+
+We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on “Correlate with a time series” and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations are being done online and the graph returned for viewing). Do the same for both SOI and DMI.
+
+13) Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations (<span style="color: red;"><b>6 marks</b></span>)?
+
+### Relationship between rainfall and runoff {#E1_20 -}
+
+Examine the relationship between annual rainfall and annual Runoff. Go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this tool to locate a gauging station near your rainfall site. You should find something similar to below. Go to “**Pre-computed reports**”. Click on “**Total Annual Discharge report**”. Ensure you have 10-20 years of available data for this exercise.
+
+<center>
+<video width="85%" height="85%" controls>
+  <source src="images/exercise1/video3.mp4" type="video/mp4">
+</video>
+</center>
+
+14) Plot a scatter plot of discharge and annual rainfall, add a line to the chart. Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. What are the relationships between rainfall and discharge? Are they linear or non- linear and why? Are they consistent across WA? (<span style="color: red;"><b>4 marks</b></span>)

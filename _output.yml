@@ -9,7 +9,9 @@ bookdown::gitbook:
         <li><a href="./"><b>Hydrology Workbook</b></a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    download: [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"],["Exercise_1A_Part_2_Answer_Sheet.docx", "Exercise 1A Part 2 Answer Sheet"]]
+    download: [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"],
+              ["Exercise_1A_Part_2_Answer_Sheet_UPDATED.docx", "Exercise 1A Part 2 Answer Sheet - Updated"],
+              ["Streamflow_Activity.docx", "Streamflow Answer Sheet"]]
     search: yes
     fontsettings:
       theme: white

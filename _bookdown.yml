@@ -4,7 +4,7 @@ delete_merged_file: true
 rmd_files: ["index.Rmd",
             #"01-gettingstarted.Rmd",
             "02-exercise1.Rmd",
-            # "03-module2.Rmd",
+             "03-surface_hydrology.Rmd",
             # "04-module3.Rmd",
             # "05-module4.Rmd",
             # "06-module5.Rmd",
