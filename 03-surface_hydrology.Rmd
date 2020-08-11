@@ -45,7 +45,7 @@ knitr::include_graphics("images/surface_hydrology/picture2.png")
 
 <br>
 
-**Activity: Measure the velocity of water, and compute the total channel discharge.**
+**Activity:** Look at the demonstration in the lab and videos below showing the principles of how to measure the velocity of water, and compute the total channel discharge based on the cross-sectional area.
 
 <br>
 
@@ -96,6 +96,17 @@ In the field:
 knitr::include_graphics("images/surface_hydrology/picture3.png")
 ```
 </center>
+
+<br>
+
+**Activity:** Look at the demonstration models in the lab of the two example river/floodplain cross-sections. Assuming these are a scale model of a real-world river channel, compute the discharge.
+
+- Sketch and use the scale to get the channel dimensions
+- Estimate the "wetted perimeter"
+- Compute a slope parameter, $S$, assume for every 1km of stream length, the stream bed drops by 1m
+- Estimate the cross-sectional area; the area "normal" (perpendicular) to the flow velocity
+- Estimate a roughness parameter, Manning's $n$, and solve Equation \@ref(eq:exercise2-2)
+- Repeat the above, assuming the water level was at "bankfull" height
 
 ## Making Sense of Streamflow Data  {#E2_5 -}
 
