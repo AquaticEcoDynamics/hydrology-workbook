@@ -380,7 +380,7 @@ We then want to correlate each grid cell on the earth with our climate index (SO
 
 ### Relationship between rainfall and runoff {#E1_20 -}
 
-Examine the relationship between annual rainfall and annual Runoff. Go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this tool to locate a gauging station near your rainfall site. You should find something similar to below. Go to “**Pre-computed reports**”. Click on “**Total Annual Discharge report**”. Ensure you have 10-20 years of available data for this exercise.
+Examine the relationship between annual rainfall and annual Runoff. Go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
 
 <center>
 <video width="85%" height="85%" controls>
