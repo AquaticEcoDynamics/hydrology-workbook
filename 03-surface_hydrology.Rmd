@@ -99,11 +99,27 @@ knitr::include_graphics("images/surface_hydrology/picture3.png")
 
 ## Making Sense of Streamflow Data  {#E2_5 -}
 
+<center>
+```{r image03-5, echo=FALSE, fig.cap="[The Avon River, Western Australia](https://en.wikipedia.org/wiki/Avon_River_(Western_Australia))", out.width = '80%'}
+knitr::include_graphics("images/surface_hydrology/picture5.jpeg")
+```
+</center>
+
 The first step in any hydrologic data analysis project is to gather the data and relevant background information on your catchment of interest. In Western Australia the [WIR website](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) contains all of the data and information you need, and we will use this in our future assignments. All states/countries have something similar; the USA has one of the best examples through the [USGS NWIS website](http://waterdata.usgs.gov/nwis).  
 
 If you click the site information button, enter your gage name or number, and browse the available datasets for your river. For this analysis, you will need daily discharge data, peak streamflow, and the annual water data report. Other datasets may also be helpful for understanding the hydrologic behavior of your river. 
 
 Hydrologic analyses are almost always conducted for "water years" not calendar years. In the Northern Hemisphere. A water year begins on October 1 and ends September 30 . In the Southern Hemisphere it Starts May 1 and ends April 30, though this can be region specific.
+
+**Activity:** Go to the [WIR web link](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx), and download the continuous flow data for the Swan River "Walyunga" gauge (616011). In Excel, explore the data. Create a hydrograph comparing discharge between a wet year and a dry year (i.e. plot two years on a common x-axis. Use "hydrologic years" rather than calendar years. Label accordingly.
+Repeat the exercise but this time creating a unit hydrograph - for this you will need to divide by the catchment area; refer to the above information and check units are consistent. This gauge is draining the Avon catchment
+
+<center>
+```{r image03-6, echo=FALSE, fig.cap="Navigate to the 'Walyunga' guage (616011)", out.width = '50%', out.height = '50%'}
+knitr::include_graphics("images/surface_hydrology/picture6.png")
+```
+</center>
+
 
 ### Daily Unit Discharge Hydrograph {#E2_6 -}
 
