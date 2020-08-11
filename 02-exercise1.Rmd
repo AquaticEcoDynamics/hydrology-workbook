@@ -1,4 +1,6 @@
-# Exercise 1: Catchment Rainfall and Runoff {#E1_1 -}
+# (PART) Climate & Rainfall {-} 
+
+# Exercise 1A: Catchment Rainfall and Runoff {#E1_1 -}
 
 ## Part 1: Spatial Rainfall Variability {#E1_2 -}
 

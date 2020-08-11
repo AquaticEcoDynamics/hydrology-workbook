@@ -1,6 +1,6 @@
 # (PART) Surface Hydrology {-} 
 
-# Streamflow {#E2_1 -}
+# Streamflow Lab {#E2_1 -}
 
 In this module we understand how to generate streamflow data, and then how to charcaterise variability in streamflow data.
 
