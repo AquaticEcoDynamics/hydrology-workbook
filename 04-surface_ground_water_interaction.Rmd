@@ -1,0 +1,98 @@
+# Surface-Ground Water Interaction {#E4_1 -}
+
+## Overview {#E4_2 -}
+
+In this experiment, you will use data loggers to record streamflow in an experimental catchment during a rainfall event, and calculate the relative contributions of pre-event and event water to that streamflow. The real-world setting for the experiment is a gaining stream (Figure \@ref(fig:image04-1)). A question we often want to be able to answer is how much groundwater is contributing to flow in a river, and how much is water that came from recent rainfall. This is relevant for water resources planning so we can work out the discharge rate of an aquifer, or for water quality management. 
+
+Groundwater usually has different chemical characteristics to storm runoff during a rainfall event and we can use this chemical signal as a tracer for groundwater contribution. In this experiment you will demonstrate how groundwater (pre-event water) contribution to river flow changes over the course of a storm event, relative to water that fell as rain during the storm event (event water). You will use the tracer dilution technique using salinity (measured as electrical conductivity, EC) as the groundwater tracer. The experimental set-up consists of a tray of soil, the ability to add rainfall (via a connection to the tap) and discharge outlets at the bottom of the catchment. During the experiment loggers will measure rainfall amount as well as streamflow and EC at the catchment outlet over time (Figure \@ref(fig:image04-2)).
+
+<center>
+```{r image04-1, echo=FALSE, fig.cap="Groundwater discharge to a gaining stream.", out.width = '60%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture1.png")
+```
+</center>
+
+<center>
+```{r image04-2, echo=FALSE, fig.cap="Experimental setup showing the catchment tray, rainfall, sprinklers and logger location.", out.width = '90%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture2.png")
+```
+</center>
+
+## Method {#E4_3 -}
+
+#### Step 1 {#E4_4 -}
+
+Set up your apparatus. There are loggers for rainfall, streamflow and EC that are connected to a computer. Follow the instructions provided VERY carefully to make sure that you record and save your data correctly. Do not proceed until you understand how the loggers work. Also make sure that all but one outlet in the bottom layer of drain outlets are blocked with rubber bungs or stickers before proceeding (Figure \@ref(fig:image04-3)).
+
+#### Step 2 {#E4_5 -}
+
+Create your “aquifer” by loading the bottom of your tray with some of the provided river sand mix. Smooth the top surface so that it is an even thickness across the catchment and then estimate the volume of this layer. The top of aquifer should sit below the top line of outlets as shown in Figure \@ref(fig:image04-3). Now saturate the sand with saline water, making sure to note the EC of the saline solution. Remove any excess ponded water with a syringe before proceeding.
+
+<center>
+```{r image04-3, echo=FALSE, fig.cap="Saturated aquifer correctly set up within catchment model.", out.width = '90%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture3.png")
+```
+</center>
+
+#### Step 3 {#E4_6 -}
+
+Now overlay the saturated soil layer with a second layer of dry soil, being careful not to disturb the original layer. Shape the new upper layer into the shape of a catchment (concave) so that when the subsurface fills up there will be a stream flowing to the catchment outlet (Figure \@ref(fig:image04-4)). The middle outlet in the top layer should NOT be covered with soil, but the soil should be just below this outlet. You will see some capillary rise of your aquifer water into the vadose zone. Make sure the rainfall outlets are close to the catchment surface. Then turn the tubes at the bottom of the catchment so that they are directed into the PVC drain and you’re ready to go!
+
+<center>
+```{r image04-4, echo=FALSE, fig.cap="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet.", out.height = '70%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture4.png")
+```
+</center>
+
+#### Step 4 {#E4_7 -}
+
+When you are ready to run the experiment, prepare a stop-watch and turn on the logger software in the computer. Now you can turn the tap on to get the rainfall flowing – make sure it is a reasonable flow that is not too high or too low (i.e. it is clearly visible on the scale on the logging software, somewhere between 2.5 and 3). Leave the rain on for approximately 20 minutes until the catchment has filled up, stream flow has begun and the EC at the catchment outlet has clearly decreased (Figure \@ref(fig:image04-5)).
+
+<center>
+```{r image04-5, echo=FALSE, fig.cap="Streamflow at the catchment outlet.", out.height = '30%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture5.png")
+```
+</center>
+
+#### Step 5 {#E4_8 -}
+
+Now you can turn the rain off, but make sure you **leave the loggers on**, we want to see what happens after the rain is finished. Run the experiment for another 20 minutes or until the streamflow has ceased if you have time. 
+
+```{block2, hint04-1, type='rmdnote2'}
+Make sure you save the experimental data as a .csv file.
+```
+
+#### Step 6 {#E4_9 -}
+
+Analyse the data. Before you can do this you might need to clean the data – remove any outliners and identify where your experimental data start and stop. You have very high temporal resolution data, which might not be ideal for the sensitivity of your loggers. Consider calculating a running average to get smooth temporal trends. Once you are happy with your clean data set you can use the logged data to identify the properties of the storm event, including:
+
+a) Time from rainfall onset to when runoff began to be recorded (mins),
+b) Time to peak discharge (mins), 
+c) Total rainfall volume (cm^3^),
+d) Total runoff volume (cm^3^),
+e) Average rainfall intensity (cm/min),
+f) The runoff coefficient, $c$, for the ‘storm’ event.
+
+#### Step 7 {#E4_10 -}
+
+Interpret the data. What were the relative contributions of pre-event (baseflow) and event water? Now that you’ve familiarised yourself with the rainfall event, you can:
+
+- Estimate the initial “aquifer” storage of saline water (cm^3^). Assume that the porosity of the dry soil is 0.25
+- Calculate and plot the hydrograph (cm^3^/s): $Q_{\text{out}}(t) = Q_{\text{event}} + Q_{\text{pre-event}}$
+- Using the tracer dilution method (see below) calculate the fraction of the hydrograph that is from baseflow. How does this change over time?
+- Comment on attributes of the experimental setup that would have increased or decreased baseflow contribution. 
+- How realistic is the experiment in terms of capturing the interaction of surface vs groundwater? Is the change in $Q_{\text{pre-event}}/Q_{\text{event}}$ over time what you would expect?
+
+
+```{block2, hint05-2, type='rmdspecialbox2'}
+We can estimate the groundwater contribution to the streamflow by looking at changes in EC.  If EC in groundwater is at a pre-event reference level, $S_{\text{pre-event}}$, EC in the rain $S_{\text{event}}$ is almost 0, then the level of dilution in EC in streamflow can be used to estimate the fraction of event and pre-event (groundwater baseflow) contributing to streamflow:
+
+$S_{\text{tot}} * Q_{\text{tot}} =  S_{\text{event}} * Q_{\text{event}}   +   S_{\text{pre-event}} * Q_{\text{pre-event}}$
+
+If $S_{\text{event}} = 0$, then:
+
+$Q_{\text{pre-event}} = S_{\text{out}}*Q_{\text{out}} / S_{\text{pre-event}}$
+
+$Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}$
+
+```

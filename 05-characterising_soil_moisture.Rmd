@@ -1,0 +1,80 @@
+# Characterising Soil Moisture {#E5_1 -}
+
+This is a simple introductory experiment to learn how to compute the essential characteristics of soil, relevant to hydrology. *We will refer again to this data when doing subsequent activities*. 
+
+For this activity we will collect soil from the locations and make three replicates at each.
+
+***For students attending in-person:*** Please attend the AGRIG215 lab during your allocated time-slot to collect a pack with sample bags and required equipment. Sign-out a GPS unit and seek to find three locations across UWA where you can easily access surface soil to a depth of 10cm. 
+
+**DO NOT TAKE SAMPLES FROM THE OVAL OR GARDENS. ONCE YOU HAVE YOUR SAMPLE REPLACE THE DISTURBED SOIL.**
+
+Using the core provided, collect a volume of soil and place into the bag. Repeat 2 more times using a similar method from 1-2 m away.
+
+***For students undertaking at home:*** Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small core. 
+<br>
+
+Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.
+
+For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying. 
+
+The volumetric water content (VWC, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:
+
+<center>
+\begin{equation}
+\theta=\frac{V_w}{V_T}=\frac{\left(M_{\text{sample}}-M_{\text{dry}}\right)}{V_T\ \rho_w}
+(\#eq:exercise5-1)
+\end{equation}
+</center>
+
+We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density ρb is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi$, $r^2$ $h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. 
+From the bulk density and particle density $\rho_p$ (2.65 g cm^-3^) one can calculate the porosity $\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)$.
+
+Repeat the above for each soil for three replicates.
+
+In Experiment 3 you will work on a desktop catchment. You can estimate the water storage potential, $S_{\text{max}}$ of the entire catchment by multiplying the soil volume by the porosity:	
+
+<center>
+\begin{equation}
+S_{max}=\ \phi{\ V}_{soil}
+(\#eq:exercise5-2)
+\end{equation}
+</center>
+
+Using a large sample of soil, estimate the infiltration of the soil using the Decagon infiltrometer, enter the data into the sheet supplied, and estimate $K$.
+
+<center>
+```{r table05-1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
+table1 <- read.csv("tables/characterising_soil_moisture/table1.csv", check.names=FALSE)
+kable(table1,"html", escape = F, align = rep('l'), caption = "Summary of soil properties.",
+      bootstrap_options = "hover", linesep = "") %>%
+  kable_styling(table1, bootstrap_options = "hover", "striped", 
+                full_width = F, position = "center",
+                font_size = 12) %>%
+  #column_spec(1, width_min = "15em") %>%
+  #column_spec(2, width_min = "15em") %>%
+ # #column_spec(3, width_min = "15em") %>%
+ # column_spec(4, width_min = "15em") %>%
+  row_spec(1:6, background = 'white', font_size = "large") %>%
+  scroll_box(width = "100%", #height = "515px",
+             fixed_thead = FALSE) 
+```
+</center>
+
+```{block2, hint05-1, type='rmdspecialbox1'}
+**Total Moisture Content:** measured by oven drying wet samples at 103-105˚C for 1-2hrs.
+
+**Air Dried Moisture Content:** measured by evaporation and loss of mass by air drying (e.g. at ~40˚C)
+
+**Saturated Water Content:** Where all pore space in the soil is occupied by water and no further absorption of rainfall is possible.  This is waterlogged soil.
+
+**Field capacity:** moisture content remaining in soil subjected to -0.033MPa (0.3Bar) pressure 
+(i.e. slight vacuum).  Capillary action, osmotic pressure and gravity are balanced at this point.  Excess water has moved to lower layers as groundwater recharge.
+
+**Permanent Wilting Point:** moisture content remaining in soil subjected to -1.50MPa (15 Bar) pressure (i.e. moderate vacuum).  Plant roots can’t extract any more water (i.e. apply a suction stronger than -1.5 MPa) from this soil and begin to die. 
+
+**Available Water Content** = Field Capacity – Permanent Wilting Point.  This is the amount moisture available for plants to extract.
+
+```
