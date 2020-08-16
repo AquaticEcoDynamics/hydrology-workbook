@@ -4,14 +4,18 @@ This is a simple introductory experiment to learn how to compute the essential c
 
 For this activity we will collect soil from the locations and make three replicates at each.
 
+```{block2, hint05-3, type='redbox2'}
 ***For students attending in-person:*** Please attend the AGRIG215 lab during your allocated time-slot to collect a pack with sample bags and required equipment. Sign-out a GPS unit and seek to find three locations across UWA where you can easily access surface soil to a depth of 10cm. 
 
 **DO NOT TAKE SAMPLES FROM THE OVAL OR GARDENS. ONCE YOU HAVE YOUR SAMPLE REPLACE THE DISTURBED SOIL.**
 
 Using the core provided, collect a volume of soil and place into the bag. Repeat 2 more times using a similar method from 1-2 m away.
+```
+
+```{block2, hint05-4, type='redbox2'}
 
 ***For students undertaking at home:*** Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small core. 
-<br>
+```
 
 Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.
 
