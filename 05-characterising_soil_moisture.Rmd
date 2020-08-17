@@ -5,23 +5,37 @@ This is a simple introductory experiment to learn how to compute the essential c
 For this activity we will collect soil from the locations and make three replicates at each.
 
 ```{block2, hint05-3, type='redbox2'}
-***For students attending in-person:*** Please attend the AGRIG215 lab during your allocated time-slot to collect a pack with sample bags and required equipment. Sign-out a GPS unit and seek to find three locations across UWA where you can easily access surface soil to a depth of 10cm. 
+***For students attending in-person:*** Please attend the AGRIG215 lab during your allocated time-slot to collect a pack with sample bags and required equipment. Sign-out a GPS unit to record your sample locations.
 
-**DO NOT TAKE SAMPLES FROM THE OVAL OR GARDENS. ONCE YOU HAVE YOUR SAMPLE REPLACE THE DISTURBED SOIL.**
+Seek to find three locations across UWA or Matilda Bay reserve where you can easily access surface soil to a depth of 10cm. Identify sites with contrasting soil types or surface properties, noting the site features.
 
-Using the core provided, collect a volume of soil and place into the bag. Repeat 2 more times using a similar method from 1-2 m away.
+DO NOT TAKE SAMPLES FROM JAMES OVAL OR THE GARDENS. ONCE YOU HAVE YOUR SAMPLE REPLACE THE DISTURBED SOIL.
+
+Using the core provided, collect a volume of soil and place into the bag. Repeat 2 more times using a similar method from 1-2 m away. Note the UTM co-ordinates of your sample. Note the volume of the soil core. Try to be consistent with how you pack the core between samples.
+
+Once you have collected your samples, return to the AGRI lab, weigh each, and place in an oven at 105˚C. Please ensure your samples are labelled correctly. Make sure you correctly blank the balance to account for the sample container weight.
+
+Leave your samples overnight, and return tomorrow at your convenience to re-weigh the dried samples. Use the data to compute soil moisture and porosity of each sample following the instructions below. 
+
 ```
 
 ```{block2, hint05-4, type='redbox2'}
 
-***For students undertaking at home:*** Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small core. 
+***For students undertaking at home:*** Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small “core” (e.g. measuring cup or inverted can) to collect your samples. You will need to know your sample size and volume. Place into a small tray or bag that is suitable for going into the oven. 
+
+For each sample use a kitchen balance to record the sample weight. Make sure you correctly blank the balance to account for the sample container weight. 
+
+Then place into the oven for drying at ~105˚C. Leave in the oven for 1-2 hours and then re-weigh. Use the data to compute soil moisture and porosity of each sample following the instructions below.
+ 
 ```
+
+### Computing Soil Porosity and Soil Moisture {#E5_2 -}
 
 Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.
 
 For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying. 
 
-The volumetric water content (VWC, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:
+The volumetric water content (VWC, $\theta$, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:
 
 <center>
 \begin{equation}
@@ -30,12 +44,12 @@ The volumetric water content (VWC, theta), is calculated from the mass of wet an
 \end{equation}
 </center>
 
-We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density ρb is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi$, $r^2$ $h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. 
+We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density $\rho_b$ is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi$, $r^2$ $h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. 
 From the bulk density and particle density $\rho_p$ (2.65 g cm^-3^) one can calculate the porosity $\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)$.
 
-Repeat the above for each soil for three replicates.
+Repeat the above for each soil for three replicates. Enter data into the Table, and the online Google sheet.
 
-In Experiment 3 you will work on a desktop catchment. You can estimate the water storage potential, $S_{\text{max}}$ of the entire catchment by multiplying the soil volume by the porosity:	
+You can estimate the water storage potential, $S_{\text{max}}$ of a region by multiplying the soil volume by the porosity:	
 
 <center>
 \begin{equation}

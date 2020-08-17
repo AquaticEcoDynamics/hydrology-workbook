@@ -24,7 +24,7 @@
 <meta name="author" content="Giles Knight, Matt Hipsey" />
 
 
-<meta name="date" content="2020-08-16" />
+<meta name="date" content="2020-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -116,7 +116,10 @@
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Overview</a></li>
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Method</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html"><i class="fa fa-check"></i>Characterising Soil Moisture</a></li>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html"><i class="fa fa-check"></i>Characterising Soil Moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_2"><i class="fa fa-check"></i>Computing Soil Porosity and Soil Moisture</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -144,27 +147,34 @@
 <p>For this activity we will collect soil from the locations and make three replicates at each.</p>
 
 <div class="redbox2">
-<p><strong><em>For students attending in-person:</em></strong> Please attend the AGRIG215 lab during your allocated time-slot to collect a pack with sample bags and required equipment. Sign-out a GPS unit and seek to find three locations across UWA where you can easily access surface soil to a depth of 10cm.</p>
-<p><strong>DO NOT TAKE SAMPLES FROM THE OVAL OR GARDENS. ONCE YOU HAVE YOUR SAMPLE REPLACE THE DISTURBED SOIL.</strong></p>
-Using the core provided, collect a volume of soil and place into the bag. Repeat 2 more times using a similar method from 1-2 m away.
+<p><strong><em>For students attending in-person:</em></strong> Please attend the AGRIG215 lab during your allocated time-slot to collect a pack with sample bags and required equipment. Sign-out a GPS unit to record your sample locations.</p>
+<p>Seek to find three locations across UWA or Matilda Bay reserve where you can easily access surface soil to a depth of 10cm. Identify sites with contrasting soil types or surface properties, noting the site features.</p>
+<p>DO NOT TAKE SAMPLES FROM JAMES OVAL OR THE GARDENS. ONCE YOU HAVE YOUR SAMPLE REPLACE THE DISTURBED SOIL.</p>
+<p>Using the core provided, collect a volume of soil and place into the bag. Repeat 2 more times using a similar method from 1-2 m away. Note the UTM co-ordinates of your sample. Note the volume of the soil core. Try to be consistent with how you pack the core between samples.</p>
+<p>Once you have collected your samples, return to the AGRI lab, weigh each, and place in an oven at 105˚C. Please ensure your samples are labelled correctly. Make sure you correctly blank the balance to account for the sample container weight.</p>
+<p>Leave your samples overnight, and return tomorrow at your convenience to re-weigh the dried samples. Use the data to compute soil moisture and porosity of each sample following the instructions below.</p>
 </div>
 
 <div class="redbox2">
-<strong><em>For students undertaking at home:</em></strong> Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small core.
+<p><strong><em>For students undertaking at home:</em></strong> Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small “core” (e.g. measuring cup or inverted can) to collect your samples. You will need to know your sample size and volume. Place into a small tray or bag that is suitable for going into the oven.</p>
+<p>For each sample use a kitchen balance to record the sample weight. Make sure you correctly blank the balance to account for the sample container weight.</p>
+Then place into the oven for drying at ~105˚C. Leave in the oven for 1-2 hours and then re-weigh. Use the data to compute soil moisture and porosity of each sample following the instructions below.
 </div>
+<div id="E5_2" class="section level3 unnumbered">
+<h3>Computing Soil Porosity and Soil Moisture</h3>
 <p>Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.</p>
 <p>For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying.</p>
-<p>The volumetric water content (VWC, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:</p>
+<p>The volumetric water content (VWC, <span class="math inline">\(\theta\)</span>, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:</p>
 <center>
 <span class="math display" id="eq:exercise5-1">\[\begin{equation}
 \theta=\frac{V_w}{V_T}=\frac{\left(M_{\text{sample}}-M_{\text{dry}}\right)}{V_T\ \rho_w}
 \tag{9}
 \end{equation}\]</span>
 </center>
-<p>We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density ρb is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column (<span class="math inline">\(\pi\)</span>, <span class="math inline">\(r^2\)</span> <span class="math inline">\(h\)</span>) where <span class="math inline">\(r\)</span> is radius and <span class="math inline">\(h\)</span> is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions.
+<p>We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density <span class="math inline">\(\rho_b\)</span> is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column (<span class="math inline">\(\pi\)</span>, <span class="math inline">\(r^2\)</span> <span class="math inline">\(h\)</span>) where <span class="math inline">\(r\)</span> is radius and <span class="math inline">\(h\)</span> is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions.
 From the bulk density and particle density <span class="math inline">\(\rho_p\)</span> (2.65 g cm<sup>-3</sup>) one can calculate the porosity <span class="math inline">\(\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)\)</span>.</p>
-<p>Repeat the above for each soil for three replicates.</p>
-<p>In Experiment 3 you will work on a desktop catchment. You can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of the entire catchment by multiplying the soil volume by the porosity:</p>
+<p>Repeat the above for each soil for three replicates. Enter data into the Table, and the online Google sheet.</p>
+<p>You can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of a region by multiplying the soil volume by the porosity:</p>
 <center>
 <span class="math display" id="eq:exercise5-2">\[\begin{equation}
 S_{max}=\ \phi{\ V}_{soil}
@@ -336,6 +346,7 @@ ID:
 <p><strong>Available Water Content</strong> = Field Capacity – Permanent Wilting Point. This is the amount moisture available for plants to extract.</p>
 </div>
 
+</div>
 </div>
             </section>
 
