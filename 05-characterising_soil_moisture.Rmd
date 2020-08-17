@@ -29,6 +29,12 @@ Then place into the oven for drying at ~105˚C. Leave in the oven for 1-2 hours 
  
 ```
 
+<center>
+```{r image05-1, echo=FALSE, fig.cap="Equipment required for collecting soil samples.", out.width = '80%'}
+knitr::include_graphics("images/05-characterising_soil_moisture/picture1.jpg")
+```
+</center>
+
 ### Computing Soil Porosity and Soil Moisture {#E5_2 -}
 
 Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.
