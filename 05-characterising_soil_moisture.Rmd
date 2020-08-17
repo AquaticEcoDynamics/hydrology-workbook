@@ -44,10 +44,10 @@ The volumetric water content (VWC, $\theta$, theta), is calculated from the mass
 \end{equation}
 </center>
 
-We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density $\rho_b$ is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi$, $r^2$ $h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. 
+We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density $\rho_b$ is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi r^2 h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. 
 From the bulk density and particle density $\rho_p$ (2.65 g cm^-3^) one can calculate the porosity $\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)$.
 
-Repeat the above for each soil for three replicates. Enter data into the Table, and the online Google sheet.
+Repeat the above for each soil for three replicates. Enter data into the Table \@ref(tab:table05-1), and the online Google sheet.
 
 You can estimate the water storage potential, $S_{\text{max}}$ of a region by multiplying the soil volume by the porosity:	
 
@@ -66,7 +66,7 @@ library(knitr)
 library(kableExtra)
 options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
 table1 <- read.csv("tables/characterising_soil_moisture/table1.csv", check.names=FALSE)
-kable(table1,"html", escape = F, align = rep('l'), caption = "Summary of soil properties.",
+kable(table1,"html", escape = F, align = rep('l'), caption = "Summary of soil properties. Click [here](https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0) for the Google Sheets version.",
       bootstrap_options = "hover", linesep = "") %>%
   kable_styling(table1, bootstrap_options = "hover", "striped", 
                 full_width = F, position = "center",
