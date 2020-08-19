@@ -64,7 +64,7 @@ S_{max}=\ \phi{\ V}_{soil}
 \end{equation}
 </center>
 
-Using a large sample of soil, estimate the infiltration of the soil using the Decagon infiltrometer, enter the data into the sheet supplied, and estimate $K$.
+Using a large sample of soil, estimate the infiltration of the soil using the Decagon infiltrometer, enter the data into the sheet supplied.
 
 <center>
 ```{r table05-1, echo=FALSE, message=FALSE, warning=FALSE}

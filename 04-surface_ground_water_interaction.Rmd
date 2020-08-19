@@ -1,6 +1,8 @@
-# Surface-Ground Water Interaction {#E4_1 -}
+# Exercise 1B: Surface-Ground Water Interaction {#E4_1 -}
 
-## Overview {#E4_2 -}
+## Part 1: Desktop Catchment {#E4_12 -}
+
+### Overview {#E4_2 -}
 
 In this experiment, you will use data loggers to record streamflow in an experimental catchment during a rainfall event, and calculate the relative contributions of pre-event and event water to that streamflow. The real-world setting for the experiment is a gaining stream (Figure \@ref(fig:image04-1)). A question we often want to be able to answer is how much groundwater is contributing to flow in a river, and how much is water that came from recent rainfall. This is relevant for water resources planning so we can work out the discharge rate of an aquifer, or for water quality management. 
 
@@ -18,7 +20,7 @@ knitr::include_graphics("images/surface_ground_water_interaction/picture2.png")
 ```
 </center>
 
-## Method {#E4_3 -}
+### Method {#E4_3 -}
 
 #### Step 1 {#E4_4 -}
 
@@ -26,7 +28,11 @@ Set up your apparatus. There are loggers for rainfall, streamflow and EC that ar
 
 #### Step 2 {#E4_5 -}
 
-Create your “aquifer” by loading the bottom of your tray with some of the provided river sand mix. Smooth the top surface so that it is an even thickness across the catchment and then estimate the volume of this layer. The top of aquifer should sit below the top line of outlets as shown in Figure \@ref(fig:image04-3). Now saturate the sand with saline water, making sure to note the EC of the saline solution. Remove any excess ponded water with a syringe before proceeding.
+Create your “aquifer” by loading the bottom of your tray with some of the provided river sand mix. Smooth the top surface so that it is an even thickness across the catchment and then estimate the volume of this layer. The top of aquifer should sit below the top line of outlets as shown in Figure \@ref(fig:image04-3). 
+
+Take a core to sample the soil, and compute the starting soil moisture (refer to the method here).
+
+Now saturate the sand with saline water, making sure to note the EC of the saline solution. Remove any excess ponded water with a syringe before proceeding.
 
 <center>
 ```{r image04-3, echo=FALSE, fig.cap="Saturated aquifer correctly set up within catchment model.", out.width = '90%'}
@@ -83,8 +89,7 @@ Interpret the data. What were the relative contributions of pre-event (baseflow)
 - Comment on attributes of the experimental setup that would have increased or decreased baseflow contribution. 
 - How realistic is the experiment in terms of capturing the interaction of surface vs groundwater? Is the change in $Q_{\text{pre-event}}/Q_{\text{event}}$ over time what you would expect?
 
-
-```{block2, hint05-2, type='rmdspecialbox2'}
+```{block2, hint04-7, type='rmdspecialbox2'}
 We can estimate the groundwater contribution to the streamflow by looking at changes in EC.  If EC in groundwater is at a pre-event reference level, $S_{\text{pre-event}}$, EC in the rain $S_{\text{event}}$ is almost 0, then the level of dilution in EC in streamflow can be used to estimate the fraction of event and pre-event (groundwater baseflow) contributing to streamflow:
 
 $S_{\text{tot}} * Q_{\text{tot}} =  S_{\text{event}} * Q_{\text{event}}   +   S_{\text{pre-event}} * Q_{\text{pre-event}}$
@@ -96,3 +101,11 @@ $Q_{\text{pre-event}} = S_{\text{out}}*Q_{\text{out}} / S_{\text{pre-event}}$
 $Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}$
 
 ```
+
+### Submission {#E4_11 -}
+
+```{block2, hint04-6, type='redbox2'}
+**Submission:** Prepare a concise report summarising the experiment (~4 pages).  Include an Introduction, Methods, Results and Discussion section, using referencing where appropriate to give real-world context to the activity. 
+
+```
+
