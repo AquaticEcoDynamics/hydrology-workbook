@@ -1,0 +1,130 @@
+# Darcy’s Law {#M6_1 -}
+
+In this session we will understand Darcy’s Law, and investigate the patterns and rates of groundwater flow within a layered groundwater system. 
+
+## Darcy Tubes {#M6_2 -}
+
+As a first step lets consider the experiment of Henry Darcy that first described the flux law for groundwater flow. To do this we use simple “Darcy tubes” that allow us to measure the relationships between rates of groundwater flow, hydraulic gradients and the hydraulic conductivity of the porous media that it flows through. 
+
+Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;
+
+<center>
+\begin{equation}
+q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         (\#eq:exercise6-1)
+\end{equation}
+</center>  
+ 
+Where $q$ is the specific discharge (or Darcy Flux) with units of L T^-1^, $Q$ is the volumetric flow rate (L^3^ T^-1^), $A$ is the cross-sectional area through which the water flow (L^2^), and $\frac{\Delta h}{ \Delta l}$ is the hydraulic gradient. This gradient is simply the change in water pressure ($h_1-h_2$) over a given distance (L/L, unitless). The key system property in this flux law is the hydraulic conductivity ($K$), which has units of L T^-1^. In natural groundwater systems the value of hydraulic conductivity can vary over 12 orders of magnitude. 
+Even though this water flux $q$ has units of L T^-1^, it’s not actually the velocity of the groundwater, because the water wasn’t flowing through the whole area, just the pore space. To correct for this and calculate the average velocity we need to use the area of the pore space ($An$, where $n$ is porosity), instead of the total area. This gives us;
+
+<center>
+\begin{equation}
+\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           (\#eq:exercise6-2)
+\end{equation}
+</center>   
+
+Where $\bar{v}$ is the average linear velocity of the water flowing through the porous media. Now that we know these simple equations we can get started with our experiments.
+
+To use a Darcy Tube we measure the flow rate through the tube for a chosen soil material. For each porous material, the tube is setup at three different angles, and for each we measure the volume that flows out of the tube over a set time interval. The slope determines the hydraulic gradient, and different slopes should yield different flow rates.
+
+<center>
+```{r image06-1, echo=FALSE, fig.cap="a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation", out.width = '100%'}
+knitr::include_graphics("images/darcys_law/picture1.png")
+```
+</center>
+
+
+**Step 1.** Fill the tube with your porous material, set it up at your desired angle, make sure your hose outlet is in the place and then turn on the tap to let water run through it at a rate that means your water level at the top of your tube remains constant (steady state). 
+
+**Step 2.** Measure the volume of water that comes out of your tube over a set time and record your data in Table \@ref(tab:table06-1). 
+
+**Step 3.** From these data you can calculate the hydraulic conductivity ($K$) of each material. What equation will you use to do this? What are the units?
+
+**Step 4.** Plot a figure to show the relationship between hydraulic gradient and volumetric flow rate ($Q$) for each material. Make sure you clearly label both axes and show units. Adjust the axes scale if needed to better fit your data. If you are wanting to compare data sets, it is easiest to do this if you plot them as multiple series on the one chart.
+
+**Step 5.** Are you results what you would expect given theory of groundwater flow outlined above? If not, why do you think that might be the case? Are there any improvements you think should be made to the experimental design?
+
+<center>
+<style>
+  td {
+    height: 30px
+      }
+</style>
+```{r table06-1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
+table1 <- read.csv("tables/darcys_law/table1.csv", check.names=FALSE)
+kable(table1,"html", escape = F, align = rep('c'), caption = "Darcy tube calculations.",
+      bootstrap_options = "hover") %>%
+  kable_styling(table1, bootstrap_options = "hover", "striped", 
+                full_width = F, position = "center",
+                font_size = 12) %>%
+  column_spec(1, width_min = "12em") %>%
+  column_spec(2, width_min = "12em") %>%
+  column_spec(3, width_min = "12em") %>%
+  column_spec(4, width_min = "12em") %>%
+  column_spec(5, width_min = "12em") %>%
+  row_spec(1:9, background = 'white') %>%
+  scroll_box(width = "100%", height = "370px",
+             fixed_thead = FALSE) 
+```
+</center>
+
+## Physical model of groundwater system {#M6_3 -}
+
+In this part of the exercise we will look at a model of a layered groundwater system.  Each layer has a different hydraulic conductivity, $K$, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called “heterogeneity”, and it is an important feature of real groundwater systems. 
+
+**Step 1.** Annotate the photo of this model (Figure \@ref(fig:image06-2)) to show the following;
+
+1) Aquifers and aquitards
+2) Recharge and discharge zones
+3) Water levels in each of the wells 
+4) The water table
+5) Hydraulic head boundaries
+
+<center>
+```{r image06-2, echo=FALSE, fig.cap="Physical model of a layered groundwater system.", out.width = '80%'}
+knitr::include_graphics("images/darcys_law/picture2.png")
+```
+</center>
+
+**Step 2.** Now let’s inject a dye to see how fast the water is moving and in which direction. 
+
+- Measure the distance travelled by the centre of mass of the dye over a fixed time interval to determine the rate of groundwater flow. What have you just measured, the specific discharge $q$, or the groundwater velocity $\bar{v}$?
+
+**Step 3.** For a given head-gradient (i.e. water table slope; $H2-H1$), measure water leaving the central “river” ($V$) over a defined interval ($t$). Use Darcy’s Law to back-calculate the Hydraulic Conductivity, $K$, noting that:
+
+<center>
+\begin{equation}
+\frac{V}{t} = Q = -KA \frac{H2-H1}{L}
+(\#eq:exercise6-3)
+\end{equation}
+</center>  
+
+**Step 4.** In the same way that a ball will roll down a hill in a direction perpendicular to topographic contours, groundwater flow will be perpendicular to hydraulic head contours. Have a go at drawing the groundwater flow lines (solid lines ending in an arrow) and hydraulic head contours (dashed lines) onto the photo of the physical groundwater model. As a general rule, flow through high conductivity layers will be primarily horizontal, and flow through low conductivity layers will be primarily vertical. 
+
+**Step 5.** What have you learnt from this experiment about groundwater systems? By using the physical model we have been able to see directly in the subsurface, but in the real world, the only information we have would be the wells. 
+
+- If you only had the hydraulic head measurements in the wells what would you know about the groundwater system? 
+- How important is it that we understand the geology as well as having measurements of hydraulic heads? 
+- What else might you measure in a real groundwater system to get a fuller picture of what is happening?
+
+## Computer model of groundwater system {#M6_4 -}
+
+We can also run a “digital twin” of the physical model that we have built in the lab. For this activity we will now use the ParFlow Sandtank model. This is a computer model simulating groundwater flow, and allows users to change aquifer configurations and explore the essential features of groundwater and contaminant flow.
+
+<center>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+<iframe src="https://player.vimeo.com/video/398697315" width= "100%" height= "100%" frameborder="0"
+allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+</center>
+
+**Step 1.** Once you have watched the introductory video lets take a look at running the model. Navigate to this model [website](https://pvw.kitware.com/sandtank/)
+
+**Step 2.** Learn how to customise the sandtank and run a simulation [here](https://www.hydroframe.org/sand-tank-user-manual)
+
+**Step 3.** Manipulate the soil conditions and the hydraulic head sliders, and run simulations pumping or injecting groundwater.
+
+**Step 4.** Try to reproduce our lab-based physical model. 

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Darcy’s Law | Hydrology Workbook</title>
+  <meta name="description" content="The online Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Darcy’s Law | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="The online Hydrology Workbook" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Darcy’s Law | Hydrology Workbook" />
+  
+  <meta name="twitter:description" content="The online Hydrology Workbook" />
+  
+
+<meta name="author" content="Giles Knight, Matt Hipsey" />
+
+
+<meta name="date" content="2020-08-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E4-1.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="https://hypothes.is/embed.js" async></script>
+  
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Climate &amp; Rainfall</b></span></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html"><i class="fa fa-check"></i>Exercise 1A: Catchment Rainfall and Runoff</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_2"><i class="fa fa-check"></i>Part 1: Spatial Rainfall Variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_4"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_8"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_12"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_13"><i class="fa fa-check"></i>Part 2: Rainfall and Runoff Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_14"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_15"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_16"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_17"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_18"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_19"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_20"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Surface Hydrology</b></span></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html"><i class="fa fa-check"></i>Streamflow Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Soils &amp; Groundwater</b></span></li>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html"><i class="fa fa-check"></i>Characterising Soil Moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_2"><i class="fa fa-check"></i>Computing Soil Porosity and Soil Moisture</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 1B: Surface-Ground Water Interaction</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_12"><i class="fa fa-check"></i>Part 1: Desktop Catchment</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_11"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_13"><i class="fa fa-check"></i>Part 2: Helena River Site Visit</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_14"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_15"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those attending in-person</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_21"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those undertaking online</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_23"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html"><i class="fa fa-check"></i>Darcy’s Law</a>
+<ul>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_2"><i class="fa fa-check"></i>Darcy Tubes</a></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="M6_1" class="section level1 unnumbered">
+<h1>Darcy’s Law</h1>
+<p>In this session we will understand Darcy’s Law, and investigate the patterns and rates of groundwater flow within a layered groundwater system.</p>
+<div id="M6_2" class="section level2 unnumbered">
+<h2>Darcy Tubes</h2>
+<p>As a first step lets consider the experiment of Henry Darcy that first described the flux law for groundwater flow. To do this we use simple “Darcy tubes” that allow us to measure the relationships between rates of groundwater flow, hydraulic gradients and the hydraulic conductivity of the porous media that it flows through.</p>
+<p>Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;</p>
+<center>
+<span class="math display" id="eq:exercise6-1">\[\begin{equation}
+q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         \tag{11}
+\end{equation}\]</span>
+</center>
+<p>Where <span class="math inline">\(q\)</span> is the specific discharge (or Darcy Flux) with units of L T<sup>-1</sup>, <span class="math inline">\(Q\)</span> is the volumetric flow rate (L<sup>3</sup> T<sup>-1</sup>), <span class="math inline">\(A\)</span> is the cross-sectional area through which the water flow (L<sup>2</sup>), and <span class="math inline">\(\frac{\Delta h}{ \Delta l}\)</span> is the hydraulic gradient. This gradient is simply the change in water pressure (<span class="math inline">\(h_1-h_2\)</span>) over a given distance (L/L, unitless). The key system property in this flux law is the hydraulic conductivity (<span class="math inline">\(K\)</span>), which has units of L T<sup>-1</sup>. In natural groundwater systems the value of hydraulic conductivity can vary over 12 orders of magnitude.
+Even though this water flux <span class="math inline">\(q\)</span> has units of L T<sup>-1</sup>, it’s not actually the velocity of the groundwater, because the water wasn’t flowing through the whole area, just the pore space. To correct for this and calculate the average velocity we need to use the area of the pore space (<span class="math inline">\(An\)</span>, where <span class="math inline">\(n\)</span> is porosity), instead of the total area. This gives us;</p>
+<center>
+<span class="math display" id="eq:exercise6-2">\[\begin{equation}
+\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           \tag{12}
+\end{equation}\]</span>
+</center>
+<p>Where <span class="math inline">\(\bar{v}\)</span> is the average linear velocity of the water flowing through the porous media. Now that we know these simple equations we can get started with our experiments.</p>
+<p>To use a Darcy Tube we measure the flow rate through the tube for a chosen soil material. For each porous material, the tube is setup at three different angles, and for each we measure the volume that flows out of the tube over a set time interval. The slope determines the hydraulic gradient, and different slopes should yield different flow rates.</p>
+<center>
+<div class="figure"><span id="fig:image06-1"></span>
+<img src="images/darcys_law/picture1.png" alt="a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation" width="100%" />
+<p class="caption">
+Figure 18: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation
+</p>
+</div>
+</center>
+<p><strong>Step 1.</strong> Fill the tube with your porous material, set it up at your desired angle, make sure your hose outlet is in the place and then turn on the tap to let water run through it at a rate that means your water level at the top of your tube remains constant (steady state).</p>
+<p><strong>Step 2.</strong> Measure the volume of water that comes out of your tube over a set time and record your data in Table <a href="M6-1.html#tab:table06-1">9</a>.</p>
+<p><strong>Step 3.</strong> From these data you can calculate the hydraulic conductivity (<span class="math inline">\(K\)</span>) of each material. What equation will you use to do this? What are the units?</p>
+<p><strong>Step 4.</strong> Plot a figure to show the relationship between hydraulic gradient and volumetric flow rate (<span class="math inline">\(Q\)</span>) for each material. Make sure you clearly label both axes and show units. Adjust the axes scale if needed to better fit your data. If you are wanting to compare data sets, it is easiest to do this if you plot them as multiple series on the one chart.</p>
+<p><strong>Step 5.</strong> Are you results what you would expect given theory of groundwater flow outlined above? If not, why do you think that might be the case? Are there any improvements you think should be made to the experimental design?</p>
+<center>
+<style>
+  td {
+    height: 30px
+      }
+</style>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:370px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table06-1">Table 9: </span>Darcy tube calculations.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Material
+</th>
+<th style="text-align:center;">
+Hydraulic gradient (-)
+</th>
+<th style="text-align:center;">
+Time (min)
+</th>
+<th style="text-align:center;">
+Volume of water (mL)
+</th>
+<th style="text-align:center;">
+Hydraulic conductivity (<span class="math inline">\(m/d\)</span>)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+</div>
+<div id="M6_3" class="section level2 unnumbered">
+<h2>Physical model of groundwater system</h2>
+<p>In this part of the exercise we will look at a model of a layered groundwater system. Each layer has a different hydraulic conductivity, <span class="math inline">\(K\)</span>, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called “heterogeneity”, and it is an important feature of real groundwater systems.</p>
+<p><strong>Step 1.</strong> Annotate the photo of this model (Figure <a href="M6-1.html#fig:image06-2">19</a>) to show the following;</p>
+<ol style="list-style-type: decimal">
+<li>Aquifers and aquitards</li>
+<li>Recharge and discharge zones</li>
+<li>Water levels in each of the wells</li>
+<li>The water table</li>
+<li>Hydraulic head boundaries</li>
+</ol>
+<center>
+<div class="figure"><span id="fig:image06-2"></span>
+<img src="images/darcys_law/picture2.png" alt="Physical model of a layered groundwater system." width="80%" />
+<p class="caption">
+Figure 19: Physical model of a layered groundwater system.
+</p>
+</div>
+</center>
+<p><strong>Step 2.</strong> Now let’s inject a dye to see how fast the water is moving and in which direction.</p>
+<ul>
+<li>Measure the distance travelled by the centre of mass of the dye over a fixed time interval to determine the rate of groundwater flow. What have you just measured, the specific discharge <span class="math inline">\(q\)</span>, or the groundwater velocity <span class="math inline">\(\bar{v}\)</span>?</li>
+</ul>
+<p><strong>Step 3.</strong> For a given head-gradient (i.e. water table slope; <span class="math inline">\(H2-H1\)</span>), measure water leaving the central “river” (<span class="math inline">\(V\)</span>) over a defined interval (<span class="math inline">\(t\)</span>). Use Darcy’s Law to back-calculate the Hydraulic Conductivity, <span class="math inline">\(K\)</span>, noting that:</p>
+<center>
+<span class="math display" id="eq:exercise6-3">\[\begin{equation}
+\frac{V}{t} = Q = -KA \frac{H2-H1}{L}
+\tag{13}
+\end{equation}\]</span>
+</center>
+<p><strong>Step 4.</strong> In the same way that a ball will roll down a hill in a direction perpendicular to topographic contours, groundwater flow will be perpendicular to hydraulic head contours. Have a go at drawing the groundwater flow lines (solid lines ending in an arrow) and hydraulic head contours (dashed lines) onto the photo of the physical groundwater model. As a general rule, flow through high conductivity layers will be primarily horizontal, and flow through low conductivity layers will be primarily vertical.</p>
+<p><strong>Step 5.</strong> What have you learnt from this experiment about groundwater systems? By using the physical model we have been able to see directly in the subsurface, but in the real world, the only information we have would be the wells.</p>
+<ul>
+<li>If you only had the hydraulic head measurements in the wells what would you know about the groundwater system?</li>
+<li>How important is it that we understand the geology as well as having measurements of hydraulic heads?</li>
+<li>What else might you measure in a real groundwater system to get a fuller picture of what is happening?</li>
+</ul>
+</div>
+<div id="M6_4" class="section level2 unnumbered">
+<h2>Computer model of groundwater system</h2>
+<p>We can also run a “digital twin” of the physical model that we have built in the lab. For this activity we will now use the ParFlow Sandtank model. This is a computer model simulating groundwater flow, and allows users to change aquifer configurations and explore the essential features of groundwater and contaminant flow.</p>
+<center>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+<iframe src="https://player.vimeo.com/video/398697315" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+</div>
+</center>
+<p><strong>Step 1.</strong> Once you have watched the introductory video lets take a look at running the model. Navigate to this model <a href="https://pvw.kitware.com/sandtank/">website</a></p>
+<p><strong>Step 2.</strong> Learn how to customise the sandtank and run a simulation <a href="https://www.hydroframe.org/sand-tank-user-manual">here</a></p>
+<p><strong>Step 3.</strong> Manipulate the soil conditions and the hydraulic head sliders, and run simulations pumping or injecting groundwater.</p>
+<p><strong>Step 4.</strong> Try to reproduce our lab-based physical model.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E4-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"], ["Exercise_1A_Part_2_Answer_Sheet_UPDATED.docx", "Exercise 1A Part 2 Answer Sheet - Updated"], ["Streamflow_Activity.docx", "Streamflow Answer Sheet"]],
+"toc": {
+"collapse": "none"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -109,3 +109,84 @@ $Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}$
 
 ```
 
+## Part 2: Helena River Site Visit {#E4_13 -}
+
+<center>
+```{r image04-6, echo=FALSE, fig.cap="", out.width='95%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture6.png")
+```
+</center>
+
+### Background {#E4_14 -}
+
+The degradation of freshwater systems by increasing salinity is a major challenge facing Western Australia. Salinisation of the Avon river, which enters the Upper Swan river at Walyunga National Park, arose due to poor land-management leading to secondary salinity in the inland wheatbelt catchments. Whilst secondary salinity is not an issue in the Swan Coastal Plain where our site visit is, the salt loads from the Avon in addition to rising sea levels and decreasing rainfall trend have been driving changes in the seasonal movement of marine waters, with increasing penetration of the salt wedge further inland from the ocean (Huang et al. 2018).
+
+Salinisation of river systems can cause shifts in floodplain vegetation which arise because of river water interaction with the floodplain. Depending on the salinity increase and the salt tolerance of the floodplain tree species, this can cause shifts in community structure. One important species that has a natural range along the Swan river and its tributaries is the *Eucalyptus rudis*. This species has been reported to be in decline for over 15 years along the Swan river (Clay & Majer 2001), and more recently along one of the tributaries of the Swan river: the Guildford floodplains of the Helena river (Dundas 2011). It is currently unknown the exact role of water availability and salinity in the observed decline, and alternate hypothesis related to tree pathogens (e.g. Phytophthora) are also as drivers of decline are also under investigation.
+
+*E. rudis* plays a vital role in the riparian ecosystem. Riparian woodland species are important filters that reduce nutrient transfers from the land into the river, which is a significant issue in the Swan river and its tributaries (excessive nutrients have historically resulted in noxious algal blooms). There is therefore a need to better understand what drives decline and if projected drying conditions for the region will make the pressures worse.
+
+This site visit allows students to understand how hydrologic monitoring of surface and water systems can support our understanding and support investigations into the drivers of decline of *E. rudis* in relation to the changing hydrology regime at the Guildford floodplains along the Helena river. This site is part of a long-term research investigation being undertaken with the WA Department of Biodiversity, Conservation and Attractions (DBCA).  
+
+During our visit, we will characterise the site and consider hydrologic pathways (surface and sub-surface), and collect data to assess water and salt distribution in this floodplain system. 
+
+You will be shown around the site to explain the basic surface and groundwater processes occurring, and in groups you will:
+
+- Identify the surface water flow regime.
+- Identify the distressed and dead trees.
+- Observe soils and their hydraulic properties.
+- Undertake salinity data collection from groundwater wells (piezometers) and surface waters, and from soils within the tree root zone.
+- Conceptualise the hydrologic processes influencing salt movement and accumulation across the site.
+
+<center>
+```{r image04-7, echo=FALSE, fig.cap="High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.", out.width='90%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture7.png")
+```
+</center>
+
+### Helena River Floodplain Field Visit Tasks: For those attending in-person {#E4_15 -}
+
+During your site visit you will be instructed to follow the tasks below and record your data in the sheet overleaf. If in doubt, please ask for assistance.
+
+#### On arrival {#E4_16 -} 
+
+Firstly check-in with an instructor and get your bearings. 
+
+- Explore the site, considering the surface water and groundwater pathways. 
+- Be able to identify flow direction in the main waterways bounding the site (Swan River to the west and Helena River to the east).
+- Be able to identify water accumulation areas within the site itself.
+- Consider the horizontal and vertical movement pathways.
+- Identify *Eucalyptus rudis* trees and their health in context of the landscape.
+
+#### Task A – Helena River flow {#E4_17 -} 
+
+Navigate to the Helena River, where it flows under the Bridge. Undertake a stream gauging measurement to determine the river flow. Refer to the Streamflow lab “Velocity-Area method”
+
+#### Task B – Ponded surface water salinity {#E4_18 -}  
+
+Measure at two contrasting locations surface water salinity, and record on the handout. 
+
+Include the GPS locations. Take one from Helena or Swan river, and one from an internal site. We will collate data from students to make a class data summary. Use waders provided for deeper waters – use a stick/ruler to judge depth of water before taking steps and do not enter into fast-running water above knee height. 
+
+#### Task C – Groundwater sampling {#E4_19 -} 
+
+Visit one of the existing piezometer wells (consult tutor for locations, or refer to map). Note the Well Identification Number. Record results from the following tasks:
+
+a) Record the depth from the water to the top of the casing. 
+b) "Bail the well" with the bailer, and take a sample of the water for salinity determination (measure EC).
+
+#### Task D – Soil salinity {#E4_20 -} 
+
+Identify a transect and soil/groundwater sampling location (consult tutor for guidance). Take an exact GPS reading to log your site. Split the tasks below between your team mates:
+
+a) Measure the soil salinity of a sample at the **surface**, and **20 cm below the surface**
+b) Use the hand auger, drill to reach the water table ~ 50cm below the surface (this may vary depending on the exact site chosen). Carefully extract the soil, without the hole collapsing. 
+Once settled (~5-10mins), take an EC reading of the water pooling in the bottom, and note the water level below the ground surface. Take caution the depth is accurate relative to the pre-disturbed surface.
+c) Whilst the above is being done, in a nearby location, prepare a flat soil surface and undertake an infiltration assessment with the Decagon infiltrometer. Repeat 3 times, noting the infiltration volume for later entry into the Decagon spreadsheet. You will need to note the soil type, based on your observation. 
+
+### Helena River Floodplain Field Visit Tasks: For those undertaking online {#E4_21 -} 
+
+#### Task Z {#E4_22 -} 
+
+For those not attending the site visit in person, your activity will be to learn about the site by reviewing prior analyses that have been undertaken and looking at historical data for the site.  You will additionally be able to see specific aspects of the site by reviewing the short videos made by participants who report on Tasks A-D.
+
+### Submission {#E4_23 -} 
