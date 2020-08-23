@@ -145,7 +145,7 @@ knitr::include_graphics("images/surface_ground_water_interaction/picture7.png")
 
 ### Helena River Floodplain Field Visit Tasks: For those attending in-person {#E4_15 -}
 
-During your site visit you will be instructed to follow the tasks below and record your data in the sheet overleaf. If in doubt, please ask for assistance.
+During your site visit you will be instructed to follow the tasks below and record your data in the sheet available in the downloads section <i class="fa fa-download" aria-hidden="true"></i>. If in doubt, please ask for assistance.
 
 #### On arrival {#E4_16 -} 
 
