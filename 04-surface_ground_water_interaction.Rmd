@@ -1,6 +1,4 @@
-# Exercise 1B: Surface-Ground Water Interaction {#E4_1 -}
-
-## Part 1: Desktop Catchment {#E4_12 -}
+# Exercise 1B Part 1: Surface-Ground Water Interaction - Desktop Catchment {#E4_1 -}
 
 ### Overview {#E4_2 -}
 
@@ -109,7 +107,7 @@ $Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}$
 
 ```
 
-## Part 2: Helena River Site Visit {#E4_13 -}
+# Exercise 1B Part 2: Helena River Site Visit {#E4_13 -}
 
 <center>
 ```{r image04-6, echo=FALSE, fig.cap="", out.width='95%'}
@@ -125,17 +123,17 @@ Salinisation of river systems can cause shifts in floodplain vegetation which ar
 
 *E. rudis* plays a vital role in the riparian ecosystem. Riparian woodland species are important filters that reduce nutrient transfers from the land into the river, which is a significant issue in the Swan river and its tributaries (excessive nutrients have historically resulted in noxious algal blooms). There is therefore a need to better understand what drives decline and if projected drying conditions for the region will make the pressures worse.
 
-This site visit allows students to understand how hydrologic monitoring of surface and water systems can support our understanding and support investigations into the drivers of decline of *E. rudis* in relation to the changing hydrology regime at the Guildford floodplains along the Helena river. This site is part of a long-term research investigation being undertaken with the WA Department of Biodiversity, Conservation and Attractions (DBCA).  
+This site visit allows students to experience how hydrologic monitoring of surface- and ground-water systems can help us build a conceptual understanding of how ecosystems are working, and to link this to management challenges that require a solution. The data being collected will help us understand the drivers of decline of *E. rudis* in relation to the changing hydrology regime at the Guildford floodplains along the Helena river. This site is part of a long-term research investigation being undertaken with the WA Department of Biodiversity, Conservation and Attractions (DBCA) and UWA and your data will contribute to our database.  
 
-During our visit, we will characterise the site and consider hydrologic pathways (surface and sub-surface), and collect data to assess water and salt distribution in this floodplain system. 
+During our visit, we will describe the site by considering hydrologic pathways (surface and sub-surface), and collect data to assess water and salt distribution in this floodplain system.  
 
 You will be shown around the site to explain the basic surface and groundwater processes occurring, and in groups you will:
 
 - Identify the surface water flow regime.
-- Identify the distressed and dead trees.
 - Observe soils and their hydraulic properties.
 - Undertake salinity data collection from groundwater wells (piezometers) and surface waters, and from soils within the tree root zone.
-- Conceptualise the hydrologic processes influencing salt movement and accumulation across the site.
+- Conceptualise the hydrologic processes influencing salt movement and accumulation across the site
+- Identify the distressed and dead trees and consider how hydrology may or may not be abel to explain this issue
 
 <center>
 ```{r image04-7, echo=FALSE, fig.cap="High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.", out.width='90%'}
@@ -145,43 +143,85 @@ knitr::include_graphics("images/surface_ground_water_interaction/picture7.png")
 
 ### Helena River Floodplain Field Visit Tasks: For those attending in-person {#E4_15 -}
 
-During your site visit you will be instructed to follow the tasks below and record your data in the sheet available in the downloads section <i class="fa fa-download" aria-hidden="true"></i>. If in doubt, please ask for assistance.
-
 #### On arrival {#E4_16 -} 
 
-Firstly check-in with an instructor and get your bearings. 
+Arrive at the carpark near King’s Meadow Oval. Firstly check-in with an instructor and get your bearings. You will take a pack with you, and other equipment you will see at the stations.
 
-- Explore the site, considering the surface water and groundwater pathways. 
-- Be able to identify flow direction in the main waterways bounding the site (Swan River to the west and Helena River to the east).
+<center>
+```{r image04-8, echo=FALSE, fig.cap="", out.width='65%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture8.png")
+```
+</center>
+
+During your site visit you will be instructed to follow the tasks below and record your data in the download sheet <i class="fa fa-download" aria-hidden="true"></i>. If in doubt, please ask for assistance. You will undertake 4 main activities. Note that each participant is expected to make a short video of one of these tasks (see Submission section at the end).
+
+#### Task A – Surface Water Flows and Salinity {#E4_17 -} 
+
+- Explore the site, considering the surface water pathways. 
+- Be able to identify flow direction in the main waterways bounding the site (Swan River to the west and Helena River to the south-east).
 - Be able to identify water accumulation areas within the site itself.
-- Consider the horizontal and vertical movement pathways.
+- Consider the horizontal and vertical movement pathways of this water.
 - Identify *Eucalyptus rudis* trees and their health in context of the landscape.
 
-#### Task A – Helena River flow {#E4_17 -} 
+<center>
+```{r image04-9, echo=FALSE, fig.cap="",out.width='45%', out.height='25%', fig.show='hold'}
+knitr::include_graphics(c("images/surface_ground_water_interaction/picture9.png",
+                          "images/surface_ground_water_interaction/picture10.png"))
+```
+```{r image04-10, echo=FALSE, fig.cap="", out.width='45%', out.height='25%', fig.show='hold'}
+knitr::include_graphics(c(
+                          "images/surface_ground_water_interaction/picture11.png",
+                          "images/surface_ground_water_interaction/picture12.png"))
+```
+</center>
 
-Navigate to the Helena River, where it flows under the Bridge. Undertake a stream gauging measurement to determine the river flow. Refer to the Streamflow lab “Velocity-Area method”
+Measure at two contrasting locations surface water salinity, and on the data sheet. 
+Include the GPS locations. Take one from East of the bridge, and one from the West. You can Take them from Helena or Swan river, and one from an internal site. We will collate data from students to make a class data summary. Use waders provided for deeper waters – *use a stick/ruler to judge depth of water before taking steps and do not enter into fast-running water above knee height*. 
 
-#### Task B – Ponded surface water salinity {#E4_18 -}  
+<center>
+```{r image04-11, echo=FALSE, fig.cap="Example inundation pattern. Which way is the water flowing?", out.width='65%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture13.png")
+```
+</center>
 
-Measure at two contrasting locations surface water salinity, and record on the data collection sheet. 
+#### Task B – Helena River Flow {#E4_18 -}  
 
-Include the GPS locations. Take one from Helena or Swan river, and one from an internal site. We will collate data from students to make a class data summary. Use waders provided for deeper waters – use a stick/ruler to judge depth of water before taking steps and do not enter into fast-running water above knee height. 
+Navigate to the Helena River, where it flows under the Bridge. Undertake a stream gauging measurement to determine the river flow. Refer to the Streamflow lab “Velocity-Area method”. 
 
 #### Task C – Groundwater sampling {#E4_19 -} 
 
-Visit one of the existing piezometer wells (consult tutor for locations, or refer to map). Note the Well Identification Number. Record results from the following tasks:
+Visit two of the existing piezometer wells (refer to map below, consult instructor for locations if you cant find them). Note the Well Identification Number. 
 
-a) Record the depth from the water to the top of the casing. 
-b) "Bail the well" with the bailer, and take a sample of the water for salinity determination (measure EC).
+<center>
+```{r image04-12, echo=FALSE, fig.cap="", out.width='45%', out.height='25%', fig.show='hold'}
+knitr::include_graphics(c(
+                          "images/surface_ground_water_interaction/picture14.png",
+                          "images/surface_ground_water_interaction/picture15.png"))
+```
+</center>
+
+Record results from the following tasks:
+
+a) Record the depth from the water to the top of the casing. Use the “dipper” provided.
+b) Record the depth from the Top of the Casing (TOC) to the ground level.
+c) "Bail the well" with the bailer, and take a sample of the water for salinity determination (measure EC of the groundwater).
+d) Consider the hydraulic slope – how do you think the height of the water table varies along the transect. Try sketching a cross-section along the transect, and consider how you would apply Darcy’s Law.
+
+<center>
+```{r image04-13, echo=FALSE, fig.cap="", out.width='65%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture16.png")
+```
+</center>
 
 #### Task D – Soil salinity {#E4_20 -} 
 
-Identify a transect and soil/groundwater sampling location (consult tutor for guidance). Take an exact GPS reading to log your site. Split the tasks below between your team mates:
+In this task we want to expand our data beyond the transect of bores more widely. Identify a soil/groundwater sampling location away from the piezometer transect – including on the east side of the bridge (consult instructor for guidance). Take an exact GPS reading to log your site. Split the tasks below between your team mates:
 
-a) Measure the soil salinity of a sample at the **surface**, and **20 cm below the surface**
-b) Use the hand auger, drill to reach the water table ~ 50cm below the surface (this may vary depending on the exact site chosen). Carefully extract the soil, without the hole collapsing. 
+a) Measure the soil salinity of a sample at the **surface**, and **20 cm below the surface**. Note soil salinity measurement is different from the water salinity measurement.
+b) Use the hand auger, drill to reach the water table (~ 50cm) below the surface (this may vary depending on the exact site chosen). Carefully extract the soil, without the hole collapsing. 
 Once settled (~5-10mins), take an EC reading of the water pooling in the bottom, and note the water level below the ground surface. Take caution the depth is accurate relative to the pre-disturbed surface.
-c) Whilst the above is being done, in a nearby location, prepare a flat soil surface and undertake an infiltration assessment with the Decagon infiltrometer. Repeat 3 times, noting the infiltration volume for later entry into the Decagon spreadsheet. You will need to note the soil type, based on your observation. 
+c) [OPTIONAL] Whilst the above is being done, in a nearby location, prepare a flat soil surface and undertake an infiltration assessment with the Decagon infiltrometer. Notie the infiltration volume for later entry into the Decagon spreadsheet. You will need to note the soil type, based on your observation. 
+
 
 ### Helena River Floodplain Field Visit Tasks: For those undertaking online {#E4_21 -} 
 
@@ -189,4 +229,30 @@ c) Whilst the above is being done, in a nearby location, prepare a flat soil sur
 
 For those not attending the site visit in person, your activity will be to learn about the site by reviewing prior analyses that have been undertaken and looking at historical data for the site.  You will additionally be able to see specific aspects of the site by reviewing the short videos made by participants who report on Tasks A-D.
 
+Make a summary of the past investigations by reading through the recent report on the site:
+
+<center>
+```{r image04-14, echo=FALSE, fig.cap="", out.width='55%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture17.png")
+```
+</center>
+
 ### Submission {#E4_23 -} 
+
+:::: {.redbox2}
+
+1) Vignette (**5 marks**): Each participant will record a video summary of a chosen TASK (A-Z). The video should take 1min to explain the context, and describe the method relevant to that task. It is aimed at your fellow peers, such that even without attending the site, they can understand the general issues and the reason for approach being taken. A guide as to what the summary should include is shown in the following:
+    - A statement setting the broad context and setting
+    - A description of the issue being assessed, and why it is relevant to do the relevant task/measurements
+    - An overview of the method
+    - A statement about how this data can be used to improve our understanding of the site and help management
+    - **Note: the Vignette is due to be uploaded by 10am Monday 31st August**
+
+3) Peer review (**3 marks**):
+    - **Note: the Peer review will be completed by 5pm Friday 4th September**
+    
+3) Site Assessment report (**12 marks**):
+    - **Note: the Site Assessment report is due to be uploaded by 5pm Tuesday 15th September**
+
+::::
+
