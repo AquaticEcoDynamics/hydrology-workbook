@@ -237,6 +237,68 @@ knitr::include_graphics("images/surface_ground_water_interaction/picture17.png")
 ```
 </center>
 
+### Mapping EC in QGIS {#E4_25 -}
+
+Now that we have collected our data, let's create a map to visualise the variation in EC over the study site. We will need QGIS for this exercise, if you don't already have it installed on your computer you can download it [here](https://qgis.org/en/site/).
+
+1) Let’s start by importing our EC point data. Go to *Layer -> Add Layer -> Add Delimited Text Layer*.
+2) Under *File name* navigate to your csv of the EC data
+    - Make sure under *File Format* 'CSV' is selected
+    - Under *Geometry Definition* set the *X field* to the Easting column of you EC data and the *Y field* to the Northing column
+    - Set the *Geometry CRS* to “EPSG:32750 - WGS84/UTM zone 50S”
+    - Click *Add*
+
+<center>
+```{r image04-16, echo=FALSE, fig.cap="Importing your EC data.", out.width='100%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture19.png")
+```
+</center>
+
+```{block2, hint04-3, type='rmdnote2'}
+Make sure your data takes this form in Excel. Save it as a CSV:
+<center>
+![](images/surface_ground_water_interaction/picture22.png){width=45%}
+</center>
+```
+
+You’ll now see the point data added to your screen, however, we have no spatial context - let’s add a basemap.
+
+3) Go to the QuickMapServices (QMS) button in the toolbar and browse/search for a basemap that you think would be appropriate (e.g. search “satellite” and browse the different satellite basemap providers).
+
+4) Add one to the map.
+
+<center>
+```{r image04-17, echo=FALSE, fig.cap="The QMS buttons in the QGIS toolbar.", out.width='50%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture20.png")
+```
+</center>
+
+```{block2, hint04-2, type='rmdnote2'}
+If you do not have the QMS button in your toolbar go *Plugins -> Manage and Install Plugins* and search ‘QuickMapServices’ to install it.
+```
+
+Now we have a basemap and our points - let's change the symbology of the points to better communicate the variation in EC.
+
+5) Right click on the point data in the layer window and go *Properties -> Symbology*.
+6) Set the symbol type to *Graduated* and specifying the values to graduate by as our EC column.
+7) Now set the *Method* to *Size*, and the *Mode* to *Natural Breaks (Jenks)*, click *Classify*.
+
+<center>
+```{r image04-18, echo=FALSE, fig.cap="Changing the symbology of our point data.", out.width='100%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture21.png")
+```
+</center>
+
+Now when you click *Apply* the point size is weighted to the EC. You can further refine your symbology by changing the point colours and size - think about how best to communicate variation in EC. 
+
+8) Finally, create a map output by clicking the *New Layout* button in the toolbar. If you aren't familiar with creating maps in QGIS work with one of your classmates who is, or read through the second half of this [tutorial](https://www.polarmicrobes.org/tutorial-on-qgis-how-to-make-a-map/).
+
+<center>
+```{r image04-15, echo=FALSE, fig.cap="Example map from your QGIS output.", out.width='100%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture18.jpg")
+```
+</center>
+
 ### Submission {#E4_23 -} 
 
 :::: {.redbox2}

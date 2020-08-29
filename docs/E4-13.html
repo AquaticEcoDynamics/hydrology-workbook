@@ -24,7 +24,7 @@
 <meta name="author" content="Giles Knight, Matt Hipsey" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -126,6 +126,7 @@
 <li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_14"><i class="fa fa-check"></i>Background</a></li>
 <li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_15"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those attending in-person</a></li>
 <li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_21"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those undertaking online</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_25"><i class="fa fa-check"></i>Mapping EC in QGIS</a></li>
 <li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_23"><i class="fa fa-check"></i>Submission</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html"><i class="fa fa-check"></i>Darcy’s Law</a>
@@ -260,6 +261,78 @@ Once settled (~5-10mins), take an EC reading of the water pooling in the bottom,
 <img src="images/surface_ground_water_interaction/picture17.png" width="55%" />
 </center>
 </div>
+</div>
+<div id="E4_25" class="section level3 unnumbered">
+<h3>Mapping EC in QGIS</h3>
+<p>Now that we have collected our data, let’s create a map to visualise the variation in EC over the study site. We will need QGIS for this exercise, if you don’t already have it installed on your computer you can download it <a href="https://qgis.org/en/site/">here</a>.</p>
+<ol style="list-style-type: decimal">
+<li>Let’s start by importing our EC point data. Go to <em>Layer -&gt; Add Layer -&gt; Add Delimited Text Layer</em>.</li>
+<li>Under <em>File name</em> navigate to your csv of the EC data
+<ul>
+<li>Make sure under <em>File Format</em> ‘CSV’ is selected</li>
+<li>Under <em>Geometry Definition</em> set the <em>X field</em> to the Easting column of you EC data and the <em>Y field</em> to the Northing column</li>
+<li>Set the <em>Geometry CRS</em> to “EPSG:32750 - WGS84/UTM zone 50S”</li>
+<li>Click <em>Add</em></li>
+</ul></li>
+</ol>
+<center>
+<div class="figure"><span id="fig:image04-16"></span>
+<img src="images/surface_ground_water_interaction/picture19.png" alt="Importing your EC data." width="100%" />
+<p class="caption">
+Figure 19: Importing your EC data.
+</p>
+</div>
+</center>
+
+<div class="rmdnote2">
+Make sure your data takes this form in Excel. Save it as a CSV:
+<center>
+<img src="images/surface_ground_water_interaction/picture22.png" style="width:45.0%" />
+</center>
+</div>
+<p>You’ll now see the point data added to your screen, however, we have no spatial context - let’s add a basemap.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Go to the QuickMapServices (QMS) button in the toolbar and browse/search for a basemap that you think would be appropriate (e.g. search “satellite” and browse the different satellite basemap providers).</p></li>
+<li><p>Add one to the map.</p></li>
+</ol>
+<center>
+<div class="figure"><span id="fig:image04-17"></span>
+<img src="images/surface_ground_water_interaction/picture20.png" alt="The QMS buttons in the QGIS toolbar." width="50%" />
+<p class="caption">
+Figure 20: The QMS buttons in the QGIS toolbar.
+</p>
+</div>
+</center>
+
+<div class="rmdnote2">
+If you do not have the QMS button in your toolbar go <em>Plugins -&gt; Manage and Install Plugins</em> and search ‘QuickMapServices’ to install it.
+</div>
+<p>Now we have a basemap and our points - let’s change the symbology of the points to better communicate the variation in EC.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Right click on the point data in the layer window and go <em>Properties -&gt; Symbology</em>.</li>
+<li>Set the symbol type to <em>Graduated</em> and specifying the values to graduate by as our EC column.</li>
+<li>Now set the <em>Method</em> to <em>Size</em>, and the <em>Mode</em> to <em>Natural Breaks (Jenks)</em>, click <em>Classify</em>.</li>
+</ol>
+<center>
+<div class="figure"><span id="fig:image04-18"></span>
+<img src="images/surface_ground_water_interaction/picture21.png" alt="Changing the symbology of our point data." width="100%" />
+<p class="caption">
+Figure 21: Changing the symbology of our point data.
+</p>
+</div>
+</center>
+<p>Now when you click <em>Apply</em> the point size is weighted to the EC. You can further refine your symbology by changing the point colours and size - think about how best to communicate variation in EC.</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Finally, create a map output by clicking the <em>New Layout</em> button in the toolbar. If you aren’t familiar with creating maps in QGIS work with one of your classmates who is, or read through the second half of this <a href="https://www.polarmicrobes.org/tutorial-on-qgis-how-to-make-a-map/">tutorial</a>.</li>
+</ol>
+<center>
+<div class="figure"><span id="fig:image04-15"></span>
+<img src="images/surface_ground_water_interaction/picture18.jpg" alt="Example map from your QGIS output." width="100%" />
+<p class="caption">
+Figure 22: Example map from your QGIS output.
+</p>
+</div>
+</center>
 </div>
 <div id="E4_23" class="section level3 unnumbered">
 <h3>Submission</h3>
