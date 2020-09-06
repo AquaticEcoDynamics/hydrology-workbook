@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Exercise 2 (GEOS4499 Students Only) | Hydrology Workbook</title>
+  <meta name="description" content="The online Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Exercise 2 (GEOS4499 Students Only) | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="The online Hydrology Workbook" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Exercise 2 (GEOS4499 Students Only) | Hydrology Workbook" />
+  
+  <meta name="twitter:description" content="The online Hydrology Workbook" />
+  
+
+<meta name="author" content="Giles Knight, Matt Hipsey" />
+
+
+<meta name="date" content="2020-09-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="M6-1.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="https://hypothes.is/embed.js" async></script>
+  
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Climate &amp; Rainfall</b></span></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html"><i class="fa fa-check"></i>Exercise 1A: Catchment Rainfall and Runoff</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_2"><i class="fa fa-check"></i>Part 1: Spatial Rainfall Variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_4"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_8"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_12"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_13"><i class="fa fa-check"></i>Part 2: Rainfall and Runoff Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_14"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_15"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_16"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_17"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_18"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_19"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_20"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Surface Hydrology</b></span></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html"><i class="fa fa-check"></i>Streamflow Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Soils &amp; Groundwater</b></span></li>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html"><i class="fa fa-check"></i>Characterising Soil Moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_2"><i class="fa fa-check"></i>Computing Soil Porosity and Soil Moisture</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 1B Part 1: Surface-Ground Water Interaction - Desktop Catchment</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_11"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html"><i class="fa fa-check"></i>Exercise 1B Part 2: Helena River Site Visit</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_14"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_15"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those attending in-person</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_21"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those undertaking online</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_25"><i class="fa fa-check"></i>Mapping EC in QGIS</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_23"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html"><i class="fa fa-check"></i>Darcy’s Law</a>
+<ul>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_2"><i class="fa fa-check"></i>Darcy Tubes</a></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="exercise-2-geos4499-students-only.html"><a href="exercise-2-geos4499-students-only.html"><i class="fa fa-check"></i><b>1</b> Exercise 2 (GEOS4499 Students Only)</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-2-geos4499-students-only.html"><a href="exercise-2-geos4499-students-only.html#M7_2"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="exercise-2-geos4499-students-only.html"><a href="exercise-2-geos4499-students-only.html#M7_3"><i class="fa fa-check"></i>Model Overview</a></li>
+<li class="chapter" data-level="" data-path="exercise-2-geos4499-students-only.html"><a href="exercise-2-geos4499-students-only.html#M7_4"><i class="fa fa-check"></i>Module Resources</a></li>
+<li class="chapter" data-level="" data-path="exercise-2-geos4499-students-only.html"><a href="exercise-2-geos4499-students-only.html#M7_5"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-2-geos4499-students-only" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Exercise 2 (GEOS4499 Students Only)</h1>
+<h2>
+Land Use and Nutrient Management
+</h2>
+<div id="M7_2" class="section level3 unnumbered">
+<h3>Objectives</h3>
+<p>To setup a simple model to compare the effect of BMPs on nutrient export from a catchment with
+mixed land use.</p>
+</div>
+<div id="M7_3" class="section level3 unnumbered">
+<h3>Model Overview</h3>
+<p>Consider a catchment basin with <strong>3 sub catchments</strong>, each with <strong>a different dominant land use and slightly different climate</strong>.</p>
+<p>The daily runoff from each sub catchment, <span class="math inline">\(Q_i\)</span> (m<sup>3</sup>/day), can be simply approximated based on the daily rainfall (<span class="math inline">\(R\)</span>), where <span class="math inline">\(c\)</span> is the daily runoff efficiency and <span class="math inline">\(R^{crit}\)</span> is the initial loss threshold (<span class="math inline">\(m\)</span>, this is the amount of rainfall that does not make it to the stream):</p>
+<center>
+<span class="math display" id="eq:module6-1">\[\begin{equation}
+Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &amp;R_{i}^{t}\le R_{i}^{crit}
+\\ c_{i}(R_{i}^{t}-R_{i}^{crit})A_{i},\ \ &amp;R_{i}^{t}&gt; R_{i}^{crit}
+\end{matrix}\right.
+\tag{1.1}
+\end{equation}\]</span>
+</center>
+<p>The total flow (<span class="math inline">\(Q_{tot}\)</span>, m<sup>3</sup>/day) is calculated by summing the individual sub catchments, however there is an assumed lag time of 1 day for sub catchment 2 and 2 days lag time for sub catchment 3:</p>
+<center>
+<span class="math display" id="eq:module6-2">\[\begin{equation}
+Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color{#F79646}{Q_{3}^{t-2}}
+\tag{1.2}
+\end{equation}\]</span>
+</center>
+<p>For each sub catchment, the phosphorus concentration, <span class="math inline">\(P_{i}\)</span> (g/m<sup>3</sup>), depends on how much flow there is (e.g. more flow = more fertilizer leaching) by assuming a simple power law fitted to the flow-concentration relationship computed for each land-use (<span class="math inline">\(P\)</span>~<span class="math inline">\(\alpha Q \beta\)</span>). This is averaged over the different land use fractions (denoted with the small <span class="math inline">\(p\)</span> index), using the land-use fraction <span class="math inline">\(F_p\)</span>:</p>
+<center>
+<span class="math display" id="eq:module6-3">\[\begin{equation}
+P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
+\tag{1.3}
+\end{equation}\]</span>
+</center>
+
+<div class="rmdnote2">
+<span class="math inline">\(\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}} \right )^{\beta_{p}}+P_{0}}\)</span> is the flow dependent concentration of the <em>p</em>-th land use type.
+</div>
+<p>Where alpha (<span class="math inline">\(\alpha\)</span>) and beta (<span class="math inline">\(\beta\)</span>) are variables that govern the stream <span class="math inline">\(P_i\)</span> concentration (g/m<sup>3</sup>) as a function of area-averaged flow rate (<span class="math inline">\(Q/A\)</span>) and they depend on the dominant land use (<span class="math inline">\(p\)</span>). <span class="math inline">\(N_p\)</span> is the number of land use classes being considered (4) and <span class="math inline">\(P_0\)</span> is the background concentration (g/m<sup>3</sup>) for that sub-catchment (i.e. the value of PO<sub>4</sub> when flow tends to 0).</p>
+<p>The total <span class="math inline">\(P\)</span> export load is <span class="math inline">\(P_{load}\)</span> (g/day) and is the sum of the different sub catchment outputs (remember <em>load = flow x concentration</em>) with the assumed lag time:</p>
+<center>
+<span class="math display" id="eq:module6-4">\[\begin{equation}
+P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
+\tag{1.4}
+\end{equation}\]</span>
+</center>
+<center>
+<video width="80%" height="80%" controls>
+<source src="images/07-module6/video1.mp4" type="video/mp4">
+</video>
+</center>
+</div>
+<div id="M7_4" class="section level3 unnumbered">
+<h3>Module Resources</h3>
+<p>Download the Excel spreadsheet for this exercise by clicking the download button in the tool bar <i class="fa fa-download" aria-hidden="true"></i>.</p>
+</div>
+<div id="M7_5" class="section level3 unnumbered">
+<h3>Exercises</h3>
+<div id="M7_6" class="section level4 unnumbered">
+<h4>Building the model</h4>
+<ol style="list-style-type: decimal">
+<li>Draw by hand the conceptual model of this system.</li>
+<li>Confirm with the person beside you what index means (<span class="math inline">\(t\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(p\)</span>).</li>
+<li>Build the above model to predict the individual sub catchment flows and basin total flow. Assume basic information as outlined in Table <a href="exercise-2-geos4499-students-only.html#tab:module6-1">1.1</a> below and supplied rainfall data for the 3 catchments. Input a value for <span class="math inline">\(c\)</span> within the range given for now.</li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:445px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:module6-1">Table 1.1: </span>Parameters for the individual catchments.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Parameters for catchment model:
+</th>
+<th style="text-align:center;">
+<span style="color: #9BBB59;">Sub Catchment 1 (<span class="math inline">\(i\)</span>=1)</span>
+</th>
+<th style="text-align:center;">
+<span style="color: #0070C0;">Sub Catchment 2 (<span class="math inline">\(i\)</span>=2)</span>
+</th>
+<th style="text-align:center;">
+<span style="color: #F79646;">Sub catchment 3 (<span class="math inline">\(i\)</span>=3)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+Sub catchment area, <span class="math inline">\(A\)</span> (km<sup>2</sup>)
+</td>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+120
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Runoff coefficient, <span class="math inline">\(c\)</span> (range)
+</td>
+<td style="text-align:center;">
+0.2 to 0.5
+</td>
+<td style="text-align:center;">
+0.1 to 0.4
+</td>
+<td style="text-align:center;">
+0.1 to 0.3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Initial loss threshold value, <span class="math inline">\(R_{crit}\)</span> (m)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.025
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: irrigated dairy
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: wheat
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: urban
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: forest
+</td>
+<td style="text-align:center;">
+0.6
+</td>
+<td style="text-align:center;">
+0.2
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+</div>
+<div id="M7_7" class="section level4 unnumbered">
+<h4>Calibrating the model</h4>
+<p>Let’s make sure the model flows are realistic:</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Manually adjust the runoff coefficient values (<span class="math inline">\(c\)</span>) for each sub catchment (see possible ranges in table below) until the model best matches the observed data. This processed is called “calibration”.</li>
+</ol>
+
+<div class="rmdtip2">
+Check this by using a regression plot of the given total observed runoff and the model total runoff, checking to get the highest R<sup>2</sup> value
+</div>
+</div>
+<div id="M6_8" class="section level4 unnumbered">
+<h4>Calculate phosphate concentrations</h4>
+<p>Now let’s work out the land-use specific stream <span class="math inline">\(P\)</span> concentrations:</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Predict the sub catchment river <span class="math inline">\(P\)</span> concentrations and total river basin <span class="math inline">\(P\)</span> export load.
+The best way to do this is first predict the <span class="math inline">\(P\)</span> concentration of each land-use class (<span class="math inline">\(F_p\)</span>) in each sub catchment each as a column (i.e. Dairy <span class="math inline">\(P\)</span> concentration, Wheat <span class="math inline">\(P\)</span> concentration and so on), and then sum the 4 columns for <span class="math inline">\(P_i\)</span>.</li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:235px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:module6-2">Table 1.2: </span>Phosphate parameters.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Parameters for P concentration:
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(\alpha\)</span> (alpha)
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(\beta\)</span> (beta)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 25em; ">
+Landuse parameters: irrigated dairy (<span class="math inline">\(p\)</span>=1)
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.10
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 25em; ">
+Landuse parameters: wheat (<span class="math inline">\(p\)</span>=2)
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.15
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 25em; ">
+Landuse parameters: urban (<span class="math inline">\(p\)</span>=3)
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.06
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.15
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 25em; ">
+Landuse parameters: forest (<span class="math inline">\(p\)</span>=4)
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.02
+</td>
+<td style="text-align:center;min-width: 11em; ">
+0.08
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+
+<div class="rmdtip2">
+See how dairy has the highest alpha? This means it produces the most <span class="math inline">\(P\)</span> of all 4 classes.
+</div>
+</div>
+<div id="M7_9" class="section level4 unnumbered">
+<h4>Consider 2 management scenarios</h4>
+<p>Finally, let’s run 2 management scenarios:</p>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Scenario 1:</strong> If the total urban area in each sub catchment expands to 50% (0.5), how would this affect the overall <span class="math inline">\(P\)</span> export?</li>
+</ol>
+
+<div class="rmdtip2">
+Change the land use fractions manually. They still have to add up to 1, so change the other parts as you see appropriate, i.e. urban area usually comes at the expense of forest, but you can decide how to change the landscape. Record your changed fractions.
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Scenario 2</strong> If the irrigated dairy industry were made to contain their flows (i.e. prevent high <span class="math inline">\(P\)</span> concentrations going to the stream), how would this affect the overall concentration in the water at the river basin outlet? They have to keep the total subcatchment <span class="math inline">\(P\)</span> concentration below 0.065 g m<sup>3</sup>.</li>
+</ol>
+
+<div class="rmdtip2">
+Use an IF statement.
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="M6-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"], ["Exercise_1A_Part_2_Answer_Sheet_UPDATED.docx", "Exercise 1A Part 2 Answer Sheet - Updated"], ["Streamflow_Activity.docx", "Streamflow Answer Sheet"], ["exercise_1b_part2_data_collection_sheet.pdf", "Exercise 1B Part 2 Data Collection Sheet"], ["Exercise 2 Resources (GEOS4499).zip", "Exercise 2 Resources (GEOS4499)"]],
+"toc": {
+"collapse": "none"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

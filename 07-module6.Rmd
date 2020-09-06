@@ -1,1 +1,155 @@
-# Module 6: Land Use and Nutrient Management {-} 
+# Exercise 2 (GEOS4499 Students Only) {#M7_1 -}
+
+<h2>Land Use and Nutrient Management</h2>
+
+### Objectives {#M7_2 -}
+
+To setup a simple model to compare the effect of BMPs on nutrient export from a catchment with
+mixed land use.
+
+### Model Overview {#M7_3 -}
+
+Consider a catchment basin with **3 sub catchments**, each with **a different dominant land use and slightly different climate**.
+
+The daily runoff from each sub catchment, $Q_i$ (m^3^/day), can be simply approximated based on the daily rainfall ($R$), where $c$ is the daily runoff efficiency and $R^{crit}$ is the initial loss threshold ($m$, this is the amount of rainfall that does not make it to the stream):
+
+<center>
+\begin{equation}
+Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &R_{i}^{t}\le R_{i}^{crit}
+\\ c_{i}(R_{i}^{t}-R_{i}^{crit})A_{i},\ \ &R_{i}^{t}> R_{i}^{crit}
+\end{matrix}\right.
+(\#eq:module6-1)
+\end{equation}
+</center>
+
+The total flow ($Q_{tot}$, m^3^/day) is calculated by summing the individual sub catchments, however there is an assumed lag time of 1 day for sub catchment 2 and 2 days lag time for sub catchment 3:
+
+<center>
+\begin{equation}
+Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color{#F79646}{Q_{3}^{t-2}}
+(\#eq:module6-2)
+\end{equation}
+</center>
+
+For each sub catchment, the phosphorus concentration, $P_{i}$ (g/m^3^), depends on how much flow there is (e.g. more flow = more fertilizer leaching) by assuming a simple power law fitted to the flow-concentration relationship computed for each land-use ($P$~$\alpha Q \beta$). This is averaged over the different land use fractions (denoted with the small $p$ index), using the land-use fraction $F_p$:
+
+<center>
+\begin{equation}
+P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
+(\#eq:module6-3)
+\end{equation}
+</center>
+
+```{block2, hint7_4, type='rmdnote2'}
+$\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}$ is the flow dependent concentration of the *p*-th land use type.
+```
+
+Where alpha ($\alpha$) and beta ($\beta$) are variables that govern the stream $P_i$ concentration (g/m^3^) as a function of area-averaged flow rate ($Q/A$) and they depend on the dominant land use ($p$). $N_p$ is the number of land use classes being considered (4) and $P_0$ is the background concentration (g/m^3^) for that sub-catchment (i.e. the value of PO~4~ when flow tends to 0).
+
+The total $P$ export load is $P_{load}$ (g/day) and is the sum of the different sub catchment outputs (remember *load = flow x concentration*) with the assumed lag time:
+
+<center>
+\begin{equation}
+P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
+(\#eq:module6-4)
+\end{equation}
+</center>
+
+<center>
+<video width="80%" height="80%" controls>
+  <source src="images/07-module6/video1.mp4" type="video/mp4">
+</video>
+</center>
+
+
+### Module Resources {#M7_4 -}
+
+Download the Excel spreadsheet for this exercise by clicking the download button in the tool bar <i class="fa fa-download" aria-hidden="true"></i>.
+
+### Exercises {#M7_5 -}
+
+#### Building the model {#M7_6 -}
+
+1) Draw by hand the conceptual model of this system.
+2) Confirm with the person beside you what index means ($t$, $i$, $p$).
+3) Build the above model to predict the individual sub catchment flows and basin total flow. Assume basic information as outlined in Table \@ref(tab:module6-1) below and supplied rainfall data for the 3 catchments. Input a value for $c$ within the range given for now.
+
+<center>
+```{r module6-1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+#options(knitr.kable.NA = '')
+module6_1 <- read.csv("tables/module6/table1.csv", check.names=FALSE) 
+kable(module6_1, format = "html", escape = F, align = "c", caption = "Parameters for the individual catchments.") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  #column_spec(1, width_min = "5em") %>%
+  #column_spec(2, width_min = "15em") %>%
+  #column_spec(3, width_min = "13em") %>%
+  #row_spec(1:12, background = '#ffffff00') %>%
+  scroll_box(width = "100%", height = "445px",
+             fixed_thead = FALSE) 
+```
+</center>
+
+
+#### Calibrating the model {#M7_7 -}
+
+Let’s make sure the model flows are realistic:
+
+4) Manually adjust the runoff coefficient values ($c$) for each sub catchment (see possible ranges in table below) until the model best matches the observed data. This processed is called “calibration”.
+
+```{block2, hint7_1, type='rmdtip2'}
+Check this by using a regression plot of the given total observed runoff and the model total runoff, checking to get the highest R^2^ value
+```
+
+
+#### Calculate phosphate concentrations {#M6_8 -}
+
+Now let’s work out the land-use specific stream $P$ concentrations:
+
+5) Predict the sub catchment river $P$ concentrations and total river basin $P$ export load.
+The best way to do this is first predict the $P$ concentration of each land-use class ($F_p$) in each sub catchment each as a column (i.e. Dairy $P$ concentration, Wheat $P$ concentration and so on), and then sum the 4 columns for $P_i$.
+
+<center>
+```{r module6-2, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+#options(knitr.kable.NA = '')
+module6_2 <- read.csv("tables/module6/table2.csv", check.names=FALSE) 
+kable(module6_2, format = "html", escape = F, align = "c", caption = "Phosphate parameters.") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  column_spec(1, width_min = "25em") %>%
+  column_spec(2, width_min = "11em") %>%
+  column_spec(3, width_min = "11em") %>%
+  #row_spec(1:12, background = '#ffffff00') %>%
+  scroll_box(width = "100%", height = "235px",
+             fixed_thead = FALSE) 
+```
+</center>
+
+```{block2, hint7_5, type='rmdtip2'}
+See how dairy has the highest alpha? This means it produces the most $P$ of all 4 classes.
+```
+
+#### Consider 2 management scenarios {#M7_9 -}
+
+Finally, let’s run 2 management scenarios:
+
+6) **Scenario 1:** If the total urban area in each sub catchment expands to 50% (0.5), how would this affect the overall $P$ export?
+
+```{block2, hint7_2, type='rmdtip2'}
+Change the land use fractions manually. They still have to add up to 1, so change the other parts as you see appropriate, i.e. urban area usually comes at the expense of forest, but you can decide how to change the landscape. Record your changed fractions.
+```
+
+7) **Scenario 2** If the irrigated dairy industry were made to contain their flows (i.e. prevent high $P$ concentrations going to the stream), how would this affect the overall concentration in the water at the river basin outlet? They have to keep the total subcatchment $P$ concentration below 0.065 g m^3^. 
+
+```{block2, hint7_3, type='rmdtip2'}
+Use an IF statement.
+```
+
+
+

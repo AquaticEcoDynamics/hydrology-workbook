@@ -1,0 +1,8 @@
+﻿Parameters for catchment model: ,"<span style=""color: #9BBB59;"">Sub Catchment 1 ($i$=1)</span> "," <span style=""color: #0070C0;"">Sub Catchment 2 ($i$=2)</span> ","<span style=""color: #F79646;"">Sub catchment 3 ($i$=3)</span> "
+"Sub catchment area, $A$ (km^2^)",50,100,120
+"Runoff coefficient, $c$ (range)",0.2 to 0.5,0.1 to 0.4,0.1 to 0.3
+"Initial loss threshold value, $R_{crit}$ (m)",0.01,0.025,0.04
+"Landuse fraction, $F$: irrigated dairy ",0.1,0,0.5
+"Landuse fraction, $F$: wheat",0,0.8,0.1
+"Landuse fraction, $F$: urban",0.3,0,0.1
+"Landuse fraction, $F$: forest ",0.6,0.2,0.3

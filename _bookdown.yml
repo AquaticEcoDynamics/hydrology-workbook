@@ -8,7 +8,7 @@ rmd_files: ["index.Rmd",
             "05-characterising_soil_moisture.Rmd",
             "04-surface_ground_water_interaction.Rmd",
              "06-darcys_law.Rmd",
-            # "07-module6.Rmd",
+             "07-module6.Rmd",
             # "08-module7.Rmd",
             # "09-module8.Rmd",
             "10-references.Rmd"]
