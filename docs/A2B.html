@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook</title>
+  <meta name="description" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook" />
+  
+  
+  
+
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="A2A.html"/>
+<link rel="next" href="A3.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/plotly-binding-4.9.2.2/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Exercises</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html"><i class="fa fa-check"></i>Exercise 2 - Streamflow analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_1"><i class="fa fa-check"></i>Sample Collection</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_3"><i class="fa fa-check"></i>Estimating Field Capacity</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_4"><i class="fa fa-check"></i>What did we learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html"><i class="fa fa-check"></i>Exercise 3B - Visualising groundwater</a>
+<ul>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_1"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 4 - Groundwater and surface water interaction</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_4"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_9"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_13"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>Rates of change</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 - Assessing environmental flow impacts</a>
+<ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_3"><i class="fa fa-check"></i>A - Classifying e-flow benefits case study : MDB</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_4"><i class="fa fa-check"></i>B - Flow diversion case study : Robe Lakes</a>
+<ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_5"><i class="fa fa-check"></i>Module resources</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_6"><i class="fa fa-check"></i>Categorising flow data</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_7"><i class="fa fa-check"></i>Flow diversion scenarios</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_8"><i class="fa fa-check"></i>Assessing impacts on lake salinity</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 - Exploring future climate data projections</a>
+<ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_2"><i class="fa fa-check"></i>Making a simple summary plot with the CCIA tool</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_3"><i class="fa fa-check"></i>Threshold exceedance</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_4"><i class="fa fa-check"></i>Spatial gradients in climate trends:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_5"><i class="fa fa-check"></i>Climate trajectories:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_6"><i class="fa fa-check"></i>Climate Futures Tool:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_7"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>II Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+<li class="chapter" data-level="" data-path="A2A.html"><a href="A2A.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a>
+<ul>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_2"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_3"><i class="fa fa-check"></i>Helena River Study Site</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_4"><i class="fa fa-check"></i>Your task</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_5"><i class="fa fa-check"></i>Literature review</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_6"><i class="fa fa-check"></i>Mapping vegetation change</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_7"><i class="fa fa-check"></i>Mapping salinity (EC) in QGIS</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_8"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_9"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_10"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_11"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html"><i class="fa fa-check"></i>Assessment 3 - Modelling catchment response to climate change</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_2"><i class="fa fa-check"></i>A. Catchment Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_3"><i class="fa fa-check"></i>Module Resources</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_4"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_5"><i class="fa fa-check"></i>Calibrating the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_6"><i class="fa fa-check"></i>Land-use change scenario</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_7"><i class="fa fa-check"></i>B. Lake system model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_8"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_9"><i class="fa fa-check"></i>Assessing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_10"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A2_11"><i class="fa fa-check"></i>Submission</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_12"><i class="fa fa-check"></i>Optional: Add phosphorus concentrations to the model</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="A2B" class="section level1 unnumbered">
+<h1>Part B - Groundwater and surface water interaction: A case study on the Helena River</h1>
+<div id="A2B_1" class="section level3 unnumbered">
+<h3>Learning Objectives</h3>
+<p>This assessment will require students to understand how hydrologic
+monitoring of can inform the conceptual models of ecosystems that
+underpin solutions to management challenges. The data set that you will
+work on is part of a long-term research investigation being undertaken
+with the WA Department of Biodiversity, Conservation and Attractions
+(DBCA) and UWA. The goal of this research is to understand the drivers
+of decline of <em>E. rudis</em> in relation to the changing hydrology regime at
+the Guildford floodplains along the Helena river.</p>
+<p>At the completion of this assessment students will have demonstrated
+their ability to:</p>
+<ul>
+<li><p>analyse and interpret measured hydrological data</p></li>
+<li><p>develop a conceptual hydrological model</p></li>
+<li><p>effectively communicate their understanding of a hydrological system
+through a written report</p></li>
+</ul>
+</div>
+<div id="A2B_2" class="section level3 unnumbered">
+<h3>Background</h3>
+<p>The degradation of freshwater systems by increasing salinity is a major
+challenge facing Western Australia. Salinisation of the Avon river,
+which enters the Upper Swan river at Walyunga National Park, arose due
+to poor land-management leading to secondary salinity in the inland
+wheatbelt catchments. Whilst secondary salinity is not an issue in the
+Swan Coastal Plain where our study site is, the salt loads from the Avon
+in addition to rising sea levels and decreasing rainfall trend have been
+driving changes in the seasonal movement of marine waters, with
+increasing penetration of the salt wedge further inland from the ocean
+(Huang et al. 2018).</p>
+<p>The City of Swan has identified our focus site on the Helena River near
+Guildford as an area of concern due to the decline of Eucalyptus rudis.
+<em>E. rudis</em> plays a vital role in the riparian ecosystem. Riparian
+woodland species are important filters that reduce nutrient transfers
+from the land into the river, which is a significant issue in the Swan
+river and its tributaries (excessive nutrients have historically
+resulted in noxious algal blooms). There is therefore a need to better
+understand what drives decline and if projected drying conditions for
+the region will make the pressures worse.</p>
+<center>
+<img src="images/assessment2B/image1.png" width="85%" />
+</center>
+<p>Salinisation of river systems can cause shifts in floodplain vegetation
+which arise because of river water interaction with the floodplain.
+Depending on the salinity increase and the salt tolerance of the
+floodplain tree species, this can cause shifts in community structure.
+<em>Eucalyptus rudis</em> is important species that has a natural range along
+the Swan river and its tributaries. This species has been reported to be
+in decline for over 15 years along the Swan river (Clay &amp; Majer 2001),
+and more recently along one of the tributaries of the Swan river: the
+Guildford floodplains of the Helena river (Dundas 2011). It is currently
+unknown the exact role of water availability and salinity in the
+observed decline, and alternate hypothesis related to tree pathogens
+(e.g. Phytophthora) are also as drivers of decline are also under
+investigation.</p>
+</div>
+<div id="A2B_3" class="section level3 unnumbered">
+<h3>Helena River Study Site</h3>
+<p>Start by watching <a href="https://echo360.org.au/media/a8e04685-0067-42ec-8524-4d97602a2e0e/public">this
+video</a>
+recorded by Matt Hipsey to give you an introduction to the Helena River
+site. You can see the key features of the site marked on this aerial
+photo.</p>
+<center>
+<img src="images/assessment2B/image2.png" width="65%" />
+</center>
+<p>The natural surface drainage of the site has been altered by artificial
+surface drainage channels.</p>
+<center>
+<img src="images/assessment2B/image3_1.png" width="45%" height="25%" /><img src="images/assessment2B/image3_2.png" width="45%" height="25%" />
+</center>
+<p>A series of monitoring wells have previously been installed at the site.
+The following <a href="https://en.wikipedia.org/wiki/Lidar">LIDAR</a> image shows
+the surface topography, with the locations of groundwater wells also
+indicated.</p>
+<center>
+<div class="figure"><span id="fig:A2Bimage4"></span>
+<img src="images/assessment2B/image4.png" alt="High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells." width="85%" />
+<p class="caption">
+Figure 29: High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.
+</p>
+</div>
+</center>
+<p>These groundwater monitoring wells are holes that have been drilled into
+the ground and lined with PVC pipes that has slots at the bottom to let
+the water in. All you can see from the land surface is the top of the
+PVC casing sticking up with a cap and sometimes a lock on it. If you
+want to use these wells for a scientific purpose you need to know the
+construction details. Firstly, where is the well (GPS coordinates) and
+what are the dimensions (depth and diameter) of the well? The well
+dimensions will determine the equipment you need to sample it. Secondly,
+across what depth range (and more importantly, elevation) is the screen
+interval (the area where slots are present)? This is the actual
+elevation of your groundwatre pressure measurement; it’s important that
+you know this so that you can compare your measurement with existing
+data. Once you get to a well, the first thing to do is measure the depth
+to water - from this measurement you can work out the elevation of the
+watertable, and also how much water is sitting in the well (standing
+water). If you want to sample for salinity or hydrochemical properties,
+then as a rule of thumb you need to remove 3-times this volume of
+standing water from the well before you take the sample to ensure the
+sample is representative of the aquifer.</p>
+<center>
+<img src="images/assessment2B/image5_1.png" width="45%" height="25%" /><img src="images/assessment2B/image5_2.png" width="45%" height="25%" />
+</center>
+</div>
+<div id="A2B_4" class="section level3 unnumbered">
+<h3>Your task</h3>
+<p>During this assessment you will use existing data to delineate the
+hydrologic pathways (surface and sub-surface) that determine the
+distribution of water and salt in this floodplain system. You will use
+this information to develop a hydrological conceptual model of this
+site. Your assessment report should describe the context of the
+investigation and summarise your findings and observations as suitable
+for a reader such as the City of Swan Environmental Management team.</p>
+<p>After your analysis you should be able to:</p>
+<ul>
+<li>Identify the distressed and dead trees at the site</li>
+<li>Identify the surface water flow regime - where and when does surface
+water pond or flow</li>
+<li>Articulate the key features of the groundwater system - water level
+trends, groundwater flow directions, and surface water - groundwater
+interaction areas</li>
+<li>Assess the distribution of salinity in groundwater wells
+(piezometers) and surface water</li>
+<li>Conceptualise the hydrologic processes influencing salt movement and
+accumulation across the site</li>
+<li>Articulate possible links between this conceptualization and
+declining health of <em>E. Rudis</em></li>
+</ul>
+<p>The data you need for the assessment is in the file <em>Helena Data Combined.xlsx</em></p>
+</div>
+<div id="A2B_5" class="section level3 unnumbered">
+<h3>Literature review</h3>
+<p>Start by reading this report by UWA researchers to learn more about the
+history of scientific studies at this site and recent findings:</p>
+<center>
+<img src="images/assessment2B/image6.png" width="55%" />
+</center>
+</div>
+<div id="A2B_6" class="section level3 unnumbered">
+<h3>Mapping vegetation change</h3>
+<p>There are now a range of spatial data products that have been generated
+from aerial imagery and remote sensing methods that we can use to help
+understand hydrological processes. One of these products is Nearmap,
+which allows us to access aerial imagery to investigate the changes in
+vegetation (and surface water distribution) over time.</p>
+<p>Nearmap can be accessed at: <a href="http://maps.au.nearmap.com" class="uri">http://maps.au.nearmap.com</a> (login via UWA
+library Onesearch - see this
+<a href="https://guides.library.uwa.edu.au/c.php?g=569441&amp;p=3958857">webpage</a>
+for details). Once you have successfully logged into Nearmap you can
+find the study site by searching for Guildford and then identifying the
+confluence of the Helena and Swan Rivers.</p>
+<center>
+<div class="figure"><span id="fig:A2Bimage7"></span>
+<img src="images/assessment2B/image7.png" alt="In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)" width="90%" />
+<p class="caption">
+Figure 30: In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)
+</p>
+</div>
+</center>
+<p>Zoom in so that you can see the vegetation canopy clearly and then use
+the time bar at the top to look at changes over time (play button will
+scroll through all available images, clock icon will split the screen so
+you can compare two different dates.</p>
+<ul>
+<li><p>What seasonal changes can you see in the images?</p></li>
+<li><p>How has the vegetation changed between the oldest and the most
+recent images (compare similar times of year)?</p></li>
+<li><p>As you scroll through time does there seem to be a period of more
+rapid decline? Are there any periods of recovery?</p></li>
+</ul>
+<p>You can also see the distribution of surface water on the Nearmap
+imagery - compare what you see with the following mapping of surface
+water inundation at the site.</p>
+<center>
+<div class="figure"><span id="fig:A2Bimage8"></span>
+<img src="images/assessment2B/image8.png" alt="Example inundation pattern. Which way is the water flowing?" width="65%" />
+<p class="caption">
+Figure 31: Example inundation pattern. Which way is the water flowing?
+</p>
+</div>
+</center>
+</div>
+<div id="A2B_7" class="section level3 unnumbered">
+<h3>Mapping salinity (EC) in QGIS</h3>
+<p>Surface water samples from across the site have previously been
+collected and analysed for electrical conductivity (EC), which is a
+measure of salinity. Let’s create a map to visualise the spatial
+variation in salinity across the study site. The following instructions
+take you through the steps to do this in QGIS, which can be downloaded
+<a href="https://qgis.org/en/site/">here</a>. If you are proficient in ArcGIS you
+can use that instead to create your map.</p>
+<ol style="list-style-type: decimal">
+<li><p>Let’s start by importing our EC point data. Go to <em>Layer -&gt; Add
+Layer -&gt; Add Delimited Text Layer</em>.</p></li>
+<li><p>Under <em>File name</em> navigate to a csv file of the EC data</p>
+<ul>
+<li>Make sure under <em>File Format</em> ‘CSV’ is selected</li>
+<li>Under <em>Geometry Definition</em> set the <em>X field</em> to the Easting
+column of you EC data and the <em>Y field</em> to the Northing column</li>
+<li>Set the <em>Geometry CRS</em> to “EPSG:32750 - WGS84/UTM zone 50S”</li>
+<li>Click <em>Add</em></li>
+</ul></li>
+</ol>
+<center>
+<div class="figure"><span id="fig:A2Bimage9"></span>
+<img src="images/assessment2B/image9.png" alt="Importing your EC data." width="100%" />
+<p class="caption">
+Figure 32: Importing your EC data.
+</p>
+</div>
+</center>
+
+<div class="rmdnote2">
+Make sure your data takes this form in Excel. Save it as a CSV:
+<center>
+<img src="images/assessment_2B/image15.png" style="width:45.0%" />
+</center>
+</div>
+<p>You’ll now see the point data added to your screen, however, we have no
+spatial context - let’s add a basemap.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Go to the QuickMapServices (QMS) button in the toolbar and
+browse/search for a basemap that you think would be appropriate
+(e.g. search “satellite” and browse the different satellite basemap
+providers).</p></li>
+<li><p>Add one to the map.</p></li>
+</ol>
+<center>
+<div class="figure"><span id="fig:A2Bimage10"></span>
+<img src="images/assessment2B/image10.png" alt="The QMS buttons in the QGIS toolbar." width="50%" />
+<p class="caption">
+Figure 33: The QMS buttons in the QGIS toolbar.
+</p>
+</div>
+</center>
+
+<div class="rmdnote2">
+If you do not have the QMS button in your toolbar go <em>Plugins -&gt; Manage and Install Plugins</em> and search ‘QuickMapServices’ to install it.
+</div>
+<p>Now we have a basemap and our points - let’s change the symbology of the
+points to better communicate the variation in EC.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Right click on the point data in the layer window and go <em>Properties
+-&gt; Symbology</em>.</li>
+<li>Set the symbol type to <em>Graduated</em> and specifying the values to
+graduate by as our EC column.</li>
+<li>Now set the <em>Method</em> to <em>Size</em>, and the <em>Mode</em> to <em>Natural Breaks
+(Jenks)</em>, click <em>Classify</em>.</li>
+</ol>
+<center>
+<div class="figure"><span id="fig:A2Bimage11"></span>
+<img src="images/assessment2B/image11.png" alt="Changing the symbology of our point data." width="100%" />
+<p class="caption">
+Figure 34: Changing the symbology of our point data.
+</p>
+</div>
+</center>
+<p>Now when you click <em>Apply</em> the point size is weighted to the EC. You can
+further refine your symbology by changing the point colours and size -
+think about how best to communicate variation in EC.</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Finally, create a map output by clicking the <em>New Layout</em> button in
+the toolbar. If you aren’t familiar with creating maps in QGIS work
+with one of your classmates who is, or read through the second half
+of this
+<a href="https://www.polarmicrobes.org/tutorial-on-qgis-how-to-make-a-map/">tutorial</a>.</li>
+</ol>
+<center>
+<div class="figure"><span id="fig:A2Bimage12"></span>
+<img src="images/assessment2B/image12.jpg" alt="Example map from your QGIS output." width="100%" />
+<p class="caption">
+Figure 35: Example map from your QGIS output.
+</p>
+</div>
+</center>
+</div>
+<div id="A2B_8" class="section level3 unnumbered">
+<h3>Time-series data for assessing groundwater levels and salinity</h3>
+<p>You are provided with a spreadsheet that summarise the timeseries data
+collected by various agencies (e.g., UWA and DWER (via
+<a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">WIR</a>)).
+This files includes numerous sheets with the following data notes :</p>
+<ul>
+<li><p>Weather: There was a “Baro” dataset, which is a UWA logger measuring
+atmospheric pressure, in kPa. We measure this as the water levels in
+the piezometers may vary due to atmospheric pressure fluctuations.
+For your report you do not need to present this, just bear in mind
+it was used to “correct” the piezometer water level data. The
+rainfall provided is from the nearby <a href="https://weather.agric.wa.gov.au">DPIRD
+South-Perth</a> weather station.</p></li>
+<li><p>GW Levels: This includes the UWA piezometer level data (converted
+into mAHD) for the main wells: HW1, HW2, and HW3. Bore 7 is also
+included which is denoted as Jeremy on the map.</p></li>
+<li><p>GW Salinity: This has the UWA salinity measurements from inside the
+Piezometers. These data are in mS/cm.</p></li>
+<li><p>Helena River: River Corrected data is the water level of Helena
+River under the nearby Traffic Bridge. So you can think of this as
+the water level at the river-end of the piezometer transect. “Poison
+Lease” (upstream in Helena River to the east of our site). It also
+has the discharge (Q) at this site, based on a rating curve.</p></li>
+<li><p>Swan River: This has WIR data from the station MSB data as above,
+including the daily min and mix, showing the tidal amplitude of the
+Swan River over time. The “Vitox” Salinity data is from the WIR
+website for the nearby location which is just to the west of our
+site (on the other side of Kings Meadow Oval). This data indicates
+the river/estuary salinity and would be very similar to the salinity
+of the surface water in Helena River near our site also. Note its
+seasonality, compared to the groundwater.</p></li>
+</ul>
+<p>Remember, when working with groundwater data you need to be careful to
+distinguish between groundwater levels that are reported as a depth to
+water (from the ground level or top of casing) as opposed to groundwater
+levels the Australian Height Datum (AHD). If there are measured values
+of depth to water you need to convert these to elevations in m AHD so
+they can be compared with the prior data and WIR data. To do this we
+need to know the ground level elevation at the measurement point, in
+mAHD (or the elevation of the top of casing, if this was the origin for
+the measurement).</p>
+<p>Raw data is often not perfect, so think of some ways to presnet the
+data. For example, you could make a PIVOT table to look at monthly
+values. When interpreting the data we would like to highlight
+seasonality, and also relative differences between sites. Importantly,
+is there a way to bring togteher the different data into a single plot
+to help our interpretation of the what is happening at the system.</p>
+</div>
+<div id="A2B_9" class="section level3 unnumbered">
+<h3>Conceptualising Surface-Groundwater interaction</h3>
+<p>Now that you have an understanding of the previous studies at the site,
+and have plotted the existing data, the next step is to develop your
+conceptual model of surface water - groundwater interaction. When trying
+to make sense of all this data from different locations and time periods
+some guiding questions can help focus your analyses:</p>
+<ul>
+<li><p>How does salinity vary across the surface water sites? How does this
+relate to sources of water (Helena River, Stormwater from nearby
+suburbs, Swan estuary, Rain)</p></li>
+<li><p>How does water level and salinity vary in the groundwater based on
+distance from the river? Are levels in the aquifer higher or lower
+than the (mean) river level? What about salinity?</p></li>
+<li><p>Do these patterns in groundwater salinity change seasonally?</p></li>
+<li><p>Which flow pathways drive the changes we see? Is water moving
+vertically or laterally? Consider how water levels in the
+piezometers vary relative to surface water. Think here Darcy’s Law
+and Hydraulic gradient.</p></li>
+<li><p>Are is the unsaturated zone (vadose zone) adequate for the tree
+roots? i.e., is the water table depth deep enough to contain
+non-salty soil moisture for them, or must they rely on water from
+salty groundwater? Look here at areas in nearmap where tree loss has
+occurred.</p></li>
+<li><p>What are the salinity tolerances reported for E. rudis, based on
+lab/field trials? And how does our data compare to sort of data
+(historical and our class data).</p></li>
+</ul>
+</div>
+<div id="A2B_10" class="section level3 unnumbered">
+<h3>Submission</h3>
+<div class="redbox2">
+<p>Your report should include:</p>
+<p>Introduction [1 page maximum]</p>
+<ul>
+<li><p>Background and context – why are we interested in this site?</p></li>
+<li><p>Map of site – where specifically are we looking at?</p></li>
+<li><p>Scope of the investigation – what is this report about?</p></li>
+</ul>
+<p>Assessment methodology [1 page : be concise!]</p>
+<ul>
+<li><p>Desktop assessment, historical data sources – external data/info we
+referred to</p></li>
+<li><p>Data analysis approach, as relevant – any processing or “higher”
+analysis we did to the data</p></li>
+</ul>
+<p>Results and findings [3 pages max]</p>
+<ul>
+<li><p>Map of surface water salinity</p></li>
+<li><p>Time-series graphs of water levels, flows and salinities (or EC)</p></li>
+<li><p>Conceptual model of surface and groundwater flow and salt pathways;
+consider all information in this, including past data and reports
+and nearmap imagery. Consider how summer may be different to winter!</p></li>
+</ul>
+<p>Discussion and conclusions [&lt;1 page]</p>
+<ul>
+<li><p>Interpretation of the above data in light of the observed
+tree-decline locations</p></li>
+<li><p>Suggestions for improved monitoring and further investigations;
+dot-points OK here.</p></li>
+</ul>
+<p>Your report will be assessed according to the marking rubric on LMS.
+Submissions not received by the due date will attract a late penalty.</p>
+</div>
+</div>
+<div id="references" class="section level3 unnumbered">
+<h3>References</h3>
+<p>Clay, R., Majer, J. (2001). Flooded Gum (Eucalyptus rudis) Decline in
+the Perth Metropolitan Area: A Preliminary Assessment.</p>
+<p>Hipsey, M.R., Alilou, H., Bourke, S., Bunting, C., Busch, B.D., Job, M.,
+Whitwell, C., and Zhai, S., (2020). Understanding and predicting
+riparian decline: Ecohydrology and hydro-climatological change in the
+Upper Swan estuary. The University of Western Australia, Perth,
+Australia. 51pp.</p>
+</div>
+<div id="A2B_11" class="section level3 unnumbered">
+<h3>Optional: Site visit to Helena River floodplain</h3>
+<p>If you are in Perth you can visit the study site just outside of the
+Guildford town center. Arrive at the carpark near King’s Meadow Oval,
+and get your bearings</p>
+<center>
+<img src="images/assessment2B/image13.png" width="65%" />
+</center>
+<ul>
+<li>Explore the site, considering the surface water pathways.</li>
+<li>Can you identify flow direction in the main waterways bounding the
+site (Swan River to the west and Helena River to the south-east).</li>
+<li>Can you identify water accumulation areas within the site itself.</li>
+<li>Consider the horizontal and vertical movement pathways of this
+water.</li>
+<li>Identify <em>Eucalyptus rudis</em> trees and their health in context of the
+landscape.</li>
+</ul>
+<center>
+<img src="images/assessment2B/image14_1.png" width="45%" height="25%" /><img src="images/assessment2B/image14_2.png" width="45%" height="25%" />
+</center>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="A2A.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="A3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"], ["Helena_Data.zip", "Helena Data"], ["Exercise 4 Data.zip", "Exercise 4 Data"], ["Exercise 6.zip", "Exercise 6"], ["Exercise 7 Data.zip", "Exercise 7 Data"], ["Assessment 3 Spreadsheets.zip", "Assessment 3 Spreadsheets"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Template"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Streamflow Lab | Hydrology Workbook</title>
+  <meta name="description" content="The online Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Streamflow Lab | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="The online Hydrology Workbook" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Streamflow Lab | Hydrology Workbook" />
+  
+  <meta name="twitter:description" content="The online Hydrology Workbook" />
+  
+
+<meta name="author" content="Matt Hipsey, Giles Knight" />
+
+
+<meta name="date" content="2021-07-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E1-1.html"/>
+<link rel="next" href="E5-1.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="https://hypothes.is/embed.js" async></script>
+  
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Climate &amp; Rainfall</b></span></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html"><i class="fa fa-check"></i>Exercise 1A: Catchment Rainfall and Runoff</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_2"><i class="fa fa-check"></i>Part 1: Spatial Rainfall Variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_4"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_8"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_12"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_13"><i class="fa fa-check"></i>Part 2: Rainfall and Runoff Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_14"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_15"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_16"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_17"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_18"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_19"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="E1-1.html"><a href="E1-1.html#E1_20"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Surface Hydrology</b></span></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html"><i class="fa fa-check"></i>Streamflow Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="E2-1.html"><a href="E2-1.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Soils &amp; Groundwater</b></span></li>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html"><i class="fa fa-check"></i>Characterising Soil Moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_2"><i class="fa fa-check"></i>Computing Soil Porosity and Soil Moisture</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 1B Part 1: Surface-Ground Water Interaction - Desktop Catchment</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_11"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html"><i class="fa fa-check"></i>Exercise 1B Part 2: Helena River Site Visit</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_14"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_15"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those attending in-person</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_21"><i class="fa fa-check"></i>Helena River Floodplain Field Visit Tasks: For those undertaking online</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_25"><i class="fa fa-check"></i>Mapping EC in QGIS</a></li>
+<li class="chapter" data-level="" data-path="E4-13.html"><a href="E4-13.html#E4_23"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html"><i class="fa fa-check"></i>Darcy’s Law</a>
+<ul>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_2"><i class="fa fa-check"></i>Darcy Tubes</a></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="M6-1.html"><a href="M6-1.html#M6_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="M7-1.html"><a href="M7-1.html"><i class="fa fa-check"></i>Exercise 2 (GEOS4499 Students Only)</a>
+<ul>
+<li class="chapter" data-level="" data-path="M7-1.html"><a href="M7-1.html#M7_2"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="M7-1.html"><a href="M7-1.html#M7_3"><i class="fa fa-check"></i>Model Overview</a></li>
+<li class="chapter" data-level="" data-path="M7-1.html"><a href="M7-1.html#M7_4"><i class="fa fa-check"></i>Module Resources</a></li>
+<li class="chapter" data-level="" data-path="M7-1.html"><a href="M7-1.html#M7_5"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="E2_1" class="section level1 unnumbered">
+<h1>Streamflow Lab</h1>
+<p>In this module we understand how to generate streamflow data, and then how to charcaterise variability in streamflow data.</p>
+<div id="E2_2" class="section level2 unnumbered">
+<h2>Measuring Stream Velocity &amp; Discharge</h2>
+<p>The process of measuring stream flow (volume rate of flow), or discharge, is called stream
+gauging. There are numerous methods of stream gauging, including direct methods, such as volumetric gauging, and dilution methods, as well as indirect methods involving stage-discharge relations, or rating curves. Since the velocity of a stream varies with depth and width across a stream, it is important to understand what it is you want to measure when choosing a stream gauging method. If you are interested in stream surface velocity, a simple float method would work well. This method involves throwing some buoyant, highly visible object into the stream and measuring the time it takes to float a known distance. If you are interested in obtaining a more accurate stream discharge measurement, the velocity-area method is your method of choice.</p>
+<p>Stream flow (discharge) can be measured based on two fundamental methods, which are each expanded upon below (refer to lecture 3 for details). The first requires a direct measurement of velocity, whereas the second is an approximation based on stream-bed slope and geometry.</p>
+<div id="E2_3" class="section level3 unnumbered">
+<h3>Flow Rate: Velocity-Area Method</h3>
+<p>Flow estimates in natural streams and artificial channels under steady (no change in depth with time) and uniform (no change in depth with space) conditions can be computed by the product of mean flow velocity (integrated in depth and across the channel) and the cross-sectional area of flow. The equation <span class="math inline">\(Q = V * A\)</span>, were <span class="math inline">\(V\)</span> (m/s) is the mean velocity and <span class="math inline">\(A\)</span> (m<sup>2</sup>) is the flow (or water) cross-sectional area is used for this purpose. Large streams and rivers, a section control is needed to generate the “rating curve” thus establishing a relationship between water stage height (<span class="math inline">\(H\)</span>) and flow discharge (<span class="math inline">\(Q\)</span>). In this case, both flow velocity measurements and cross-sectional areas are needed.</p>
+<p>Discharge using the Velocity-Area method is measured by integrating the area and velocity of each point across the stream. The channel or stream is divided into sections based on where the velocity and stage height measurements were taken in the cross-section of the stream/channel. The flow velocity is measured using a current meter (i.e. propeller, electromagnetic, ultrasonic, and Doppler).</p>
+<p>The discharge is computed using:</p>
+<center>
+<span class="math display" id="eq:exercise2-1">\[\begin{equation}
+Q = \sum^{n}_{i=0} (V_{i} * \text{Area}_{i})
+\tag{4}
+\end{equation}\]</span>
+</center>
+<p>where <span class="math inline">\(n\)</span> is the number of vertical for measuring velocities, <span class="math inline">\(V_{i}\)</span> is the mean velocity value for vertical <span class="math inline">\(i\)</span> (m/s) and <span class="math inline">\(\text{Area}_i\)</span> is the cross-sectional area around vertical <span class="math inline">\(i\)</span> (m<sup>2</sup>). The cross-sectional area is best estimated by treating the sections as rectangles, trapezia or triangles.</p>
+<center>
+<div class="figure"><span id="fig:image03-1"></span>
+<img src="images/surface_hydrology/picture1.png" alt="Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge." width="50%" />
+<p class="caption">
+Figure 6: Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge.
+</p>
+</div>
+</center>
+<p>To measure stream velocity we can utilise a “<strong>swoffer</strong>” – a pole with a propeller on the end with an electronic logger recording the rotations. A current meter is so designed that its rotation speed varies linearly with the stream velocity at the location of the instrument.</p>
+A more modern alternative is an “ADV” (Acoustic Doppler Velocimeter). This relies on a method where it looks at the scatter of sound waves rebounding of particles/bubbles in the water, and based on the “Doppler effect” (recall the sound of a train changing pitch as it moves past you), it can compute the water velocity.
+<center>
+<div class="figure"><span id="fig:image03-2"></span>
+<img src="images/surface_hydrology/picture2.png" alt="An ADV - used to measure stream velocity." width="30%" />
+<p class="caption">
+Figure 7: An ADV - used to measure stream velocity.
+</p>
+</div>
+</center>
+<p><br></p>
+<p><strong>Activity:</strong> Look at the demonstration in the lab and videos below showing the principles of how to measure the velocity of water, and compute the total channel discharge based on the cross-sectional area.</p>
+<p><br></p>
+<center>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+<iframe style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" src="https://www.youtube.com/embed/c1tQcxyRioQ" allowfullscreen scrolling="no" allow="encrypted-media; accelerometer; gyroscope; picture-in-picture">
+</iframe>
+</div>
+</center>
+<br>
+<center>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+<iframe style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" src="https://www.youtube.com/embed/_k1BTDjZfbU" allowfullscreen scrolling="no" allow="encrypted-media; accelerometer; gyroscope; picture-in-picture">
+</iframe>
+</div>
+</center>
+</div>
+<div id="E2_4" class="section level3 unnumbered">
+<h3>Flow Rate: Manning’s Formula</h3>
+<p>Manning’s formula for estimating runoff (in m<sup>3</sup>s<sup>-1</sup>) from basic channel geometry, slope and roughness is:</p>
+<center>
+<span class="math display" id="eq:exercise2-2">\[\begin{equation}
+Q = \frac{1}{n}(A\space{}R^{\frac{2}{3}}\space{}S^{\frac{1}{2}})
+\tag{5}
+\end{equation}\]</span>
+</center>
+<p>Where: <span class="math inline">\(A\)</span> is the channel cross-sectional area (m<sup>2</sup>) ; <span class="math inline">\(R\)</span> is the hydraulic radius given by <span class="math inline">\(\frac{A}{P}\)</span> ; <span class="math inline">\(P\)</span> is the wetted perimeter (i.e. bed plus banks; m); <span class="math inline">\(S\)</span> is the channel slope (m/m); <span class="math inline">\(n\)</span> is Manning’s ‘n’ (which is an empirical roughness coefficient).</p>
+<p>In the field:</p>
+<ul>
+<li>The bottom slope (<span class="math inline">\(S\)</span>) will be estimated by using a differential GPS (DGPS). Conduct this by averaging the slope (m/m) for two reaches, one upstream and one downstream of the measurement point</li>
+<li>Estimate the ‘wetted perimeter’ (<span class="math inline">\(P\)</span>) of the channel and cross sectional area (<span class="math inline">\(A\)</span>)</li>
+<li>The roughness coefficient (<span class="math inline">\(n\)</span>) should be assumed from the literature, based on your observations and using a photograph of the channel. Then use the table below:</li>
+</ul>
+<center>
+<img src="images/surface_hydrology/picture3.png" width="70%" />
+</center>
+<p><br></p>
+<p><strong>Activity:</strong> Look at the demonstration models in the lab of the two example river/floodplain cross-sections. Assuming these are a scale model of a real-world river channel, compute the discharge.</p>
+<ul>
+<li>Sketch and use the scale to get the channel dimensions</li>
+<li>Estimate the “wetted perimeter”</li>
+<li>Compute a slope parameter, <span class="math inline">\(S\)</span>, assume for every 1km of stream length, the stream bed drops by 1m</li>
+<li>Estimate the cross-sectional area; the area “normal” (perpendicular) to the flow velocity</li>
+<li>Estimate a roughness parameter, Manning’s <span class="math inline">\(n\)</span>, and solve Equation <a href="E2-1.html#eq:exercise2-2">(5)</a></li>
+<li>Repeat the above, assuming the water level was at “bankfull” height</li>
+</ul>
+</div>
+</div>
+<div id="E2_5" class="section level2 unnumbered">
+<h2>Making Sense of Streamflow Data</h2>
+<p>The first step in any hydrologic data analysis project is to gather the data and relevant background information on your catchment of interest. In Western Australia the <a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">WIR website</a> contains all of the data and information you need, and we will use this in our future assignments. All states/countries have something similar; the USA has one of the best examples through the <a href="http://waterdata.usgs.gov/nwis">USGS NWIS website</a>.</p>
+<p>If you click the site information button, enter your gage name or number, and browse the available datasets for your river. For this analysis, you will need daily discharge data, peak streamflow, and the annual water data report. Other datasets may also be helpful for understanding the hydrologic behavior of your river.</p>
+<p>Hydrologic analyses are almost always conducted for “water years” not calendar years. In the Northern Hemisphere. A water year begins on October 1 and ends September 30 . In the Southern Hemisphere it Starts May 1 and ends April 30, though this can be region specific.</p>
+<div id="E2_6" class="section level3 unnumbered">
+<h3>Daily Unit Discharge Hydrograph</h3>
+<center>
+<div class="figure"><span id="fig:image03-5"></span>
+<img src="images/surface_hydrology/picture5.jpeg" alt="[The Avon River, Western Australia](https://en.wikipedia.org/wiki/Avon_River_(Western_Australia))" width="80%" />
+<p class="caption">
+Figure 8: <a href="https://en.wikipedia.org/wiki/Avon_River_(Western_Australia)">The Avon River, Western Australia</a>
+</p>
+</div>
+</center>
+<p>Unit discharge is the total discharge of the river divided by the watershed area. Thus, it has units of m<sup>3</sup>/s/km<sup>2</sup>. Unit discharge is very useful for comparing the hydrologic behaviour of catchments of different size (since discharge scales with area). Depending on your data source you will need to download data and do appropriate conversions in a spreadsheet.</p>
+<p>A properly formatted unit discharge hydrograph has a descriptive title, labelled axes, and a logarithmic y-axis. If you need help with formatting the graph in Excel, please don’t hesitate to ask for help!</p>
+<p><strong>Activity:</strong> Go to the <a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">WIR web link</a>, and download the continuous flow data for the Swan River “Walyunga” gauge (616011). In Excel, explore the data. Create a hydrograph comparing discharge between a wet year and a dry year (i.e. plot two years on a common x-axis. Use “hydrologic years” rather than calendar years. Label accordingly.
+Repeat the exercise but this time creating a unit hydrograph - for this you will need to divide by the catchment area; refer to the above information and check units are consistent. This gauge is draining the Avon catchment</p>
+<center>
+<div class="figure"><span id="fig:image03-6"></span>
+<img src="images/surface_hydrology/picture6.png" alt="Navigate to the 'Walyunga' guage (616011)" width="50%" height="50%" />
+<p class="caption">
+Figure 9: Navigate to the ‘Walyunga’ guage (616011)
+</p>
+</div>
+</center>
+</div>
+<div id="E2_7" class="section level3 unnumbered">
+<h3>Flow Duration Curves</h3>
+<div id="E2_8" class="section level4 unnumbered">
+<h4>What is it?</h4>
+<p>The flow duration curve is a plot that shows the percentage of time that flow in a stream is likely to equal or exceed some specified value of interest. For example, it can be used to show the percentage of time river flow can be expected to exceed a design flow of some specified value (e.g., 20 m<sup>3</sup>/s), or to show the discharge of the stream that occurs or is exceeded some percent of the time (e.g., 80% of the time).</p>
+</div>
+<div id="E2_9" class="section level4 unnumbered">
+<h4>How is it calculated?</h4>
+<p>The basic time unit used in preparing a flow-duration curve will greatly affect its appearance. For most studies, mean daily discharges are used. These will give a steep curve. When the mean flow over a long period is used (such as mean monthly flow), the resulting curve will be flatter due to averaging of short-term peaks with intervening smaller flows during a month. Extreme values are averaged out more and more, as the time period gets larger (e.g., for a flow duration curve based on annual flows at a long-record station).</p>
+<p><strong>Step 1:</strong> Sort (rank) average daily discharges for period of record from the largest value to the smallest value, involving a total of <span class="math inline">\(n\)</span> values.</p>
+<p><strong>Step 2:</strong> Assign each discharge value a rank (<span class="math inline">\(M\)</span>), starting with 1 for the largest daily discharge value.</p>
+<p><strong>Step 3:</strong> Calculate exceedence probability (<span class="math inline">\(P\)</span>) as follows:</p>
+<center>
+<span class="math display" id="eq:exercise2-3">\[\begin{equation}
+P = 100 * [\frac{M}{n+1}]
+\tag{6}
+\end{equation}\]</span>
+</center>
+<p>Where, <span class="math inline">\(P\)</span> = the probability that a given flow will be equaled or exceeded (% of time), <span class="math inline">\(M\)</span> = the ranked position on the listing (dimensionless), and <span class="math inline">\(n\)</span> = the number of events for period of record (dimensionless).</p>
+<p><strong>Activity:</strong> Follow the above steps using the 616011 gauge data to create your own flow duration curve.</p>
+</div>
+<div id="E2_10" class="section level4 unnumbered">
+<h4>What does this particular information tell you about your stream?</h4>
+<p>A flow duration curve characterizes the ability of the basin to provide flows of various
+magnitudes. Information concerning the relative amount of time that flows past a site are likely to equal or exceed a specified value of interest is extremely useful for the design of structures on a stream. For example, a structure can be designed to perform well within some range of flows, such as flows that occur between 20 and 80% of the time (or some other selected interval).</p>
+<p>The shape of a flow-duration curve in its upper and lower regions is particularly significant in evaluating the stream and basin characteristics. The shape of the curve in the high-flow region indicates the type of flood regime the basin is likely to have, whereas, the shape of the low-flow region characterizes the ability of the basin to sustain low flows during dry seasons. A very steep curve (high flows for short periods) would be expected for rain-caused floods on small watersheds. Snowmelt floods, which last for several days, or regulation of floods with reservoir storage, will generally result in a much flatter curve near the upper limit. In the low-flow region, an intermittent stream would exhibit periods of no flow, whereas, a very flat curve indicates that moderate flows are sustained throughout the year due to natural or artificial streamflow regulation, or due to a large groundwater capacity which sustains the base flow to the stream.</p>
+<p>An example, properly formatted flow duration curve is shown below (Figure <a href="E2-1.html#fig:image03-7">10</a>).</p>
+<center>
+<div class="figure"><span id="fig:image03-7"></span>
+<img src="images/surface_hydrology/picture7.png" alt="Aproperly formatted flow duration curve" width="85%" height="85%" />
+<p class="caption">
+Figure 10: Aproperly formatted flow duration curve
+</p>
+</div>
+</center>
+</div>
+</div>
+<div id="E2_11" class="section level3 unnumbered">
+<h3>Flood Frequency Analysis</h3>
+<div id="E2_12" class="section level4 unnumbered">
+<h4>What is it?</h4>
+<p>Flood frequency analyses are used to predict design floods for sites along a river. The technique involves using observed annual peak flow discharge data to calculate statistical information such as mean values, standard deviations, skewness, and recurrence intervals. These statistical data are then used to construct frequency distributions, which are graphs and tables that tell the <strong>likelihood</strong> of various discharges as a function of recurrence interval or exceedence probability.</p>
+<p>Flood frequency distributions can take on many forms according to the equations used to carry out the statistical analyses. Four of the common forms are: <strong>Normal Distribution</strong>; <strong>Log-Normal Distribution</strong>; <strong>Gumbel Distribution</strong>; and <strong>Log-Pearson Type III Distribution</strong>. Each distribution can be used to predict design floods; however, there are advantages and disadvantages of each technique.</p>
+<p>While the log Pearson Type III distribution is the recommended technique, its application is a bit more complex than we are going to undertake for this class. Instead, we will use the older Weibull plotting position method.</p>
+<p>Flood frequency information can be determined from knowledge of the peak discharge (highest discharge) in any given year provided enough years of information has been collected. This allows one to relate the expected recurrence interval for a given discharge, and determine the probability that a flood of a given discharge will occur in any given year. The recurrence interval for a given discharge can be calculated by first ranking the discharges.</p>
+<p><strong>Activity:</strong> In Table <a href="E2-1.html#tab:table03-1">7</a> below for “Big River,” fill in the Rank column. To do this, enter a 1 for the maximum discharge that has occurred during the 20 years of available data. The second highest discharge will be given a rank of 2, etc. with the lowest discharge given a value of 20.
+<br></p>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table03-1">Table 7: </span>Complete the table for ‘Big River’
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Date
+</th>
+<th style="text-align:center;">
+Maximum Discharge (m<sup>3</sup>/s), <span class="math inline">\(Q\)</span>
+</th>
+<th style="text-align:center;">
+Rank, <span class="math inline">\(m\)</span>
+</th>
+<th style="text-align:center;">
+Recurrence Interval, <span class="math inline">\(R\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+28-Feb-86
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1410
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+4-Mar-87
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+2890
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+22-Mar-88
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1850
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+3-Mar-89
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+800
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1-Feb-90
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1000
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+12-Apr-91
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+692
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+4-Apr-92
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1350
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+2-May-93
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1200
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+16-Mar-94
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+850
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+6-Jul-95
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+2400
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+21-Feb-96
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+890
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+30-Jan-97
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1480
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+16-Mar-98
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1500
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+21-Feb-99
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1300
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+12-May-00
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1700
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+8-Apr-01
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+2200
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1-Mar-02
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1830
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+8-Feb-03
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1120
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+12-Mar-04
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+750
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+6-Mar-05
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+1250
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<p><br>
+After you have filled in the Rank column, you can now calculate the recurrence interval for each peak discharge. The recurrence interval, <span class="math inline">\(R\)</span>, is given by the Weibull Equation:</p>
+<center>
+<span class="math display" id="eq:exercise2-4">\[\begin{equation}
+R = \frac{n+1}{m}
+\tag{7}
+\end{equation}\]</span>
+</center>
+<p>Where <span class="math inline">\(n\)</span> is the number of years over which the data was collected (20 years in this case), and <span class="math inline">\(m\)</span> is the rank of each peak discharge. Use this equation to calculate the recurrence interval for each peak discharge.</p>
+<p>Next, use the graph below to plot a graph of discharge (on the y-axis) versus recurrence interval (on the x-axis). Note that the x-axis is a logarithmic scale, and thus you should try to estimate as best you can where the data point will fall between the lines on the graph. Once you have plotted the points use a ruler to draw the best fit straight line through the data points (lay a ruler on the graph and try to draw a line that most closely approximates all of the data points). Do not draw lines that connect individual data points.</p>
+<center>
+<img src="images/surface_hydrology/picture4.png" width="70%" />
+</center>
+<p>By extrapolating your line on the graph, determine the peak discharge expected in a flood with a recurrence interval of 50 years and 100 years. These are the discharges expected in a 50 year flood and a 100 year flood.</p>
+<p>The annual exceedence probability, <span class="math inline">\(P_{e}\)</span>, is the probability that a given discharge will occur in a given year. It is calculated as the inverse of the recurrence interval, <span class="math inline">\(R\)</span>:</p>
+<center>
+<span class="math display" id="eq:exercise2-5">\[\begin{equation}
+P_{e} = \frac{1}{R}
+\tag{8}
+\end{equation}\]</span>
+</center>
+<p>Thus, the probability that a flood with a 10 year recurrence interval will occur in any year is 1/10 = 0.1 or 10%. What are the probabilities that a 50 year flood and a 100 year flood will occur in any given year?</p>
+<p><strong>Extra activity:</strong> Repeat the above flood frequency analysis using the 616011 Walyunga data set that you downloaded in Excel (Hint, use a pivot table and the max option to get the annual maximum discharge).</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E1-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E5-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"], ["Exercise_1A_Part_2_Answer_Sheet_UPDATED.docx", "Exercise 1A Part 2 Answer Sheet - Updated"], ["Streamflow_Activity.docx", "Streamflow Answer Sheet"], ["exercise_1b_part2_data_collection_sheet.pdf", "Exercise 1B Part 2 Data Collection Sheet"], ["Exercise 2 Resources (GEOS4499).zip", "Exercise 2 Resources (GEOS4499)"]],
+"toc": {
+"collapse": "none"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

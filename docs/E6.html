@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 6 - Managed aquifer recharge | Hydrology Workbook</title>
+  <meta name="description" content="Exercise 6 - Managed aquifer recharge | Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 6 - Managed aquifer recharge | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 6 - Managed aquifer recharge | Hydrology Workbook" />
+  
+  
+  
+
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E5.html"/>
+<link rel="next" href="E7.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/plotly-binding-4.9.2.2/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Exercises</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html"><i class="fa fa-check"></i>Exercise 2 - Streamflow analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_1"><i class="fa fa-check"></i>Sample Collection</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_3"><i class="fa fa-check"></i>Estimating Field Capacity</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_4"><i class="fa fa-check"></i>What did we learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html"><i class="fa fa-check"></i>Exercise 3B - Visualising groundwater</a>
+<ul>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_1"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 4 - Groundwater and surface water interaction</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_4"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_9"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_13"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>Rates of change</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 - Assessing environmental flow impacts</a>
+<ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_3"><i class="fa fa-check"></i>A - Classifying e-flow benefits case study : MDB</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_4"><i class="fa fa-check"></i>B - Flow diversion case study : Robe Lakes</a>
+<ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_5"><i class="fa fa-check"></i>Module resources</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_6"><i class="fa fa-check"></i>Categorising flow data</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_7"><i class="fa fa-check"></i>Flow diversion scenarios</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_8"><i class="fa fa-check"></i>Assessing impacts on lake salinity</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 - Exploring future climate data projections</a>
+<ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_2"><i class="fa fa-check"></i>Making a simple summary plot with the CCIA tool</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_3"><i class="fa fa-check"></i>Threshold exceedance</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_4"><i class="fa fa-check"></i>Spatial gradients in climate trends:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_5"><i class="fa fa-check"></i>Climate trajectories:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_6"><i class="fa fa-check"></i>Climate Futures Tool:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_7"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>II Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a>
+<ul>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_1"><i class="fa fa-check"></i>Overview of scheduled group project activities</a></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_2"><i class="fa fa-check"></i>Introduction &amp; Assessent Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html"><i class="fa fa-check"></i>Assessment 3 - Modelling catchment response to climate change</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_2"><i class="fa fa-check"></i>A. Catchment Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_3"><i class="fa fa-check"></i>Module Resources</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_4"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_5"><i class="fa fa-check"></i>Calibrating the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_6"><i class="fa fa-check"></i>Land-use change scenario</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_7"><i class="fa fa-check"></i>B. Lake system model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_8"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_9"><i class="fa fa-check"></i>Assessing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_10"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A2_11"><i class="fa fa-check"></i>Submission</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_12"><i class="fa fa-check"></i>Optional: Add phosphorus concentrations to the model</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="E6" class="section level1 unnumbered">
+<h1>Exercise 6 - Managed aquifer recharge</h1>
+<div id="E6_1" class="section level2 unnumbered">
+<h2>Objectives</h2>
+<p>In this exercise students will consolidate their understanding of managed aquifer recharge, and the role it plays in securing water resources in a changing climate. At the end of this exercise students will be able to:</p>
+<ul>
+<li>Describe the processes involved in managed aquifer recharge</li>
+<li>Identify the key benefits and limitations of managed aquifer recharge</li>
+</ul>
+</div>
+<div id="E6_2" class="section level2 unnumbered">
+<h2>What is managed aquifer recharge</h2>
+<p>The term managed aquifer recharge refers to the any process by which people intentionally add water to aquifers so that it can be stored in the subsurface. Managed aquifer recharge provides a mechanism to short-circuit the water cycle, so that we don’t need to wait thousands of years for water to re-enter the groundwater system. We aren’t doing anything that wouldn’t happen naturally, we are just making it happen faster (or preferentially) so that we can offset some of the impacts of groundwater withdrawals and climate change. The following diagrams summarizes the key processes that can be associated with managed aquifer recharge - <em>make sure you understand all these processes before proceeding</em>.</p>
+<center>
+<div class="figure"><span id="fig:E6image1"></span>
+<img src="images/exercise6/image1.png" alt="Processes related to managed aquifer recharge (after @dillon2019sixty)." width="80%" />
+<p class="caption">
+Figure 22: Processes related to managed aquifer recharge (after <span class="citation"><a href="#ref-dillon2019sixty" role="doc-biblioref">Dillon et al.</a> (<a href="#ref-dillon2019sixty" role="doc-biblioref">2019</a>)</span>).
+</p>
+</div>
+</center>
+</div>
+<div id="E6_3" class="section level2 unnumbered">
+<h2>How do we get the water into the aquifer?</h2>
+<p>The addition of water to the subsurface can be facilitated by infiltration from the surface (through water spreading, infiltration basins or galleries), or by injecting the water into specially designed injection wells. Let’s think about the pros and cons of each of these approaches. Consider the resources required, associated costs, and potential limitations of each of these two options to <em>complete Table <a href="E6.html#tab:E6table1">8</a> below</em>.</p>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:E6table1">Table 8: </span>Pros and cons of surface infiltration vs injection wells for managed aquifer recharge.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+Pros
+</th>
+<th style="text-align:center;">
+Cons
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 20em; background-color: white !important;">
+Infiltration basins
+</td>
+<td style="text-align:center;min-width: 20em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 20em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 20em; background-color: white !important;">
+Injection wells
+</td>
+<td style="text-align:center;min-width: 20em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 20em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="E6_4" class="section level2 unnumbered">
+<h2>What are the benefits of managed aquifer recharge?</h2>
+<p>Managed aquifer recharge provides another tool for water resource managers to secure water resources for people and the environment. Subsurface water storage has minimal impact on existing landholders (as compared to dams) and can provide an important mechanism to minimize evaporative losses, and outflows of freshwater to the ocean. By implementing a managed aquifer recharge scheme using water that would otherwise be going out to sea, water resource managers are able to provide an additional water source that is not dependant on rainfall. Sometimes water that has been intentionally added to the aquifer will be used within years or decades by people for potable water or irrigation, or by flora and fauna that depend on groundwater. But even just adding this extra water to the groundwater system can provide protection against risks like 1) seawater intrusion, 2) surface water depletion, or 3) acidification (oxidation of acid sulphate soils), which can be exacerbated by changing climate and groundwater withdrawals. <em>Choose one of these risks and draw a diagram to show how managed aquifer recharge might be used to reduce the risk</em>.</p>
+</div>
+<div id="E6_5" class="section level2 unnumbered">
+<h2>What are the potential risks of MAR?</h2>
+<p>The major risk of managed aquifer recharge is about water quality – but maybe not in the way you would think. Sometimes people think of drinking poo-water, and think “icky, no way.” But actually, with the groundwater replenishment scheme here in Perth, the risk is that we are adding very clean oxic water to groundwater that anoxic and contains dissolved solids. The mixing of oxic and anoxic waters results in chemical reactions, and lots of scientific research has been undertaken to determine the likely products of these reactions and that they will not negatively impact our groundwater resources. The injection of groundwater is also not close to the location of drinking water abstraction, so that the water that is added to the groundwater system will remain in the aquifer for a very long time. Time spent in the subsurface can be particularly useful for reducing viral loads or bacteria (but this usually only requires weeks or months, not thousands of years!).</p>
+<p>In Australia managed aquifer recharge schemes are covered by a national guideline that describes how the potential risks should be determined and managed. There are also policies in Western Australia that address potential impacts to the environment, other water users and human health. <em>Read the section on Governance of MAR in <span class="citation"><a href="#ref-dillon2019sixty" role="doc-biblioref">Dillon et al.</a> (<a href="#ref-dillon2019sixty" role="doc-biblioref">2019</a>)</span> (page 20) to learn about how MAR is managed in other countries</em>.</p>
+</div>
+<div id="E6_6" class="section level2 unnumbered">
+<h2>Where is managed aquifer recharge happening</h2>
+<p>Managed aquifer recharge is taking place all over the world, ranging from small local-scale schemes to large regional-scale schemes that cost millions of dollars to implement. Enhanced aquifer recharge has actually been happening for decades (leaky water pipes are one example), but the term managed aquifer recharge has been used more recently to describe the intentional additions of water to groundwater systems that are becoming increasingly common as a strategy for water resource management. The following chart from <span class="citation"><a href="#ref-dillon2019sixty" role="doc-biblioref">Dillon et al.</a> (<a href="#ref-dillon2019sixty" role="doc-biblioref">2019</a>)</span> shows the development of managed aquifer recharge since 1965 in a range of countries.</p>
+<ul>
+<li>Which countries were early adopters?</li>
+<li>Which countries are the current leaders?</li>
+<li>What proportion of global groundwater use these countries account for (Refer to Table 2 of <span class="citation"><a href="#ref-dillon2019sixty" role="doc-biblioref">Dillon et al.</a> (<a href="#ref-dillon2019sixty" role="doc-biblioref">2019</a>)</span>)?</li>
+</ul>
+<center>
+<img src="images/exercise6/image2.png" width="65%" />
+</center>
+</div>
+<div id="E6_7" class="section level2 unnumbered">
+<h2>What do you think about MAR?</h2>
+<p>Hopefully this exercise, and the learning materials in the module on Managed Aquifer Recharge, have helped you learn more about this process, and the relative risks and benefits.</p>
+<ul>
+<li>What did you know about MAR before this unit?</li>
+<li>What have you learned that you didn’t know before?</li>
+<li>Has this module changed your thinking on MAR?</li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-dillon2019sixty" class="csl-entry">
+Dillon, P, P Stuyfzand, T Grischek, M Lluria, RDG Pyne, RC Jain, J Bear, et al. 2019. <span>“Sixty Years of Global Progress in Managed Aquifer Recharge.”</span> <em>Hydrogeology Journal</em> 27 (1): 1–30.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"], ["Helena_Data.zip", "Helena Data"], ["Exercise 4 Data.zip", "Exercise 4 Data"], ["Exercise 6.zip", "Exercise 6"], ["Exercise 7 Data.zip", "Exercise 7 Data"], ["Assessment 3 Spreadsheets.zip", "Assessment 3 Spreadsheets"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Template"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

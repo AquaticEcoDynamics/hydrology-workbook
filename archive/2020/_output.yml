@@ -1,0 +1,31 @@
+bookdown::gitbook:
+  includes:
+    in_header: "includes/hypothesis.html"
+  css: css/style.css
+  config:
+    toc:
+      collapse: none
+      before: |
+        <li><a href="./"><b>Hydrology Workbook</b></a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    download: [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"],
+              ["Exercise_1A_Part_2_Answer_Sheet_UPDATED.docx", "Exercise 1A Part 2 Answer Sheet - Updated"],
+              ["Streamflow_Activity.docx", "Streamflow Answer Sheet"],
+              ["exercise_1b_part2_data_collection_sheet.pdf", "Exercise 1B Part 2 Data Collection Sheet"],
+              ["Exercise 2 Resources (GEOS4499).zip", "Exercise 2 Resources (GEOS4499)"]]
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    sharing:
+      facebook: no
+      github: no
+      twitter: no
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: no
+    info: yes

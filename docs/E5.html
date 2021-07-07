@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 5 - Simple lake model | Hydrology Workbook</title>
+  <meta name="description" content="Exercise 5 - Simple lake model | Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 5 - Simple lake model | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 5 - Simple lake model | Hydrology Workbook" />
+  
+  
+  
+
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E4-1.html"/>
+<link rel="next" href="E6.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/plotly-binding-4.9.2.2/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Exercises</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html"><i class="fa fa-check"></i>Exercise 2 - Streamflow analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="E2.html"><a href="E2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a>
+<ul>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_1"><i class="fa fa-check"></i>Sample Collection</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_3"><i class="fa fa-check"></i>Estimating Field Capacity</a></li>
+<li class="chapter" data-level="" data-path="E3A.html"><a href="E3A.html#E3A_4"><i class="fa fa-check"></i>What did we learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html"><i class="fa fa-check"></i>Exercise 3B - Visualising groundwater</a>
+<ul>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_1"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E3B.html"><a href="E3B.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 4 - Groundwater and surface water interaction</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_4"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_9"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_13"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>Rates of change</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 - Assessing environmental flow impacts</a>
+<ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_3"><i class="fa fa-check"></i>A - Classifying e-flow benefits case study : MDB</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_4"><i class="fa fa-check"></i>B - Flow diversion case study : Robe Lakes</a>
+<ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_5"><i class="fa fa-check"></i>Module resources</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_6"><i class="fa fa-check"></i>Categorising flow data</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_7"><i class="fa fa-check"></i>Flow diversion scenarios</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_8"><i class="fa fa-check"></i>Assessing impacts on lake salinity</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 - Exploring future climate data projections</a>
+<ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_2"><i class="fa fa-check"></i>Making a simple summary plot with the CCIA tool</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_3"><i class="fa fa-check"></i>Threshold exceedance</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_4"><i class="fa fa-check"></i>Spatial gradients in climate trends:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_5"><i class="fa fa-check"></i>Climate trajectories:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_6"><i class="fa fa-check"></i>Climate Futures Tool:</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#E8_7"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>II Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a>
+<ul>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_1"><i class="fa fa-check"></i>Overview of scheduled group project activities</a></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_2"><i class="fa fa-check"></i>Introduction &amp; Assessent Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html"><i class="fa fa-check"></i>Assessment 3 - Modelling catchment response to climate change</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_2"><i class="fa fa-check"></i>A. Catchment Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_3"><i class="fa fa-check"></i>Module Resources</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_4"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_5"><i class="fa fa-check"></i>Calibrating the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_6"><i class="fa fa-check"></i>Land-use change scenario</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_7"><i class="fa fa-check"></i>B. Lake system model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_8"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_9"><i class="fa fa-check"></i>Assessing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_10"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A2_11"><i class="fa fa-check"></i>Submission</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3.html"><a href="A3.html#A3_12"><i class="fa fa-check"></i>Optional: Add phosphorus concentrations to the model</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="E5" class="section level1 unnumbered">
+<h1>Exercise 5 - Simple lake model</h1>
+<div id="E5_1" class="section level2 unnumbered">
+<h2>Introduction</h2>
+<p>In this assignment you will look at simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space.</p>
+<p>In this assignment we will look at a simple “bucket” storage model of how a lake level fluctuates through time. This is a modified version of an exercise from <span class="citation"><a href="#ref-wainwright2002environmental" role="doc-biblioref">Wainwright and Mulligan</a> (<a href="#ref-wainwright2002environmental" role="doc-biblioref">2002</a>)</span> (see p38). Similar types of models have been used for paleo-environmental reconstructions <span class="citation">(<a href="#ref-bradley1999paleoclimatology" role="doc-biblioref">Bradley 1999</a>)</span> and in hillslope hydrology <span class="citation">(<a href="#ref-dunin1976infiltration" role="doc-biblioref">Dunin 1976</a>)</span>, where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater <span class="citation">(<a href="#ref-cook2013estimating" role="doc-biblioref">Cook 2013</a>)</span>.</p>
+</div>
+<div id="E5_2" class="section level2 unnumbered">
+<h2>Defining the system</h2>
+<p>In this first part of the assignment you will use a simple “bucket” storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure <a href="E5.html#fig:E5image1">20</a>). There is also a maximum level to which the lake can be filled, <span class="math inline">\(h_{\text{max}}\)</span> (m), above which water will overflow from the lake, such that <span class="math inline">\(0\le h\le h_{\text{max}}\)</span>. This simple system is described by the equation;</p>
+<span class="math display" id="eq:E5equation1">\[\begin{equation}
+\frac{dh}{dt}= r+i-e-kh
+\tag{12}
+\end{equation}\]</span>
+<p>where <span class="math inline">\(r\)</span> is the rate of rainfall (m yr<sup>-1</sup>), <span class="math inline">\(i\)</span> is the rate of water inflow from rivers and runoff (m yr<sup>-1</sup>), <span class="math inline">\(e\)</span> is the rate of evaporation from the lake (m yr<sup>-1</sup>), and <span class="math inline">\(kh\)</span> is the seepage rate from the base of the lake (infiltration to the underlying aquifer), which is assumed to be a linear function of the depth of water in the lake, <span class="math inline">\(h\)</span> (m). This seepage is controlled by the coefficient <span class="math inline">\(k\)</span> (yr<sup>-1</sup>), which describes the permeability of the lake bed. Before proceeding, satisfy yourself that you understand this equation and that each term in this equation has the same units, as required.</p>
+<center>
+<div class="figure"><span id="fig:E5image1"></span>
+<img src="images/exercise5/image1.png" alt="Conceptual model of lake water balance." width="70%" />
+<p class="caption">
+Figure 20: Conceptual model of lake water balance.
+</p>
+</div>
+</center>
+<p>Surface waters can be either gaining (groundwater discharge to streams and lakes), losing (recharge of aquifers by streams and lakes), or through-flow systems <span class="citation">(<a href="#ref-winter1998ground" role="doc-biblioref">Winter et al. 1998</a>)</span>. Based on the information you have, what type of lake (gaining, losing or through-flow) is the system shown in Figure <a href="E5.html#fig:E5image1">20</a>? What other data might you want to measure to confirm this?</p>
+</div>
+<div id="E5_3" class="section level2 unnumbered">
+<h2>Simulating the system</h2>
+<p>Equation <a href="E5.html#eq:E5equation1">(12)</a> is a differential equation, describing the rate of change of water level over time. We know that <span class="math inline">\(\frac{dh}{dt}\)</span> is technically the instantaneous rate of change of lake water level. But calculus tells us that we can approximate <span class="math inline">\(\frac{dh}{dt}\)</span> by calculating the change in water level over small increments of time, with the most accurate approximation using the smallest increments of time.</p>
+<p>So we have an equation for the rate of change in lake water level (Equation <a href="E5.html#eq:E5equation1">(12)</a>). But how do we calculate the lake level as a function of time, <span class="math inline">\(h(t)\)</span>? That is, how do we solve this differential equation to calculate <span class="math inline">\(h\)</span> for any given time? To do this we will use an iterative approach. Start with an initial lake level, <span class="math inline">\(h_{i}\)</span>, and then calculate the change in lake level over each small increment of time (in this case <span class="math inline">\(dt = 1\)</span> year is fine), using the rates for each process. The water level at the next time-step is then calculated by summing the initial level and the calculated change; <span class="math inline">\(h_{i+1} = h_{i} + dh\)</span>. Would this step of going from <span class="math inline">\(\frac{dh}{dt}\)</span> to <span class="math inline">\(h(t)\)</span> be considered as differentiation or integration?.</p>
+<center>
+<div class="figure"><span id="fig:E5image2"></span>
+<img src="images/exercise5/image2.png" alt="Simulated lake level under three different model scenarios (A, B and C)." width="70%" />
+<p class="caption">
+Figure 21: Simulated lake level under three different model scenarios (A, B and C).
+</p>
+</div>
+</center>
+<p><br></p>
+<center>
+<table class="table table-hover" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:E5table1">Table 7: </span>Model parameters for lake level simulations shown in Figure 2.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Parameter
+</th>
+<th style="text-align:center;">
+Units
+</th>
+<th style="text-align:center;">
+Model ?
+</th>
+<th style="text-align:center;">
+Model ?
+</th>
+<th style="text-align:center;">
+Model ?
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(r\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.50
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(i\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.20
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.60
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.80
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(e\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(k\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(h_{\text{max}}\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m
+</td>
+<td style="text-align:center;min-width: 10em; ">
+50.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+50.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+50.00
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<div id="E5_4" class="section level2 unnumbered">
+<h2>Transient simulation</h2>
+<p>In the above simulations all model parameters are constant throughout the time period of the simulation, so that the results tell us what the “steady state” water level in the lake would be given those inputs and outputs. Let’s now see what happens if we have a time-varying (i.e. transient) input, we can call this Model D.</p>
+<p>Let’s say that rainfall varies on decadal timescales, with wet (<span class="math inline">\(r\)</span> = 1.5 m yr<sup>-1</sup>) and dry (<span class="math inline">\(r\)</span> = 0.5 m yr<sup>-1</sup>) phases that alternate every 25 years. Start with a wet period and simulate water levels over 200 years using this transient rainfall distribution. Plot this new scenario on a chart along with the basecase. How do they compare? Does the lake ever overflow in this transient scenario?</p>
+<p>If the lake is approximately circular, with a diameter of 50 m, what is the surface area of the lake? (hint: assume that the sides are steep so that lake surface area is independent of water level height). Based on this surface area, calculate the total volumes of seepage from the lakebed under these two scenarios (the basecase [Model A] and the transient model [Model D]). How do they compare, what is the effect of the transient rainfall input on the total volume of seepage? What does this tell you about the value of transient simulations vs steady state simulations?</p>
+</div>
+<div id="E5_5" class="section level2 unnumbered">
+<h2>Rates of change</h2>
+<p>Now let’s look at the rate of change in lake level under each of these modelling scenarios. Plot <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of <span class="math inline">\(\frac{dh}{dt}\)</span> vs time relate to Figure <a href="E5.html#fig:E5image2">21</a>? How long does it take for each model to reach “steady state?” How would the time it takes to reach steady state change if we used a different initial water level in our simulations?</p>
+<p>Now have a go at making your own rainfall boundary condition. You may choose to base it on a probability distribution, or a have it randomly varying through time. Plot both lake water level and <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for your chosen rainfall distribution. How does this change your results?</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bradley1999paleoclimatology" class="csl-entry">
+Bradley, Raymond S. 1999. <em>Paleoclimatology: Reconstructing Climates of the Quaternary</em>. Elsevier.
+</div>
+<div id="ref-cook2013estimating" class="csl-entry">
+Cook, Peter G. 2013. <span>“Estimating Groundwater Discharge to Rivers from River Chemistry Surveys.”</span> <em>Hydrological Processes</em> 27 (25): 3694–3707.
+</div>
+<div id="ref-dunin1976infiltration" class="csl-entry">
+Dunin, Frank X. 1976. <span>“Infiltration: Its Simulation for Field Conditions.”</span>
+</div>
+<div id="ref-wainwright2002environmental" class="csl-entry">
+Wainwright, John, and Mark Mulligan. 2002. <em>Environmental Modelling: Finding Simplicity in Complexity</em>. Wiley Online Library.
+</div>
+<div id="ref-winter1998ground" class="csl-entry">
+Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. <em>Ground Water and Surface Water: A Single Resource</em>. Vol. 1139. US geological Survey.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E4-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"], ["Helena_Data.zip", "Helena Data"], ["Exercise 4 Data.zip", "Exercise 4 Data"], ["Exercise 6.zip", "Exercise 6"], ["Exercise 7 Data.zip", "Exercise 7 Data"], ["Assessment 3 Spreadsheets.zip", "Assessment 3 Spreadsheets"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Template"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

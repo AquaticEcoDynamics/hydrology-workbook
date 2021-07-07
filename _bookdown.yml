@@ -2,14 +2,20 @@ book_filename: Hydrology Workbook
 output_dir: docs
 delete_merged_file: true
 rmd_files: ["index.Rmd",
-            #"01-gettingstarted.Rmd",
-            "02-exercise1.Rmd",
-            "03-surface_hydrology.Rmd",
-            "05-characterising_soil_moisture.Rmd",
-            "04-surface_ground_water_interaction.Rmd",
-             "06-darcys_law.Rmd",
-             "07-module6.Rmd",
-            # "08-module7.Rmd",
-            # "09-module8.Rmd",
-            "10-references.Rmd"]
+            "exercise1A.Rmd",
+            "exercise1B.Rmd",
+            "exercise2.Rmd",
+            "exercise3A.Rmd",
+            "exercise3B.Rmd",
+            "exercise4.Rmd",
+            "exercise5.Rmd",
+            "exercise6.Rmd",
+            "exercise7.Rmd",
+            "exercise8.Rmd",
+            "assessment2.Rmd",
+            #"assessment2B.Rmd",
+            "assessment3.Rmd",
+            #"assessment3B.Rmd",
+            "references.Rmd",
+            ]
 new_session: no

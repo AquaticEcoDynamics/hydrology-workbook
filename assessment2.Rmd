@@ -1,0 +1,36 @@
+# (PART) Assessments {.unnumbered}
+
+# Assessment 2 - Yule Brook Catchment Report {#A2 .unnumbered}
+
+## Overview of scheduled group project activities {#A2_1 .unnumbered}
+
+```{r, echo=FALSE}
+htmltools::includeHTML("tables/assessment2/table1.html")
+```
+
+## Introduction & Assessent Summary {#A2_2 .unnumbered}
+
+The aim of the assignment is to undertake a team-based assessment of the Yule Brook catchment condition, synthesising available historical data and assessing also the new data collected during the catchment race field trip. The outcome will be an overview of how the catchment is working, identifying management issues associated with urban development, and suggesting recommendations.
+
+Through the completion of this assignment you will demonstrate:
+
+-   an understanding of how to collect, process and analyze water quantity and quality data;
+-   an ability to synthesize the data for identifying catchment condition and management priorities;
+-   an ability to work as part of a team to manage diverse and complex information, and agree on recommendations;
+-   effective written science communication skills
+
+Your final submission will be a group report entitled "*Yule Brook Catchment Assessment*".
+
+The report does not have a page limit, but will have the following sections:
+
+1)  *Introduction & background*
+2)  *Catchment setting*
+3)  *Catchment hydrology*
+4)  *Catchment water quality*
+5)  *Water quality management and restoration options*
+6)  *Recommendations*
+7)  *References*
+
+The report is due as an upload to LMS by **5pm Friday 23^rd^ October**. There will be no exceptions to this due date so please plan your time effectively! The marking rubric is available on LMS.
+
+Students will be requested to complete a group peer-review following submission, reflecting on the roles within their team and contributions.

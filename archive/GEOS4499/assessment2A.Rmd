@@ -1,0 +1,169 @@
+# (PART) Assessments {.unnumbered}
+
+# Assessment 2 - Data Analysis {#A2 .unnumbered}
+
+This assessment consists of two parts. Part A focuses on rainfall and streamflow data, and you will complete this during week 1 and 2 of the unit. Part B extends our focus to the subsurface, linking surface water and groundwater hydrology.
+
+# Part A - Rainfall and streamflow data analysis {#A2A .unnumbered}
+
+In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:A2Aimage1)). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.
+
+In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. We will be sharing our data using an online spreadsheet. Please make sure that you upload your data as soon as possible so that others can include it in their analysis.
+
+<center>
+```{r A2Aimage1, echo=FALSE, fig.cap="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net).", out.width = '80%'}
+knitr::include_graphics("images/assessment2A/image1.png")
+```
+</center>
+
+## Objectives {#A2A_1 .unnumbered}
+
+By the end of this assignment, you should:
+
+-   Understand how and why rainfall may be changing over time and use statistics and regression to test this hypothesis.
+-   Know how different modes of climate variability such as IOD and ENSO can affect annual rainfall.
+-   Be able to elucidate the nature of the relationship between rainfall and streamflow.
+
+## Temporal trends in rainfall {#A2A_2 .unnumbered}
+
+Prior to starting this work, make sure you have completed the [Exercise 1B](#E1B_1) activity.
+
+1)  For your chosen site, calculate the trend in rainfall for the **last 5 years.** Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) or calculate the manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear -- discuss? (You can do this same analysis by adding a trend-line to the data, as described in 2. below).
+
+2)  Now, calculate the trend in rainfall for **all** years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r^2^) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table \@ref(tab:A2Atable1) and the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing)).
+
+<center>
+```{r A2Atable1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
+table1 <- read.csv("tables/assessment2A/table1.csv", check.names=FALSE)
+kable(table1,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.",
+      bootstrap_options = "hover") %>%
+  kable_styling(table1, bootstrap_options = "hover", "striped",
+                full_width = F, position = "center",
+                font_size = 12) %>%
+  column_spec(1, width_min = "9em") %>%
+  column_spec(2, width_min = "9em") %>%
+  column_spec(3, width_min = "9em") %>%
+  column_spec(4, width_min = "9em") %>%
+  column_spec(5, width_min = "9em") %>%
+  column_spec(6, width_min = "9em") %>%
+  row_spec(1:25, background = 'white') %>%
+  scroll_box(width = "100%", height = "515px",
+             fixed_thead = FALSE)
+```
+</center>
+
+<br>
+
+3)  Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table \@ref(tab:A2Atable1). The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.
+
+4)  Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) [Google Sheets version](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
+
+## Spatial patterns in rainfall {#A2A_3 .unnumbered}
+
+5)  Take the information in Table \@ref(tab:E1Btable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+
+<center>
+```{r A2Aimage2, echo=FALSE, fig.cap="", out.width = '90%'}
+knitr::include_graphics("images/assessment2A/image2.png")
+```
+</center>
+
+## Interannual variability in rainfall {#A2A_4 .unnumbered}
+
+Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO).
+
+Other indicators of temporal variability (look for cyclic patterns). Does rainfall correlate with known modes of climate variability (i.e. IOD and ENSO using the Southern Oscillation Index (SOI). SOI is calculated as follows.
+
+<center>
+```{=tex}
+\begin{equation}
+\text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
+(\#eq:A2Aequation1)
+\end{equation}
+```
+</center>
+
+Where:
+
+-   $P_{\text{diff}}$ = (average Tahiti MSLP for the month) - (average Darwin MSLP for the month)
+-   $P_{\text{diffav}}$ = long term average of $P_{\text{diff}}$ for the month in question, and
+-   $SD(P_{\text{diff}})$ = long term standard deciation of $P_{\text{diff}}$ for the month in question.
+
+IOD is calculated by anomalous Sea Surface Temperature gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin.
+
+We will use the extremely useful [Climate Explorer](https://climexp.knmi.nl/start.cgi?id=someone@somewhere) for the next section. First you will need to register so you can save data series. Access the rainfall from the previous site that you used in the previous section. Click on "**Monthly Station Data**" (right hand menu), select "precipitation" from the "GHCN-M (all)" column, search for your station (e.g. type BROOME in the "Select stations" section), and then press "Get stations". If the selection works you will see relevant stations listed, and then click "**get data**". You will then see graphs and options for further integrating the data. Make a name to save the data (the default should be fine). Click "**Add to list**".
+
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/assessment2A/video1.mp4" type="video/mp4">
+</video>
+</center>
+
+Now get the first climate index for the IOD called the DMI. Go to "**Monthly climate indices**" and then select DMI. Note any trend and variability in the index.
+
+To correlate the index and rainfall select "**Correlate with other time series**". And tick your previously saved rainfall timeseries and then press "**Correlate**" and copy the results into Table \@ref(tab:A2Atable2) and the appropriate tab in the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing).
+
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/assessment2A/video2.mp4" type="video/mp4">
+</video>
+</center>
+
+<br>
+
+<center>
+```{r A2Atable2, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
+A2Atable2 <- read.csv("tables/assessment2A/table2.csv", check.names=FALSE)
+kable(A2Atable2,"html", escape = F, align = rep('c', 5), caption = "Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations.",
+      bootstrap_options = "hover") %>%
+  kable_styling(table1, bootstrap_options = "hover", "striped",
+                full_width = F, position = "center",
+                font_size = 12) %>%
+  column_spec(1, width_min = "12em") %>%
+  column_spec(2, width_min = "12em") %>%
+  column_spec(3, width_min = "12em") %>%
+  column_spec(4, width_min = "12em") %>%
+  column_spec(5, width_min = "12em") %>%
+  row_spec(1:12, background = 'white') %>%
+  scroll_box(width = "100%",
+             fixed_thead = FALSE)
+```
+</center>
+
+<br>
+
+6)  Highlight any months that have a significant p-value (\<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?
+
+We can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using reanalysis information) to investigate the whole of Australia. Click on "**Monthly observations**" and go to **Precipitation CRU TS 0.5**.
+
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/assessment2A/video3.mp4" type="video/mp4">
+</video>
+</center>
+
+We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on "Correlate with a time series" and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations are being done online and the graph returned for viewing). Do the same for both SOI and DMI.
+
+7)  For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?
+
+## Relationship between rainfall and runoff {#A2A_5 .unnumbered}
+
+Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 1B](#E1B_1) activity for details on how to source the data - make sure the site has streamflow data by checking the data availability and the request the report for water levels and flow - continuous to get the flow data).
+
+8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
+
+## Submission {#A2A_6 .unnumbered}
+
+Your submission for this assessment is a summary report outlining the results of the analysis and questions posed in questions 1-8, above. This should include the figures and tables you created, summarising the data from your chosen site and the broader class data-set.
+
+Your report should have a title and the information should be grouped into numbered headings and sub-headings, like a scientific journal article. Start with an introduction, then you will have 4 data sections: 1) temporal trends in rainfall, 2) spatial patterns in rainfall, 3) interannual variability in rainfall and 4) relationships between rainfall and runoff. Finally, you should write a conclusion that summarizes the main findings and links back to the objectives you stated in your introduction.
+
+Make sure that all the text in your figures is legible. For charts, all axes should be clearly labeled and units given where appropriate. Make sure to include appropriate captions to describe your tables and figures, and cite these in the text (Figure captions go below the figure. Table captions go above the table).
+
+You will be assessed according to the rubric provided on LMS. Be sure to submit your report via the Turnitin Link on LMS by the due date and time. Late submissions will attract penalties in line with UWA policy.

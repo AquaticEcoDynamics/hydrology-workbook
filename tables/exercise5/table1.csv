@@ -1,0 +1,6 @@
+﻿Parameter,Units,Model ?,Model ?,Model ?
+$r$,m yr^-1^,1,1.5,1
+$i$ ,m yr^-1^,0.2,1.6,0.8
+$e$ ,m yr^-1^,1,0.05,0.05
+$k$  ,yr^-1^,0.05,0.05,0.05
+$h_{\text{max}}$,m,50,50,50
