@@ -1,8 +1,8 @@
 # Exercise 4 - Visualising groundwater {#E4 .unnumbered}
 
-In this exercise you will investigate what controls the direction and rate of groundwater flow, and investigate groundwater storage and flow within a layered groundwater system.
+## Learning Objectives{#E4_1 .unnumbered}
 
-Learning Objectives:
+In this exercise you will investigate what controls the direction and rate of groundwater flow, and investigate groundwater storage and flow within a layered groundwater system.
 
 At the completion of this exercise students will be able to
 
@@ -12,7 +12,7 @@ At the completion of this exercise students will be able to
 
 -   identify patterns of groundwater flow and hydraulic head contours within layered groundwater systems
 
-## Groundwater flow rates {#E3B_1 .unnumbered}
+## Groundwater flow rates {#E4_2 .unnumbered}
 
 As a first step lets consider the flux law for groundwater flow. Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;
 
