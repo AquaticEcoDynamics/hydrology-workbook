@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 4 - Visualising groundwater | Hydrology Workbook</title>
+  <meta name="description" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
+  
+  
+  
+
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E3.html"/>
+<link rel="next" href="E5.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Recommended study plan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_32"><i class="fa fa-check"></i>Further information</a></li>
+</ul></li>
+<li class="part"><span><b>I EXERCISES</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1 – Spatial rainfall variability</a><ul>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 2 - Sourcing rainfall and flow data</a><ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3.html"><a href="E3.html"><i class="fa fa-check"></i>Exercise 3 – Runoff generation</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html"><i class="fa fa-check"></i>Exercise 4 - Visualising groundwater</a><ul>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_1"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a><ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 – Lake nutrient assessment</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html"><i class="fa fa-check"></i>Exercise 10 - Assessing environmental flow impacts</a><ul>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_3"><i class="fa fa-check"></i>Classifying e-flow benefits case study : MDB</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E11.html"><a href="E11.html"><i class="fa fa-check"></i>Exercise 11 – Water Sensitive Urban Design</a></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a></li>
+<li class="part"><span><b>II LABS</b></span></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html"><i class="fa fa-check"></i>Lab 1 - Desktop catchments</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_2"><i class="fa fa-check"></i>Building a “Desktop Catchment”</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_3"><i class="fa fa-check"></i>Characterising soil moisture</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#E3A_1"><i class="fa fa-check"></i>Sample Collection</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_5"><i class="fa fa-check"></i>What did we learn?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html"><i class="fa fa-check"></i>Lab 2 - Streamflow analysis</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Lab 3 - Groundwater and surface water interaction</a><ul>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_4"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_9"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_13"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>III ASSESSMENTS</b></span></li>
+<li class="chapter" data-level="" data-path="A1.html"><a href="A1.html"><i class="fa fa-check"></i>Assessment 1 - Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a><ul>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a><ul>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_2"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_3"><i class="fa fa-check"></i>Helena River Study Site</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_4"><i class="fa fa-check"></i>Your task</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_5"><i class="fa fa-check"></i>Literature review</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_6"><i class="fa fa-check"></i>Mapping vegetation change</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_7"><i class="fa fa-check"></i>Mapping salinity (EC) in QGIS</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_8"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_9"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_10"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_11"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a><ul>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_1"><i class="fa fa-check"></i>Overview of scheduled group project activities</a></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_2"><i class="fa fa-check"></i>Introduction &amp; Assessent Summary</a></li>
+</ul></li>
+<li class="part"><span><b>IV REFERENCES</b></span></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="E4" class="section level1 unnumbered">
+<h1>Exercise 4 - Visualising groundwater</h1>
+<p>In this exercise you will investigate what controls the direction and rate of groundwater flow, and investigate groundwater storage and flow within a layered groundwater system.</p>
+<p>Learning Objectives:</p>
+<p>At the completion of this exercise students will be able to</p>
+<ul>
+<li><p>calculate groundwater flow rates</p></li>
+<li><p>describe the range of flow rates within natural groundwater systems and explain the key factors controlling these rates</p></li>
+<li><p>identify patterns of groundwater flow and hydraulic head contours within layered groundwater systems</p></li>
+</ul>
+<div id="E3B_1" class="section level2 unnumbered">
+<h2>Groundwater flow rates</h2>
+<p>As a first step lets consider the flux law for groundwater flow. Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;</p>
+<center>
+<span class="math display" id="eq:E3Bequation1">\[\begin{equation}
+q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         \tag{3}
+\end{equation}\]</span>
+</center>
+<p>Where <span class="math inline">\(q\)</span> is the specific discharge (or Darcy Flux) with units of L T<sup>-1</sup>, <span class="math inline">\(Q\)</span> is the volumetric flow rate (L<sup>3</sup> T<sup>-1</sup>), <span class="math inline">\(A\)</span> is the cross-sectional area through which the water flow (L<sup>2</sup>), and <span class="math inline">\(\frac{\Delta h}{ \Delta l}\)</span> is the hydraulic gradient. This gradient is simply the change in water pressure (<span class="math inline">\(h_1-h_2\)</span>) over a given distance (L/L, unitless). The key system property in this flux law is the hydraulic conductivity (<span class="math inline">\(K\)</span>), which has units of L T<sup>-1</sup>. In natural groundwater systems the value of hydraulic conductivity can vary over 12 orders of magnitude. Even though this water flux <span class="math inline">\(q\)</span> has units of L T<sup>-1</sup>, it’s not actually the velocity of the groundwater, because the water wasn’t flowing through the whole area, just the pore space. To correct for this and calculate the average velocity we need to use the area of the pore space (<span class="math inline">\(An\)</span>, where <span class="math inline">\(n\)</span> is porosity), instead of the total area. This gives us;</p>
+<center>
+<span class="math display" id="eq:E3Bequation2">\[\begin{equation}
+\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           \tag{4}
+\end{equation}\]</span>
+</center>
+<p>Where <span class="math inline">\(\bar{v}\)</span> is the average linear velocity of the water flowing through the porous media.</p>
+<p>Now that we know these simple equations let’s look at some experimental data from simple “Darcy tubes” that allow us to measure the relationships between rates of groundwater flow, hydraulic gradients and the hydraulic conductivity of the porous media that it flows through. This is how the idea of a “hydraulic conductivity” was first defined, empirically, and it was only decades later that the physical basis for hydraulic conductivity and Darcy’s Law was fully elucidated from first principles (see <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/TR021i002p00648-1">Hubbert 1940</a> for some light bedtime reading).</p>
+<center>
+<div class="figure"><span id="fig:E3Bimage1"></span>
+<img src="images/exercise3B/picture1.png" alt="a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation" width="100%" />
+<p class="caption">
+Figure 5: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation
+</p>
+</div>
+</center>
+<p>Let’s have a go at using this experimental setup to estimate the hydraulic conductivity of different sedimentary materials. To do this all we need to do is measure the flow rate through the tube for our chosen porous media. For each porous material, the slope determines the hydraulic gradient and we just need to measure the volume that flows out of the tube over a set time interval.</p>
+<p>During this experiment;</p>
+<ul>
+<li><p>the diameter of the tubes was 40 mm</p></li>
+<li><p>the inlet at the top of the tube was 25 cm above the outlet at the bottom of the tube, and the lateral distance between the inlet and the outlet was 0.5 m</p></li>
+<li><p>Over a period 24 hours 168 mL was collected from the tube filled with sand, 3.6 mL was collected from the tube filled with silty sand, and 814 mL of water was collected from the tube filled with gravel.</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Based on this information you can rearrange Eq (10) to calculate the hydraulic conductivity of each porous media. Are you results consistent with the range of values for similar porous media in the literature? Could you measure the hydraulic conductivity of a clay sample using this experimental setup? What could you do to improve this experiment?</li>
+<li>Given these hydraulic conductivities, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, <a href="https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf">HG20</a>) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (11). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). <em>Note that it’s probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.</em></li>
+<li>How does your estimate of groundwater velocity compare to the streamflow rates you have been working with in previous Exercises? What is the implication for transport and storage of pollutants in the environment?</li>
+</ol>
+<center>
+<div class="figure"><span id="fig:E3Bimage2"></span>
+<img src="images/exercise3B/picture4.png" alt="Section of a map of the watertable across Perth" width="100%" />
+<p class="caption">
+Figure 6: Section of a map of the watertable across Perth
+</p>
+</div>
+</center>
+</div>
+<div id="E3B_3" class="section level2 unnumbered">
+<h2>Physical model of groundwater system</h2>
+<p>In this part of the exercise we will look at a model of a layered groundwater system. Each layer has a different hydraulic conductivity, <span class="math inline">\(K\)</span>, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called “heterogeneity”, and it is an important feature of real groundwater systems.</p>
+<p>Start by annotating the photo of this model (Figure <a href="E4.html#fig:E3Bimage2">6</a>) to show the following;</p>
+<ol style="list-style-type: decimal">
+<li><p>Aquifers and aquitards</p></li>
+<li><p>Recharge and discharge zones</p></li>
+<li><p>Water levels in each of the wells</p></li>
+<li><p>The water table</p></li>
+<li><p>Hydraulic head boundaries</p></li>
+</ol>
+<center>
+<div class="figure"><span id="fig:E3Bimage3"></span>
+<img src="images/exercise3B/picture2.png" alt="Physical model of a layered groundwater system." width="80%" />
+<p class="caption">
+Figure 7: Physical model of a layered groundwater system.
+</p>
+</div>
+</center>
+<p>Now watch <a href="https://echo360.org.au/media/beef71b3-fdca-4a62-9a58-4ad9f0b7b58a/public">this video</a> to see how water moves through the model when dye is injected to see the direction of groundwater flow. Does the flow direction vary spatially? Does the flow direction change over time?</p>
+<p>Draw arrows on the following screen-shot to show the direction of groundwater flow within the model domain. We have learnt that the measure of potential for groundwater flow is “hydraulic head” and we also know that groundwater flows from high hydraulic head to low hydraulic head. In fact, groundwater flow will be perpendicular to the equipotentials (lines of equal hydraulic head). Based on your inferred flow paths, try now to add in the hydraulic head contours (or equipotentials).</p>
+<p><em>It might help for you to think about topographic contours on a landscape map - in this case you have elevation contours, and if you placed a ball at the top of a hill it would roll (or flow) from the higher elevation to the lower elevation. As a general rule, we also know that flow through high conductivity layers will be primarily horizontal, and flow through low conductivity layers will be primarily vertical.</em></p>
+<center>
+<div class="figure"><span id="fig:E3Bimage4"></span>
+<img src="images/exercise3B/picture3.png" alt="Physical model of a layered groundwater system." width="80%" />
+<p class="caption">
+Figure 8: Physical model of a layered groundwater system.
+</p>
+</div>
+</center>
+<p>What can you learn from this physical model about groundwater systems? By using the physical model we have been able to see directly in the subsurface, but in the real world, the only information we have would be the wells.</p>
+<ul>
+<li><p>If you only had the hydraulic head measurements in the wells what would you know about the groundwater system?</p></li>
+<li><p>What else would you need to know about this system to calculate groundwater flow velocities (and therefore contaminant transport)?</p></li>
+<li><p>How important is it that we understand the geology as well as having measurements of hydraulic heads?</p></li>
+<li><p>What else might you measure in a real groundwater system to get a fuller picture of what is happening?</p></li>
+</ul>
+</div>
+<div id="E3B_4" class="section level2 unnumbered">
+<h2>Computer model of groundwater system</h2>
+<p>We can also run a “digital twin” of the physical model that we have built in the lab. For this activity we will now use the ParFlow Sandtank model. This is a computer model simulating groundwater flow, and allows users to change aquifer configurations and explore the essential features of groundwater and contaminant flow.</p>
+<center>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/398697315" width="100%" height="360" frameborder="0" allowfullscreen>
+</iframe>
+</center>
+<p>Once you have watched the introductory video lets take a look at running the model. Navigate to this model <a href="https://pvw.kitware.com/sandtank/">website</a>. You can learn how to customise the sandtank and run a simulation <a href="https://www.hydroframe.org/sand-tank-user-manual">here</a>. Have a go at manipulating the soil conditions and the hydraulic head sliders, and run simulations pumping or injecting groundwater. Can you reproduce our lab-based physical model?</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"], ["Helena_Data.zip", "Helena Data"], ["Exercise 4 Data.zip", "Exercise 4 Data"], ["Exercise 6.zip", "Exercise 6"], ["Exercise 7 Data.zip", "Exercise 7 Data"], ["Assessment 3 Spreadsheets.zip", "Assessment 3 Spreadsheets"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Template"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

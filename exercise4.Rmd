@@ -1,132 +1,131 @@
-# Exercise 4 - Groundwater and surface water interaction {#E4_1 .unnumbered}
+# Exercise 4 - Visualising groundwater {#E4 .unnumbered}
 
-### Learning Objectives {#E4_2 .unnumbered}
+In this exercise you will investigate what controls the direction and rate of groundwater flow, and investigate groundwater storage and flow within a layered groundwater system.
 
-In this experiment, you will use data from a physical model of a catchment during a simulated rainfall event to calculate the relative contributions of pre-event and event water to that streamflow. The real-world setting for the experiment is a gaining stream (Figure \@ref(fig:E4image1)).
+Learning Objectives:
 
-At the conclusion of this exercise students will have demonstrated an ability to:
+At the completion of this exercise students will be able to
 
--   analyse measured experimental data to characterize the key properties of a rainfall event.
+-   calculate groundwater flow rates
 
--   quantify pre-event and event components of water in a storm hydrograph (hydrochemical baseflow separation).
+-   describe the range of flow rates within natural groundwater systems and explain the key factors controlling these rates
 
--   discuss the significance of experimental results for managing water resources in the context of surface water - groundwater interaction.
+-   identify patterns of groundwater flow and hydraulic head contours within layered groundwater systems
 
-### Background {#E4_3 .unnumbered}
+## Groundwater flow rates {#E3B_1 .unnumbered}
 
-A question we often want to be able to answer is how much groundwater is contributing to flow in a river, and how much is water that came from recent rainfall. This is relevant for water resources planning so we can work out the discharge rate of an aquifer, or for water quality management.
+As a first step lets consider the flux law for groundwater flow. Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;
 
 <center>
-```{r E4image1, echo=FALSE, fig.cap="Groundwater discharge to a gaining stream.", out.width = '60%'}
-knitr::include_graphics("images/exercise4/image1.png")
+
+```{=tex}
+\begin{equation}
+q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         (\#eq:E3Bequation1)
+\end{equation}
 ```
 </center>
 
-Groundwater usually has different chemical characteristics to storm runoff during a rainfall event and we can use this chemical signal as a tracer for groundwater contribution. In this experiment you will demonstrate how groundwater (pre-event water) contribution to river flow changes over the course of a storm event, relative to water that fell as rain during the storm event (event water). You will use the tracer dilution technique with salinity (measured as electrical conductivity, EC) as the groundwater tracer.
-
-### Experimental Method {#E4_4 .unnumbered}
-
-#### Set up of apparatus {#E4_5 .unnumbered}
-
-The experimental set-up consists of a tray of soil, the ability to add rainfall (via a connection to the tap) and discharge outlets at the bottom of the catchment. During the experiment loggers are set up to measure the rainfall amount as well as streamflow and EC at the catchment outlet over time (Figure \@ref(fig:E4image2)).There are loggers for rainfall, streamflow and EC that are connected to a computer.
+Where $q$ is the specific discharge (or Darcy Flux) with units of L T^-1^, $Q$ is the volumetric flow rate (L^3^ T^-1^), $A$ is the cross-sectional area through which the water flow (L^2^), and $\frac{\Delta h}{ \Delta l}$ is the hydraulic gradient. This gradient is simply the change in water pressure ($h_1-h_2$) over a given distance (L/L, unitless). The key system property in this flux law is the hydraulic conductivity ($K$), which has units of L T^-1^. In natural groundwater systems the value of hydraulic conductivity can vary over 12 orders of magnitude. Even though this water flux $q$ has units of L T^-1^, it's not actually the velocity of the groundwater, because the water wasn't flowing through the whole area, just the pore space. To correct for this and calculate the average velocity we need to use the area of the pore space ($An$, where $n$ is porosity), instead of the total area. This gives us;
 
 <center>
-```{r E4image2, echo=FALSE, fig.cap="Experimental setup showing the catchment tray, rainfall, sprinklers and logger location.", out.width = '90%'}
-knitr::include_graphics("images/exercise4/image2.png")
+
+```{=tex}
+\begin{equation}
+\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           (\#eq:E3Bequation2)
+\end{equation}
 ```
 </center>
 
-#### Create the aquifer {#E4_6 .unnumbered}
+Where $\bar{v}$ is the average linear velocity of the water flowing through the porous media.
 
-The first step was to create the "aquifer" by loading the bottom of the tray with river sand. The top surface was smoothed so that it was an even thickness across the catchment and then the volume of this layer was estmated. Importantly, the top of aquifer sits below the top line of outlets as shown in Figure \@ref(fig:E4image3). A core to sample of the soil was collected so that you can compute the starting soil moisture (refer to Exercise 3A for the methodology to do this). To create the pre-event groundwater, the sand was saturated with saline water (making sure to note the EC of the saline solution) and any excess ponded water removed with a syringe before proceeding.
+Now that we know these simple equations let's look at some experimental data from simple "Darcy tubes" that allow us to measure the relationships between rates of groundwater flow, hydraulic gradients and the hydraulic conductivity of the porous media that it flows through. This is how the idea of a "hydraulic conductivity" was first defined, empirically, and it was only decades later that the physical basis for hydraulic conductivity and Darcy's Law was fully elucidated from first principles (see [Hubbert 1940](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/TR021i002p00648-1) for some light bedtime reading).
 
 <center>
-```{r E4image3, echo=FALSE, fig.cap="Saturated aquifer correctly set up within catchment model.", out.width = '90%'}
-knitr::include_graphics("images/exercise4/picture3.png")
+
+```{r E3Bimage1, echo=FALSE, fig.cap="a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation", out.width = '100%'}
+knitr::include_graphics("images/exercise3B/picture1.png")
+```
+
+</center>
+
+Let's have a go at using this experimental setup to estimate the hydraulic conductivity of different sedimentary materials. To do this all we need to do is measure the flow rate through the tube for our chosen porous media. For each porous material, the slope determines the hydraulic gradient and we just need to measure the volume that flows out of the tube over a set time interval.
+
+During this experiment;
+
+-   the diameter of the tubes was 40 mm
+
+-   the inlet at the top of the tube was 25 cm above the outlet at the bottom of the tube, and the lateral distance between the inlet and the outlet was 0.5 m
+
+-   Over a period 24 hours 168 mL was collected from the tube filled with sand, 3.6 mL was collected from the tube filled with silty sand, and 814 mL of water was collected from the tube filled with gravel.
+
+1.  Based on this information you can rearrange Eq (10) to calculate the hydraulic conductivity of each porous media. Are you results consistent with the range of values for similar porous media in the literature? Could you measure the hydraulic conductivity of a clay sample using this experimental setup? What could you do to improve this experiment?
+2.  Given these hydraulic conductivities, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, [HG20](https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf)) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (11). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). *Note that it's probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.*
+3.  How does your estimate of groundwater velocity compare to the streamflow rates you have been working with in previous Exercises? What is the implication for transport and storage of pollutants in the environment?
+
+<center>
+
+```{r E3Bimage2, echo=FALSE, fig.cap="Section of a map of the watertable across Perth", out.width = '100%'}
+knitr::include_graphics("images/exercise3B/picture4.png")
+```
+
+</center>
+
+## Physical model of groundwater system {#E3B_3 .unnumbered}
+
+In this part of the exercise we will look at a model of a layered groundwater system. Each layer has a different hydraulic conductivity, $K$, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called "heterogeneity", and it is an important feature of real groundwater systems.
+
+Start by annotating the photo of this model (Figure \@ref(fig:E3Bimage2)) to show the following;
+
+1)  Aquifers and aquitards
+
+2)  Recharge and discharge zones
+
+3)  Water levels in each of the wells
+
+4)  The water table
+
+5)  Hydraulic head boundaries
+
+<center>
+```{r E3Bimage3, echo=FALSE, fig.cap="Physical model of a layered groundwater system.", out.width = '80%'}
+knitr::include_graphics("images/exercise3B/picture2.png")
 ```
 </center>
 
-#### Create the unsaturated zone {#E4_7 .unnumbered}
+Now watch [this video](https://echo360.org.au/media/beef71b3-fdca-4a62-9a58-4ad9f0b7b58a/public) to see how water moves through the model when dye is injected to see the direction of groundwater flow. Does the flow direction vary spatially? Does the flow direction change over time?
 
-This saturated aquifer layer was then overlain with a second layer of dry soil, being careful not to disturb the original layer. This upper layer was shaped into the form of a catchment (concave) so that when the subsurface fills up there was a stream flowing to the catchment outlet (Figure \@ref(fig:E4image4)). The middle outlet should not be covered with soil, but the soil should be just below this outlet (this is your riverbed). At this step you could see some capillary rise of aquifer water into the vadose zone.
+Draw arrows on the following screen-shot to show the direction of groundwater flow within the model domain. We have learnt that the measure of potential for groundwater flow is "hydraulic head" and we also know that groundwater flows from high hydraulic head to low hydraulic head. In fact, groundwater flow will be perpendicular to the equipotentials (lines of equal hydraulic head). Based on your inferred flow paths, try now to add in the hydraulic head contours (or equipotentials).
 
-<center>
-```{r E4image4, echo=FALSE, fig.cap="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet.", out.height = '70%'}
-knitr::include_graphics("images/exercise4/picture4.png")
-```
-</center>
-
-#### Make it rain {#E4_8 .unnumbered}
-
-The rainfall outlets were brought close to the catchment surface to avoid "raining" outside the catchment, and then the tubes at the bottom of the catchment were turned so that they were directed into the PVC drain so that outflow could be measured. And now the rain! The apparatus was left with the rain on for approximately 20 minutes until the catchment had filled up, stream flow had begun and the EC at the catchment outlet has clearly decreased (Figure \@ref(fig:E4image5)). To finish, the rain was turned off, but with the loggers still running for another 20 minutes, or until streamflow ceased, so we could measure what happens after the rain had stopped.
+*It might help for you to think about topographic contours on a landscape map - in this case you have elevation contours, and if you placed a ball at the top of a hill it would roll (or flow) from the higher elevation to the lower elevation. As a general rule, we also know that flow through high conductivity layers will be primarily horizontal, and flow through low conductivity layers will be primarily vertical.*
 
 <center>
-```{r E4image5, echo=FALSE, fig.cap="Streamflow at the catchment outlet.", out.height = '30%'}
-knitr::include_graphics("images/exercise4/picture5.png")
-```
-</center>
 
-### Data Analysis {#E4_9 .unnumbered}
-
-#### QA-QC of data {#E4_10 .unnumbered}
-
-Download the data provided.
-
-Before you can start your analysis you might need to clean the data -- remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data, which combines with the sensitivity of your loggers to give you a lot of noise. Consider calculating a running average (over 60 seconds or more) to get smooth temporal trends.
-
-#### Characterizing the rainfall event {#E4_11 .unnumbered}
-
-Once you are happy with your clean data set you can use the logged data to identify the properties of the storm event, including:
-
-a)  Time from rainfall onset to when runoff began to be recorded (mins),
-b)  Time to peak discharge (mins),
-c)  Total rainfall volume (cm^3^),
-d)  Total runoff volume (cm^3^),
-e)  Average rainfall intensity (cm/min),
-f)  The runoff coefficient, $c$, for the 'storm' event.
-
-#### Separating pre-event and event water {#E4_12 .unnumbered}
-
-Now let's calculate the contributions of pre-event (baseflow = groundwater) and event (rainfall and runoff) water. Because the groundwater was saline you can use the tracer dilution method (see the blue box below for details) to calculate the fraction of the hydrograph that is from baseflow. In other words, we want to calculate and plot a hydrograph showing each of the components of the water balance:
-
-<center>
-$Q_{\text{out}}(t) = Q_{\text{event}} + Q_{\text{pre-event}}$
-</center>
-
-where $Q_{\text{out}}$ (cm^3^/s) is the volumetric flow rate measured at the outlet of the catchment, $Q_{\text{event}}$ (cm^3^/s) is the volumetric flow rate of event water (representing rainfall and runoff) and $Q_{\text{pre-event}}$ is the volumetric flow rate of pre-event water (representing groundwater).
-
-```{block2, E4blubox1, type='bluebox'}
-If there is a difference in the salinity of groundwater and rainfall-runoff then we can estimate the groundwater contribution to the streamflow by looking at changes in salinity at the catchment outlet (measured as electrical conductivity, or EC). 
-
-To do this we assume that the EC in groundwater is at a pre-event reference level, $S_{\text{pre-event}}$, and EC in the rain $S_{\text{event}}$ is effectively 0.  The level of dilution in EC in streamflow can then be used to estimate the fraction of pre-event (groundwater baseflow) and event (rainfall-runoff) water contributing to total streamflow.
-
-The salt mass balance tells us that the total salt mass coming out of the catchment via the stream must equal the sum of pre-event and event components: 
-<center>
-$S_{\text{out}} * Q_{\text{out}} =  S_{\text{event}} * Q_{\text{event}}   +   S_{\text{pre-event}} * Q_{\text{pre-event}}$
-</center>
-
-And because the rainfall and runoff didn't have any salt added, $S_{\text{event}} = 0$
-
-So that we can cancel the "event" term and rearrange to solve for the pre-event component of volumetric flow: 
-<center>
-$Q_{\text{pre-event}} = S_{\text{out}}*Q_{\text{out}} / S_{\text{pre-event}}$
-</center>
-
-And once this pre-event component is known, we can calculate the event component of volumetric flow from rearranging the water balance to give:
-<center>
-$Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}$
-</center>
-
+```{r E3Bimage4, echo=FALSE, fig.cap="Physical model of a layered groundwater system.", out.width = '80%'}
+knitr::include_graphics("images/exercise3B/picture3.png")
 ```
 
-### Interpretation and conclusions {#E4_13 .unnumbered}
+</center>
 
--   How do the relative amounts of pre-event and event water change over time? Is the change in $Q_{\text{pre-event}}/Q_{\text{event}}$ over time what you would expect?
+What can you learn from this physical model about groundwater systems? By using the physical model we have been able to see directly in the subsurface, but in the real world, the only information we have would be the wells.
 
--   How could attributes of the experimental setup have increased or decreased the baseflow contribution?
+-   If you only had the hydraulic head measurements in the wells what would you know about the groundwater system?
 
--   How would the results have changed if we ran the experiment again, starting with a wetted-up unsaturated zone?
+-   What else would you need to know about this system to calculate groundwater flow velocities (and therefore contaminant transport)?
 
--   How realistic is the experiment in terms of capturing the interaction of surface water and groundwater?
+-   How important is it that we understand the geology as well as having measurements of hydraulic heads?
 
--   What are the significance of these results for water resource management?
+-   What else might you measure in a real groundwater system to get a fuller picture of what is happening?
+
+## Computer model of groundwater system {#E3B_4 .unnumbered}
+
+We can also run a "digital twin" of the physical model that we have built in the lab. For this activity we will now use the ParFlow Sandtank model. This is a computer model simulating groundwater flow, and allows users to change aquifer configurations and explore the essential features of groundwater and contaminant flow.
+
+<center>
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/398697315" width="100%" height="360" frameborder="0" allowfullscreen>
+
+</iframe>
+
+</center>
+
+Once you have watched the introductory video lets take a look at running the model. Navigate to this model [website](https://pvw.kitware.com/sandtank/). You can learn how to customise the sandtank and run a simulation [here](https://www.hydroframe.org/sand-tank-user-manual). Have a go at manipulating the soil conditions and the hydraulic head sliders, and run simulations pumping or injecting groundwater. Can you reproduce our lab-based physical model?

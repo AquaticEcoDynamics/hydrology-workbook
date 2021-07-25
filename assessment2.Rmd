@@ -1,5 +1,3 @@
-# (PART) Assessments {.unnumbered}
-
 # Assessment 2 - Yule Brook Catchment Report {#A2 .unnumbered}
 
 ## Overview of scheduled group project activities {#A2_1 .unnumbered}
@@ -31,6 +29,6 @@ The report does not have a page limit, but will have the following sections:
 6)  *Recommendations*
 7)  *References*
 
-The report is due as an upload to LMS by **5pm Friday 23^rd^ October**. There will be no exceptions to this due date so please plan your time effectively! The marking rubric is available on LMS.
+The report is due as an upload to LMS. The due date and marking rubric is available on LMS.
 
 Students will be requested to complete a group peer-review following submission, reflecting on the roles within their team and contributions.

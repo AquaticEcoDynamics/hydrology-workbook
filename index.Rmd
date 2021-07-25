@@ -12,6 +12,28 @@ description: ""
 
 # Introduction {-}
 
-Module specific activities will be added sequentially throughout semester. From the table of contents you can see the weekly activities, and specific details for individual assessments. Please refer to LMS for information about the course schedule.
+## Overview {#AI_2 .unnumbered}
 
-For more information contact your Unit Coordinator or tutor.
+This site is a web-based "workbook" containing instructions and information needed to undertake the activities and assessments in **ENVT2251 Hydrology and Water Resource Management** unit at UWA. 
+
+The workbook is broken up into 3 types of activities:
+
+-   **Exercises**: non-assessed desktop-based activities, to be undertaken either self-paced or in-class workshops.
+-   **Labs**: Practical activities to be undertaken in the lab or field sessions as guided by teaching staff.
+-   **Assessments**: Specific instructions for assessed activities.
+ 
+Note that work undertaken in the exercises maybe referred to in the unit quiz assessments, or form the foundation of tasks required in the assessments. 
+
+The module specific activities will be updated sequentially throughout semester.  
+
+## Recommended study plan {#AI_2 .unnumbered}
+
+From the below table you can see the weekly activities, and the links between the workbook and the over-arching LMS modules.
+
+```{r, echo=FALSE}
+htmltools::includeHTML("tables/intro/table1.html")
+```
+
+## Further information {#AI_32 .unnumbered}
+
+Please refer to the ENVT2251 LMS pages for information about the course schedule and for accessing lecture content. For more information contact your Unit Coordinator or tutor.

@@ -1,0 +1,339 @@
+# Assessment 3 - Modelling catchment response to climate change {#A3 .unnumbered}
+
+## Objectives {#A3_1 .unnumbered}
+
+The aim of this assignment is to develop your thinking about how we can conceptualise environmental systems in times of change, how different “components” of the environment link together, and to understand approaches to predict changes to the environment brought about by climate change. We look at simple example of a catchment-lake system, but the methods and logic introduced are relevant for how assessments are undertaken to assess how climate change impacts real-world systems.
+
+We will develop the assessment through three main sessions focused on:
+
+-   A. Catchment streamflow prediction
+
+-   B. Lake dynamics
+
+-   C. Assessing climate change impacts
+
+
+## A. Catchment Model {#A3_2 .unnumbered}
+
+Consider a river basin with **3 sub-catchments**, each with **a different dominant land use and slightly different climate**.
+
+The daily runoff from each sub-catchment, $Q_i$ (m^3^/day), can be simply approximated based on the daily rainfall ($R$), where $c$ is the daily runoff efficiency and $R^{crit}$ is the initial loss threshold ($m$, this is the amount of rainfall that does not make it to the stream):
+
+<center>
+\begin{equation}
+Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &R_{i}^{t}\le R_{i}^{crit}
+\\ c_{i}(R_{i}^{t}-R_{i}^{crit})A_{i},\ \ &R_{i}^{t}> R_{i}^{crit}
+\end{matrix}\right.
+(\#eq:A3equation1)
+\end{equation}
+</center>
+
+The “$t$” super- script refers to a “time-step”, usually referring to a single day. The “$i$” subscript in the above refers to the catchment index; in other words, $i=1$ refers to sub-catchment 1.
+
+The total flow ($Q_{tot}$, m^3^/day) is calculated by summing the individual sub catchments, however there is an assumed lag time of 1 day for sub-catchment 2 and 2 days lag time for sub-catchment 3:
+
+<center>
+\begin{equation}
+Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color{#F79646}{Q_{3}^{t-2}}
+(\#eq:A3equation2)
+\end{equation}
+</center>
+
+The time-lag of one day ($t-1$) and two days ($t-2$), is a way to simply account for the time it takes for water in sub-catchment 2 and 3 to reach to overall catchment outlet, a process we call streamflow routing.
+
+### Module Resources {#A3_3 .unnumbered}
+
+Download the Excel spreadsheet for this exercise by clicking the download button in the tool bar <i class="fa fa-download" aria-hidden="true"></i>.
+
+### Building the model {#A3_4 .unnumbered}
+
+1)  Draw by hand the conceptual model of this system.
+2)  Confirm what the indices are referring to in the above equations ($t$, $i$).
+3)  Build the above model in Excel, to predict the individual sub-catchment flows and river basin total flow. Assume basic information as outlined in Table \@ref(tab:A3table1) below and the supplied rainfall data for the 3 sub-catchments. Input a guessed value for $c$ within the range indicated for now.
+
+<center>
+```{r A3table1, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+
+table1 <- read.csv("tables/assessment3/table1.csv", check.names=FALSE)
+kable(table1, format = "html", escape = F, align = "c", caption = "Parameters for the individual catchments.") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  scroll_box(width = "100%", height = "445px",
+             fixed_thead = FALSE)
+```
+</center>
+
+### Calibrating the model {#A3_5 .unnumbered}
+
+Now we have the model running, let's make sure the predicted flows are realistic. Previously we assumed a value of $c$ for each sub-catchment, but what is the best value for each sub-catchment that would give the most accurate prediction?
+
+4)  Manually adjust the runoff coefficient values ($c$) for each sub-catchment (see possible ranges in table above) until the model best matches the observed data. This process is called "calibration".
+
+```{block2, A3hint1, type='rmdtip2'}
+The goal of model calibration is to minimise error between the predictions and available observations. We can check this by using a regression plot of the  total observed runoff and the model total runoff, checking to get the highest R^2^ value, and ensuring the magnitudes are comparable.
+```
+
+5)  Plotting the time-series of daily flows is“crowded” and it’s hard to see differences. In this case we therefore do what is called a “cumulative mass-curve”. For this we cumulate the daily flow and plot over time – so it keeps increasing. This is the cumulative mass of water (usually presented in m3) delivered by the catchment. Create a "stacked area plot" of the cumulative flow from each sub-catchment.
+
+### Land-use change scenario {#A3_6 .unnumbered}
+
+Lets assess a land-use change scenario, and see how urbanisation may affect runoff amounts.
+
+5)  If the total urban area in each sub-catchment expands to 50% ($F_{urban}=0.5$), how would this affect the overall amount of water discharged?
+
+```{block2, A3hint2, type='rmdtip2'}
+To assess this we must change the runoff coefficient, $c$, to reflect the increased imperviousness brought about by urbanisation. We will need to assume a $c$ value for urban land, $c_{urban}$,, and then we need to average this and the calibrated version from step (4) to come up with the new value: $c_{new} = (c_{old} + c_{urban})/2$. The $R^{crit}$ value for each sub-catchment should also be redued by 25%.
+```
+
+To compare scenarios we could plot time-series of streamflows with multiple series on a single plot. As above, we can more easily compare scenarios using the cumulative mass plot, as they will start to diverge and the differences will stand out more clearly.
+
+6)  Prepare a cumulative time-series of water from the orginal calibrated model, and the urban land-use change scenario. Quantify the difference between the two in terms of annual water volume for each catchment.
+
+## B. Lake system model {#A3_7 .unnumbered}
+
+The catchment we have simulated above discharges its water into a lake system located at the low point of the landscape. This includes two main lakes which are situated in sequence. Aside from the catchment river inflow, the lakes receive and lose water from various hydrological pathways The lakes can fill up and overflow, above a certain critical lake height, and overflow water from the initial lake flows to the downstream lake.
+
+<center>
+```{r A3image1, echo=FALSE, fig.cap="Two-lake system", out.width = '80%'}
+knitr::include_graphics("images/assessment3/image1.jpg")
+```
+</center>
+
+Given the position of upper lake in the landscape it is likely to be a through-flow lake, so we also include terms for groundwater outflow, connecting the two lakes. We'll assume that groundwater inflow is determined by the regional groundwater gradient which is relatvely stable so that we can use a constant value. For groundwater outflow, we can use the same approach as we used in Exercise 5, where infiltration was a function of water level in the lake.
+
+Bearing this in mind, the water balance equation describing the change in lake storage ($S$, $m^3$) of the upper lake is:
+
+<center>
+\begin{equation}
+\frac{dS_{upper}}{dt}= Q_{tot} +\underbrace{   (R - E -kh_{upper} ) A_{upper} }_{\text{upper lake fluxes}} - Q_{out_{upper}}
+(\#eq:equationA3A5)
+\end{equation}
+\begin{equation}
+\frac{dS_{lower}}{dt}= Q_{out_{upper}} + \underbrace{ kh_{upper} A_{upper} }_{\text{gw from upper -> lower}} + \underbrace{  (R - E - kh_{lower}) A_{lower} }_{\text{lower lake fluxes}} - Q_{out_{lower}}
+(\#eq:A3equation3)
+\end{equation}
+</center>
+
+wher $R$ is the precipitation ($m/day$) falling on the relevant lake (precipitation rate x lake area, $A$), $Q_{tot}$ is the inflow (discharge) rate from the catchment ($m^3/day$), $Q_{out_{upper}}$ is the overflow from the upper to the lower lake, $E$ is the evaporation rate ($m/day$) and the $khA$ terms reflect the groundwater seepage associated with each of the lakes.
+
+<center>
+```{r A3image2, echo=FALSE, fig.cap="Model parameters for lake system water level simulation", out.width = '80%'}
+knitr::include_graphics("images/assessment3/image2.png")
+```
+</center>
+
+With these we can model the water storage in the two lakes. Start with the template spreadsheet provided. You can use the daily rain and evaporation (data provided) to drive this model, but you will need to ensure you have consistent units across terms (i.e. all rates are /d, not a mix of /d and /y, and note that volumes are different from lengths!).
+
+We will assume that the sides of the lakes are steep so that lake surface area is independent of water level height. Therefore, water level is related to the storage volume in the lake according to:
+
+<center>
+\begin{equation}
+h_{upper}=\frac{S_{upper}}{A_{lower}}    \text{    &    }     h_{lower}=\frac{S_{lower}}{A_{lower}}
+(\#eq:A3equation4)
+\end{equation}
+</center>
+
+To start the simulation we must use an initial lake water level, as provided in the details below (Table 4), to get the starting lake storage, $S^{t=0}$ or $S^{0}$.
+
+The outflow (overflow) of each lake only occurs when the lake water level exceeds the maximum depth, which are denoted $h^{max}_{upper}$ and $h^{max}_{lower}$. In general, for either lake:
+
+<center>
+\begin{equation}
+Q_{out}=
+\left\{\begin{matrix} 0,\ \ &h^{t}\le h^{max}
+\\ (h^{t*}-h^{max})A,\ \ &h^{t}\gt h^{max}
+\end{matrix}\right.
+(\#eq:A3equation5)
+\end{equation}
+</center>
+
+where $h^{t*}$ is the estimate of what the daily water level would be prior to computing $Q_{out}$ (i.e., an interim value). Note that when applying this, and $IF$ statement can be used to compute the equation above.
+
+The rate of potential evaporation, $E_{p_{annual}}$ $(m/yr)$, at the chosen location varies seasonally - more in summer and less in winter. It is rare to measure evaporation so instead we can rely on the annual rate of potential evaporation, and spread it over a year using a sine wave. The sine wave, is tailored to ensure the peak is in summer and the trough is in winter, and that the sum of the daily evaporation rates adds to the annual total:
+
+<center>
+\begin{equation}
+E_{daily}= sin() E_{p_{annual}}
+(\#eq:A3equation6)
+\end{equation}
+</center>
+
+This is depicted visually in Figure \@ref(fig:A3figure1), which is incorporated in the provided data sheet with typical parameters for Perth conditions.
+
+<center>
+```{r A3figure1, fig.cap="Potential evaporation rate sine wave function used to capture seasonal variation in lake evaporation.", echo=FALSE, message=FALSE, warning=FALSE, out.width='80%',out.height='50%'}
+library(ggplot2)
+library(lubridate)
+library(plotly)
+library(dplyr)
+evap <- read.csv("tables/assessment3/figure1.csv")
+evap$Date <- as.Date(evap$Date)
+plot <- ggplot(data=evap, aes(x=Date, y=Evaporation)) +
+  geom_line(colour= "#3182bd", size = 1.2) + xlab("Time (years)") + ylab("Potential evaporation (m day<sup>-1</sup>)") +
+              theme_bw()
+ggplotly(plot) %>%
+  config(displaylogo = FALSE)
+```
+</center>
+
+### Building the model {#A3_8 .unnumbered}
+Now we have established the background, start building the model by following these steps:
+
+7) Sketch the described system, setting the context and using the notation above.
+8) Write out the above two equations using “difference” notation (i.e., $S^{t+1}_{lower} = S^t_{lower} + R^t...$ ).
+9) Open the LakeModel spreadsheet and finish the columns for the Upper Lake, using the below
+settings in Table 2 (change the red numbers to match Table 4).
+10) Plot the Upper Lake storage and water depth over time. Now also plot the water fluxes.
+11) Once this lake looks good, implement the columns needed for resolving the Lower Lake, based on Eq 19 above.
+
+### Assessing the model {#A3_9 .unnumbered}
+12) Change the settings (model parameters) to see the sensitivity to leakage ($k$) and maximum lake depth ($h_{max}$).
+13) Would increasing or decreasing the surface area of Lower Lake help stabilise the water level?
+14) Use the model to demonstrate an alternate scenario of lake management – how would this change the lake water levels?
+15) How realistic is this model and what changes could you make if you were asked to improve it?
+
+## C. Climate change impact assessment {#A3_10 .unnumbered}
+
+In the final exercise of this assignment, we continue modelling calculations that we have developed previously with one addition: we use your models to predict the effects of a changing climate. Lake water quality has been highlighted as being sensitive to climate change (Trolle et al., 2011). Within Western Australia, a significant decline in rainfall has been observed (e.g., https://water.wa.gov.au/planning-for-the-future/allocation-plans/managing-water-in-a-changing-climate/climate-change-impacts-on-the-south-west)
+
+Read the document ‘_Climate analyses for south-west Western Australia_’ (CSIRO, 2010) to learn about the projected climate changes for the coming decades, the various scenarios proposed and the different models that are synthesised in the report. For example, look at Sections 4.5.1 Rainfall Change and 4.5.2 Areal Potential Evaporation show predicted rainfall and evaporation changes for the year ~2030.
+
+Use your judgement to select seasonal and annual trend changes, for example, one model may predict a 2% decrease in spring rainfall and a 3% increase in evaporation for the area around Perth. Alter your climate forcing data so that it reflects one of the climate models forecast. Recalculate the water balance for 2030 to 2033 with your new rainfall and evaporation forcing. This is essentially a new scenario of your model.
+
+When describing the methods for this climate change assessment, explain the methods you used to obtain the climate change trend from the CSIRO report, and then the approach to alter the climate forcing in the model.
+
+When describing the results of the climate change impacts, explain what the differences were between the base case and the projected scenarios. Create a set of figures that show the differences between the base case scenario and any future scenarios for key catchment and lake results.
+
+When interpreting the results, consider:
+
+• how your results match the rest of the climate literature that you have researched,
+
+• positive or negative changes for future lake ecosystems in 2033,
+
+• the benefits of regional and global climate models,
+
+• the relative merits of simple bucket models and complex general circulation models,
+
+• any other effects of increased temperature that are not captured in this model,
+
+• how the model could be improved, and the next steps that future modellers could carry out.
+
+## Submission {#A2_11 .unnumbered}
+
+::: {.redbox2}
+Your submission is a single report based building on all three exercises, parts A, B and C listed above.
+
+If you did not complete any of the individual exercises, you should still write the report, based on whatever you were able to complete.
+Use the questions in the exercise as a guide to the ideas that should be included in your discussion. There is no page limit, but it should be around eight pages.
+
+There are two main focuses for the report:
+
+• _the scientific aspects associated with catchment and lake assessment_, and
+
+• _the technical and practical aspects of numerical modelling_.
+
+The structure of the report should be as follows:
+
+**Introduction** :
+Include just the background information that is necessary to understand your aim. This should relate to assessment of land-use change and climate change.
+Introduce all three exercises together in a nicely connected way within the one introduction Include an aim, and a hypothesis if you can
+Include conceptual diagrams if they help explain the background
+
+**Methods** :
+Explain what you did, so that someone else could repeat it
+Separate the three exercises, within this one Methods section, using sub-sections for the catchment, lake and climate aspects
+Use the past tense, and a passive voice Show the model equations
+Show all parameters used, including sources for parameters or estimates found in the literature
+Include conceptual diagrams to help explain the methods
+
+**Results** :
+Report the numbers, trends or other findings you calculated.
+Include figures if they help you explain the results, for example, time series.
+Separate the three exercises, within this one Results section.
+Remember to label all of your axes with the correct units, provide a legend only if necessary, and add a caption underneath the figure. Don’t add a title on a figure (use a caption).
+
+**Discussion** :
+Assess the ability of the model to capture this system. You may wish to consider -
+- The suitability of the conceptual model (is it flawed or robust?)
+- The model equations
+- The software used
+- The uncertainty of the parameters
+- How managers could use this to help adapt to a changing climate
+
+Give a general conclusion of the three exercises
+Connect your results to your aims
+Connect your results to the rest of your background reading.
+
+**References** :
+Follow the unit style and use a consistent format throughout.
+
+:::
+
+### Optional: Add phosphorus concentrations to the model{#A3_12 .unnumbered}
+
+For each sub-catchment, the phosphorus concentration, $P_{i}$ (g/m^3^), depends on how much flow there is (e.g. more flow = more fertilizer leaching) by assuming a simple power law fitted to the flow-concentration relationship computed for each land-use ($P$\~$\alpha Q \beta$). This is averaged over the different land use fractions (denoted with the small $p$ index), using the land-use fraction $F_p$:
+
+<center>
+\begin{equation}
+P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
+(\#eq:A3equation7)
+\end{equation}
+</center>
+
+```{block2, A3hint3, type='rmdnote2'}
+$\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}$ is the flow dependent concentration of the *p*-th land use type.
+```
+
+Where alpha ($\alpha$) and beta ($\beta$) are variables that govern the stream $P_i$ concentration (g/m^3^) as a function of area-averaged flow rate ($Q/A$) and they depend on the dominant land use ($p$). $N_p$ is the number of land use classes being considered (4) and $P_0$ is the background concentration (g/m^3^) for that sub-catchment (i.e. the value of PO~4~ when flow tends to 0).
+
+The total $P$ export load is $P_{load}$ (g/day) and is the sum of the different sub catchment outputs (remember *load = flow x concentration*) with the assumed lag time:
+
+<center>
+\begin{equation}
+P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
+(\#eq:A3equation8)
+\end{equation}
+</center>
+
+<center>
+<video width="80%" height="80%" controls>
+<source src="images/assessment3/video1.mp4" type="video/mp4">
+</video>
+</center>
+
+Now let's work out the land-use specific stream $P$ concentrations:
+
+5)  Predict the sub catchment river $P$ concentrations and total river basin $P$ export load. The best way to do this is first predict the $P$ concentration of each land-use class ($F_p$) in each sub catchment each as a column (i.e. Dairy $P$ concentration, Wheat $P$ concentration and so on), and then sum the 4 columns for $P_i$.
+
+<center>
+```{r A3table2, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+#options(knitr.kable.NA = '')
+table2 <- read.csv("tables/assessment3/table1.csv", check.names=FALSE)
+kable(table2, format = "html", escape = F, align = "c", caption = "Phosphate parameters.") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  column_spec(1, width_min = "25em") %>%
+  column_spec(2, width_min = "11em") %>%
+  column_spec(3, width_min = "11em") %>%
+  #row_spec(1:12, background = '#ffffff00') %>%
+  scroll_box(width = "100%", height = "235px",
+             fixed_thead = FALSE)
+```
+</center>
+
+```{block2, A3hint4, type='rmdtip2'}
+See how dairy has the highest alpha? This means it produces the most $P$ of all 4 classes.
+```
+
+
+7) If the irrigated dairy industry were made to contain their flows (i.e. prevent high $P$ concentrations going to the stream), how would this affect the overall concentration in the water at the river basin outlet? They have to keep the total subcatchment $P$ concentration below 0.065 g m^3^.
+
+```{block2, A3hint5, type='rmdtip2'}
+Use an IF statement.
+```
