@@ -8,7 +8,7 @@ bookdown::gitbook:
         <li><a href="./"><b>Hydrology Workbook</b></a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    download: [["Exercise_1A_Answer_Sheet.docx", "Exercise 1 Answer Sheet"],
+    download: [["docs/downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"],
               ["Helena_Data.zip", 'Helena Data'],
               ['Exercise_7_eFlow_Table.docx', 'Exercise 7 Answer Sheet']
               ]
