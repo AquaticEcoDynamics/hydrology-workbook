@@ -26,7 +26,7 @@ By the end of this assignment, you should:
 
 ## Temporal trends in rainfall {#A2A_2 .unnumbered}
 
-Prior to starting this work, make sure you have completed the [Exercise 1B](#E1B_1) activity.
+Prior to starting this work, make sure you have completed the [Exercise 2](#E1B_1) activity.
 
 1)  For your chosen site, calculate the trend in rainfall for the **last 5 years.** Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) or calculate the manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear -- discuss? (You can do this same analysis by adding a trend-line to the data, as described in 2. below).
 
@@ -86,7 +86,7 @@ Other indicators of temporal variability (look for cyclic patterns). Does rainfa
 ```
 </center>
 
-Where:
+where:
 
 -   $P_{\text{diff}}$ = (average Tahiti MSLP for the month) - (average Darwin MSLP for the month)
 -   $P_{\text{diffav}}$ = long term average of $P_{\text{diff}}$ for the month in question, and
@@ -154,7 +154,7 @@ We then want to correlate each grid cell on the earth with our climate index (SO
 
 ## Relationship between rainfall and runoff {#A2A_5 .unnumbered}
 
-Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 1B](#E1B_1) activity for details on how to source the data - make sure the site has streamflow data by checking the data availability and the request the report for water levels and flow - continuous to get the flow data).
+Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 2](#E1B_1) activity for details on how to source the data - make sure the site has streamflow data by checking the data availability and the request the report for water levels and flow - continuous to get the flow data).
 
 8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
 

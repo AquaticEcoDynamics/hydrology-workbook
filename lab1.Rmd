@@ -4,12 +4,38 @@
 
 ## Learning Objectives {#L1_1 .unnumbered}
 
+-   To be able to conceptualise how catchment water stores respond to rainfall.
+-   To understand that the relationship between rainfall and runoff depends on soil and catchment conditions.
+-   Develop skills related to laboratory data analysis and interpretation.
 
 ## Building a "Desktop Catchment" {#L1_2 .unnumbered}
 
+A real-world catchment is sometimes conceptualised as a "bucket" of soil. This is somehwat simplistic but it does help us clarify a few key concepts that underpin our understanding of the water balance.
+
+Using this analogy, the soil acts like a "sponge" that can store water. Improtantly, a certain amount of water needs to be stored in the sponge before it will release any. Think about your kitchen sponge - it will soak up water to a point, after which it becomes saturated and cannot hold more - any excess added will simply leak away.
+
+The catchment geomorphology and soil also means that the bucket needs to have a certain amount of water stored before it will leak any to the river network. We call this a storage threshold. This threshold amount of water storage needs to be met before any discharge will occur. In a pure bucket of soil, the soil capilliarity will hold onto water. In soil science, the amount of water that soil can hold before the water starts to flow (e.g. drain away) is called the field capacity.
+
+If rain falls on a catchment at a time when the storgae threshold is already met (i.e., the bucket is already partially full), then even a small amount of rain can cause a discharge to occur. However, if a rainfall event occurs when the bucket is near to empty, then the rainfall will first be soaked up and not lead to any discharge unless the storage threshold is met. The starting conditions at the begining of an event are called the antededent conditions.
+
+<center>
+```{r L1imageA, echo=FALSE, fig.cap="A catchment can be conceptualised as a bucket of soil, which holds and releases water.", out.width = '80%'}
+knitr::include_graphics("images/lab1/bucket.png")
+```
+</center>
 
 
-## Characterising soil moisture {#L1_3 .unnumbered}
+In this laboratory we will create a desktop catchment able to simulate this behaviour. By comparing data collected using different "bucket" settings, we can assess the importance of soil properties and antecedent conditions on the relationship between discharge and rainfall.
+
+
+### Step 1 : Catchment Setup {#L1_3 .unnumbered}
+
+
+
+
+### Step 2 : Characterising soil moisture {#L1_4 .unnumbered}
+
+#### Soil water terms {#L1_5 .unnumbered}
 
 During this exercise you will measure some of the key properties for soil hydrology. To do this, you will collect soil from different locations of your choosing to analyse. You will then calculate soil moisture content, porosity and field capacity. Importantly, you will finish by thinking about the meaning of your results. Let's start by remembering some key terms:
 
@@ -25,7 +51,7 @@ During this exercise you will measure some of the key properties for soil hydrol
 
 **Available Water Content:** This is the amount moisture available for plants to extract, and is caluclated from Field Capacity – Permanent Wilting Point. This water does not drain through to the watertable under gravity, and also is not held too tightly by the soil, so that plants are able access it for uptake through their roots.  
 
-### Sample Collection {#E3A_1 .unnumbered}
+#### Sample Collection {#L1_6 .unnumbered}
 
 First, start by collecting your soil samples. 
 
@@ -44,7 +70,7 @@ knitr::include_graphics("images/exercise3A/image1.jpeg")
 </center>
 
 
-### Computing Soil Moisture and Soil Porosity {#E3A_2 .unnumbered}
+#### Computing Soil Moisture and Soil Porosity {#L1_7 .unnumbered}
 
 Soil moisture (water content) and porosity (proportion of void space) are key parameters that describe the capacity of soils to store water. Let's calculate these parameters for each the the soil samples you collected.
 
@@ -72,10 +98,33 @@ S_{max}=\ \phi{\ V}_{soil}
 ```
 </center>
 
-##Computing the runoff coefficient {#L1_4 .unnumbered}
+### Step 3 : Collect experimental data {#L1_8 .unnumbered}
 
 
-### What did we learn? {#L1_5 .unnumbered}
+### Step 4 : Data analysis {#L1_9 .unnumbered}
+
+The experimental data saved from the data-logger can be used to visualise the change in rainfall and runoff (discharge) over time, and to calculate the total rainfall and runoff amount.
+
+#### Plotting the experimental data {#L1_10 .unnumbered}
+
+In Excel, plot a time-series graph showing rainfall and the cumulative volume of discharge. We can compute the discharge rate by looking at the difference between the output volume between two time-steps.
+
+#### Estimate the lag time {#L1_11 .unnumbered}
+
+Once you have plotted the rainfall and discharge, estimate the start time of the rain event, and the start time of the discharge. The time difference is the lag time that it took to fill the storage threshold - the amount the soil needed to be wetted prior to discharge occuring.
+
+#### Computing the runoff coefficient {#L1_12 .unnumbered}
+
+The runoff coefficient is the ratio of discharge to the input rainfall amount. Simply calculate this total discharge volume / total rainfall volume. 
+
+#### Share and compare your results {#L1_13 .unnumbered}
+
+Once the above steps are completed, log onto the shared data spreadsheet [here] and enter your results. Use the shared data to compare the parameters computed for different cacthment settings. 
+
+Explore the data, for example, make a scatter plot comparing discharge and rainfall. How does runoff coefficient compare to antecedant conditions. What about catchment slope?
+
+
+## What did we learn? {#L1_14 .unnumbered}
 
 -   Spatial heterogeneity is a substantial issue in subsurface hydrology. What is the variation between sample replicates? How does this compare to the mean of the measured values (i.e. is the variation large relative to the mean?). How much do the soil parameter estimates vary across the whole data set?
 
