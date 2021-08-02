@@ -19,6 +19,7 @@ tab:E6table1
 fig:E7image1
 fig:E7image2
 fig:L1imageA
+fig:L1imageB
 fig:E3BimageA
 eq:E3Aequation1
 eq:E3Aequation2

@@ -30,14 +30,31 @@ In this laboratory we will create a desktop catchment able to simulate this beha
 
 ### Step 1 : Catchment Setup {#L1_3 .unnumbered}
 
+In the lab you will be introdcued to the desktop cacthment setup.
 
+Start by filling the catchment with soil. Estimate the volume of soil that was added - start by making a regualr shape to compute the volume and then shape the catchment to be more realistic.
+
+<center>
+```{r L1imageB, echo=FALSE, fig.cap="Photo of the desktop catchment.", out.height = '50%'}
+knitr::include_graphics("images/exercise4/picture5.png")
+```
+</center>
+
+Across the class we will compare different settings, comparing a) catchment slope and b) antecedent conditions (in the form of different soil moisture amounts).
+
+Depending on your allocated settings, prepare your cacthment. 
+
+-  Adjust slope with blocks provided. 
+-  Add an initial amount of moisture using the watering can as guided.
+
+We are now ready to start the experiment, but first we must characterise how much water is stored in the soil.
 
 
 ### Step 2 : Characterising soil moisture {#L1_4 .unnumbered}
 
 #### Soil water terms {#L1_5 .unnumbered}
 
-During this exercise you will measure some of the key properties for soil hydrology. To do this, you will collect soil from different locations of your choosing to analyse. You will then calculate soil moisture content, porosity and field capacity. Importantly, you will finish by thinking about the meaning of your results. Let's start by remembering some key terms:
+During this exercise you will measure some of the key properties for soil hydrology. To do this, you will collect soil from locations of your choosing to analyse. You will then calculate soil moisture content, porosity and field capacity. Let's start by remembering some key terms:
 
 **Porosity:** The porosity is the ratio of the volume of the voids to the total volume of the sample. So if you have a sample of 100 cm^3^ and 30 cm^3^ is void space (non-solid), then you have a porosity of 0.3 or 30%.
 
@@ -49,22 +66,22 @@ During this exercise you will measure some of the key properties for soil hydrol
 
 **Wilting Point:**  Plant roots can’t extract any more water (i.e. apply a suction stronger than -1.5 MPa) from this soil and begin to die. Permanent wilting point is the moisture content remaining in soil subjected to -1.50MPa (15 Bar) pressure (i.e. moderate vacuum). 
 
-**Available Water Content:** This is the amount moisture available for plants to extract, and is caluclated from Field Capacity – Permanent Wilting Point. This water does not drain through to the watertable under gravity, and also is not held too tightly by the soil, so that plants are able access it for uptake through their roots.  
+**Available Water Content:** This is the amountof  moisture available for plants to extract, and is caluclated from Field Capacity – Permanent Wilting Point. This water does not drain through to the watertable under gravity, and also is not held too tightly by the soil, so that plants are able access it for uptake through their roots.  
 
 #### Sample Collection {#L1_6 .unnumbered}
 
-First, start by collecting your soil samples. 
+First, start by collecting your soil samples. If your in the lab, this will be from our setup. If your stuck at home, you can do this in your kitchen as an exercise!
 
-Find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small "core" (e.g. measuring cup or inverted can) to collect your samples. At each site you should collect three replicate samples. You will probably want to wrap these in foil to keep them from falling apart and then place them in a zip-lock bag (sealed tight to stop the sample drying out) with the sample ID recorded in permanent marker ready for transport back to "the lab" (i.e. your kitchen). While you are in the field make sure you record the coordinates (or location) where you collected the samples.
+Clear the surface and use a small "core" (e.g. measuring cup or inverted can) to collect your samples. Collect two replicate samples. You will probably want to wrap these in foil to keep them from falling apart and then place them in a zip-lock bag (sealed tight to stop the sample drying out) with the sample ID recorded in permanent marker ready for transport back to "the lab" (i.e. your kitchen). While you are in the field make sure you record the coordinates (or location) where you collected the samples.
 
 You should also make a brief description of the soil - what colour is it (in real scientific studies we use colour charts to make sure colour descriptions are robust and repeatable). Would you describe your soil sample as sand? Or is it silty, making it feel with finer grains because of the finer grains. Sometimes it's difficult to tell just by touch whether a sample contains silt or clay because these are both fine-grained. To test for clay you can roll a sample in your palm, if it holds a cylindrical sausage shape then it contains clay. Does your sample seem to have a lot of dark brown organic matter, or not much?
 
-For each sample use a balance to record the sample weight, making sure you correctly blank the balance to account for the sample container weight. Record the dimensions and volume of your samples. Then place them onto a tray that is suitable for going into the oven. Then place the tray into the oven for drying at \~105˚C. Leave in the oven until the sample is totally dry and then re-weigh (check after for 1-2 hours).
+For each sample use a balance to record the sample weight, making sure you correctly blank the balance to account for the sample container weight. Record the dimensions and volume of your samples. Then place them onto a tray that is suitable for going into the oven. Then place the tray into the oven for drying at \~105˚C. Leave in the oven until the sample is totally dry and then re-weigh (check after for 1-2 hours; in the meantime goto Step 3).
 
-Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. Repeat for the three replicates of each soil and enter your sample details and your results into the online [Google sheet](https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0). Make sure to enter your data on the correct sheet for this teaching period.
+Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. Repeat for the replicates of each soil and enter your sample details and your results into the online [Google sheet](https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0). Make sure to enter your data on the correct sheet for this teaching period.
 
 <center>
-```{r E3BimageA, echo=FALSE, fig.cap="A soil sample (core) collected using a kitchen measuring cup.", out.width = '80%'}
+```{r E3BimageA, echo=FALSE, fig.cap="A soil sample (core) collected using a kitchen measuring cup.", out.width = '50%'}
 knitr::include_graphics("images/exercise3A/image1.jpeg")
 ```
 </center>
@@ -100,14 +117,30 @@ S_{max}=\ \phi{\ V}_{soil}
 
 ### Step 3 : Collect experimental data {#L1_8 .unnumbered}
 
+Once you have prepared the experimental setup, and taken the soil samples to the oven, you are now ready to go. Start the logger on the computer, and then start the rainfall (i.e., turn the tap on). 
+
+The rain should occur for around 10-15 minutes, or at least long enough for the catchment flow to be occuring. 
+
+After you turn off the rainfall tap, keep the system logging, and wait for the soil to keeping draining. After 10 or so minutes stop the logger and export the data as a csv or xls file.
 
 ### Step 4 : Data analysis {#L1_9 .unnumbered}
 
-The experimental data saved from the data-logger can be used to visualise the change in rainfall and runoff (discharge) over time, and to calculate the total rainfall and runoff amount.
+The experimental data saved from the data-logger can be used to visualise the change in rainfall and runoff (discharge) over time, and used to calculate the total rainfall and runoff amount.
 
 #### Plotting the experimental data {#L1_10 .unnumbered}
 
 In Excel, plot a time-series graph showing rainfall and the cumulative volume of discharge. We can compute the discharge rate by looking at the difference between the output volume between two time-steps.
+
+Make sure the units are described correctly - the units of rainfall or L/min and the units in the "tank" are L.
+
+Once you are happy with your clean data set you can use the logged data to identify the properties of the storm event, including:
+
+a)  Time from rainfall onset to when runoff began to be recorded (mins),
+b)  Time to peak discharge (mins),
+c)  Total rainfall volume (cm^3^),
+d)  Total runoff volume (cm^3^),
+e)  Average rainfall intensity (cm/min),
+f)  The runoff coefficient, $c$, for the 'storm' event.
 
 #### Estimate the lag time {#L1_11 .unnumbered}
 
