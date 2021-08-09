@@ -14,7 +14,6 @@ By the end of this activity, you should:
 
 ## Getting Rainfall Data {#E1B_3 -}
 
-**Download the activity sheet for this exercise by clicking the download button in the tool bar** <i class="fa fa-download" aria-hidden="true"></i>. 
 
 1) Start by downloading the daily rainfall data for a chosen BOM site from the [Bureau of Meteorology](http://www.bom.gov.au/climate/data/) web site. Choose a site of interest in Western Australia.  Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel. 
 

@@ -63,7 +63,7 @@ kable(table1,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 ## Spatial patterns in rainfall {#A2A_3 .unnumbered}
 
-5)  Take the information in Table \@ref(tab:E1Btable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+5)  Take the information in Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
 
 <center>
 ```{r A2Aimage2, echo=FALSE, fig.cap="", out.width = '90%'}
