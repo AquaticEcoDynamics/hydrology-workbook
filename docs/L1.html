@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Lab 1 - Desktop catchments | Hydrology Workbook</title>
   <meta name="description" content="Lab 1 - Desktop catchments | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Lab 1 - Desktop catchments | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -50,10 +50,35 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -100,8 +125,11 @@
 <ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
@@ -233,7 +261,7 @@
 <div class="figure"><span id="fig:L1imageA"></span>
 <img src="images/lab1/bucket.png" alt="A catchment can be conceptualised as a bucket of soil, which holds and releases water." width="80%" />
 <p class="caption">
-Figure 12: A catchment can be conceptualised as a bucket of soil, which holds and releases water.
+Figure 15: A catchment can be conceptualised as a bucket of soil, which holds and releases water.
 </p>
 </div>
 </center>
@@ -246,7 +274,7 @@ Figure 12: A catchment can be conceptualised as a bucket of soil, which holds an
 <div class="figure"><span id="fig:L1imageB"></span>
 <img src="images/exercise4/picture5.png" alt="Photo of the desktop catchment." width="316" height="50%" />
 <p class="caption">
-Figure 13: Photo of the desktop catchment.
+Figure 16: Photo of the desktop catchment.
 </p>
 </div>
 </center>
@@ -281,7 +309,7 @@ Figure 13: Photo of the desktop catchment.
 <div class="figure"><span id="fig:E3BimageA"></span>
 <img src="images/exercise3A/image1.jpeg" alt="A soil sample (core) collected using a kitchen measuring cup." width="50%" />
 <p class="caption">
-Figure 14: A soil sample (core) collected using a kitchen measuring cup.
+Figure 17: A soil sample (core) collected using a kitchen measuring cup.
 </p>
 </div>
 </center>
@@ -289,19 +317,19 @@ Figure 14: A soil sample (core) collected using a kitchen measuring cup.
 <div id="L1_7" class="section level4 unnumbered">
 <h4>Computing Soil Moisture and Soil Porosity</h4>
 <p>Soil moisture (water content) and porosity (proportion of void space) are key parameters that describe the capacity of soils to store water. Let’s calculate these parameters for each the the soil samples you collected.</p>
-<p><strong>Soil moisture</strong>: For each of your soils samples you should have measured the soil weight before and after drying in the oven. The mass-loss during oven drying represents the weight of water contained in that soil volume. (Note that clayey soils can retain considerable amounts of water when they are air-dry). Based on this water mass we can work out the gravimetric (by weight) and/or volumetric (by volume) water content of each soil sample. The volumetric water content (VWC, <span class="math inline">\(\theta\)</span>, theta, unitless because it is a ratio), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume using Equation <a href="L1.html#eq:E3Aequation1">(5)</a>. You can express this value as a % by multiplying your result from <a href="L1.html#eq:E3Aequation1">(5)</a> by 100. Enter your results into the online table (via Google Sheets)</p>
+<p><strong>Soil moisture</strong>: For each of your soils samples you should have measured the soil weight before and after drying in the oven. The mass-loss during oven drying represents the weight of water contained in that soil volume. (Note that clayey soils can retain considerable amounts of water when they are air-dry). Based on this water mass we can work out the gravimetric (by weight) and/or volumetric (by volume) water content of each soil sample. The volumetric water content (VWC, <span class="math inline">\(\theta\)</span>, theta, unitless because it is a ratio), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume using Equation <a href="L1.html#eq:E3Aequation1">(6)</a>. You can express this value as a % by multiplying your result from <a href="L1.html#eq:E3Aequation1">(6)</a> by 100. Enter your results into the online table (via Google Sheets)</p>
 <center>
 <span class="math display" id="eq:E3Aequation1">\[\begin{equation}
 \theta=\frac{V_w}{V_T}=\frac{\left(M_{\text{sample}}-M_{\text{dry}}\right)}{V_T\ \rho_w}
-\tag{5}
+\tag{6}
 \end{equation}\]</span>
 </center>
 <p><strong>Soil Porosity</strong>: Let’s now calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density <span class="math inline">\(\rho_b\)</span> is the mass of dry soil per unit volume. You have already measured the dry volume of your soil, so to determine the bulk density you just need to work out the volume of your soil sample (if it was a column of core then volume = <span class="math inline">\(\pi r^2 h\)</span> where <span class="math inline">\(r\)</span> is radius and <span class="math inline">\(h\)</span> is height of soil in the sample). From the bulk density and particle density <span class="math inline">\(\rho_p\)</span> (2.65 g cm<sup>-3</sup>) you can then calculate the porosity <span class="math inline">\(\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)\)</span>. This value will also be a ratio, and you can multiply it by 100 to calculate the porosity as a %.</p>
-<p>Now that you know the porosity, you can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of your sample by multiplying the soil volume by the porosity as shown in Equation <a href="L1.html#eq:E3Aequation2">(6)</a>. Add your results of these analyses to the online Google Sheet.</p>
+<p>Now that you know the porosity, you can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of your sample by multiplying the soil volume by the porosity as shown in Equation <a href="L1.html#eq:E3Aequation2">(7)</a>. Add your results of these analyses to the online Google Sheet.</p>
 <center>
 <span class="math display" id="eq:E3Aequation2">\[\begin{equation}
 S_{max}=\ \phi{\ V}_{soil}
-\tag{6}
+\tag{7}
 \end{equation}\]</span>
 </center>
 </div>
@@ -386,6 +414,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {

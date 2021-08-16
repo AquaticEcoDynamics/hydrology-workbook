@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise 10 - Assessing environmental flow impacts | Hydrology Workbook</title>
   <meta name="description" content="Exercise 10 - Assessing environmental flow impacts | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise 10 - Assessing environmental flow impacts | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -50,10 +50,35 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -100,8 +125,11 @@
 <ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
@@ -278,7 +306,7 @@ and soil moisture for plants</li>
 <div class="figure"><span id="fig:E7image1"></span>
 <img src="images/exercise7/image1.png" alt="Focus study sites where environmental water delivery is assessed in the MDB. Visit: https://flow-mer.org.au" width="100%" />
 <p class="caption">
-Figure 10: Focus study sites where environmental water delivery is assessed in the MDB. Visit: <a href="https://flow-mer.org.au" class="uri">https://flow-mer.org.au</a>
+Figure 13: Focus study sites where environmental water delivery is assessed in the MDB. Visit: <a href="https://flow-mer.org.au" class="uri">https://flow-mer.org.au</a>
 </p>
 </div>
 </center>
@@ -297,7 +325,7 @@ region
 <div class="figure"><span id="fig:E7image2"></span>
 <img src="images/exercise7/image2.png" alt="Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar." width="100%" />
 <p class="caption">
-Figure 11: Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar.
+Figure 14: Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar.
 </p>
 </div>
 </center>
@@ -343,6 +371,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {

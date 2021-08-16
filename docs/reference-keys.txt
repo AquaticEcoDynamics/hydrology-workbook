@@ -11,9 +11,13 @@ tab:E1Btable1
 eq:E3Bequation1
 eq:E3Bequation2
 fig:E3Bimage1
+fig:E4imageX
+fig:E4imageY
 fig:E3Bimage2
 fig:E3Bimage3
 fig:E3Bimage4
+fig:E4imageZ
+eq:E4equation2
 fig:E6image1
 tab:E6table1
 fig:E7image1

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Part A - Rainfall and streamflow data analysis | Hydrology Workbook</title>
   <meta name="description" content="Part A - Rainfall and streamflow data analysis | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Part A - Rainfall and streamflow data analysis | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -50,10 +50,35 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -100,8 +125,11 @@
 <ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
@@ -215,13 +243,13 @@
             <section class="normal" id="section-">
 <div id="A1A" class="section level1 unnumbered">
 <h1>Part A - Rainfall and streamflow data analysis</h1>
-<p>In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure <a href="A1A.html#fig:A2Aimage1">25</a>). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.</p>
+<p>In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure <a href="A1A.html#fig:A2Aimage1">28</a>). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.</p>
 <p>In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. We will be sharing our data using an online spreadsheet. Please make sure that you upload your data as soon as possible so that others can include it in their analysis.</p>
 <center>
 <div class="figure"><span id="fig:A2Aimage1"></span>
 <img src="images/assessment2A/image1.png" alt="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net)." width="80%" />
 <p class="caption">
-Figure 25: A guide to the timescales applicable to weather, climate variability and climate change <a href="www.pacificclimatefutures.net">Pacific Climate Futures</a>.
+Figure 28: A guide to the timescales applicable to weather, climate variability and climate change <a href="www.pacificclimatefutures.net">Pacific Climate Futures</a>.
 </p>
 </div>
 </center>
@@ -749,7 +777,7 @@ Narrogin
 <center>
 <span class="math display" id="eq:A2Aequation1">\[\begin{equation}
 \text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
-\tag{12}
+\tag{13}
 \end{equation}\]</span>
 </center>
 <p>where:</p>
@@ -1019,6 +1047,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {

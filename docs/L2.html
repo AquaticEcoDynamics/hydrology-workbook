@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Lab 2 - Streamflow analysis | Hydrology Workbook</title>
   <meta name="description" content="Lab 2 - Streamflow analysis | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Lab 2 - Streamflow analysis | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -50,10 +50,35 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -100,8 +125,11 @@
 <ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
@@ -258,7 +286,7 @@ electromagnetic, ultrasonic, and Doppler).</p>
 <center>
 <span class="math display" id="eq:E2equation1">\[\begin{equation}
 Q = \sum^{n}_{i=0} (V_{i} * \text{Area}_{i})
-\tag{7}
+\tag{8}
 \end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(n\)</span> is the number of vertical for measuring velocities, <span class="math inline">\(V_{i}\)</span> is
@@ -270,7 +298,7 @@ or triangles.</p>
 <div class="figure"><span id="fig:E2image1"></span>
 <img src="images/exercise2/image1.png" alt="Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge." width="50%" />
 <p class="caption">
-Figure 15: Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge.
+Figure 18: Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge.
 </p>
 </div>
 </center>
@@ -287,7 +315,7 @@ you), it can compute the water velocity.</p>
 <div class="figure"><span id="fig:E2image2"></span>
 <img src="images/exercise2/image2.png" alt="An ADV - used to measure stream velocity." width="30%" />
 <p class="caption">
-Figure 16: An ADV - used to measure stream velocity.
+Figure 19: An ADV - used to measure stream velocity.
 </p>
 </div>
 </center>
@@ -621,7 +649,7 @@ channel geometry, slope and roughness is:</p>
 <center>
 <span class="math display" id="eq:E2equation2">\[\begin{equation}
 Q = \frac{1}{n}(A\space{}R^{\frac{2}{3}}\space{}S^{\frac{1}{2}})
-\tag{8}
+\tag{9}
 \end{equation}\]</span>
 </center>
 <p>Where: <span class="math inline">\(A\)</span> is the channel cross-sectional area (m<sup>2</sup>) ; <span class="math inline">\(R\)</span> is the
@@ -650,7 +678,7 @@ method). Draw a scale diagram of your chosen cross-section to estimate
 the wetted perimeter. Use the slope over the 5.2 km of Carey Bk between
 the main highway (25 m AHD) and where it flows into the Donnelly River
 (7 m AHD). Now you just need a roughness parameter, Manning’s <span class="math inline">\(n\)</span>, and
-you can solve Equation <a href="L2.html#eq:E2equation2">(8)</a>.</p>
+you can solve Equation <a href="L2.html#eq:E2equation2">(9)</a>.</p>
 <ul>
 <li><p>How does this streamflow estimate compare to the answer you got
 using the velocity-area method above?</p></li>
@@ -683,7 +711,7 @@ May 1 and ends April 30, though this can be region specific.</p>
 <div class="figure"><span id="fig:E2image4"></span>
 <img src="images/exercise2/image4.jpeg" alt="[The Avon River, Western Australia](https://en.wikipedia.org/wiki/Avon_River_(Western_Australia))" width="80%" />
 <p class="caption">
-Figure 17: <a href="https://en.wikipedia.org/wiki/Avon_River_(Western_Australia)">The Avon River, Western Australia</a>
+Figure 20: <a href="https://en.wikipedia.org/wiki/Avon_River_(Western_Australia)">The Avon River, Western Australia</a>
 </p>
 </div>
 </center>
@@ -710,7 +738,7 @@ This gauge is draining the Avon catchment</p>
 <div class="figure"><span id="fig:E2image5"></span>
 <img src="images/exercise2/image5.png" alt="Navigate to the 'Walyunga' guage (616011)" width="50%" height="50%" />
 <p class="caption">
-Figure 18: Navigate to the ‘Walyunga’ guage (616011)
+Figure 21: Navigate to the ‘Walyunga’ guage (616011)
 </p>
 </div>
 </center>
@@ -745,7 +773,7 @@ for the largest daily discharge value.</p>
 <center>
 <span class="math display" id="eq:E2equation3">\[\begin{equation}
 P = 100 * [\frac{M}{n+1}]
-\tag{9}
+\tag{10}
 \end{equation}\]</span>
 </center>
 <p>Where, <span class="math inline">\(P\)</span> = the probability that a given flow will be equaled or
@@ -779,12 +807,12 @@ flat curve indicates that moderate flows are sustained throughout the
 year due to natural or artificial streamflow regulation, or due to a
 large groundwater capacity which sustains the base flow to the stream.</p>
 <p>An example, properly formatted flow duration curve is shown below
-(Figure <a href="L2.html#fig:E2image6">19</a>).</p>
+(Figure <a href="L2.html#fig:E2image6">22</a>).</p>
 <center>
 <div class="figure"><span id="fig:E2image6"></span>
 <img src="images/exercise2/image6.png" alt="Aproperly formatted flow duration curve" width="85%" height="85%" />
 <p class="caption">
-Figure 19: Aproperly formatted flow duration curve
+Figure 22: Aproperly formatted flow duration curve
 </p>
 </div>
 </center>
@@ -1097,7 +1125,7 @@ recurrence interval for each peak discharge. The recurrence interval,
 <center>
 <span class="math display" id="eq:E2equation4">\[\begin{equation}
 R = \frac{n+1}{m}
-\tag{10}
+\tag{11}
 \end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(n\)</span> is the number of years over which the data was collected (20
@@ -1126,7 +1154,7 @@ inverse of the recurrence interval, <span class="math inline">\(R\)</span>:</p>
 <center>
 <span class="math display" id="eq:E2equation5">\[\begin{equation}
 P_{e} = \frac{1}{R}
-\tag{11}
+\tag{12}
 \end{equation}\]</span>
 </center>
 <p>Thus, the probability that a flood with a 10 year recurrence interval
@@ -1169,6 +1197,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {

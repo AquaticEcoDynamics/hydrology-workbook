@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise 4 - Visualising groundwater | Hydrology Workbook</title>
   <meta name="description" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -50,10 +50,35 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -100,8 +125,11 @@
 <ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
@@ -258,14 +286,47 @@ Figure 5: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’
 </ul>
 <ol style="list-style-type: decimal">
 <li>Based on this information you can rearrange Eq (10) to calculate the hydraulic conductivity of each porous media. Are you results consistent with the range of values for similar porous media in the literature? Could you measure the hydraulic conductivity of a clay sample using this experimental setup? What could you do to improve this experiment?</li>
-<li>Given these hydraulic conductivities, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, <a href="https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf">HG20</a>) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (11). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). <em>Note that it’s probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.</em></li>
-<li>How does your estimate of groundwater velocity compare to the streamflow rates you have been working with in previous Exercises? What is the implication for transport and storage of pollutants in the environment?</li>
+</ol>
+</div>
+<div id="E3B_3" class="section level2 unnumbered">
+<h2>Using Darcy’s Law to calculate flow to a stream</h2>
+<p>Now we understand the concept of Darcy’s Law within a small-scale context, lets think about how we can apply it in the “real world.” The below diagram shows the flow in an aquifer towards a stream.</p>
+<center>
+<div class="figure"><span id="fig:E4imageX"></span>
+<img src="images/exercise4/pictureX.png" alt="Water table and topography of a idealised hillslope" width="80%" />
+<p class="caption">
+Figure 6: Water table and topography of a idealised hillslope
+</p>
+</div>
+</center>
+<ol start="2" style="list-style-type: decimal">
+<li>Consider the digram above. If the slope of the water table hydraulic gradient perpendicular to the stream is on average approximately 1/1000 (m/m), what is the Darcy flux, q, of groundwater towards the river? Use a hydraulic conductivity, K, of 1 m /day.</li>
+</ol>
+</div>
+<div id="E3B_3" class="section level2 unnumbered">
+<h2>Creating a flow net</h2>
+<p>We can trace the path of a “parcel” of water at any point in a groundwater system by creating a “flow net.” To do this we map the lines of “equipotential” (i.e., lines of constant head), like height contours on a topographic map, but instead of land height, its water height. Based on the gradient in water height (hydraulic gradient) we can work out the path that a parcel of wtare would take, as water will flow from high to low pressure.</p>
+<p>Before we go further, lets check out this cool flow-net tool called “<a href="https://tdpfonline.net/topodrive.html">TopoDrive</a>” . This is an online interactive tool that allows you to visulise groundwater flow nets!</p>
+<center>
+<div class="figure"><span id="fig:E4imageY"></span>
+<img src="images/exercise4/pictureY.png" alt="Creating a hillslope flow-net. For an overview, check out this youtube instruction video [here](https://www.youtube.com/watch?v=d9f4iTh09bo)." width="80%" />
+<p class="caption">
+Figure 7: Creating a hillslope flow-net. For an overview, check out this youtube instruction video <a href="https://www.youtube.com/watch?v=d9f4iTh09bo">here</a>.
+</p>
+</div>
+</center>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a hypothetical hillslope water table cross-section with the tool. Use the tool to show the water flow pathways. Make a note of your observations - is there anythign unexpected? Depending on your flow-net you may be surprised that water does not always flow in a straight line!</li>
+</ol>
+<p>One thing to note with flow-lines (or sometimes we call them streamlines), water flow paths must cross lines of equipotetnial at right-angles (i.e. perpendicular).</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Now look at the below image - a plan view of the water table contours around Perth. Given the sort of hydraulic conductivities estimated above, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, <a href="https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf">HG20</a>) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (11). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). <em>Note that it’s probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.</em></li>
 </ol>
 <center>
 <div class="figure"><span id="fig:E3Bimage2"></span>
 <img src="images/exercise3B/picture4.png" alt="Section of a map of the watertable across Perth" width="100%" />
 <p class="caption">
-Figure 6: Section of a map of the watertable across Perth
+Figure 8: Section of a map of the watertable across Perth
 </p>
 </div>
 </center>
@@ -273,7 +334,7 @@ Figure 6: Section of a map of the watertable across Perth
 <div id="E3B_3" class="section level2 unnumbered">
 <h2>Physical model of groundwater system</h2>
 <p>In this part of the exercise we will look at a model of a layered groundwater system. Each layer has a different hydraulic conductivity, <span class="math inline">\(K\)</span>, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called “heterogeneity,” and it is an important feature of real groundwater systems.</p>
-<p>Start by annotating the photo of this model (Figure <a href="E4.html#fig:E3Bimage2">6</a>) to show the following;</p>
+<p>Start by annotating the photo of this model (Figure <a href="E4.html#fig:E3Bimage2">8</a>) to show the following;</p>
 <ol style="list-style-type: decimal">
 <li><p>Aquifers and aquitards</p></li>
 <li><p>Recharge and discharge zones</p></li>
@@ -285,7 +346,7 @@ Figure 6: Section of a map of the watertable across Perth
 <div class="figure"><span id="fig:E3Bimage3"></span>
 <img src="images/exercise3B/picture2.png" alt="Physical model of a layered groundwater system." width="80%" />
 <p class="caption">
-Figure 7: Physical model of a layered groundwater system.
+Figure 9: Physical model of a layered groundwater system.
 </p>
 </div>
 </center>
@@ -296,7 +357,7 @@ Figure 7: Physical model of a layered groundwater system.
 <div class="figure"><span id="fig:E3Bimage4"></span>
 <img src="images/exercise3B/picture3.png" alt="Physical model of a layered groundwater system." width="80%" />
 <p class="caption">
-Figure 8: Physical model of a layered groundwater system.
+Figure 10: Physical model of a layered groundwater system.
 </p>
 </div>
 </center>
@@ -316,6 +377,30 @@ Figure 8: Physical model of a layered groundwater system.
 </iframe>
 </center>
 <p>Once you have watched the introductory video lets take a look at running the model. Navigate to this model <a href="https://pvw.kitware.com/sandtank/">website</a>. You can learn how to customise the sandtank and run a simulation <a href="https://www.hydroframe.org/sand-tank-user-manual">here</a>. Have a go at manipulating the soil conditions and the hydraulic head sliders, and run simulations pumping or injecting groundwater. Can you reproduce our lab-based physical model?</p>
+</div>
+<div id="E3B_4" class="section level2 unnumbered">
+<h2>Example calculation of groundwater baseflow to a river</h2>
+<p>In this section is an example of how we can apply Darcy’s Law to work out how an aquifer is “working,” i.e., how much water it is conducting and entering the river as baseflow. Consider the following.</p>
+<p>After a prolonged period without rain, the discharge of a river at a measuring station A is 10 m3/s and at a downstream station B it is 15 m3/s. The distance between A and B is 2 km.</p>
+<center>
+<div class="figure"><span id="fig:E4imageZ"></span>
+<img src="images/exercise4/pictureZ.png" alt="Plan and cross sectional view of a river valley" width="80%" />
+<p class="caption">
+Figure 11: Plan and cross sectional view of a river valley
+</p>
+</div>
+</center>
+<p>Between the stations, the river receives water from both sides, from an unconfined aquifer, and the equipotentials are assumed to be parallel to the river.</p>
+<p>The slope of the water table (hydraulic gradient) on average is approximately 1/1000 (m/m).</p>
+<p>Based on this information, use Darcy’s Law to determine the transmissivity of the aquifer, in m2/s.</p>
+<p>Note that, Transmissivity of an aquifer is the depth integrated hydraulic conductivity</p>
+<center>
+<span class="math display" id="eq:E4equation2">\[\begin{equation}
+Transmissivity = T = Aquifer Depth * K 
+\tag{5}
+\end{equation}\]</span>
+</center>
+<p>Start by drawing a diagram and annotate with the information that you know.</p>
 
 </div>
 </div>
@@ -348,6 +433,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {

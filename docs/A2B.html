@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook</title>
   <meta name="description" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -50,10 +50,35 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -100,8 +125,11 @@
 <ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
@@ -295,7 +323,7 @@ indicated.</p>
 <div class="figure"><span id="fig:A2Bimage4"></span>
 <img src="images/assessment2B/image4.png" alt="High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells." width="85%" />
 <p class="caption">
-Figure 26: High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.
+Figure 29: High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.
 </p>
 </div>
 </center>
@@ -373,7 +401,7 @@ confluence of the Helena and Swan Rivers.</p>
 <div class="figure"><span id="fig:A2Bimage7"></span>
 <img src="images/assessment2B/image7.png" alt="In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)" width="90%" />
 <p class="caption">
-Figure 27: In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)
+Figure 30: In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)
 </p>
 </div>
 </center>
@@ -395,7 +423,7 @@ water inundation at the site.</p>
 <div class="figure"><span id="fig:A2Bimage8"></span>
 <img src="images/assessment2B/image8.png" alt="Example inundation pattern. Which way is the water flowing?" width="65%" />
 <p class="caption">
-Figure 28: Example inundation pattern. Which way is the water flowing?
+Figure 31: Example inundation pattern. Which way is the water flowing?
 </p>
 </div>
 </center>
@@ -425,7 +453,7 @@ column of you EC data and the <em>Y field</em> to the Northing column</li>
 <div class="figure"><span id="fig:A2Bimage9"></span>
 <img src="images/assessment2B/image9.png" alt="Importing your EC data." width="100%" />
 <p class="caption">
-Figure 29: Importing your EC data.
+Figure 32: Importing your EC data.
 </p>
 </div>
 </center>
@@ -449,7 +477,7 @@ providers).</p></li>
 <div class="figure"><span id="fig:A2Bimage10"></span>
 <img src="images/assessment2B/image10.png" alt="The QMS buttons in the QGIS toolbar." width="50%" />
 <p class="caption">
-Figure 30: The QMS buttons in the QGIS toolbar.
+Figure 33: The QMS buttons in the QGIS toolbar.
 </p>
 </div>
 </center>
@@ -471,7 +499,7 @@ graduate by as our EC column.</li>
 <div class="figure"><span id="fig:A2Bimage11"></span>
 <img src="images/assessment2B/image11.png" alt="Changing the symbology of our point data." width="100%" />
 <p class="caption">
-Figure 31: Changing the symbology of our point data.
+Figure 34: Changing the symbology of our point data.
 </p>
 </div>
 </center>
@@ -489,7 +517,7 @@ of this
 <div class="figure"><span id="fig:A2Bimage12"></span>
 <img src="images/assessment2B/image12.jpg" alt="Example map from your QGIS output." width="100%" />
 <p class="caption">
-Figure 32: Example map from your QGIS output.
+Figure 35: Example map from your QGIS output.
 </p>
 </div>
 </center>
@@ -671,6 +699,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {
