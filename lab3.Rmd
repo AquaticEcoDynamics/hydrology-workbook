@@ -24,6 +24,13 @@ knitr::include_graphics("images/exercise4/image1.png")
 
 Groundwater usually has different chemical characteristics to storm runoff during a rainfall event and we can use this chemical signal as a tracer for groundwater contribution. In this experiment you will demonstrate how groundwater (pre-event water) contribution to river flow changes over the course of a storm event, relative to water that fell as rain during the storm event (event water). You will use the tracer dilution technique with salinity (measured as electrical conductivity, EC) as the groundwater tracer.
 
+<center>
+```{r L3imageX, echo=FALSE, fig.cap="Schematic of interactions and different water sources being explored in this lab activity. Note that in this case the rain has 0ppt salinity and the groundwater has 10ppt salinity. What is the salinity in the outflowing water going to be?", out.height = '70%'}
+knitr::include_graphics("images/lab3/pictureX.png")
+```
+</center>
+
+
 ### Experimental Method {#L3__4 .unnumbered}
 
 #### Set up of apparatus {#L3__5 .unnumbered}

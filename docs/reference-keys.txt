@@ -40,6 +40,7 @@ tab:E2table2
 eq:E2equation4
 eq:E2equation5
 fig:L3image1
+fig:L3imageX
 fig:L3image2
 fig:L3image3
 fig:L3image4
