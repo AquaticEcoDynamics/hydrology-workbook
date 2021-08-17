@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exercise 4 - Visualising groundwater | Hydrology Workbook</title>
-  <meta name="description" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
+  <title>Lab 3 - Groundwater and surface water interaction | Hydrology Workbook</title>
+  <meta name="description" content="Lab 3 - Groundwater and surface water interaction | Hydrology Workbook" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
+  <meta property="og:title" content="Lab 3 - Groundwater and surface water interaction | Hydrology Workbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exercise 4 - Visualising groundwater | Hydrology Workbook" />
+  <meta name="twitter:title" content="Lab 3 - Groundwater and surface water interaction | Hydrology Workbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="E3.html"/>
-<link rel="next" href="E5.html"/>
+<link rel="prev" href="L2.html"/>
+<link rel="next" href="A1.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -241,176 +241,152 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="E4" class="section level1 unnumbered">
-<h1>Exercise 4 - Visualising groundwater</h1>
-<div id="E4_1" class="section level2 unnumbered">
-<h2>Learning Objectives</h2>
-<p>In this exercise you will investigate what controls the direction and rate of groundwater flow, and investigate groundwater storage and flow within a layered groundwater system.</p>
-<p>At the completion of this exercise students will be able to</p>
+<div id="L3_1" class="section level1 unnumbered">
+<h1>Lab 3 - Groundwater and surface water interaction</h1>
+<div id="L3_2" class="section level3 unnumbered">
+<h3>Learning Objectives</h3>
+<p>In this experiment, you will use data from a physical model of a catchment during a simulated rainfall event to calculate the relative contributions of pre-event and event water to that streamflow. The real-world setting for the experiment is a gaining stream (Figure <a href="#fig:E4image1"><strong>??</strong></a>).</p>
+<p>At the conclusion of this exercise students will have demonstrated an ability to:</p>
 <ul>
-<li><p>calculate groundwater flow rates</p></li>
-<li><p>describe the range of flow rates within natural groundwater systems and explain the key factors controlling these rates</p></li>
-<li><p>identify patterns of groundwater flow and hydraulic head contours within layered groundwater systems</p></li>
+<li><p>analyse measured experimental data to characterize the key properties of a rainfall event.</p></li>
+<li><p>quantify pre-event and event components of water in a storm hydrograph (hydrochemical baseflow separation).</p></li>
+<li><p>discuss the significance of experimental results for managing water resources in the context of surface water - groundwater interaction.</p></li>
 </ul>
 </div>
-<div id="E4_2" class="section level2 unnumbered">
-<h2>Groundwater flow rates</h2>
-<p>As a first step lets consider the flux law for groundwater flow. Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;</p>
+<div id="L3_3" class="section level3 unnumbered">
+<h3>Background</h3>
+<p>A question we often want to be able to answer is how much groundwater is contributing to flow in a river, and how much is water that came from recent rainfall. This is relevant for water resources planning so we can work out the discharge rate of an aquifer, or for water quality management.</p>
 <center>
-<span class="math display" id="eq:E3Bequation1">\[\begin{equation}
-q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         \tag{3}
-\end{equation}\]</span>
-</center>
-<p>Where <span class="math inline">\(q\)</span> is the specific discharge (or Darcy Flux) with units of L T<sup>-1</sup>, <span class="math inline">\(Q\)</span> is the volumetric flow rate (L<sup>3</sup> T<sup>-1</sup>), <span class="math inline">\(A\)</span> is the cross-sectional area through which the water flow (L<sup>2</sup>), and <span class="math inline">\(\frac{\Delta h}{ \Delta l}\)</span> is the hydraulic gradient. This gradient is simply the change in water pressure (<span class="math inline">\(h_1-h_2\)</span>) over a given distance (L/L, unitless). The key system property in this flux law is the hydraulic conductivity (<span class="math inline">\(K\)</span>), which has units of L T<sup>-1</sup>. In natural groundwater systems the value of hydraulic conductivity can vary over 12 orders of magnitude. Even though this water flux <span class="math inline">\(q\)</span> has units of L T<sup>-1</sup>, it’s not actually the velocity of the groundwater, because the water wasn’t flowing through the whole area, just the pore space. To correct for this and calculate the average velocity we need to use the area of the pore space (<span class="math inline">\(An\)</span>, where <span class="math inline">\(n\)</span> is porosity), instead of the total area. This gives us;</p>
-<center>
-<span class="math display" id="eq:E3Bequation2">\[\begin{equation}
-\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           \tag{4}
-\end{equation}\]</span>
-</center>
-<p>Where <span class="math inline">\(\bar{v}\)</span> is the average linear velocity of the water flowing through the porous media.</p>
-<p>Now that we know these simple equations let’s look at some experimental data from simple “Darcy tubes” that allow us to measure the relationships between rates of groundwater flow, hydraulic gradients and the hydraulic conductivity of the porous media that it flows through. This is how the idea of a “hydraulic conductivity” was first defined, empirically, and it was only decades later that the physical basis for hydraulic conductivity and Darcy’s Law was fully elucidated from first principles (see <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/TR021i002p00648-1">Hubbert 1940</a> for some light bedtime reading).</p>
-<center>
-<div class="figure"><span id="fig:E3Bimage1"></span>
-<img src="images/exercise3B/picture1.png" alt="a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation" width="100%" />
+<div class="figure"><span id="fig:L3image1"></span>
+<img src="images/exercise4/image1.png" alt="Groundwater discharge to a gaining stream." width="60%" />
 <p class="caption">
-Figure 5: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation
+Figure 23: Groundwater discharge to a gaining stream.
 </p>
 </div>
 </center>
-<p>Let’s have a go at using this experimental setup to estimate the hydraulic conductivity of different sedimentary materials. To do this all we need to do is measure the flow rate through the tube for our chosen porous media. For each porous material, the slope determines the hydraulic gradient and we just need to measure the volume that flows out of the tube over a set time interval.</p>
-<p>During this experiment;</p>
+<p>Groundwater usually has different chemical characteristics to storm runoff during a rainfall event and we can use this chemical signal as a tracer for groundwater contribution. In this experiment you will demonstrate how groundwater (pre-event water) contribution to river flow changes over the course of a storm event, relative to water that fell as rain during the storm event (event water). You will use the tracer dilution technique with salinity (measured as electrical conductivity, EC) as the groundwater tracer.</p>
+</div>
+<div id="L3__4" class="section level3 unnumbered">
+<h3>Experimental Method</h3>
+<div id="L3__5" class="section level4 unnumbered">
+<h4>Set up of apparatus</h4>
+<p>The experimental set-up consists of a tray of soil, the ability to add rainfall (via a connection to the tap) and discharge outlets at the bottom of the catchment. During the experiment loggers are set up to measure the rainfall amount as well as streamflow and EC at the catchment outlet over time (Figure <a href="L3-1.html#fig:L3image2">24</a>).There are loggers for rainfall, streamflow and EC that are connected to a computer.</p>
+<center>
+<div class="figure"><span id="fig:L3image2"></span>
+<img src="images/exercise4/image2.png" alt="Experimental setup showing the catchment tray, rainfall, sprinklers and logger location." width="90%" />
+<p class="caption">
+Figure 24: Experimental setup showing the catchment tray, rainfall, sprinklers and logger location.
+</p>
+</div>
+</center>
+</div>
+<div id="E4_6" class="section level4 unnumbered">
+<h4>Create the aquifer</h4>
+<p>The first step was to create the “aquifer” by loading the bottom of the tray with river sand. The top surface was smoothed so that it was an even thickness across the catchment and then the volume of this layer was estmated. This can take the shape of a wedge. Importantly, the top of aquifer sits below the top line of outlets as shown in Figure <a href="L3-1.html#fig:L3image3">25</a>.</p>
+<p>To create the pre-event groundwater, the sand should be saturated with saline water (making sure to note the EC of the saline solution). Note the volume of water added to fill the aquifer. Remove any excess ponded water removed with a syringe before proceeding.</p>
+<center>
+<div class="figure"><span id="fig:L3image3"></span>
+<img src="images/exercise4/picture3.png" alt="Saturated aquifer correctly set up within catchment model." width="90%" />
+<p class="caption">
+Figure 25: Saturated aquifer correctly set up within catchment model.
+</p>
+</div>
+</center>
+</div>
+<div id="L3__7" class="section level4 unnumbered">
+<h4>Create the unsaturated zone</h4>
+<p>This saturated aquifer layer is then overlain with a second layer of <strong>dry</strong> soil, being careful not to disturb the original aquifer layer. This upper layer can be shaped into the form of a catchment (concave) so that when the subsurface fills up there was a stream flowing to the catchment outlet (Figure <a href="L3-1.html#fig:L3image4">26</a>). The middle outlet should not be covered with soil, but the soil should be just below this outlet (this is your riverbed). At this step you could see some capillary rise of aquifer water into the vadose zone.</p>
+<center>
+<div class="figure"><span id="fig:L3image4"></span>
+<img src="images/exercise4/picture4.png" alt="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet." width="254" height="70%" />
+<p class="caption">
+Figure 26: Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet.
+</p>
+</div>
+</center>
+</div>
+<div id="L3_8" class="section level4 unnumbered">
+<h4>Make it rain</h4>
+<p>The rainfall outlets were brought close to the catchment surface to avoid “raining” outside the catchment, and then the tubes at the bottom of the catchment were turned so that they were directed into the PVC drain so that outflow could be measured. And now the rain! The apparatus was left with the rain on for approximately 20 minutes until the catchment had filled up, stream flow had begun and the EC at the catchment outlet has clearly decreased (Figure <a href="L3-1.html#fig:L3image5">27</a>). To finish, the rain was turned off, but with the loggers still running for another 20 minutes, or until streamflow ceased, so we could measure what happens after the rain had stopped.</p>
+<center>
+<div class="figure"><span id="fig:L3image5"></span>
+<img src="images/exercise4/picture5.png" alt="Streamflow at the catchment outlet." width="316" height="30%" />
+<p class="caption">
+Figure 27: Streamflow at the catchment outlet.
+</p>
+</div>
+</center>
+</div>
+</div>
+<div id="L3_9" class="section level3 unnumbered">
+<h3>Data Analysis</h3>
+<div id="L3_10" class="section level4 unnumbered">
+<h4>QA-QC of data</h4>
+<p>Use the data collected, or if it is not available then download the raw data sheet provided.</p>
+<p>Before you can start your analysis you might need to clean the data – remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data, which combines with the sensitivity of your loggers to give you a lot of noise. Consider calculating a running average (over 60 seconds or more) to get smooth temporal trends. Refer to Lab 1.</p>
+</div>
+<div id="L3_11" class="section level4 unnumbered">
+<h4>Characterizing the rainfall event</h4>
+<p>Once you are happy with your clean data set you can use the logged data to identify the properties of the storm event, including:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Time from rainfall onset to when runoff began to be recorded (mins),</li>
+<li>Time to peak discharge (mins),</li>
+<li>Total rainfall volume (cm<sup>3</sup>),</li>
+<li>Total runoff volume (cm<sup>3</sup>),</li>
+<li>Average rainfall intensity (cm/min),</li>
+<li>The runoff coefficient, <span class="math inline">\(c\)</span>, for the ‘storm’ event.</li>
+</ol>
+</div>
+<div id="L3_12" class="section level4 unnumbered">
+<h4>Separating pre-event and event water</h4>
+<p>Now let’s calculate the contributions of pre-event (baseflow = groundwater) and event (rainfall and new runoff) water. Because the groundwater was saline you can use the <em>tracer dilution method</em> (see the blue box below for details) to calculate the fraction of the hydrograph that is from baseflow. In other words, we want to calculate and plot a hydrograph showing each of the components of the water balance:</p>
+<center>
+<span class="math inline">\(Q_{\text{out}}(t) = Q_{\text{event}} + Q_{\text{pre-event}}\)</span>
+</center>
+<p>where <span class="math inline">\(Q_{\text{out}}\)</span> (cm<sup>3</sup>/s) is the volumetric flow rate measured at the outlet of the catchment, <span class="math inline">\(Q_{\text{event}}\)</span> (cm<sup>3</sup>/s) is the volumetric flow rate of event water (representing rainfall and runoff) and <span class="math inline">\(Q_{\text{pre-event}}\)</span> is the volumetric flow rate of pre-event water (representing groundwater).</p>
+
+<div class="bluebox">
+<p>If there is a difference in the salinity of groundwater and rainfall-runoff then we can estimate the groundwater contribution to the streamflow by looking at changes in salinity at the catchment outlet (measured as electrical conductivity, or EC).</p>
+<p>To do this we assume that the EC in groundwater is at a pre-event reference level, <span class="math inline">\(S_{\text{pre-event}}\)</span>, and EC in the rain <span class="math inline">\(S_{\text{event}}\)</span> is effectively 0. The level of dilution in EC in streamflow can then be used to estimate the fraction of pre-event (groundwater baseflow) and event (rainfall-runoff) water contributing to total streamflow.</p>
+The salt mass balance tells us that the total salt mass coming out of the catchment via the stream must equal the sum of pre-event and event components:
+<center>
+<span class="math inline">\(S_{\text{out}} * Q_{\text{out}} = S_{\text{event}} * Q_{\text{event}} + S_{\text{pre-event}} * Q_{\text{pre-event}}\)</span>
+</center>
+<p>And because the rainfall and runoff didn’t have any salt added, <span class="math inline">\(S_{\text{event}} = 0\)</span></p>
+So that we can cancel the “event” term and rearrange to solve for the pre-event component of volumetric flow:
+<center>
+<span class="math inline">\(Q_{\text{pre-event}} = S_{\text{out}}*Q_{\text{out}} / S_{\text{pre-event}}\)</span>
+</center>
+And once this pre-event component is known, we can calculate the event component of volumetric flow from rearranging the water balance to give:
+<center>
+<span class="math inline">\(Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}\)</span>
+</center>
+</div>
+</div>
+</div>
+<div id="L3_13" class="section level3 unnumbered">
+<h3>Interpretation and conclusions</h3>
 <ul>
-<li><p>the diameter of the tubes was 40 mm</p></li>
-<li><p>the inlet at the top of the tube was 25 cm above the outlet at the bottom of the tube, and the lateral distance between the inlet and the outlet was 0.5 m</p></li>
-<li><p>Over a period 24 hours 168 mL was collected from the tube filled with sand, 3.6 mL was collected from the tube filled with silty sand, and 814 mL of water was collected from the tube filled with gravel.</p></li>
+<li><p>Create a summary plot that nicely shows the runoff and indicates the fraction leavign the catchment that is “baseflow” (i.e. aquifer water).</p></li>
+<li><p>How do the relative amounts of pre-event and event water change over time? Is the change in <span class="math inline">\(Q_{\text{pre-event}}/Q_{\text{event}}\)</span> over time what you would expect?</p></li>
+<li><p>How could attributes of the experimental setup have increased or decreased the baseflow contribution?</p></li>
+<li><p>How would the results have changed if we ran the experiment again, starting with a wetted-up unsaturated zone?</p></li>
+<li><p>How realistic is the experiment in terms of capturing the interaction of surface water and groundwater?</p></li>
+<li><p>What are the significance of these results for water resource management?</p></li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>Based on this information you can rearrange Eq (10) to calculate the hydraulic conductivity of each porous media. Are you results consistent with the range of values for similar porous media in the literature? Could you measure the hydraulic conductivity of a clay sample using this experimental setup? What could you do to improve this experiment?</li>
-</ol>
-</div>
-<div id="E3B_3" class="section level2 unnumbered">
-<h2>Using Darcy’s Law to calculate flow to a stream</h2>
-<p>Now we understand the concept of Darcy’s Law within a small-scale context, lets think about how we can apply it in the “real world.” The below diagram shows the flow in an aquifer towards a stream.</p>
-<center>
-<div class="figure"><span id="fig:E4imageX"></span>
-<img src="images/exercise4/pictureX.png" alt="Water table and topography of a idealised hillslope" width="80%" />
-<p class="caption">
-Figure 6: Water table and topography of a idealised hillslope
-</p>
-</div>
-</center>
-<ol start="2" style="list-style-type: decimal">
-<li>Consider the digram above. If the slope of the water table hydraulic gradient perpendicular to the stream is on average approximately 1/1000 (m/m), what is the Darcy flux, q, of groundwater towards the river? Use a hydraulic conductivity, K, of 1 m /day.</li>
-</ol>
-</div>
-<div id="E3B_3" class="section level2 unnumbered">
-<h2>Creating a flow net</h2>
-<p>We can trace the path of a “parcel” of water at any point in a groundwater system by creating a “flow net.” To do this we map the lines of “equipotential” (i.e., lines of constant head), like height contours on a topographic map, but instead of land height, its water height. Based on the gradient in water height (hydraulic gradient) we can work out the path that a parcel of wtare would take, as water will flow from high to low pressure.</p>
-<p>Before we go further, lets check out this cool flow-net tool called “<a href="https://tdpfonline.net/topodrive.html">TopoDrive</a>” . This is an online interactive tool that allows you to visulise groundwater flow nets!</p>
-<center>
-<div class="figure"><span id="fig:E4imageY"></span>
-<img src="images/exercise4/pictureY.png" alt="Creating a hillslope flow-net. For an overview, check out this youtube instruction video [here](https://www.youtube.com/watch?v=d9f4iTh09bo)." width="80%" />
-<p class="caption">
-Figure 7: Creating a hillslope flow-net. For an overview, check out this youtube instruction video <a href="https://www.youtube.com/watch?v=d9f4iTh09bo">here</a>.
-</p>
-</div>
-</center>
-<ol start="3" style="list-style-type: decimal">
-<li>Create a hypothetical hillslope water table cross-section with the tool. Use the tool to show the water flow pathways. Make a note of your observations - is there anythign unexpected? Depending on your flow-net you may be surprised that water does not always flow in a straight line!</li>
-</ol>
-<p>One thing to note with flow-lines (or sometimes we call them streamlines), water flow paths must cross lines of equipotetnial at right-angles (i.e. perpendicular).</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Now look at the below image - a plan view of the water table contours around Perth. Given the sort of hydraulic conductivities estimated above, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, <a href="https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf">HG20</a>) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (11). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). <em>Note that it’s probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.</em></li>
-</ol>
-<center>
-<div class="figure"><span id="fig:E3Bimage2"></span>
-<img src="images/exercise3B/picture4.png" alt="Section of a map of the watertable across Perth" width="100%" />
-<p class="caption">
-Figure 8: Section of a map of the watertable across Perth
-</p>
-</div>
-</center>
-</div>
-<div id="E3B_3" class="section level2 unnumbered">
-<h2>Physical model of groundwater system</h2>
-<p>In this part of the exercise we will look at a model of a layered groundwater system. Each layer has a different hydraulic conductivity, <span class="math inline">\(K\)</span>, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called “heterogeneity,” and it is an important feature of real groundwater systems.</p>
-<p>Start by annotating the photo of this model (Figure <a href="E4.html#fig:E3Bimage2">8</a>) to show the following;</p>
-<ol style="list-style-type: decimal">
-<li><p>Aquifers and aquitards</p></li>
-<li><p>Recharge and discharge zones</p></li>
-<li><p>Water levels in each of the wells</p></li>
-<li><p>The water table</p></li>
-<li><p>Hydraulic head boundaries</p></li>
-</ol>
-<center>
-<div class="figure"><span id="fig:E3Bimage3"></span>
-<img src="images/exercise3B/picture2.png" alt="Physical model of a layered groundwater system." width="80%" />
-<p class="caption">
-Figure 9: Physical model of a layered groundwater system.
-</p>
-</div>
-</center>
-<p>Now watch <a href="https://echo360.org.au/media/beef71b3-fdca-4a62-9a58-4ad9f0b7b58a/public">this video</a> to see how water moves through the model when dye is injected to see the direction of groundwater flow. Does the flow direction vary spatially? Does the flow direction change over time?</p>
-<p>Draw arrows on the following screen-shot to show the direction of groundwater flow within the model domain. We have learnt that the measure of potential for groundwater flow is “hydraulic head” and we also know that groundwater flows from high hydraulic head to low hydraulic head. In fact, groundwater flow will be perpendicular to the equipotentials (lines of equal hydraulic head). Based on your inferred flow paths, try now to add in the hydraulic head contours (or equipotentials).</p>
-<p><em>It might help for you to think about topographic contours on a landscape map - in this case you have elevation contours, and if you placed a ball at the top of a hill it would roll (or flow) from the higher elevation to the lower elevation. As a general rule, we also know that flow through high conductivity layers will be primarily horizontal, and flow through low conductivity layers will be primarily vertical.</em></p>
-<center>
-<div class="figure"><span id="fig:E3Bimage4"></span>
-<img src="images/exercise3B/picture3.png" alt="Physical model of a layered groundwater system." width="80%" />
-<p class="caption">
-Figure 10: Physical model of a layered groundwater system.
-</p>
-</div>
-</center>
-<p>What can you learn from this physical model about groundwater systems? By using the physical model we have been able to see directly in the subsurface, but in the real world, the only information we have would be the wells.</p>
-<ul>
-<li><p>If you only had the hydraulic head measurements in the wells what would you know about the groundwater system?</p></li>
-<li><p>What else would you need to know about this system to calculate groundwater flow velocities (and therefore contaminant transport)?</p></li>
-<li><p>How important is it that we understand the geology as well as having measurements of hydraulic heads?</p></li>
-<li><p>What else might you measure in a real groundwater system to get a fuller picture of what is happening?</p></li>
-</ul>
-</div>
-<div id="E3B_4" class="section level2 unnumbered">
-<h2>Computer model of groundwater system</h2>
-<p>We can also run a “digital twin” of the physical model that we have built in the lab. For this activity we will now use the ParFlow Sandtank model. This is a computer model simulating groundwater flow, and allows users to change aquifer configurations and explore the essential features of groundwater and contaminant flow.</p>
-<center>
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/398697315" width="100%" height="360" frameborder="0" allowfullscreen>
-</iframe>
-</center>
-<p>Once you have watched the introductory video lets take a look at running the model. Navigate to this model <a href="https://pvw.kitware.com/sandtank/">website</a>. You can learn how to customise the sandtank and run a simulation <a href="https://www.hydroframe.org/sand-tank-user-manual">here</a>. Have a go at manipulating the soil conditions and the hydraulic head sliders, and run simulations pumping or injecting groundwater. Can you reproduce our lab-based physical model?</p>
-</div>
-<div id="E3B_4" class="section level2 unnumbered">
-<h2>Example calculation of groundwater baseflow to a river</h2>
-<p>In this section is an example of how we can apply Darcy’s Law to work out how an aquifer is “working,” i.e., how much water it is conducting and entering the river as baseflow. Consider the following.</p>
-<p>After a prolonged period without rain, the discharge of a river at a measuring station A is 10 m3/s and at a downstream station B it is 15 m3/s. The distance between A and B is 2 km.</p>
-<center>
-<div class="figure"><span id="fig:E4imageZ"></span>
-<img src="images/exercise4/pictureZ.png" alt="Plan and cross sectional view of a river valley" width="80%" />
-<p class="caption">
-Figure 11: Plan and cross sectional view of a river valley
-</p>
-</div>
-</center>
-<p>Between the stations, the river receives water from both sides, from an unconfined aquifer, and the equipotentials are assumed to be parallel to the river.</p>
-<p>The slope of the water table (hydraulic gradient) on average is approximately 1/1000 (m/m).</p>
-<p>Based on this information, use Darcy’s Law to determine the transmissivity of the aquifer, in m2/s.</p>
-<p>Note that, Transmissivity of an aquifer is the depth integrated hydraulic conductivity</p>
-<center>
-<span class="math display" id="eq:E4equation2">\[\begin{equation}
-Transmissivity = T = Aquifer Depth * K 
-\tag{5}
-\end{equation}\]</span>
-</center>
-<p>Start by drawing a diagram and annotate with the information that you know.</p>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="E3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="E5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="L2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="A1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
