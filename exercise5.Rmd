@@ -154,11 +154,11 @@ knitr::include_graphics("images/exercise5/Picture1SSS.png")
 </center>
 <br>
 
-2a) You have measured an annual average decline of $7 mm/day$ in a small dam (the average of higher values during the summer months and lower during winter). Assuming that the dam is sealed but leaks $~1 mm/day$ to the sub-surface, and that the starting depth is $4m$, what is the time-scale (in days) for the dam to dry out, assuming an average annual rainfall of $431 mm$?
+2a) You have measured an annual average decline in water level due to evaporation of $7 mm/day$ in a small dam (the average of higher values during the summer months and lower during winter). Assuming that the dam is sealed but leaks an additional $~1 mm/day$ to the sub-surface, and that the starting depth is $4m$, what is the time-scale (in days) for the dam to dry out, assuming an average annual rainfall of $431 mm$?
 
  *(Hint: First define all the input and outputs, and then re-arrange the water balance equation for time)*
 
-2b) If an amount of $5.8mm/day$ was extracted for irrigation, how long would it last?
+2b) If an amount of $5.8mm/day$ was extracted for irrigation, would the dam last a whole year before drying?
 <br>
 
 
