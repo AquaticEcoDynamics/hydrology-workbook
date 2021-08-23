@@ -2,7 +2,7 @@
 
 ## The water balance and principle of conservation {#E5_1 .unnumbered}
 
-The water balance concept is the most important conceptual framework we have in hydrology. At its simplest it is a basic accounting system able to resolve the inputs and outputs to a given 'system'. A system could be a lake or reservoir, or a catchment, an agricultural field, or even a suburb in a city. In fact, we can do a water balance at the global scale. The approach can be expanded to undertake very detailed tracking of water sources and stores.
+The water balance concept is the most important conceptual framework we have in hydrology. At its simplest it is a basic accounting system able to resolve the inputs and outputs to a given 'system'. A system could be a lake or reservoir, or a catchment, an agricultural field, or even a suburb in a city. In fact, we can do a water balance at the global scale. The approach can be expanded to undertake very detailed tracking of water sources and stores, termed water balance modelling.
 
 We have already relied on this concept implicitly when considering the Desktop Catchment data, such as how much rain entered, what the soil water storage was and how much water was discharged. Lets now consider this at the field scale.
 
@@ -20,7 +20,7 @@ or written more formally:
 (\#eq:E5eq2)
 \end{equation}
 
-where $S$ is the storage volume of water in the system of interest, $I$ is the rate of water input, and $O$ is the rate of water output. This is depicted schematically below. Sometimes we call the box (store) our 'control volume'. the use of $\Delta$ means "change in". $\Delta t$, is the time-scale over which the storage change occurred.
+where $S$ is the storage volume of water in the system of interest, $I$ is the rate of water input, and $O$ is the rate of water output. This is depicted schematically below. Sometimes we call the box (store) our 'control volume'. the use of $\Delta$ means "change in . $\Delta t$, is the time-scale over which the storage change occurred.
 <br>
 <center>
 ```{r E5image1, echo=FALSE, fig.cap="Conceptual depiction of the water balance", out.width = '50%'}
@@ -103,13 +103,13 @@ Consider the following case-study. The soils in a very small drainage basin near
 - At the end of the day the upper layer of soil is water-saturated. The contribution of throughflow to the brook discharge was estimated as being 11 $mm/day$. 
 - All parts of the drainage basin contribute to the brook discharge and the B horizon may be regarded as water-impermeable
 
-1) Based on this information, how much overland flow (in units of $mm$) occurred during the day? Start by sketching a catchment ‘bucket’ water balance diagram, and then annotate with the relevant information.
+1) Based on this information, how much overland flow (in units of $mm$) occurred during the day? *Start by sketching a catchment ‘bucket’ water balance diagram, and then annotate with the relevant information*.
 
 
 
 ## The water balance for a watershed {#E5_4 .unnumbered}
 
-The above 1D approach is convenient for catchments that are spatially homogeneous. For larger, more complex catchments we can expand the approach to consider the different water stores and how water is redistributed.
+The above 1D approach is convenient for catchments that are spatially homogeneous. For larger, more complex catchments we can expand the approach to consider the different water stores and how water is redistributed. Water balance [modelling software](https://ewater.org.au/products/ewater-source/why-use-source/) can be employed to undertake this. This software can support water resource management decisions and planning.
 
 
 <center>
@@ -123,7 +123,7 @@ knitr::include_graphics("images/exercise5/Picture3SSS.png")
 
 ## The water balance for a wetland {#E5_5 .unnumbered}
 
-We can also undertake a water balance assessment for a waterbody, like a wetland, lake, river or estuary. Take a look at the below diagram for a wetland.
+A common activity is to undertake a water balance assessment for a waterbody, like a wetland, lake, river or estuary. Take a look at the below diagram for a wetland.
 
 
 
