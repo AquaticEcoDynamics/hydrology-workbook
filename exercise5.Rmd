@@ -24,7 +24,7 @@ where $S$ is the storage volume of water in the system of interest, $I$ is the r
 <br>
 <center>
 ```{r E5image1, echo=FALSE, fig.cap="Conceptual depiction of the water balance", out.width = '50%'}
-knitr::include_graphics("images/exercise6/Picture1.png")
+knitr::include_graphics("images/exercise6/Picture1SS.png")
 ```
 </center>
 <br>
@@ -34,7 +34,7 @@ So the concept is pretty simple, but the challenge we have is applying it to a p
 
 <center>
 ```{r E5image2, echo=FALSE, fig.cap="Water balance diagram for a landscape", out.width = '70%'}
-knitr::include_graphics("images/exercise6/Picture2.png")
+knitr::include_graphics("images/exercise6/Picture2SS.png")
 ```
 </center>
 
@@ -59,7 +59,7 @@ The water balance can be more conveniently assumed to be "1D" (one-dimensional) 
 <br>
 <center>
 ```{r E5image3, echo=FALSE, fig.cap="Water balance diagram for a landscape - in one-dimension (1D)", out.width = '90%'}
-knitr::include_graphics("images/exercise6/Picture3.png")
+knitr::include_graphics("images/exercise6/Picture3SS.png")
 ```
 </center>
 <br>
@@ -87,7 +87,7 @@ As it is 1-dimensional, we can use the units for this in $mm$, which is usually 
 <br>
 <center>
 ```{r E5image55, echo=FALSE, fig.cap="Example monthly water balance components being used to determine times of water excess or deficit. ", out.width = '100%'}
-knitr::include_graphics("images/exercise5/Picture2.png")
+knitr::include_graphics("images/exercise5/Picture2SSS.png")
 ```
 </center>
 <br>
@@ -114,7 +114,7 @@ The above 1D approach is convenient for catchments that are spatially homogeneou
 
 <center>
 ```{r E5image567, echo=FALSE, fig.cap="Components of a catchment water balance", out.width = '90%'}
-knitr::include_graphics("images/exercise5/Picture3.png")
+knitr::include_graphics("images/exercise5/Picture3SSS.png")
 ```
 </center>
 
@@ -129,7 +129,7 @@ We can also undertake a water balance assessment for a waterbody, like a wetland
 
 <center>
 ```{r E5image5, echo=FALSE, fig.cap="Components of a wetland water balance. Source:USGS Water Supply Paper 2425", out.width = '90%'}
-knitr::include_graphics("images/exercise6/Picture5.png")
+knitr::include_graphics("images/exercise6/Picture5SS.png")
 ```
 </center>
 
@@ -149,7 +149,7 @@ Consider the following case-study. A land-holder wants to understand if a small 
 <br>    
 <center>
 ```{r E5image60, echo=FALSE, fig.cap="An irrigation dam. How long will this water last?!", out.width = '50%'}
-knitr::include_graphics("images/exercise5/Picture1.png")
+knitr::include_graphics("images/exercise5/Picture1SSS.png")
 ```
 </center>
 <br>
