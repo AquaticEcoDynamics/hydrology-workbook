@@ -131,7 +131,24 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>The water balance and principle of conservation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>1D (vertical) water balance at the plot/landscape scale</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Example: Calculate the water balance for a hillslope</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>The water balance for a watershed</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>The water balance for a wetland</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_6"><i class="fa fa-check"></i>Example: Calculate the water balance for an irrigation dam</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_7"><i class="fa fa-check"></i>Tracking the volume of a lake over time</a>
+<ul>
+<li class="chapter" data-level="0.0.1" data-path="E5.html"><a href="E5.html#E5_88.unnumbered"><i class="fa fa-check"></i><b>0.0.1</b> Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_9"><i class="fa fa-check"></i>Activity: Simulating the system</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
 <ul>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
@@ -243,13 +260,13 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="A1A" class="section level1 unnumbered">
 <h1>Part A - Rainfall and streamflow data analysis</h1>
-<p>In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure <a href="A1A.html#fig:A2Aimage1">29</a>). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.</p>
+<p>In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure <a href="A1A.html#fig:A2Aimage1">38</a>). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.</p>
 <p>In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. We will be sharing our data using an online spreadsheet. Please make sure that you upload your data as soon as possible so that others can include it in their analysis.</p>
 <center>
 <div class="figure"><span id="fig:A2Aimage1"></span>
 <img src="images/assessment2A/image1.png" alt="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net)." width="80%" />
 <p class="caption">
-Figure 29: A guide to the timescales applicable to weather, climate variability and climate change <a href="www.pacificclimatefutures.net">Pacific Climate Futures</a>.
+Figure 38: A guide to the timescales applicable to weather, climate variability and climate change <a href="www.pacificclimatefutures.net">Pacific Climate Futures</a>.
 </p>
 </div>
 </center>
@@ -267,13 +284,13 @@ Figure 29: A guide to the timescales applicable to weather, climate variability 
 <p>Prior to starting this work, make sure you have completed the <a href="E1B.html#E1B_1">Exercise 2</a> activity.</p>
 <ol style="list-style-type: decimal">
 <li><p>For your chosen site, calculate the trend in rainfall for the <strong>last 5 years.</strong> Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) or calculate the manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select “<strong>Line Fit Plots</strong>.” What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear – discuss? (You can do this same analysis by adding a trend-line to the data, as described in 2. below).</p></li>
-<li><p>Now, calculate the trend in rainfall for <strong>all</strong> years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and “<strong>display the equation</strong>” on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r<sup>2</sup>) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table <a href="A1A.html#tab:A2Atable1">8</a> and the <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">online spreadsheet</a>).</p></li>
+<li><p>Now, calculate the trend in rainfall for <strong>all</strong> years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and “<strong>display the equation</strong>” on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r<sup>2</sup>) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table <a href="A1A.html#tab:A2Atable1">9</a> and the <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">online spreadsheet</a>).</p></li>
 </ol>
 <center>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:A2Atable1">Table 8: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.
+<span id="tab:A2Atable1">Table 9: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.
 </caption>
 <thead>
 <tr>
@@ -757,14 +774,14 @@ Narrogin
 </center>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table <a href="A1A.html#tab:A2Atable1">8</a>. The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.</p></li>
-<li><p>Inspect the results of everyone’s analysis for Table <a href="A1A.html#tab:A2Atable1">8</a> <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">Google Sheets version</a>. Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?</p></li>
+<li><p>Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table <a href="A1A.html#tab:A2Atable1">9</a>. The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.</p></li>
+<li><p>Inspect the results of everyone’s analysis for Table <a href="A1A.html#tab:A2Atable1">9</a> <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">Google Sheets version</a>. Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?</p></li>
 </ol>
 </div>
 <div id="A2A_3" class="section level2 unnumbered">
 <h2>Spatial patterns in rainfall</h2>
 <ol start="5" style="list-style-type: decimal">
-<li>Take the information in Table <a href="A1A.html#tab:A2Atable1">8</a> (<a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">Google Sheets version</a>) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?</li>
+<li>Take the information in Table <a href="A1A.html#tab:A2Atable1">9</a> (<a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">Google Sheets version</a>) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?</li>
 </ol>
 <center>
 <img src="images/assessment2A/image2.png" width="90%" />
@@ -777,7 +794,7 @@ Narrogin
 <center>
 <span class="math display" id="eq:A2Aequation1">\[\begin{equation}
 \text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
-\tag{13}
+\tag{18}
 \end{equation}\]</span>
 </center>
 <p>where:</p>
@@ -794,7 +811,7 @@ Narrogin
 </video>
 </center>
 <p>Now get the first climate index for the IOD called the DMI. Go to “<strong>Monthly climate indices</strong>” and then select DMI. Note any trend and variability in the index.</p>
-<p>To correlate the index and rainfall select “<strong>Correlate with other time series</strong>.” And tick your previously saved rainfall timeseries and then press “<strong>Correlate</strong>” and copy the results into Table <a href="A1A.html#tab:A2Atable2">9</a> and the appropriate tab in the <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">online spreadsheet</a>.</p>
+<p>To correlate the index and rainfall select “<strong>Correlate with other time series</strong>.” And tick your previously saved rainfall timeseries and then press “<strong>Correlate</strong>” and copy the results into Table <a href="A1A.html#tab:A2Atable2">10</a> and the appropriate tab in the <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">online spreadsheet</a>.</p>
 <center>
 <video width="85%" height="85%" controls>
 <source src="images/assessment2A/video2.mp4" type="video/mp4">
@@ -805,7 +822,7 @@ Narrogin
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:A2Atable2">Table 9: </span>Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations.
+<span id="tab:A2Atable2">Table 10: </span>Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations.
 </caption>
 <thead>
 <tr>

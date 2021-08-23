@@ -131,7 +131,24 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>The water balance and principle of conservation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>1D (vertical) water balance at the plot/landscape scale</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Example: Calculate the water balance for a hillslope</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>The water balance for a watershed</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>The water balance for a wetland</a>
+<ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_6"><i class="fa fa-check"></i>Example: Calculate the water balance for an irrigation dam</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_7"><i class="fa fa-check"></i>Tracking the volume of a lake over time</a>
+<ul>
+<li class="chapter" data-level="0.0.1" data-path="E5.html"><a href="E5.html#E5_88.unnumbered"><i class="fa fa-check"></i><b>0.0.1</b> Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_9"><i class="fa fa-check"></i>Activity: Simulating the system</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
 <ul>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
@@ -286,7 +303,7 @@ electromagnetic, ultrasonic, and Doppler).</p>
 <center>
 <span class="math display" id="eq:E2equation1">\[\begin{equation}
 Q = \sum^{n}_{i=0} (V_{i} * \text{Area}_{i})
-\tag{8}
+\tag{13}
 \end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(n\)</span> is the number of vertical for measuring velocities, <span class="math inline">\(V_{i}\)</span> is
@@ -298,7 +315,7 @@ or triangles.</p>
 <div class="figure"><span id="fig:E2image1"></span>
 <img src="images/exercise2/image1.png" alt="Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge." width="50%" />
 <p class="caption">
-Figure 18: Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge.
+Figure 27: Current-meter discharge measurements are made by determining the discharge in each subsection of a channel cross section and summing the subsection discharges to obtain a total discharge.
 </p>
 </div>
 </center>
@@ -315,7 +332,7 @@ you), it can compute the water velocity.</p>
 <div class="figure"><span id="fig:E2image2"></span>
 <img src="images/exercise2/image2.png" alt="An ADV - used to measure stream velocity." width="30%" />
 <p class="caption">
-Figure 19: An ADV - used to measure stream velocity.
+Figure 28: An ADV - used to measure stream velocity.
 </p>
 </div>
 </center>
@@ -352,7 +369,7 @@ downstream? What might have caused this change in flow?</p></li>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:467.5px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:E2table1">Table 6: </span>Measured data for velocity-area method of calculating streamflow
+<span id="tab:E2table1">Table 7: </span>Measured data for velocity-area method of calculating streamflow
 </caption>
 <thead>
 <tr>
@@ -649,7 +666,7 @@ channel geometry, slope and roughness is:</p>
 <center>
 <span class="math display" id="eq:E2equation2">\[\begin{equation}
 Q = \frac{1}{n}(A\space{}R^{\frac{2}{3}}\space{}S^{\frac{1}{2}})
-\tag{9}
+\tag{14}
 \end{equation}\]</span>
 </center>
 <p>Where: <span class="math inline">\(A\)</span> is the channel cross-sectional area (m<sup>2</sup>) ; <span class="math inline">\(R\)</span> is the
@@ -678,7 +695,7 @@ method). Draw a scale diagram of your chosen cross-section to estimate
 the wetted perimeter. Use the slope over the 5.2 km of Carey Bk between
 the main highway (25 m AHD) and where it flows into the Donnelly River
 (7 m AHD). Now you just need a roughness parameter, Manning’s <span class="math inline">\(n\)</span>, and
-you can solve Equation <a href="L2.html#eq:E2equation2">(9)</a>.</p>
+you can solve Equation <a href="L2.html#eq:E2equation2">(14)</a>.</p>
 <ul>
 <li><p>How does this streamflow estimate compare to the answer you got
 using the velocity-area method above?</p></li>
@@ -711,7 +728,7 @@ May 1 and ends April 30, though this can be region specific.</p>
 <div class="figure"><span id="fig:E2image4"></span>
 <img src="images/exercise2/image4.jpeg" alt="[The Avon River, Western Australia](https://en.wikipedia.org/wiki/Avon_River_(Western_Australia))" width="80%" />
 <p class="caption">
-Figure 20: <a href="https://en.wikipedia.org/wiki/Avon_River_(Western_Australia)">The Avon River, Western Australia</a>
+Figure 29: <a href="https://en.wikipedia.org/wiki/Avon_River_(Western_Australia)">The Avon River, Western Australia</a>
 </p>
 </div>
 </center>
@@ -738,7 +755,7 @@ This gauge is draining the Avon catchment</p>
 <div class="figure"><span id="fig:E2image5"></span>
 <img src="images/exercise2/image5.png" alt="Navigate to the 'Walyunga' guage (616011)" width="50%" height="50%" />
 <p class="caption">
-Figure 21: Navigate to the ‘Walyunga’ guage (616011)
+Figure 30: Navigate to the ‘Walyunga’ guage (616011)
 </p>
 </div>
 </center>
@@ -773,7 +790,7 @@ for the largest daily discharge value.</p>
 <center>
 <span class="math display" id="eq:E2equation3">\[\begin{equation}
 P = 100 * [\frac{M}{n+1}]
-\tag{10}
+\tag{15}
 \end{equation}\]</span>
 </center>
 <p>Where, <span class="math inline">\(P\)</span> = the probability that a given flow will be equaled or
@@ -807,12 +824,12 @@ flat curve indicates that moderate flows are sustained throughout the
 year due to natural or artificial streamflow regulation, or due to a
 large groundwater capacity which sustains the base flow to the stream.</p>
 <p>An example, properly formatted flow duration curve is shown below
-(Figure <a href="L2.html#fig:E2image6">22</a>).</p>
+(Figure <a href="L2.html#fig:E2image6">31</a>).</p>
 <center>
 <div class="figure"><span id="fig:E2image6"></span>
 <img src="images/exercise2/image6.png" alt="Aproperly formatted flow duration curve" width="85%" height="85%" />
 <p class="caption">
-Figure 22: Aproperly formatted flow duration curve
+Figure 31: Aproperly formatted flow duration curve
 </p>
 </div>
 </center>
@@ -856,7 +873,7 @@ given a value of 20. <br></p>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:E2table2">Table 7: </span>Complete the table for ‘Big River’
+<span id="tab:E2table2">Table 8: </span>Complete the table for ‘Big River’
 </caption>
 <thead>
 <tr>
@@ -1125,7 +1142,7 @@ recurrence interval for each peak discharge. The recurrence interval,
 <center>
 <span class="math display" id="eq:E2equation4">\[\begin{equation}
 R = \frac{n+1}{m}
-\tag{11}
+\tag{16}
 \end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(n\)</span> is the number of years over which the data was collected (20
@@ -1154,7 +1171,7 @@ inverse of the recurrence interval, <span class="math inline">\(R\)</span>:</p>
 <center>
 <span class="math display" id="eq:E2equation5">\[\begin{equation}
 P_{e} = \frac{1}{R}
-\tag{12}
+\tag{17}
 \end{equation}\]</span>
 </center>
 <p>Thus, the probability that a flood with a 10 year recurrence interval
