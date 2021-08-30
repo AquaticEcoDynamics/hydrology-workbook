@@ -10,7 +10,7 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"],
               ["downloads/Walyunga_139985.zip", 'Walyunga Streamflow Data from WIR'],
-              ["Helena_Data.zip", 'Helena Data'],
+              ["downloads/Assignment 1B - Helena Data.zip", 'Assign 1B - Helena Data'],
               ['Exercise_7_eFlow_Table.docx', 'Exercise 7 Answer Sheet']
               ]
     search: yes

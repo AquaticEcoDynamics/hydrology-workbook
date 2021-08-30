@@ -160,7 +160,7 @@ After your analysis you should be able to:
 
 The data you need for the assessment is in the file *Helena Data Combined.xlsx*
 
-### Literature review {#A2B_5 .unnumbered}
+### 1. Literature review {#A2B_5 .unnumbered}
 
 Start by reading this report by UWA researchers to learn more about the
 history of scientific studies at this site and recent findings:
@@ -171,7 +171,7 @@ knitr::include_graphics("images/assessment2B/image6.png")
 ```
 </center>
 
-### Mapping vegetation change {#A2B_6 .unnumbered}
+### 2. Mapping vegetation change {#A2B_6 .unnumbered}
 
 There are now a range of spatial data products that have been generated
 from aerial imagery and remote sensing methods that we can use to help
@@ -215,7 +215,7 @@ knitr::include_graphics("images/assessment2B/image8.png")
 ```
 </center>
 
-### Mapping salinity (EC) in QGIS {#A2B_7 .unnumbered}
+### 3. Mapping salinity (EC) in QGIS {#A2B_7 .unnumbered}
 
 Surface water samples from across the site have previously been
 collected and analysed for electrical conductivity (EC), which is a
@@ -301,14 +301,14 @@ knitr::include_graphics("images/assessment2B/image12.jpg")
 ```
 </center>
 
-### Time-series data for assessing groundwater levels and salinity {#A2B_8 .unnumbered}
+### 4. Time-series data for assessing groundwater levels and salinity {#A2B_8 .unnumbered}
 
 You are provided with a spreadsheet that summarise the timeseries data
 collected by various agencies (e.g., UWA and DWER (via
 [WIR](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx))).
 This files includes numerous sheets with the following data notes :
 
--   Weather: There was a "Baro" dataset, which is a UWA logger measuring
+-   **Weather**: There was a "Baro" dataset, which is a UWA logger measuring
     atmospheric pressure, in kPa. We measure this as the water levels in
     the piezometers may vary due to atmospheric pressure fluctuations.
     For your report you do not need to present this, just bear in mind
@@ -316,22 +316,22 @@ This files includes numerous sheets with the following data notes :
     rainfall provided is from the nearby [DPIRD
     South-Perth](https://weather.agric.wa.gov.au) weather station.
 
--   GW Levels: This includes the UWA piezometer level data (converted
+-   **GW Levels**: This includes the UWA piezometer level data (converted
     into mAHD) for the main wells: HW1, HW2, and HW3. Bore 7 is also
     included which is denoted as Jeremy on the map.
 
--   GW Salinity: This has the UWA salinity measurements from inside the
+-   **GW Salinity**: This has the UWA salinity measurements from inside the
     Piezometers. These data are in mS/cm.
 
--   Helena River: River Corrected data is the water level of Helena
+-   **Helena River**: River Corrected data is the water level of Helena
     River under the nearby Traffic Bridge. So you can think of this as
     the water level at the river-end of the piezometer transect. "Poison
     Lease" (upstream in Helena River to the east of our site). It also
     has the discharge (Q) at this site, based on a rating curve.
 
--   Swan River: This has WIR data from the station MSB data as above,
+-   **Swan River**: This has WIR data from the station MSB data as above,
     including the daily min and mix, showing the tidal amplitude of the
-    Swan River over time. The "Vitox" Salinity data is from the WIR
+    Swan River over time. The "*Vitox*" Salinity data is from the WIR
     website for the nearby location which is just to the west of our
     site (on the other side of Kings Meadow Oval). This data indicates
     the river/estuary salinity and would be very similar to the salinity
@@ -355,7 +355,7 @@ seasonality, and also relative differences between sites. Importantly,
 is there a way to bring togteher the different data into a single plot
 to help our interpretation of the what is happening at the system.
 
-### Conceptualising Surface-Groundwater interaction {#A2B_9 .unnumbered}
+### 5. Conceptualising Surface-Groundwater interaction {#A2B_9 .unnumbered}
 
 Now that you have an understanding of the previous studies at the site,
 and have plotted the existing data, the next step is to develop your
@@ -403,8 +403,8 @@ Introduction [1 page maximum]
 
 Assessment methodology [1 page : be concise!]
 
--   Desktop assessment, historical data sources -- external data/info we
-    referred to
+-   Desktop assessment, historical data sources -- external data/info that has been
+    referred to. A table can be convenient to summarise, or a list.
 
 -   Data analysis approach, as relevant -- any processing or "higher"
     analysis we did to the data
@@ -445,27 +445,7 @@ Australia. 51pp.
 ### Optional: Site visit to Helena River floodplain {#A2B_11 .unnumbered}
 
 If you are in Perth you can visit the study site just outside of the
-Guildford town center. Arrive at the carpark near King's Meadow Oval,
-and get your bearings
+Guildford town center. See "Helena River Site Visit".
 
-<center>
-```{r A2Bimage13, echo=FALSE, fig.cap="", out.width='65%'}
-knitr::include_graphics("images/assessment2B/image13.png")
-```
-</center>
 
--   Explore the site, considering the surface water pathways.
--   Can you identify flow direction in the main waterways bounding the
-    site (Swan River to the west and Helena River to the south-east).
--   Can you identify water accumulation areas within the site itself.
--   Consider the horizontal and vertical movement pathways of this
-    water.
--   Identify *Eucalyptus rudis* trees and their health in context of the
-    landscape.
 
-<center>
-```{r A2Bimage14, echo=FALSE, fig.cap="",out.width='45%', out.height='25%', fig.show='hold'}
-knitr::include_graphics(c("images/assessment2B/image14_1.png",
-                          "images/assessment2B/image14_2.png"))
-```
-</center>
