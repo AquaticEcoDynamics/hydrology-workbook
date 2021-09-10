@@ -88,10 +88,24 @@ Land cover
 [WIR](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx). 
 This is where you could get flow and water quality data if you wanted to. Track down the flow gauges on this map.
 -	Go to the Intramaps website:
-https://www.mapsolutions.com.au/intramaps/intramaps-public.aspx
+https://www.gosnells.wa.gov.au/About_our_City/Maps/Map_Module_List.  
 Pick any local government area, and dig into the local data on stormwater drainage. To see which local government area you want, use the shapefile LGA.shp. Turn on the labels using the Label with `WA_LGA_s_3`. You can make the shape transparent using *Symbology > Opacity*.
 -	Go to the floodplain mapping tool:
 https://www.water.wa.gov.au/maps-and-data/maps/flood-maps
 Examine the bottom of the catchment and the floodplain layers. The menus at the top right give you access to the legend, different layers that you can turn on and off and different base maps. 
 -	Compare Land Use, Land Cover, the aerial photography from Google, Intramaps layers and Floodplain Mapping. 
+
+## Summary {-}
+
+Now you have a clear idea of different types of geospatial data relevant to catchments:
+
+- Land cover
+- Land use
+- Monitoring sites
+- Drainage lines and sub-catchment areas.
+- Groundwater
+- Stormwater
+- Flood inundation risk
+
+Some data is from State Government public resources and some is available through local councils; bringing these information sources together will be useful later when preparing your report.
 
