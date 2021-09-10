@@ -11,7 +11,8 @@ bookdown::gitbook:
     download: [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"],
               ["downloads/Walyunga_139985.zip", 'Walyunga Streamflow Data from WIR'],
               ["downloads/Assignment 1B - Helena Data.zip", 'Assign 1B - Helena Data'],
-              ['Exercise_7_eFlow_Table.docx', 'Exercise 7 Answer Sheet']
+              ["downloads/Exercise 7 YuleGIS.zip", 'Exercise 7 - Yule Brook GIS'],
+              ['Exercise_7_eFlow_Table.docx', 'Exercise 10 Answer Sheet']
               ]
     search: yes
     fontsettings:

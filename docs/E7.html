@@ -159,7 +159,10 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a>
+<ul>
+<li><a href="E7.html#yule-brook-mapping-exercise---qgis">Yule Brook mapping exercise - <strong>QGIS</strong></a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 – Lake nutrient assessment</a></li>
 <li class="chapter" data-level="" data-path="E10.html"><a href="E10.html"><i class="fa fa-check"></i>Exercise 10 - Assessing environmental flow impacts</a>
 <ul>
@@ -261,8 +264,114 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="E7" class="section level1 unnumbered">
 <h1>Exercise 7 – Land-use mapping</h1>
-<p>The exercise will be made available prior to scheduled session for this activity.</p>
+<p>For Assignment 2, you will undertake a catchment management report for Yule Brook catchment - an urban catchment within the City of Perth that drains into the Swan-Canning Estuary. Understanding land cover and land use within a catchment is critical to support management.</p>
+<center>
+<div class="figure"><span id="fig:E7image0"></span>
+<img src="images/exercise7/7_image0.png" alt="Yule Brook catchment land cover pattern." width="100%" />
+<p class="caption">
+Figure 22: Yule Brook catchment land cover pattern.
+</p>
+</div>
+</center>
+<div id="yule-brook-mapping-exercise---qgis" class="section level2 unnumbered">
+<h2>Yule Brook mapping exercise - <strong>QGIS</strong></h2>
+<p>In this exercise, you will build a series of maps of <a href="https://www.water.wa.gov.au/__data/assets/pdf_file/0010/9775/115586.pdf">Yule Brook</a> using QGIS.</p>
+<p><strong>Getting started</strong></p>
+<ul>
+<li>Install <a href="https://qgis.org/en/site/">QGIS</a></li>
+<li>Open QGIS and wait for it to load.</li>
+<li>Download the mapping zip folder by clicking the download button in the tool bar <i class="fa fa-download" aria-hidden="true"></i>.</li>
+<li><em>Extract</em> the folder to a drive with enough space.</li>
+<li>Locate the data in the <em>Browser window</em> and add it as layers to the <em>Layers window</em>.</li>
+</ul>
+<p><strong>Become confident with the files and the display</strong></p>
+<ul>
+<li>You can choose to display or hide any of the layers by ticking or unticking the little box.</li>
+<li>You can edit the layers by right clicking on the layer name and right clicking on the layer name and choosing <em>Properties</em>, or double clicking on the layer name, which gets you to <em>Layer Properties</em>. You will use <em>Layer Properties</em> throughout this exercise.</li>
+<li>You can open the attribute table using <em>Layers &gt; Open Attribute Table</em>, or hit the button in the image below. The attribute table allows you to view the properties in a way that is similar to Excel. You can also access the attribute table in Windows by opening the <code>*.dbf</code> file.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:E7image1"></span>
+<img src="images/exercise7/7_image1.png" alt="Attribute Table." width="100%" />
+<p class="caption">
+Figure 23: Attribute Table.
+</p>
+</div>
+</center>
+<ul>
+<li>If you want to save a layer as a new file in a particular location on your computer, use <em>right click &gt; Export &gt; Save Features As</em>.</li>
+<li>In the <em>Layer Properties</em> menu, you can do a few useful things
+<ul>
+<li><em>Source</em> – edit the display name; check the coordinate reference system</li>
+<li><em>Symbology</em> – use the top dropdown to change it from No symbols to Single symbol or Categorized. You can choose which Column to add values to and hit the Classify button. You can also edit the Opacity here.</li>
+<li><em>Labels</em> – you can turn the labels on with <em>Layer Properties &gt; Labels</em>, then switch from No labels to Single labels in the top dropdown menu. You can choose which category of the file you want to use for the label by using the dropdown menu named Label with.</li>
+</ul></li>
+</ul>
+<center>
+<div class="figure"><span id="fig:E7image2"></span>
+<img src="images/exercise7/7_image2.png" alt="Choosing a category of data for layer labels." width="100%" />
+<p class="caption">
+Figure 24: Choosing a category of data for layer labels.
+</p>
+</div>
+</center>
+<ul>
+<li>If you want to do anything else, your best bet is to search for it online. It is likely that someone will have done it before and there will be an answer on a web forum. If you want to find a QGIS function, use <em>Processing &gt; Toolbox (&gt; Searchbar)</em>.</li>
+</ul>
+<p><strong>Drainage</strong></p>
+<ul>
+<li>Note the flow paths of the stormwater drains and the positions of the compensation basins. Go to Google Earth or Google Maps and compare the shapefile with the aerial photos of the same spots. Consider whether they are as clear as the shapefile indicates. Are they filled with water or are they dry? Do they cross roads or follow roads?<br />
+</li>
+<li>Check the hydrological subcatchments. Do they match the drainage lines well? Are there any subcatchments that are not well represented?
+Land cover</li>
+<li>Set your labels and colours so that they make nice images that communicate the permeability and interception of the landscape. Use <em>Properties &gt; Symbology &gt; Unique Values</em>. The categories are:
+<ul>
+<li>Hard surfaces</li>
+<li>Open water</li>
+<li>Roads</li>
+<li>Grass</li>
+<li>Roofs</li>
+<li>Trees</li>
+<li>Sand</li>
+</ul></li>
+<li>Check this layer against aerial photos. Zoom in on a few areas and assess how accurate the layer is. It should be good but not perfect.</li>
+<li>Select a few broad areas and describe how infiltration and interception would be different in these areas.</li>
+</ul>
+<p><strong>Land use</strong></p>
+<ul>
+<li>Similarly to how you edited the land cover data, edit the land use layer so that it displays the land use in a meaningful way. Set the symbology to display <code>LAND_CAT</code> (<em>Layer Properties &gt; Symbology &gt; Categorized &gt; Classify</em>). Check this layer against Google Earth and determine its accuracy. Consider the accuracy of this layer – bear in mind that this dataset was created by a machine-learning algorithm by the GIS team at the Department of Biodiversity, Conservation and Attractions.</li>
+<li>Consider the future of remote sensing for environmental management and compare this to what Google and Facebook can do.</li>
+</ul>
+<p><strong>Groundwater</strong></p>
+<ul>
+<li>Add the groundwater contours minimum layer. Turn the labels on. Set the labelling field to <code>ELEV_AHD_M</code>. You may want to increase the font size.</li>
+</ul>
+<p><strong>Race stations</strong></p>
+<ul>
+<li>Add the Race Stations layer and create a map of where you went or will go on the Amazing Race field trip and the route you took.</li>
+<li>You can add a basemap if you like, using:
+<ul>
+<li><em>Plugins &gt; Manage and Install Plugins</em></li>
+<li>Search for <code>QuickOSM</code> or <code>OpenMapServices</code></li>
+<li>Go to Web and open up a map, such as <code>OSM Standard</code></li>
+</ul></li>
+<li>Add the flow gauges</li>
+</ul>
+<p><strong>External resources</strong></p>
+<ul>
+<li>Using a web-browser, such as the program Microsoft Edge, which is the new version of Internet Explorer, go to
+<a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">WIR</a>.
+This is where you could get flow and water quality data if you wanted to. Track down the flow gauges on this map.</li>
+<li>Go to the Intramaps website:
+<a href="https://www.mapsolutions.com.au/intramaps/intramaps-public.aspx" class="uri">https://www.mapsolutions.com.au/intramaps/intramaps-public.aspx</a>
+Pick any local government area, and dig into the local data on stormwater drainage. To see which local government area you want, use the shapefile LGA.shp. Turn on the labels using the Label with <code>WA_LGA_s_3</code>. You can make the shape transparent using <em>Symbology &gt; Opacity</em>.</li>
+<li>Go to the floodplain mapping tool:
+<a href="https://www.water.wa.gov.au/maps-and-data/maps/flood-maps" class="uri">https://www.water.wa.gov.au/maps-and-data/maps/flood-maps</a>
+Examine the bottom of the catchment and the floodplain layers. The menus at the top right give you access to the legend, different layers that you can turn on and off and different base maps.</li>
+<li>Compare Land Use, Land Cover, the aerial photography from Google, Intramaps layers and Floodplain Mapping.</li>
+</ul>
 
+</div>
 </div>
             </section>
 
@@ -313,7 +422,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"], ["downloads/Walyunga_139985.zip", "Walyunga Streamflow Data from WIR"], ["downloads/Assignment 1B - Helena Data.zip", "Assign 1B - Helena Data"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Answer Sheet"]],
+"download": [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"], ["downloads/Walyunga_139985.zip", "Walyunga Streamflow Data from WIR"], ["downloads/Assignment 1B - Helena Data.zip", "Assign 1B - Helena Data"], ["downloads/Exercise 7 YuleGIS.zip", "Exercise 7 - Yule Brook GIS"], ["Exercise_7_eFlow_Table.docx", "Exercise 10 Answer Sheet"]],
 "toc": {
 "collapse": "section"
 },

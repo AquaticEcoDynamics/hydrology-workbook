@@ -69,7 +69,7 @@ So we need to use indicators – “measures of response”. This can include th
 We then monitor/assess indicators and adjust environmental flow management regime ... in an ideal world. The Murray-Darling Basin Authority (MDBA) has a program called "FLOW MER" - Measuring Evaluation Research to do just this.
 
 <center>=
-```{r E7image1, echo=FALSE, fig.cap="Focus study sites where environmental water delivery is assessed in the MDB. Visit: https://flow-mer.org.au", out.width='100%'}
+```{r E10image1, echo=FALSE, fig.cap="Focus study sites where environmental water delivery is assessed in the MDB. Visit: https://flow-mer.org.au", out.width='100%'}
 knitr::include_graphics("images/exercise7/image1.png")
 ```
 </center>
@@ -90,7 +90,7 @@ After reviewing the overview of the environmental flow monitoring focus areas, c
 
 <center>
 
-```{r E7image2, echo=FALSE, fig.cap="Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar.", out.width='100%'}
+```{r E10image2, echo=FALSE, fig.cap="Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar.", out.width='100%'}
 knitr::include_graphics("images/exercise7/image2.png")
 ```
 </center>

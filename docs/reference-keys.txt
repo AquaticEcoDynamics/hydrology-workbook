@@ -35,8 +35,11 @@ fig:E5image7
 tab:E5table1
 fig:E6image1
 tab:E6table1
+fig:E7image0
 fig:E7image1
 fig:E7image2
+fig:E10image1
+fig:E10image2
 fig:L1imageA
 fig:L1imageB
 fig:E3BimageA
