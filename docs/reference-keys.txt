@@ -38,6 +38,11 @@ tab:E6table1
 fig:E7image0
 fig:E7image1
 fig:E7image2
+fig:E8image0
+fig:E8image01
+fig:E8image1
+fig:E8image3
+eq:E8equation1
 fig:E10image1
 fig:E10image2
 fig:L1imageA
