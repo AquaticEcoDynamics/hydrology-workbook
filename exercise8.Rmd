@@ -167,7 +167,7 @@ We can compute a characteristic time-scale of flow through a wetland, called the
 
 Hydraulic Residence Time ($HRT$, days) = $V_{wetland} / Q$
 
-where $V_{wetland}$ is the wetland volume (m^3^) and can be approximated from wetland area and depth, and $Q$ is the average flow going through the wetland (m^3^/day). If we assume the wetland is at steady-state (not changing volume rapidly) then $Q_{in} ~ Q_{out}$, and this can be assumed as the average flow through rate.
+where $V_{wetland}$ is the wetland volume (m^3^) and can be approximated from wetland area and depth, and $Q$ is the average flow going through the wetland (m^3^/day). If we assume the wetland is at steady-state (not changing volume rapidly) then $Q_{in} \approx Q_{out}$, and this can be assumed as the average flow through rate.
 
 <center>
 ```{r E8image3, echo=FALSE, fig.cap="Schematic of wetland flushing time calculation.", out.width='90%'}
