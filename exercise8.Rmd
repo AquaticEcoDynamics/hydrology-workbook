@@ -14,30 +14,30 @@ Indicators of wetland health include dissolved oxygen, pH, salinity, temperature
 
 A summary of the suite of measurements we make to measure an aquatic system include:
 
-- Dissolved oxygen, $DO$ or $O_2$ : Dissolved oxygen is a measure of the concentration of oxygen gas dissolved in water. Oxygen can be generated from photosynthesis within a wetland, mixed into surface waters from the atmosphere or imported from river inflows. It is is consumed by organism respiration.
-- Turbidity: Turbidity is a measure of the clarity of water. As suspended particulate matter including clay, silt, detritus and plankton in the water increases, the clarity decreases and the water takes on a muddy appearance. Turbidity does not measure the quantity of suspended matter in the water, just its effects on clarity.
-- pH : The pH of water is a measure of its acidity or alkalinity. The actual component of the water being measured is its concentration of hydrogen ions (H+). In water, some of the H2O molecules will dissociate into H+ ions (also called protons) and
-OH- ions (hydroxide). When there are more H+ ions than OH- ions the water will have a pH below 7 and is acidic. Conversely, when there are more OH- ions than H+ ions the water has a pH greater than 7 and is alkaline. When the pH of a water body is 7, the H+ concentration is the same as the concentration of hydroxide (OH-) ions and is neutral. When the water is approximately neutral, it is called circum-neutral.
-- Colour : The colour of water results from the combination of dissolved and suspended substances. These include metals e.g. iron and manganese, dissolved organic matter e.g. humus and peat materials, plankton e.g. diatoms and Cyanobacteria, colloidal substances e.g. carbonates and clays and industrial wastes. Turbidity, even at low levels, will make the apparent colour higher than the true colour. The true colour of a water sample can be measured after removing all suspended material. 
-- Salinity, $S$ : Salinity is the amount of salt dissolved in the water. There are many salts dissolved in water, most notable sodium chloride. The amount of salt in the water can be measured directly by evaporating the water from a known volume of water and weighing the residual. However this is time consuming. A solution of salt will conduct electricity, and the amount it conducts depends on the concentration of the dissolved salts, the conductivity in a solution increases as the amount of salts dissolved in the water increases. Electrical Conductivity (EC) uses this characteristic to estimate the levels of salinity. The units of EC in water are usually expressed as micro Siemens per centimetre (μS/cm). 
-- Nitrogen, $N$ :  is a key nutrient in an aquatic ecosystem and made up of :
+- **Dissolved oxygen**, $DO$ or $O_2$ : *is a measure of the concentration of oxygen gas dissolved in water. Oxygen can be generated from photosynthesis within a wetland, mixed into surface waters from the atmosphere or imported from river inflows. It is is consumed by organism respiration.*
+- **Turbidity** : *is a measure of the clarity of water. As suspended particulate matter including clay, silt, detritus and plankton in the water increases, the clarity decreases and the water takes on a muddy appearance. Turbidity does not measure the quantity of suspended matter in the water, just its effects on clarity.*
+- **pH** : *The pH of water is a measure of its acidity or alkalinity. The actual component of the water being measured is its concentration of hydrogen ions (H+). In water, some of the H2O molecules will dissociate into H+ ions (also called protons) and OH- ions (hydroxide). When there are more H+ ions than OH- ions the water will have a pH below 7 and is acidic. Conversely, when there are more OH- ions than H+ ions the water has a pH greater than 7 and is alkaline. When the pH of a water body is 7, the H+ concentration is the same as the concentration of hydroxide (OH-) ions and is neutral. When the water is approximately neutral, it is called circum-neutral.*
+- **Colour** : *The colour of water results from the combination of dissolved and suspended substances. These include metals e.g. iron and manganese, dissolved organic matter e.g. humus and peat materials, plankton e.g. diatoms and Cyanobacteria, colloidal substances e.g. carbonates and clays and industrial wastes. Turbidity, even at low levels, will make the apparent colour higher than the true colour. The true colour of a water sample can be measured after removing all suspended material. *
+- **Salinity**, $S$ : *Salinity is the amount of salt dissolved in the water. There are many salts dissolved in water, most notable sodium chloride. The amount of salt in the water can be measured directly by evaporating the water from a known volume of water and weighing the residual. However this is time consuming. A solution of salt will conduct electricity, and the amount it conducts depends on the concentration of the dissolved salts, the conductivity in a solution increases as the amount of salts dissolved in the water increases. Electrical Conductivity (EC) uses this characteristic to estimate the levels of salinity. The units of EC in water are usually expressed as micro Siemens per centimetre (μS/cm).* 
+- **Nitrogen**, $N$ :  *is a key nutrient in an aquatic ecosystem and made up of* :
     - Total Nitrogen $TN$
     - Dissolved Organic Nitrogen $DON$
     - Nitrate $NO_3$
     - Ammonium $NH_4$
-- Phosphorus, $P$ :  is a key nutrient in an aquatic ecosystem and made up of :
+- **Phosphorus**, $P$ :  *is a key nutrient in an aquatic ecosystem and made up of* :
     - Total Phosphorus, $TP$:
     - Dissolved Organic Phosphorus $DOP$
     - Phosphate, $PO_4$ :
-- Chlorophyll-a, $Chl-a$
+- **Chlorophyll-a**, $Chl-a$
 - Heavy metals 
 - Micropollutants 
+- Faecal coliforms
 
 <br>
 
 ## Turning data into information {-}
 
-Data are the measurements you take that represent the condition or health of the environment at that time. The environmental conditions in an estuary will change over time, at least seasonally but often daily.
+Data are the measurements you take that represent the condition or health of the environment at that time. The environmental conditions in an aquatic ecosystem will change over time, at least seasonally but often daily.
 
 A suite of data covering a range of indicators of condition taken only on one occasion can tell you about condition at that time only. This is often called a snapshot of the condition. Data collected from several occasions begins to tell you about variability and change over time. As data accumulate, seasonal and longer term changes will be discovered and confidence will increase.
 
@@ -45,9 +45,9 @@ Data needs to be analysed and interpreted to provide information. A good quality
 
 ### Guidelines and thresholds  {-}
 
-One approach is to compare data and data summaries to water quality *guidelines* (objectives or targets). Guidelines are available in the National Water Quality Guidelines (ANZECC & ARMCANZ, 2000), and State policies are also of assistance in interpreting water quality data.
+One approach is to compare data and data summaries to water quality *guidelines* (objectives or targets). Guidelines are available in the [National Water Quality Guidelines](https://www.waterquality.gov.au/anz-guidelines) (ANZECC & ARMCANZ, 2000), and State policies are also of assistance in interpreting water quality data.
 
-The Australian and New Zealand Environment Conservation Council (ANZECC) published the revised Australian and New Zealand guidelines for fresh and marine water quality in 2000. These guidelines, which are usually called the 'ANZECC guidelines' and are available on the internet at www.deh.gov.au/water/quality/nwqms, provide government and the community – especially regulators, industry, consultants, community groups and catchment and water managers – with a framework for conserving ambient water quality in our rivers, lakes, estuaries and marine waters.
+The Australian and New Zealand Environment Conservation Council (ANZECC) [published the widely used Australian and New Zealand guidelines](https://www.waterquality.gov.au/anz-guidelines/resources/previous-guidelines/anzecc-armcanz-2000) for fresh and marine water quality in 2000. These guidelines, which are usually called the 'ANZECC guidelines' and are available on the internet at www.deh.gov.au/water/quality/nwqms, provide government and the community – especially regulators, industry, consultants, community groups and catchment and water managers – with a framework for conserving ambient water quality in our rivers, lakes, estuaries and marine waters.
 
 ### Linking water quality indicators to environmental values  {-}
  
@@ -94,13 +94,20 @@ Data can be summarised using basic statistical tools.
 
 A simple measure of the typical state of an aquatic ecosystem is to determine the central tendency of the data, often called the median or mean.
 
-The distribution of data is important in understanding central tendency. The graphs below show the data as a frequency distribution (that is the frequency or number of times a particular measurement was taken). Data may be evenly distributed (often called normal distribution) or can be skewed, with more measurements at one end of the range of results (Figure 32 & Figure 33).
+The distribution of data is important in understanding central tendency. The graphs below show the data as a frequency distribution (that is the frequency or number of times a particular measurement was taken). Data may be evenly distributed (often called normal distribution) or can be skewed, with more measurements at one end of the range of results.
 
-Water quality data generally has a skewed distribution – most of the time the level is similar. If there is a change in water quality data it is generally for a short period of time. For example, turbidity measurements are generally low in a healthy system when fresh water inflows are low. Any sediment that has entered the estuary will quickly settle out of the water column. Rainfall in the catchment will increase sediment transportation to the estuary resulting in increased turbidity levels. When rainfall ceases, sediment transport from the catchment rapidly decreases and turbidity in the estuary will fall. Turbidity may increase 10, or even 100 fold during these events. Figure 36 illustrates this situation.
+Water quality data generally has a skewed distribution – most of the time the level is similar, and when there is a change in water quality data it is generally for a short period of time. For example, turbidity measurements are generally low in a healthy system when fresh water inflows are low. Or algae (chlorophyll-a) will be low until a bloom occurs. 
+
+<center>
+```{r E8image5, echo=FALSE, fig.cap="Example distributions of WQ data - normal (left) and skewed (right).", out.width='80%'}
+knitr::include_graphics("images/exercise8/distribution.png")
+```
+</center>
+
 
 ### Time-series trends {-}
 
-As discussed above, variability is a natural part of the aquatic environment, and typically there is a 10-20 per cent difference between consecutive water quality measurements. There will be more substantial changes following floods, after long dry periods and after entrance opening. For example, turbidity may go up tenfold during a flood event and salinity can increase 100 fold as freshwater inflows decrease.
+As discussed above, variability is a natural part of the aquatic environment, and typically there is a 10-20 per cent difference between consecutive water quality measurements. There will be more substantial changes following floods, after long dry periods and after entrance opening. For example, turbidity may go up tenfold during a flood event.
 
 Displaying the data in a time series provides a picture of change over time. Time series plots are useful to illustrate seasonal patterns, major events or when one-off high or low levels are measured.
 
@@ -113,6 +120,12 @@ Trend lines can also be added to time series graphs to establish if there have b
 
 Let's explore the above ideas by analysing data from a case-study wetland. The [Yellagonga wetlands](https://parks.dpaw.wa.gov.au/park/yellagonga) within the Swan Coastal Plain (SCP) are a Groundwater Dependent Ecosystem (GDE) within the Cities of Joondalup and Wanneroo. 
 
+<center>
+```{r E8image1, echo=FALSE, fig.cap="Yellagonga (Lake Joondalup).", out.width='100%'}
+knitr::include_graphics("images/exercise8/yellagonga.jpg")
+```
+</center>
+
 A spreadsheet of historical monitoring data is available for download. 
 
 1. Take a look through the data set and note:
@@ -121,9 +134,11 @@ A spreadsheet of historical monitoring data is available for download.
 - The time frame of monitoring
 - The number of monitoring sites
 
+<br>
+
 <center>
-```{r E8image1, echo=FALSE, fig.cap="Yellagonga (Lake Joondalup).", out.width='100%'}
-knitr::include_graphics("images/exercise8/yellagonga.jpg")
+```{r E8image10, echo=FALSE, fig.cap="WQ Monitoring Sites.", out.width='70%'}
+knitr::include_graphics("images/exercise8/yellagonga_wq.png")
 ```
 </center>
 
@@ -160,13 +175,19 @@ knitr::include_graphics("images/exercise8/wetlandvolume.png")
 ```
 </center>
 
-6. For the Black Lake wetland (the one monitored on the Yule Brook catchment race), the area was estimated to be X m^2^. If you assume a mean depth of X m, and a flow rate of 0.1 m^3^/s, what is the retention time of water at this site?
+6. For the Black Creek wetland (the one monitored on the Yule Brook catchment race), the area was estimated to be 3850 m^2^. If you assume a mean depth of 0.5 m, and a flow rate of 0.1 m^3^/s, what is the retention time of water at this site?
 7. The HRT estimate above assumes complete mixing in the wetland. For this site do you think that is the case?
+
+<center>
+```{r E8image4, echo=FALSE, fig.cap="Black Creek wetland in the Yule Brook catchment, highlighting the inlet and outlet. How many nutrients can it assimilate?", out.width='40%'}
+knitr::include_graphics("images/exercise8/blacklake.png")
+```
+</center>
 
 
 ### Nutrient assimilation efficiency {-}
 
-The efficiency of a wetland to reduce nutrients (or suspended sediment or salt etc) can be computed based on the ratio of the outlet to inlet nutrient concentration, corrected for an assumed background concentration.
+The efficiency of a wetland to reduce nutrients (or suspended sediment or salt etc.) can be computed based on the ratio of the outlet to inlet nutrient concentration, corrected for an assumed background concentration.
 
 <center>
 \begin{equation}
@@ -177,12 +198,14 @@ The efficiency of a wetland to reduce nutrients (or suspended sediment or salt e
 
 where: $C_0$ is the ‘background’ concentration (the value expected in a “clean river”), $C_{in}$ is the input concentration, $C_{out}$ is the outlet concentration. The above expressions can be applied to all nutrients and contaminants, however, note the following when applying it:
  
-- For attributes that are imrpoving (e.g., $DO$) during their transit through the wetland, then the above fraction can be reversed. 
+- For attributes that are improving (e.g., $DO$) during their transit through the wetland, then the above fraction can be reversed. 
 - The value $C_0$ needs to be realistic and smaller than $C_{out}$. This value could be based on a value like form the ANZECC guidelines or based on a locally set target.
+
+Now do the following tasks:
 
 8. For the provided data set on Black Lake wetland (the one monitored on the Yule Brook catchment race), compute the efficiency using the above formula for the different nutrient species.
 9. Which ones improve the most? Using your knowledge of wetland processes, can you explain why some species are changing? List the potential processes contributing to the changes.
-10. Is their a relationship between $HRT$ (i.e. the time the water is within the wetland) and the reduction efficiency? What could be done to improve this?
+10. Is their a relationship between $HRT$ (i.e. the time the water is within the wetland) and the reduction efficiency? What could be done to improve water retention?
 
 <br>
 
