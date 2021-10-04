@@ -74,12 +74,15 @@ knitr::include_graphics("images/exercise7/image1.png")
 ```
 </center>
 
+###Activity {-}
+
 Take some time now to choose a selected MDBA focus site accessible from the above link. For your allocated/chosen focus region:
 
 -   Identify its location and key "values"
 -   Read the background and description of the approach to assessment of benefits
 
 Review and be able to answer the following questions:
+
 -   What are the expected stresses to be caused if natural water-flow regimes are lost?
 -   List the current type of work being undertaken to assess how e-water is affecting the
 region
@@ -97,9 +100,12 @@ knitr::include_graphics("images/exercise7/image2.png")
 
 ## Conclusions {#E7_9 -}
 
-In this exercise, we have explored the complexities of allocating water to the environment in a contested situation (i.e., where there are competing "customers" for the water resource).  In particular, we can sumamrise **environmental flows**:
+In this exercise, we have explored the complexities of allocating water to the environment in a contested situation (i.e., where there are competing "customers" for the water resource).  In particular, in the context of  **environmental flows** we can sumamrise :
 
+-   rivers and associated habitats have intrinsic values
 -   appreciate that there is a potential conflict between e-flow vs irrigation allocation
--   e-flow allocation is a river restoration and maintenance tool
+-   water manaagement activity can create stressors on dependent ecosystems
+-   e-flow allocation is a river restoration and maintenance tool, to reduce stressors
+-   there is a need for identifying "Sustainable Diversion Limits" based on assessment of historical flow requirements
 -   the array of benefits from e-water need to quantified and maybe site specific
--   there is a need for identifying "Sustainable Diversion Limits" based on assessment of historical flow requirements.
+
