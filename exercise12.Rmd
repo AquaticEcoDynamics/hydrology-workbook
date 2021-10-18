@@ -33,7 +33,7 @@ Q = -K (2 \pi r h)  \frac{dh}{dr}
 (\#eq:E12eq1)
 \end{equation}
 
-whereby, $A$ is the surface area ($m^2$) of the cylinder over which the flow is occurring, and $dh/dr$ is the slope of the water label towards the well (aka, the hydraulic gradient; $m/m$).
+whereby, $A$ is the surface area ($m^2$) of the cylinder over which the flow is occurring, and $dh/dr$ is the slope of the water table towards the well (aka, the hydraulic gradient; $m/m$).
 
 With some assumptions and rearrangement this can be adapted to give the Thiem equation:
 
@@ -54,7 +54,7 @@ where transmissivity, $T$, is defined as aquifer conductivity x depth: $T = Kd$ 
 
 ### Exercise: {-}
 
-A hydrologist is undertaking a pump test of an *unconfined* aquifer. After pumping the aquifer for some time at a constant rate of 100 m^3^/day, the water level drawdown at a distance of 150m from the pumping well is 1.5m. The total radius of influence of the well is 800m, and the depth of water in the aquifer is estimated to be 10m deep before pumping started. 
+A hydrologist is undertaking a pump test of an *unconfined* aquifer. After pumping the aquifer for some time at a constant rate of 100 m^3^/day, the water level draw-down at a distance of 150m from the pumping well is 1.5m. The total radius of influence of the well is 800m, and the depth of water in the aquifer is estimated to be 10m deep before pumping started. 
 
 What is the hydraulic conductivity, $K$, of the aquifer material? 
 
@@ -62,7 +62,7 @@ What is the hydraulic conductivity, $K$, of the aquifer material?
 
 ## 2. Mine de-watering application {-}
 
-Now we have an idea about how a field based measurement of water table change in response to a fixed pumping rate can tech us something about the aquifer conditions. This is useful to do before a site is being actively developed. For example, how much water can be allocated to operations and assigning how much can be pumped out in a sustainable way.
+Now we have an idea about how a field based measurement of water table change in response to a fixed pumping rate -this can teach us something about the aquifer conditions. This is useful to do before a site is being actively developed. For example, to help us estimate how much water can be allocated to on-ground operations, and assigning how much can be pumped out in a sustainable way.
 
 But another application is the context of mine "de-watering" - this is essentially where water must be extracted to enable below-ground operations to occur.  
 
@@ -98,4 +98,5 @@ In this exercise, we have explored the basics of "pump-tests" and "de-watering" 
 -   apply the Theim equation to get a simple quantitative estimate of aquifer conductivity.
 -   estimate pumping rates required to successfully de-water.
 -   recommend monitoring strategies to track the impacts of pumping (before an after) on water quality and water quantiity.
+
 
