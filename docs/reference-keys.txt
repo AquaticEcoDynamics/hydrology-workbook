@@ -48,6 +48,12 @@ fig:E8image4
 eq:E8equation1
 fig:E10image1
 fig:E10image2
+fig:E12image0
+fig:E12image1
+eq:E12eq1
+eq:E12eq2
+eq:E12eq3
+fig:E12image2
 fig:L1imageA
 fig:L1imageB
 fig:E3BimageA

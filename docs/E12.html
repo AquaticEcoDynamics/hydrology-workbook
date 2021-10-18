@@ -193,7 +193,18 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E11.html"><a href="E11.html"><i class="fa fa-check"></i>Exercise 11 – Water Sensitive Urban Design</a></li>
-<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a>
+<ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#pump-test-calculation-exercise"><i class="fa fa-check"></i>1. Pump test calculation exercise</a>
+<ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise"><i class="fa fa-check"></i>Exercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#mine-de-watering-application"><i class="fa fa-check"></i>2. Mine de-watering application</a>
+<ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise-1"><i class="fa fa-check"></i>Exercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#conclusions"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
 <li class="part"><span><b>II LABS</b></span></li>
 <li class="chapter" data-level="" data-path="L1.html"><a href="L1.html"><i class="fa fa-check"></i>Lab 1 - Desktop catchments</a>
 <ul>
@@ -285,8 +296,98 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="E12" class="section level1 unnumbered">
 <h1>Exercise 12 – Mine dewatering</h1>
-<p>The exercise will be made available prior to scheduled session for this activity.</p>
+<p>The aim of this session is to better familiarise ourselves with some common issues associated with groundwater management – including the case of water pump tests and de-watering which is common in the Australian mining industry.</p>
+<p>Within the lectures we have learnt about groundwater flow and aquifers. And we have previously seen a laboratory scale model of groundwater to understand Darcy flow. In this exercise, we consider how to compute the conditions of an aquifer, based on pump test data, and then we adapt a related approach to describe an open-cut mine de-watering application.</p>
+<div id="pump-test-calculation-exercise" class="section level2 unnumbered">
+<h2>1. Pump test calculation exercise</h2>
+<p>Pump tests are undertaken to test the ability of an aquifer to supply water. When we pump water it causes a <em>cone of depression</em> in the aquifer sutrface, best illustarted in the below diagram:</p>
+<center>
+<div class="figure"><span id="fig:E12image0"></span>
+<img src="images/exercise12/well.jpeg" alt="Three dimensional view of water tabel elevation around a well" width="60%" />
+<p class="caption">
+Figure 34: Three dimensional view of water tabel elevation around a well
+</p>
+</div>
+</center>
+<p>Depending on the rate of response of groundwater levels (<span class="math inline">\(h\)</span>) near the pumping well (at a distance <span class="math inline">\(r\)</span> from the well), one can estimate the transmission properties of the aquifer including the hydraulic conductivity, <span class="math inline">\(K\)</span>. The below exercise demonstrates how to calculate this using the Thiem equation.</p>
+<p>The below diagram shows this relevant information.</p>
+<center>
+<div class="figure"><span id="fig:E12image1"></span>
+<img src="images/exercise12/pump.png" alt="Schematic of the draw-down cone around an aquifer that is being pumped" width="100%" />
+<p class="caption">
+Figure 35: Schematic of the draw-down cone around an aquifer that is being pumped
+</p>
+</div>
+</center>
+<p><br>
+For an unconfined aquifer, we adapt Darcy’s equation to consider the flow, <span class="math inline">\(Q\)</span>, going through the well. For example:</p>
+<p><span class="math display" id="eq:E12eq1">\[\begin{equation}
+Q = -KA \frac{dh}{dr} \\
+Q = -K (2 \pi r h)  \frac{dh}{dr}
+\tag{12}
+\end{equation}\]</span></p>
+<p>whereby, <span class="math inline">\(A\)</span> is the surface area (<span class="math inline">\(m^2\)</span>) of the cylinder over which the flow is occurring, and <span class="math inline">\(dh/dr\)</span> is the slope of the water label towards the well (aka, the hydraulic gradient; <span class="math inline">\(m/m\)</span>).</p>
+<p>With some assumptions and rearrangement this can be adapted to give the Thiem equation:</p>
+<p><span class="math display" id="eq:E12eq2">\[\begin{equation}
+h_0^2 - h^2 = \frac{Q}{\pi K} \: ln \left[\frac{r}{R}\right]
+\tag{13}
+\end{equation}\]</span></p>
+<p>noting, this is for an unconfined aquifer, with the water table at height <span class="math inline">\(h_0\)</span> before pumping. A slightly different version is used for a confined (artesian) aquifer system, which has a aquifer depth of <span class="math inline">\(d\)</span>:</p>
+<p><span class="math display" id="eq:E12eq3">\[\begin{equation}
+h-h_0 = \frac{Q}{2 \pi T} \: ln \left[\frac{r}{R}\right]
+\tag{14}
+\end{equation}\]</span></p>
+<p>where transmissivity, <span class="math inline">\(T\)</span>, is defined as aquifer conductivity x depth: <span class="math inline">\(T = Kd\)</span> (in this case <span class="math inline">\(d \sim h_0\)</span>).</p>
+<div id="exercise" class="section level3 unnumbered">
+<h3>Exercise:</h3>
+<p>A hydrologist is undertaking a pump test of an <em>unconfined</em> aquifer. After pumping the aquifer for some time at a constant rate of 100 m<sup>3</sup>/day, the water level drawdown at a distance of 150m from the pumping well is 1.5m. The total radius of influence of the well is 800m, and the depth of water in the aquifer is estimated to be 10m deep before pumping started.</p>
+<p>What is the hydraulic conductivity, <span class="math inline">\(K\)</span>, of the aquifer material?</p>
+</div>
+</div>
+<div id="mine-de-watering-application" class="section level2 unnumbered">
+<h2>2. Mine de-watering application</h2>
+<p>Now we have an idea about how a field based measurement of water table change in response to a fixed pumping rate can tech us something about the aquifer conditions. This is useful to do before a site is being actively developed. For example, how much water can be allocated to operations and assigning how much can be pumped out in a sustainable way.</p>
+<p>But another application is the context of mine “de-watering” - this is essentially where water must be extracted to enable below-ground operations to occur.</p>
+<p>As a first approximation, we can apply the Theim equation assuming the mine-pit is like a “big-well” - see below figure.</p>
+<center>
+<div class="figure"><span id="fig:E12image2"></span>
+<img src="images/exercise12/mine.png" alt="Schematic of a mining excavation, with a radius, r, and depth of extraction." width="80%" />
+<p class="caption">
+Figure 36: Schematic of a mining excavation, with a radius, r, and depth of extraction.
+</p>
+</div>
+</center>
+<div id="exercise-1" class="section level3 unnumbered">
+<h3>Exercise:</h3>
+<p>A surface ore deposit in the Pimbara region of MiningLand is scheduled for development. The ore deposit is roughly 1km wide and circular. Miners wish to dig and extract the material down to 25m from the surface, but the water table is sitting at 15m below the land surface and so during the mining activity a de-watering operation is necessary.</p>
+<p>The mean aquifer depth is estimated to be 50m. For operational reasons, at a distance of 400m from the centre of the operation the water table needs to be reduced below the bottom of the excavation. Environmental regulators have indicated that the dewatering operation may not impact water tables beyond 1500m from the centre of the deposit.</p>
+<ul>
+<li><ol style="list-style-type: lower-roman">
+<li>Sketch the problem (similar to exercise 1) and annotate with relevant information.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-roman">
+<li>As a rough approximation, we can employ the Theim equation to consider the draw-down caused by a groundwater pump, pumping at a steady rate <span class="math inline">\(Q\)</span>, for this problem:</li>
+</ol></li>
+</ul>
+<p>If we assume a hydraulic conductivity of the region is around 0.5 m/day, and other information as indicated in the question, what is the average rate of discharge, <span class="math inline">\(Q\)</span>, that needs to be pumped to pull the groundwater down low enough for mining to occur?</p>
+<ul>
+<li><ol start="3" style="list-style-type: lower-roman">
+<li>Once mining has ceased and de-watering has ceased, the pit is predicted to refill with ground water, but the environmental regulator is placing strict guidelines on the mine operator to ensure the newly formed lake is safe. Outline an environmental monitoring program that you would propose in order to collect necessary data, giving rationale for the chosen measurements.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="conclusions" class="section level2 unnumbered">
+<h2>Conclusions</h2>
+<p>In this exercise, we have explored the basics of “pump-tests” and “de-watering” - both routinely undertaken by mining companies to complete mining activities, particularly open-cut mining. You should be able to:</p>
+<ul>
+<li>conceptualise how water moves towards an actively pumping well.</li>
+<li>apply the Theim equation to get a simple quantitative estimate of aquifer conductivity.</li>
+<li>estimate pumping rates required to successfully de-water.</li>
+<li>recommend monitoring strategies to track the impacts of pumping (before an after) on water quality and water quantiity.</li>
+</ul>
 
+</div>
 </div>
 
 
