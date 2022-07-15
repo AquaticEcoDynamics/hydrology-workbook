@@ -604,6 +604,13 @@
       "Repository": "CRAN",
       "Hash": "c9c462b759a5cc844ae25b5942654d13"
     },
+    "uuid": {
+      "Package": "uuid",
+      "Version": "1.1-0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f1cb46c157d080b729159d407be83496"
+    },
     "vctrs": {
       "Package": "vctrs",
       "Version": "0.4.1",
@@ -638,6 +645,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "c0e49a9760983e81e55cdd9be92e7182"
+    },
+    "xaringanExtra": {
+      "Package": "xaringanExtra",
+      "Version": "0.6.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "fc4355438a15a1d0c9afcd3463bf9ffc"
     },
     "xfun": {
       "Package": "xfun",

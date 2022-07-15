@@ -12,6 +12,12 @@ description: ""
 
 # Introduction {-}
 
+```{r xaringanExtra, include = FALSE}
+library(xaringanExtra)
+xaringanExtra::use_panelset()
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+```
+
 ## Overview {#AI_2 .unnumbered}
 
 This site is a web-based "workbook" containing instructions and information needed to undertake the activities and assessments in **ENVT2251 Hydrology and Water Resource Management** unit at UWA. 
