@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 2 - Sourcing rainfall and flow data | Hydrology Workbook</title>
+  <meta name="description" content="Exercise 2 - Sourcing rainfall and flow data | Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 2 - Sourcing rainfall and flow data | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 2 - Sourcing rainfall and flow data | Hydrology Workbook" />
+  
+  
+  
+
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E1A.html"/>
+<link rel="next" href="E3.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+<script src="libs/panelset-0.2.6/panelset.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Recommended study plan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_32"><i class="fa fa-check"></i>Further information</a></li>
+</ul></li>
+<li class="part"><span><b>I EXERCISES</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1 – Spatial rainfall variability</a><ul>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 2 - Sourcing rainfall and flow data</a><ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3.html"><a href="E3.html"><i class="fa fa-check"></i>Exercise 3 – Runoff generation</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html"><i class="fa fa-check"></i>Exercise 4 - Visualising groundwater</a><ul>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>The water balance and principle of conservation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>1D (vertical) water balance at the plot/landscape scale</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Example: Calculate the water balance for a hillslope</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>The water balance for a watershed</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>The water balance for a wetland</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_6"><i class="fa fa-check"></i>Example: Calculate the water balance for an irrigation dam</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_7"><i class="fa fa-check"></i>Tracking the volume of a lake over time</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="E5.html"><a href="E5.html#E5_88.unnumbered"><i class="fa fa-check"></i><b>0.0.1</b> Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_9"><i class="fa fa-check"></i>Activity: Simulating the system</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a><ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a><ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#yule-brook-catchment-background"><i class="fa fa-check"></i>Yule Brook catchment background</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#yule-brook-mapping-exercise---qgis"><i class="fa fa-check"></i>Yule Brook mapping exercise - <strong>QGIS</strong></a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 – Lake nutrient assessment</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#indicators-of-wetland-health"><i class="fa fa-check"></i>Indicators of wetland health</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#water-quality-attributes-of-interest"><i class="fa fa-check"></i>Water quality attributes of interest</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#turning-data-into-information"><i class="fa fa-check"></i>Turning data into information</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#guidelines-and-thresholds"><i class="fa fa-check"></i>Guidelines and thresholds</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#linking-water-quality-indicators-to-environmental-values"><i class="fa fa-check"></i>Linking water quality indicators to environmental values</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#trigger-values"><i class="fa fa-check"></i>Trigger values</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#summary-statistics"><i class="fa fa-check"></i>Summary statistics</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#time-series-trends"><i class="fa fa-check"></i>Time-series trends</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#wetland-data-case-study-yellagonga"><i class="fa fa-check"></i>Wetland data case study : Yellagonga</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#quantifying-wetland-function"><i class="fa fa-check"></i>Quantifying wetland function</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#wetland-retention-time"><i class="fa fa-check"></i>Wetland retention time</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#nutrient-assimilation-efficiency"><i class="fa fa-check"></i>Nutrient assimilation efficiency</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#getting-further-info-on-wetlands"><i class="fa fa-check"></i>Getting further info on wetlands</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html"><i class="fa fa-check"></i>Exercise 10 - Assessing environmental flow impacts</a><ul>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_3"><i class="fa fa-check"></i>Classifying e-flow benefits case study : MDB</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E11.html"><a href="E11.html"><i class="fa fa-check"></i>Exercise 11 – Water Sensitive Urban Design</a></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#pump-test-calculation-exercise"><i class="fa fa-check"></i>1. Pump test calculation exercise</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise"><i class="fa fa-check"></i>Exercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#mine-de-watering-application"><i class="fa fa-check"></i>2. Mine de-watering application</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise-1"><i class="fa fa-check"></i>Exercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#conclusions"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>II LABS</b></span></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html"><i class="fa fa-check"></i>Lab 1 - Desktop catchments</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_2"><i class="fa fa-check"></i>Building a “Desktop Catchment”</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_3"><i class="fa fa-check"></i>Step 1 : Catchment Setup</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_4"><i class="fa fa-check"></i>Step 2 : Characterising soil moisture</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_8"><i class="fa fa-check"></i>Step 3 : Collect experimental data</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_9"><i class="fa fa-check"></i>Step 4 : Data analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_14"><i class="fa fa-check"></i>What did we learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html"><i class="fa fa-check"></i>Lab 2 - Streamflow analysis</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html"><i class="fa fa-check"></i>Lab 3 - Groundwater and surface water interaction</a><ul>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_3"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3__4"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_9"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_13"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="F1_1.html"><a href="F1_1.html"><i class="fa fa-check"></i>Helena River Site Visit - Sampling Activities</a></li>
+<li class="part"><span><b>III ASSESSMENTS</b></span></li>
+<li class="chapter" data-level="" data-path="A1.html"><a href="A1.html"><i class="fa fa-check"></i>Assessment 1 - Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a><ul>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a><ul>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_2"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_3"><i class="fa fa-check"></i>Helena River Study Site</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_4"><i class="fa fa-check"></i>Your task</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_5"><i class="fa fa-check"></i>1. Literature review</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_6"><i class="fa fa-check"></i>2. Mapping vegetation change</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_7"><i class="fa fa-check"></i>3. Mapping salinity (EC) in QGIS</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_8"><i class="fa fa-check"></i>4. Time-series data for assessing groundwater levels and salinity</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_9"><i class="fa fa-check"></i>5. Conceptualising Surface-Groundwater interaction</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_10"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_11"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a><ul>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_1"><i class="fa fa-check"></i>Overview of scheduled group project activities</a></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_2"><i class="fa fa-check"></i>Introduction &amp; Assessent Summary</a></li>
+</ul></li>
+<li class="part"><span><b>IV REFERENCES</b></span></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="E1B" class="section level1 unnumbered hasAnchor">
+<h1>Exercise 2 - Sourcing rainfall and flow data<a href="E1B.html#E1B" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="E1B_1" class="section level2 unnumbered hasAnchor">
+<h2>Introduction<a href="E1B.html#E1B_1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The previous exercise focused on estimating rainfall and runoff at catchment scales during a single (daily) storm event. This focused on catchment scale rainfall and processes. In this exercise we will learn how to access rain and flow data, and examine the nature of rainfall data and use some simple statistics in Excel to describe these data. This will help you prepare for the Assignment 1A where you will examine at how rainfall may be changing over time, how it varies over space across Western Australia, and how it correlates with flow.</p>
+</div>
+<div id="E1B_2" class="section level2 unnumbered hasAnchor">
+<h2>Objective<a href="E1B.html#E1B_2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this activity, you should:</p>
+<ul>
+<li>Be able to source rainfall and flow data, understand the nature of that data and describe it using simple statistics in Excel.</li>
+</ul>
+</div>
+<div id="E1B_3" class="section level2 unnumbered hasAnchor">
+<h2>Getting Rainfall Data<a href="E1B.html#E1B_3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Start by downloading the daily rainfall data for a chosen BOM site from the <a href="http://www.bom.gov.au/climate/data/">Bureau of Meteorology</a> web site. Choose a site of interest in Western Australia. Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel.</li>
+</ol>
+<center>
+<video width="100%" height="100%" controls>
+<source src="images/exercise1A/video1.mp4" type="video/mp4">
+</video>
+</center>
+</div>
+<div id="E1B_4" class="section level2 unnumbered hasAnchor">
+<h2>Statistical Properties of Rainfall Data<a href="E1B.html#E1B_4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before moving forward with our analysis lets open the dataset and make sure the site has a suitable period of data.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Now, let’s plot the time series of DAILY rainfall. Clean up the plot as required and add to your activity sheet. Describe the main features of this data set. Consider: what is the most appropriate type of graph for rainfall data (bar, scatter, line)?</p></li>
+<li><p>Calculate the annual SUM of rainfall. But note, we want to ensure that there are only whole years to calculate the sums or else the incomplete years will be in error (the sum will be artificially low due to missing data). Delete the rows of data for the last partial year (e.g., 2021) and any partial years at the start (the first and last year measured may change depending on the site you selected). To explore each year’s data we will use a PIVOT table. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (select “Create a new tab”). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. You can also select “COUNT” to see how many entries are given for each. Years with more than 10% of days missing (e.g &lt;300 days counted), are unreliable to include in our analysis so see if your station has any incomplete years. Clean up the plot with the sum of rainfall as required and add to your activity sheet. What are the main features of this annual data set? What variability can you see?</p></li>
+<li><p>Now we have a “clean” dataset, we want to explore some statistics. Use the <em>Data Analysis</em> add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to <em>Tools-&gt;Add-ins-&gt;Analysis ToolPack</em>).
+Copy the results <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">here</a> and complete Table <a href="E1B.html#tab:E1Btable1">4</a> for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics?</p></li>
+</ol>
+<!-- Old link: -->
+<!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing -->
+<ol start="5" style="list-style-type: decimal">
+<li><p>Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed?</p></li>
+<li><p>Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select <strong>Month</strong> and <strong>Rainfall</strong> amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet.
+How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)?</p></li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:E1Btable1">Table 4: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete a row in the table for your site <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">here</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Station
+</th>
+<th style="text-align:center;">
+Station ID
+</th>
+<th style="text-align:center;">
+Years
+</th>
+<th style="text-align:center;">
+Mean
+</th>
+<th style="text-align:center;">
+SD
+</th>
+<th style="text-align:center;">
+Min / Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Swanbourne
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9215
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Perth
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9225
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Perth Airport
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9021
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Bickley
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9240
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Mundaring
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9030
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Chidlow
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9007
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Northam
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10111
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Kellerberrin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10073
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Merredin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10092
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Kalgoorlie-Boulder
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+12038
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Leonora
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+12241
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Cape Leeuwin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9518
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Busselton
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9515
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Geraldton Town
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+8050
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Carnarvon
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+6011
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Exmouth Gulf
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+5004
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Broome
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+3003
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Wyndham
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+1006
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Bridgetown Comparison
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9510
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Wagin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10647
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Hyden
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10568
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Albany
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9500
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Esperance Downs
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9631
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Manjimup
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+9573
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+Narrogin
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+10614
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+</div>
+<div id="E1B_5" class="section level2 unnumbered hasAnchor">
+<h2>Getting Streamflow Data<a href="E1B.html#E1B_5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol start="7" style="list-style-type: decimal">
+<li>In your Assessment 1A we will need to examine the relationship between annual rainfall and annual streamflow (aka runoff) for a chosen catchment. Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the <a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">Department of Water</a> web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a “package of pre-computed reports”. You will then be emailed a zip file of the station’s data. Ensure the station has 10-20 years of available data for this exercise.</li>
+</ol>
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1B/video1.mp4" type="video/mp4">
+</video>
+</center>
+<ol start="8" style="list-style-type: decimal">
+<li>Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?</li>
+</ol>
+</div>
+<div id="E1B_6" class="section level2 unnumbered hasAnchor">
+<h2>Conclusions<a href="E1B.html#E1B_6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now you know how to source some essential water data, and summarise it in an easy to use fashion. What else could we do to explore the data?</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E1A.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"], ["downloads/Walyunga_139985.zip", "Walyunga Streamflow Data from WIR"], ["downloads/Assignment 1B - Helena Data.zip", "Assign 1B - Helena Data"], ["downloads/Exercise 7 YuleGIS.zip", "Exercise 7 - Yule Brook GIS"], ["downloads/Exercise 8 Data.zip", "Exercise 8 - WQ Data"], ["downloads/Exercise_10_eFlow_Table.docx", "Exercise 10 Answer Sheet"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

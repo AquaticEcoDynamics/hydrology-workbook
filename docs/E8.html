@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 8 – Lake nutrient assessment | Hydrology Workbook</title>
+  <meta name="description" content="Exercise 8 – Lake nutrient assessment | Hydrology Workbook" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 8 – Lake nutrient assessment | Hydrology Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 8 – Lake nutrient assessment | Hydrology Workbook" />
+  
+  
+  
+
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="E7.html"/>
+<link rel="next" href="E10.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+<script src="libs/panelset-0.2.6/panelset.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Hydrology Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Recommended study plan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_32"><i class="fa fa-check"></i>Further information</a></li>
+</ul></li>
+<li class="part"><span><b>I EXERCISES</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1 – Spatial rainfall variability</a><ul>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 2 - Sourcing rainfall and flow data</a><ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E3.html"><a href="E3.html"><i class="fa fa-check"></i>Exercise 3 – Runoff generation</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html"><i class="fa fa-check"></i>Exercise 4 - Visualising groundwater</a><ul>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>The water balance and principle of conservation</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>1D (vertical) water balance at the plot/landscape scale</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Example: Calculate the water balance for a hillslope</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>The water balance for a watershed</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>The water balance for a wetland</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_6"><i class="fa fa-check"></i>Example: Calculate the water balance for an irrigation dam</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_7"><i class="fa fa-check"></i>Tracking the volume of a lake over time</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="E5.html"><a href="E5.html#E5_88.unnumbered"><i class="fa fa-check"></i><b>0.0.1</b> Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_9"><i class="fa fa-check"></i>Activity: Simulating the system</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a><ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a><ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#yule-brook-catchment-background"><i class="fa fa-check"></i>Yule Brook catchment background</a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#yule-brook-mapping-exercise---qgis"><i class="fa fa-check"></i>Yule Brook mapping exercise - <strong>QGIS</strong></a></li>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 – Lake nutrient assessment</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#indicators-of-wetland-health"><i class="fa fa-check"></i>Indicators of wetland health</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#water-quality-attributes-of-interest"><i class="fa fa-check"></i>Water quality attributes of interest</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#turning-data-into-information"><i class="fa fa-check"></i>Turning data into information</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#guidelines-and-thresholds"><i class="fa fa-check"></i>Guidelines and thresholds</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#linking-water-quality-indicators-to-environmental-values"><i class="fa fa-check"></i>Linking water quality indicators to environmental values</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#trigger-values"><i class="fa fa-check"></i>Trigger values</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#summary-statistics"><i class="fa fa-check"></i>Summary statistics</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#time-series-trends"><i class="fa fa-check"></i>Time-series trends</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#wetland-data-case-study-yellagonga"><i class="fa fa-check"></i>Wetland data case study : Yellagonga</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#quantifying-wetland-function"><i class="fa fa-check"></i>Quantifying wetland function</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#wetland-retention-time"><i class="fa fa-check"></i>Wetland retention time</a></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#nutrient-assimilation-efficiency"><i class="fa fa-check"></i>Nutrient assimilation efficiency</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#getting-further-info-on-wetlands"><i class="fa fa-check"></i>Getting further info on wetlands</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html"><i class="fa fa-check"></i>Exercise 10 - Assessing environmental flow impacts</a><ul>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_3"><i class="fa fa-check"></i>Classifying e-flow benefits case study : MDB</a></li>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E11.html"><a href="E11.html"><i class="fa fa-check"></i>Exercise 11 – Water Sensitive Urban Design</a></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#pump-test-calculation-exercise"><i class="fa fa-check"></i>1. Pump test calculation exercise</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise"><i class="fa fa-check"></i>Exercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#mine-de-watering-application"><i class="fa fa-check"></i>2. Mine de-watering application</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise-1"><i class="fa fa-check"></i>Exercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#conclusions"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>II LABS</b></span></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html"><i class="fa fa-check"></i>Lab 1 - Desktop catchments</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_2"><i class="fa fa-check"></i>Building a “Desktop Catchment”</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_3"><i class="fa fa-check"></i>Step 1 : Catchment Setup</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_4"><i class="fa fa-check"></i>Step 2 : Characterising soil moisture</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_8"><i class="fa fa-check"></i>Step 3 : Collect experimental data</a></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_9"><i class="fa fa-check"></i>Step 4 : Data analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_14"><i class="fa fa-check"></i>What did we learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html"><i class="fa fa-check"></i>Lab 2 - Streamflow analysis</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html"><i class="fa fa-check"></i>Lab 3 - Groundwater and surface water interaction</a><ul>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_3"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3__4"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_9"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_13"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="F1_1.html"><a href="F1_1.html"><i class="fa fa-check"></i>Helena River Site Visit - Sampling Activities</a></li>
+<li class="part"><span><b>III ASSESSMENTS</b></span></li>
+<li class="chapter" data-level="" data-path="A1.html"><a href="A1.html"><i class="fa fa-check"></i>Assessment 1 - Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a><ul>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a><ul>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_2"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_3"><i class="fa fa-check"></i>Helena River Study Site</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_4"><i class="fa fa-check"></i>Your task</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_5"><i class="fa fa-check"></i>1. Literature review</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_6"><i class="fa fa-check"></i>2. Mapping vegetation change</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_7"><i class="fa fa-check"></i>3. Mapping salinity (EC) in QGIS</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_8"><i class="fa fa-check"></i>4. Time-series data for assessing groundwater levels and salinity</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_9"><i class="fa fa-check"></i>5. Conceptualising Surface-Groundwater interaction</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_10"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_11"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a><ul>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_1"><i class="fa fa-check"></i>Overview of scheduled group project activities</a></li>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_2"><i class="fa fa-check"></i>Introduction &amp; Assessent Summary</a></li>
+</ul></li>
+<li class="part"><span><b>IV REFERENCES</b></span></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hydrology Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="E8" class="section level1 unnumbered hasAnchor">
+<h1>Exercise 8 – Lake nutrient assessment<a href="E8.html#E8" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><br></p>
+<div id="indicators-of-wetland-health" class="section level2 unnumbered hasAnchor">
+<h2>Indicators of wetland health<a href="E8.html#indicators-of-wetland-health" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Indicators of wetland health include dissolved oxygen, pH, salinity, temperature, turbidity and colour; measuring these parameters over time is used to monitor the result of any threats to ecosystem health. For example, turbidity is used as a measure (indicator) of potential excessive sediment in the water column that may result in either in sedimentation or reduce light penetration (the specific threat). Turbidity measures the <em>potential</em> for an impact, whereas a more direct measure of impact would be actually measuring light penetration - however this is more time consuming and difficult so us not generally undertaken.</p>
+<p><br></p>
+</div>
+<div id="water-quality-attributes-of-interest" class="section level2 unnumbered hasAnchor">
+<h2>Water quality attributes of interest<a href="E8.html#water-quality-attributes-of-interest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A summary of the suite of measurements we make to measure an aquatic system include:</p>
+<ul>
+<li><strong>Dissolved oxygen</strong>, <span class="math inline">\(DO\)</span> or <span class="math inline">\(O_2\)</span> : <em>is a measure of the concentration of oxygen gas dissolved in water. Oxygen can be generated from photosynthesis within a wetland, mixed into surface waters from the atmosphere or imported from river inflows. It is is consumed by organism respiration.</em></li>
+<li><strong>Turbidity</strong> : <em>is a measure of the clarity of water. As suspended particulate matter including clay, silt, detritus and plankton in the water increases, the clarity decreases and the water takes on a muddy appearance. Turbidity does not measure the quantity of suspended matter in the water, just its effects on clarity.</em></li>
+<li><strong>pH</strong> : <em>The pH of water is a measure of its acidity or alkalinity. The actual component of the water being measured is its concentration of hydrogen ions (H+). In water, some of the H2O molecules will dissociate into H+ ions (also called protons) and OH- ions (hydroxide). When there are more H+ ions than OH- ions the water will have a pH below 7 and is acidic. Conversely, when there are more OH- ions than H+ ions the water has a pH greater than 7 and is alkaline. When the pH of a water body is 7, the H+ concentration is the same as the concentration of hydroxide (OH-) ions and is neutral. When the water is approximately neutral, it is called circum-neutral.</em></li>
+<li><strong>Colour</strong> : <em>The colour of water results from the combination of dissolved and suspended substances. These include metals e.g. iron and manganese, dissolved organic matter e.g. humus and peat materials, plankton e.g. diatoms and Cyanobacteria, colloidal substances e.g. carbonates and clays and industrial wastes. Turbidity, even at low levels, will make the apparent colour higher than the true colour. The true colour of a water sample can be measured after removing all suspended material. </em></li>
+<li><strong>Salinity</strong>, <span class="math inline">\(S\)</span> : <em>Salinity is the amount of salt dissolved in the water. There are many salts dissolved in water, most notable sodium chloride. The amount of salt in the water can be measured directly by evaporating the water from a known volume of water and weighing the residual. However this is time consuming. A solution of salt will conduct electricity, and the amount it conducts depends on the concentration of the dissolved salts, the conductivity in a solution increases as the amount of salts dissolved in the water increases. Electrical Conductivity (EC) uses this characteristic to estimate the levels of salinity. The units of EC in water are usually expressed as micro Siemens per centimetre (μS/cm).</em></li>
+<li><strong>Nitrogen</strong>, <span class="math inline">\(N\)</span> : <em>is a key nutrient in an aquatic ecosystem and made up of</em> :
+<ul>
+<li>Total Nitrogen <span class="math inline">\(TN\)</span></li>
+<li>Dissolved Organic Nitrogen <span class="math inline">\(DON\)</span></li>
+<li>Nitrate <span class="math inline">\(NO_3\)</span></li>
+<li>Ammonium <span class="math inline">\(NH_4\)</span></li>
+</ul></li>
+<li><strong>Phosphorus</strong>, <span class="math inline">\(P\)</span> : <em>is a key nutrient in an aquatic ecosystem and made up of</em> :
+<ul>
+<li>Total Phosphorus, <span class="math inline">\(TP\)</span>:</li>
+<li>Dissolved Organic Phosphorus <span class="math inline">\(DOP\)</span></li>
+<li>Phosphate, <span class="math inline">\(PO_4\)</span> :</li>
+</ul></li>
+<li><strong>Chlorophyll-a</strong>, <span class="math inline">\(Chl-a\)</span></li>
+<li>Heavy metals</li>
+<li>Micropollutants</li>
+<li>Faecal coliforms</li>
+</ul>
+<p><br></p>
+</div>
+<div id="turning-data-into-information" class="section level2 unnumbered hasAnchor">
+<h2>Turning data into information<a href="E8.html#turning-data-into-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data are the measurements you take that represent the condition or health of the environment at that time. The environmental conditions in an aquatic ecosystem will change over time, at least seasonally but often daily.</p>
+<p>A suite of data covering a range of indicators of condition taken only on one occasion can tell you about condition at that time only. This is often called a snapshot of the condition. Data collected from several occasions begins to tell you about variability and change over time. As data accumulate, seasonal and longer term changes will be discovered and confidence will increase.</p>
+<p>Data needs to be analysed and interpreted to provide information. A good quality long term data set will assist in providing good information, but understanding and achieving good wetland management only occurs when the data is correctly interpreted.</p>
+<div id="guidelines-and-thresholds" class="section level3 unnumbered hasAnchor">
+<h3>Guidelines and thresholds<a href="E8.html#guidelines-and-thresholds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One approach is to compare data and data summaries to water quality <em>guidelines</em> (objectives or targets). Guidelines are available in the <a href="https://www.waterquality.gov.au/anz-guidelines">National Water Quality Guidelines</a> (ANZECC &amp; ARMCANZ, 2000), and State policies are also of assistance in interpreting water quality data.</p>
+<p>The Australian and New Zealand Environment Conservation Council (ANZECC) <a href="https://www.waterquality.gov.au/anz-guidelines/resources/previous-guidelines/anzecc-armcanz-2000">published the widely used Australian and New Zealand guidelines</a> for fresh and marine water quality in 2000. These guidelines, which are usually called the ‘ANZECC guidelines’ and are available on the internet at www.deh.gov.au/water/quality/nwqms, provide government and the community – especially regulators, industry, consultants, community groups and catchment and water managers – with a framework for conserving ambient water quality in our rivers, lakes, estuaries and marine waters.</p>
+</div>
+<div id="linking-water-quality-indicators-to-environmental-values" class="section level3 unnumbered hasAnchor">
+<h3>Linking water quality indicators to environmental values<a href="E8.html#linking-water-quality-indicators-to-environmental-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>‘Environmental values’ are those values or uses of water that the community believes are important for a healthy ecosystem – for public benefit, welfare, safety or health. These include, but are not limited to, protection of aquatic ecosystems, drinking water, primary and secondary recreation, visual amenity, and agricultural water for irrigation, livestock and growing aquatic foods.</p>
+<p>The environmental values (and uses) of water apply to waterways such as natural rivers, creeks, lagoons, wetlands, lakes, groundwater, and estuarine and marine waters. The quality of artificial waterways such as reservoirs, where the waters are valued by the community for aquatic ecosystems or human uses, are also addressed by the guidelines, but enclosed and piped waters are excluded.</p>
+<p>For each environmental value, the guidelines identify particular water quality characteristics or ‘indicators’ that are used to assess whether the condition of the water supports that value. The presence of faecal coliforms, for example, is used as an indicator for recreational and drinking water quality, because this directly puts those uses at risk, but it is not an indicator for the protection of aquatic ecosystems.
+The ANZECC guidelines are a powerful tool that allows ambient water quality management to be an important element in decision-making for environment protection, land- use planning and natural resource management.</p>
+<p>The ANZECC guidelines advocate an ‘issues-based’ approach to assessing ambient water quality, rather than the application of rigid numerical criteria with no appreciation of the context. This means that the guidelines focus on:
+- the environmental values we are seeking to achieve or maintain
+- the outcomes being sought
+- the ecological and environmental processes that drive any water quality problem.</p>
+<p>For each environmental value of water, the ANZECC guidelines outline common ‘issues’ (or pressures) that may be a problem and provide ‘packaged’ solutions on how to deal with them. These common issues in waterways include such problems as algal blooms and salinity.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E8image0"></span>
+<img src="images/exercise8/values.png" alt="Example relationship between values and indicators" width="50%" />
+<p class="caption">
+Figure 25: Example relationship between values and indicators
+</p>
+</div>
+</center>
+</div>
+<div id="trigger-values" class="section level3 unnumbered hasAnchor">
+<h3>Trigger values<a href="E8.html#trigger-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Trigger values are fundamental to using the ANZECC guidelines. The trigger values for different indicators of water quality may be given as a threshold value or as a range of desirable values. Where an indicator is below the threshold value or within the desirable range for its trigger value in a particular waterway, the risk to the protection of the environmental value is low.</p>
+<p>Where an indicator is higher than the threshold value or outside the desirable range for its trigger value in a particular waterway, there may be a risk that the environmental value will not be protected.</p>
+<center>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:E8image01"></span>
+<img src="images/exercise8/trigger1.png" alt="Trigger values show when a variable of interest exceeds a threshold" width="45%" /><img src="images/exercise8/trigger2.png" alt="Trigger values show when a variable of interest exceeds a threshold" width="45%" />
+<p class="caption">
+Figure 26: Trigger values show when a variable of interest exceeds a threshold
+</p>
+</div>
+</center>
+<p>There are standard recognised approaches for analysing and interpreting data that can provide comparison between different sites and systems, changes over time and an evaluation against guidelines and targets.
+Data can be summarised using basic statistical tools.</p>
+</div>
+<div id="summary-statistics" class="section level3 unnumbered hasAnchor">
+<h3>Summary statistics<a href="E8.html#summary-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A simple measure of the typical state of an aquatic ecosystem is to determine the central tendency of the data, often called the median or mean.</p>
+<p>The distribution of data is important in understanding central tendency. The graphs below show the data as a frequency distribution (that is the frequency or number of times a particular measurement was taken). Data may be evenly distributed (often called normal distribution) or can be skewed, with more measurements at one end of the range of results.</p>
+<p>Water quality data generally has a skewed distribution – most of the time the level is similar, and when there is a change in water quality data it is generally for a short period of time. For example, turbidity measurements are generally low in a healthy system when fresh water inflows are low. Or algae (chlorophyll-a) will be low until a bloom occurs.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E8image5"></span>
+<img src="images/exercise8/distribution.png" alt="Example distributions of WQ data - normal (left) and skewed (right)." width="80%" />
+<p class="caption">
+Figure 27: Example distributions of WQ data - normal (left) and skewed (right).
+</p>
+</div>
+</center>
+</div>
+<div id="time-series-trends" class="section level3 unnumbered hasAnchor">
+<h3>Time-series trends<a href="E8.html#time-series-trends" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As discussed above, variability is a natural part of the aquatic environment, and typically there is a 10-20 per cent difference between consecutive water quality measurements. There will be more substantial changes following floods, after long dry periods and after entrance opening. For example, turbidity may go up tenfold during a flood event.</p>
+<p>Displaying the data in a time series provides a picture of change over time. Time series plots are useful to illustrate seasonal patterns, major events or when one-off high or low levels are measured.</p>
+<p>Trend lines can also be added to time series graphs to establish if there have been substantial increases or decreases of parameters over time. For the clearest picture, a long time period is required to show changes. Usually less than five years will not provide a good assessment.</p>
+<p><br></p>
+</div>
+</div>
+<div id="wetland-data-case-study-yellagonga" class="section level2 unnumbered hasAnchor">
+<h2>Wetland data case study : Yellagonga<a href="E8.html#wetland-data-case-study-yellagonga" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s explore the above ideas by analysing data from a case-study wetland. The <a href="https://parks.dpaw.wa.gov.au/park/yellagonga">Yellagonga wetlands</a> within the Swan Coastal Plain (SCP) are a Groundwater Dependent Ecosystem (GDE) within the Cities of Joondalup and Wanneroo.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E8image1"></span>
+<img src="images/exercise8/yellagonga.jpg" alt="Yellagonga (Lake Joondalup)." width="100%" />
+<p class="caption">
+Figure 28: Yellagonga (Lake Joondalup).
+</p>
+</div>
+</center>
+<p>A spreadsheet of historical monitoring data is available for download.</p>
+<ol style="list-style-type: decimal">
+<li>Take a look through the data set and note:</li>
+</ol>
+<ul>
+<li>The number of variables</li>
+<li>The time frame of monitoring</li>
+<li>The number of monitoring sites</li>
+</ul>
+<p><br></p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E8image10"></span>
+<img src="images/exercise8/yellagonga_wq.png" alt="WQ Monitoring Sites." width="70%" />
+<p class="caption">
+Figure 29: WQ Monitoring Sites.
+</p>
+</div>
+</center>
+<ol start="2" style="list-style-type: decimal">
+<li>What is the mean of the various water quality attributes? How does this compare between sites? (<em>Hint: use column filtering and pivot tables to quickly summarise the data</em>)</li>
+<li>Do any variables exceed guideline values?</li>
+</ol>
+<p>Often we are interested how nutrients are “partitioned” - that is, how the different nutrient species that make up total nitrogen or total phosphorus change over time.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>For a chosen site in the data-set, produce a “stacked area” time-series of <span class="math inline">\(TN\)</span> and <span class="math inline">\(TP\)</span>. To do this you must compute the organic amount and then make a stacked graph of the components :
+<ul>
+<li>Organic Nitrogen : <span class="math inline">\(ON=TN-NO_3-NH_4\)</span></li>
+<li>Organic Phosphorus : <span class="math inline">\(OP=TP-PO_4\)</span></li>
+</ul></li>
+<li>Looking at the nutrient trend over time for the chosen site, do you see any changes in either the total amount of nutrients or the bioavailable fraction?</li>
+</ol>
+<p><br></p>
+</div>
+<div id="quantifying-wetland-function" class="section level2 unnumbered hasAnchor">
+<h2>Quantifying wetland function<a href="E8.html#quantifying-wetland-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Monitoring tells us about the state of an environmental system, but in some circumstances we are also interested in how a system is <strong>functioning</strong>.</p>
+<p>In the case of constructed or engineered wetlands our focus is on improving water quality by reducing nutrient concentrations. Wetlands act as a temporary store of water flowing through a river. They may filter out the hydrograph peak by slowing the flow down, and also they act as a “biogeochemical reactor” able to change the water chemistry in the river water as it moves through.</p>
+<div id="wetland-retention-time" class="section level3 unnumbered hasAnchor">
+<h3>Wetland retention time<a href="E8.html#wetland-retention-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can compute a characteristic time-scale of flow through a wetland, called the Hydraulic Residence Time, using this formula:</p>
+<p>Hydraulic Residence Time (<span class="math inline">\(HRT\)</span>, days) = <span class="math inline">\(V_{wetland} / Q\)</span></p>
+<p>where <span class="math inline">\(V_{wetland}\)</span> is the wetland volume (m<sup>3</sup>) and can be approximated from wetland area and depth, and <span class="math inline">\(Q\)</span> is the average flow going through the wetland (m<sup>3</sup>/day). If we assume the wetland is at steady-state (not changing volume rapidly) then <span class="math inline">\(Q_{in} \approx Q_{out}\)</span>, and this can be assumed as the average flow through rate.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E8image3"></span>
+<img src="images/exercise8/wetlandvolume.png" alt="Schematic of wetland flushing time calculation." width="90%" />
+<p class="caption">
+Figure 30: Schematic of wetland flushing time calculation.
+</p>
+</div>
+</center>
+<ol start="6" style="list-style-type: decimal">
+<li>For the Black Creek wetland (the one monitored on the Yule Brook catchment race), the area was estimated to be 3850 m<sup>2</sup>. If you assume a mean depth of 0.5 m, and a flow rate of 0.1 m<sup>3</sup>/s, what is the retention time of water at this site?</li>
+<li>The HRT estimate above assumes complete mixing in the wetland. For this site do you think that is the case?</li>
+</ol>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E8image4"></span>
+<img src="images/exercise8/blacklake.png" alt="Black Creek wetland in the Yule Brook catchment, highlighting the inlet and outlet. How many nutrients can it assimilate?" width="40%" />
+<p class="caption">
+Figure 31: Black Creek wetland in the Yule Brook catchment, highlighting the inlet and outlet. How many nutrients can it assimilate?
+</p>
+</div>
+</center>
+</div>
+<div id="nutrient-assimilation-efficiency" class="section level3 unnumbered hasAnchor">
+<h3>Nutrient assimilation efficiency<a href="E8.html#nutrient-assimilation-efficiency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The efficiency of a wetland to reduce nutrients (or suspended sediment or salt etc.) can be computed based on the ratio of the outlet to inlet nutrient concentration, corrected for an assumed background concentration.</p>
+<center>
+<span class="math display" id="eq:E8equation1">\[\begin{equation}
+\mathrm{Removal\ Efficiency\ (\%)\ =\ }1-\frac{C_{out}-C_0}{C_{in}-C_0} \times \: 100 \%
+\tag{11}
+\end{equation}\]</span>
+</center>
+<p>where: <span class="math inline">\(C_0\)</span> is the ‘background’ concentration (the value expected in a “clean river”), <span class="math inline">\(C_{in}\)</span> is the input concentration, <span class="math inline">\(C_{out}\)</span> is the outlet concentration. The above expressions can be applied to all nutrients and contaminants, however, note the following when applying it:</p>
+<ul>
+<li>For attributes that are improving (e.g., <span class="math inline">\(DO\)</span>) during their transit through the wetland, then the above fraction can be reversed.</li>
+<li>The value <span class="math inline">\(C_0\)</span> needs to be realistic and smaller than <span class="math inline">\(C_{out}\)</span>. This value could be based on a value like form the ANZECC guidelines or based on a locally set target.</li>
+</ul>
+<p>Now do the following tasks:</p>
+<ol start="8" style="list-style-type: decimal">
+<li>For the provided data set on Black Lake wetland (the one monitored on the Yule Brook catchment race), compute the efficiency using the above formula for the different nutrient species.</li>
+<li>Which ones improve the most? Using your knowledge of wetland processes, can you explain why some species are changing? List the potential processes contributing to the changes.</li>
+<li>Is their a relationship between <span class="math inline">\(HRT\)</span> (i.e. the time the water is within the wetland) and the reduction efficiency? What could be done to improve water retention?</li>
+</ol>
+<p><br></p>
+</div>
+</div>
+<div id="getting-further-info-on-wetlands" class="section level2 unnumbered hasAnchor">
+<h2>Getting further info on wetlands<a href="E8.html#getting-further-info-on-wetlands" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There is a lot of information about wetlands online. The “<a href="https://wetlandinfo.des.qld.gov.au/wetlands/">WetlandInfo</a>” pages managed by the Qld government is a great summary and information resource. Take some time to peruse the pages here and see what you can find.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="E7.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E10.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"], ["downloads/Walyunga_139985.zip", "Walyunga Streamflow Data from WIR"], ["downloads/Assignment 1B - Helena Data.zip", "Assign 1B - Helena Data"], ["downloads/Exercise 7 YuleGIS.zip", "Exercise 7 - Yule Brook GIS"], ["downloads/Exercise 8 Data.zip", "Exercise 8 - WQ Data"], ["downloads/Exercise_10_eFlow_Table.docx", "Exercise 10 Answer Sheet"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

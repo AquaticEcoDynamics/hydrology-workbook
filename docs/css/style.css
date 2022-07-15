@@ -189,3 +189,9 @@ leaflet-bar a, .leaflet-bar a:hover {
 .leaflet-touch .leaflet-bar a {
 background-color: #fff !important;
 }
+
+/* Fix panelset css */
+
+.panelset .panel-active {
+display: block !important;
+}
