@@ -66,7 +66,7 @@ The average depth of rainfall (ADR) over the entire catchment can be calculated 
 
 <center>
 \begin{equation}
-\mathrm{ADR\ (mm)\ =\ }\frac{\sum{A_i\ast P_i}}{\sum A_i}
+\mathrm{ADR\ (mm)\ =\ }\frac{\sum{ (A_i\ast P_i)}}{\sum A_i}
 (\#eq:E1Aequation1)
 \end{equation}
 </center>
@@ -79,7 +79,7 @@ The average depth of rainfall over the entire catchment can be calculated using:
 
 <center>
 \begin{equation}
-\mathrm{ADR\ (mm)\ =\ }\frac{\sum{A_i\ast P_i}}{\sum A_i}
+\mathrm{ADR\ (mm)\ =\ }\frac{\sum{(A_i\ast P_i})}{\sum A_i}
 (\#eq:E1Aequation2)
 \end{equation}
 </center>
