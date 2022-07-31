@@ -33,7 +33,7 @@ Before moving forward with our analysis lets open the dataset and make sure the 
 
 
 4) Now we have a "clean" dataset, we want to explore some statistics. Use the *Data Analysis* add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools->Add-ins->Analysis ToolPack*).
-Copy the results [here](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing) and complete Table \@ref(tab:E1Btable1) for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? 
+Copy the results [here](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing) and complete Table \@ref(tab:E1Btable1) for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? 
 
 <!-- Old link: -->
 <!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing -->
@@ -49,7 +49,7 @@ library(knitr)
 library(kableExtra)
 options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
 table1.csv <- read.csv("tables/exercise1B/table1.csv", check.names=FALSE)
-kable(table1.csv,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete a row in the table for your site [here](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing).",
+kable(table1.csv,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete a row in the table for your site [here](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing).",
       bootstrap_options = "hover") %>%
   kable_styling(table1.csv, bootstrap_options = "hover", "striped",
                 full_width = F, position = "center",
