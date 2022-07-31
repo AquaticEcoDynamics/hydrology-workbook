@@ -30,7 +30,7 @@ Prior to starting this work, make sure you have completed the [Exercise 2](#E1B_
 
 1)  For your chosen site, calculate the trend in rainfall for the **last 5 years.** Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) or calculate the manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear -- discuss? (You can do this same analysis by adding a trend-line to the data, as described in 2. below).
 
-2)  Now, calculate the trend in rainfall for **all** years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r^2^) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table \@ref(tab:A2Atable1) and the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing)).
+2)  Now, calculate the trend in rainfall for **all** years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r^2^) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table \@ref(tab:A2Atable1) and the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing)).
 
 <center>
 ```{r A2Atable1, echo=FALSE, message=FALSE, warning=FALSE}
@@ -59,11 +59,11 @@ kable(table1,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 3)  Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table \@ref(tab:A2Atable1). The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.
 
-4)  Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) [Google Sheets version](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
+4)  Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) [Google Sheets version](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
 
 ## Spatial patterns in rainfall {#A2A_3 .unnumbered}
 
-5)  Take the information in Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+5)  Take the information in Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
 
 <center>
 ```{r A2Aimage2, echo=FALSE, fig.cap="", out.width = '90%'}
@@ -104,7 +104,7 @@ We will use the extremely useful [Climate Explorer](https://climexp.knmi.nl/star
 
 Now get the first climate index for the IOD called the DMI. Go to "**Monthly climate indices**" and then select DMI. Note any trend and variability in the index.
 
-To correlate the index and rainfall select "**Correlate with other time series**". And tick your previously saved rainfall timeseries and then press "**Correlate**" and copy the results into Table \@ref(tab:A2Atable2) and the appropriate tab in the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing).
+To correlate the index and rainfall select "**Correlate with other time series**". And tick your previously saved rainfall timeseries and then press "**Correlate**" and copy the results into Table \@ref(tab:A2Atable2) and the appropriate tab in the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing).
 
 <center>
 <video width="85%" height="85%" controls>
@@ -156,7 +156,7 @@ We then want to correlate each grid cell on the earth with our climate index (SO
 
 Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 2](#E1B_1) activity for details on how to source the data - make sure the site you have chosen has streamflow data by checking the data availability and the request the report for **water levels and flow - continuous** to get the flow data). *(If WIR website is not working, a file for Walyunga (Avon River) is available via the download button : Walyunga_139985.zip)*
 
-8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
+8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
 
 ## Submission {#A2A_6 .unnumbered}
 
