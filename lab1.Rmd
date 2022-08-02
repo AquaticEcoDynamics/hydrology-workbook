@@ -78,7 +78,7 @@ You should also make a brief description of the soil - what colour is it (in rea
 
 For each sample use a balance to record the sample weight, making sure you correctly blank the balance to account for the sample container weight. Record the dimensions and volume of your samples. Then place them onto a tray that is suitable for going into the oven. Then place the tray into the oven for drying at \~105˚C. Leave in the oven until the sample is totally dry and then re-weigh (check after for 1-2 hours; in the meantime goto Step 3).
 
-Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. Repeat for the replicates of each soil and enter your sample details and your results into the online [Google sheet](https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0). Make sure to enter your data on the correct sheet for this teaching period.
+Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. Repeat for the replicates of each soil and enter your sample details and your results into the online [Google sheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing). Make sure to enter your data on the correct sheet for this teaching period.
 
 <center>
 ```{r E3BimageA, echo=FALSE, fig.cap="A soil sample (core) collected using a kitchen measuring cup.", out.width = '50%'}
