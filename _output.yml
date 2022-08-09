@@ -10,6 +10,7 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"],
               ["downloads/Walyunga_139985.zip", 'Walyunga Streamflow Data from WIR'],
+              ["downloads/Walyunga.xlsx", 'Walyunga Streamflow Data from WIR - NEW'],
               ["downloads/Assignment 1B - Helena Data.zip", 'Assign 1B - Helena Data'],
               ["downloads/Exercise 7 YuleGIS.zip", 'Exercise 7 - Yule Brook GIS'],
               ["downloads/Exercise 8 Data.zip", 'Exercise 8 - WQ Data'],
