@@ -59,11 +59,6 @@ fig:L1imageB
 fig:E3BimageA
 eq:E3Aequation1
 eq:E3Aequation2
-eq:E2equation1
-fig:E2image1
-fig:E2image2
-tab:E2table1
-eq:E2equation2
 fig:E2image4
 fig:E2image5
 eq:E2equation3
@@ -71,6 +66,11 @@ fig:E2image6
 tab:E2table2
 eq:E2equation4
 eq:E2equation5
+eq:E2equation1
+fig:E2image1
+fig:E2image2
+tab:E2table1
+eq:E2equation2
 fig:L3image1
 fig:L3imageX
 fig:L3image2
