@@ -85,7 +85,7 @@ knitr::include_graphics("images/exercise4/picture5.png")
 To find out how much of the initial salinity is left after the storm, after the rain has ceased, take two samples from the catchment for soil EC analysis - one from the aquifer near to the upper and lower areas. Follow the provided handout for instructions on measuring soil EC.
 
 <center>
-```{r L3imageY, echo=FALSE, fig.cap="Look for the instruction sheet on how to measure soil EC", out.height = '70%'}
+```{r L3imageY, echo=FALSE, fig.cap="Look for the instruction sheet on how to measure soil EC", out.height = '40%'}
 knitr::include_graphics("images/lab3/pictureY.png")
 ```
 </center>
