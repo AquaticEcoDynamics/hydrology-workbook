@@ -72,6 +72,8 @@ The rainfall outlets should then be brought close to the catchment surface, to a
 
 Start the logger logging. And now the rain! The apparatus should then be left with the rain on for approximately 15-20 minutes until the catchment has filled up, streamflow has begun and the EC at the catchment outlet has clearly decreased (Figure \@ref(fig:L3image5)). To finish, turn the rain off but leave the loggers still running for another 15-20 minutes, or until streamflow ceased, so you can measure what happens after the rain has stopped.
 
+Once all is done save the logger data as a *.csv file and share with your team.
+
 <center>
 ```{r L3image5, echo=FALSE, fig.cap="Streamflow at the catchment outlet.", out.height = '30%'}
 knitr::include_graphics("images/exercise4/picture5.png")
@@ -80,18 +82,22 @@ knitr::include_graphics("images/exercise4/picture5.png")
 
 #### Measure the final soil EC {#L3_80 .unnumbered}
 
-After the rain has ceased, take two samples from the catchment for soil EC analysis - one from the aquifer near to the upper and lower areas. Follow the provided handout for instructions on measuring soil EC.
+To find out how much of the initial salinity is left after the storm, after the rain has ceased, take two samples from the catchment for soil EC analysis - one from the aquifer near to the upper and lower areas. Follow the provided handout for instructions on measuring soil EC.
 
-
+<center>
+```{r L3imageY, echo=FALSE, fig.cap="Look for the instruction sheet on how to measure soil EC", out.height = '70%'}
+knitr::include_graphics("images/lab3/pictureY.png")
+```
+</center>
 
 
 ### Data Analysis {#L3_9 .unnumbered}
 
 #### QA-QC of data {#L3_10 .unnumbered}
 
-Use the data collected, or if it is not available then download the raw data sheet provided.
+Use the data collected from the data logger (saved as csv). If it is not available then download the reference/default data sheet provided on LMS.
 
-Before you can start your analysis you might need to clean the data -- remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data, which combines with the sensitivity of your loggers to give you a lot of noise. Consider calculating a running average (over 60 seconds or more) to get smooth temporal trends. Refer to Lab 1.
+Before you can start your analysis you might need to clean the data -- remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data (1Hz = 1 entry per second!), which combines with the sensitivity of your loggers to give you a lot of noise. You can smooth the data by calculating a running average (over 30 seconds or more) to get smooth temporal trends. Refer to analysis done in Lab 1 also.
 
 #### Characterizing the rainfall event {#L3_11 .unnumbered}
 
@@ -99,10 +105,10 @@ Once you are happy with your clean data set you can use the logged data to ident
 
 a)  Time from rainfall onset to when runoff began to be recorded (mins),
 b)  Time to peak discharge (mins),
-c)  Total rainfall volume (cm^3^),
-d)  Total runoff volume (cm^3^),
-e)  Average rainfall intensity (cm/min),
-f)  The runoff coefficient, $c$, for the 'storm' event.
+c)  Total rainfall volume (cm^3^ or L),
+d)  Total runoff volume (cm^3^ or L),
+e)  Average rainfall intensity (L/min),
+f)  The runoff coefficient, $c$, for the 'storm' event (fraction of rain that left as streamflow).
 
 #### Separating pre-event and event water {#L3_12 .unnumbered}
 
@@ -140,7 +146,7 @@ $Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}$
 
 ### Interpretation and conclusions {#L3_13 .unnumbered}
 
--   Create a summary plot that nicely shows the runoff and indicates the fraction leavign the catchment that is "baseflow" (i.e. aquifer water).
+-   Create a summary plot that nicely shows the runoff and indicates the fraction leaving the catchment that is "baseflow" (i.e. aquifer water).
 
 -   How do the relative amounts of pre-event and event water change over time? Is the change in $Q_{\text{pre-event}}/Q_{\text{event}}$ over time what you would expect?
 
