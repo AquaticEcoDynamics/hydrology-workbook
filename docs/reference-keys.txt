@@ -77,6 +77,7 @@ fig:L3image2
 fig:L3image3
 fig:L3image4
 fig:L3image5
+fig:L3imageY
 fig:image04-11
 fig:A2Aimage1
 tab:A2Atable1

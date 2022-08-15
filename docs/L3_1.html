@@ -323,6 +323,7 @@ Figure 49: Unsaturated zone on to of aquifer. Topography should slope towards th
 <h4>Make it rain<a href="L3_1.html#L3_8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The rainfall outlets should then be brought close to the catchment surface, to avoid “raining” outside the catchment, and then the tubes at the bottom of the catchment checked to ensure they are not blocked and directed into the PVC drain where the outflow is measured.</p>
 <p>Start the logger logging. And now the rain! The apparatus should then be left with the rain on for approximately 15-20 minutes until the catchment has filled up, streamflow has begun and the EC at the catchment outlet has clearly decreased (Figure <a href="L3_1.html#fig:L3image5">50</a>). To finish, turn the rain off but leave the loggers still running for another 15-20 minutes, or until streamflow ceased, so you can measure what happens after the rain has stopped.</p>
+<p>Once all is done save the logger data as a *.csv file and share with your team.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3image5"></span>
 <img src="images/exercise4/picture5.png" alt="Streamflow at the catchment outlet." width="316" height="30%" />
@@ -334,15 +335,23 @@ Figure 50: Streamflow at the catchment outlet.
 </div>
 <div id="L3_80" class="section level4 unnumbered hasAnchor">
 <h4>Measure the final soil EC<a href="L3_1.html#L3_80" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>After the rain has ceased, take two samples from the catchment for soil EC analysis - one from the aquifer near to the upper and lower areas. Follow the provided handout for instructions on measuring soil EC.</p>
+<p>To find out how much of the initial salinity is left after the storm, after the rain has ceased, take two samples from the catchment for soil EC analysis - one from the aquifer near to the upper and lower areas. Follow the provided handout for instructions on measuring soil EC.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:L3imageY"></span>
+<img src="images/lab3/pictureY.png" alt="Look for the instruction sheet on how to measure soil EC" width="913" height="70%" />
+<p class="caption">
+Figure 51: Look for the instruction sheet on how to measure soil EC
+</p>
+</div>
+</center>
 </div>
 </div>
 <div id="L3_9" class="section level3 unnumbered hasAnchor">
 <h3>Data Analysis<a href="L3_1.html#L3_9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="L3_10" class="section level4 unnumbered hasAnchor">
 <h4>QA-QC of data<a href="L3_1.html#L3_10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Use the data collected, or if it is not available then download the raw data sheet provided.</p>
-<p>Before you can start your analysis you might need to clean the data – remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data, which combines with the sensitivity of your loggers to give you a lot of noise. Consider calculating a running average (over 60 seconds or more) to get smooth temporal trends. Refer to Lab 1.</p>
+<p>Use the data collected from the data logger (saved as csv). If it is not available then download the reference/default data sheet provided on LMS.</p>
+<p>Before you can start your analysis you might need to clean the data – remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data (1Hz = 1 entry per second!), which combines with the sensitivity of your loggers to give you a lot of noise. You can smooth the data by calculating a running average (over 30 seconds or more) to get smooth temporal trends. Refer to analysis done in Lab 1 also.</p>
 </div>
 <div id="L3_11" class="section level4 unnumbered hasAnchor">
 <h4>Characterizing the rainfall event<a href="L3_1.html#L3_11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -350,10 +359,10 @@ Figure 50: Streamflow at the catchment outlet.
 <ol style="list-style-type: lower-alpha">
 <li>Time from rainfall onset to when runoff began to be recorded (mins),</li>
 <li>Time to peak discharge (mins),</li>
-<li>Total rainfall volume (cm<sup>3</sup>),</li>
-<li>Total runoff volume (cm<sup>3</sup>),</li>
-<li>Average rainfall intensity (cm/min),</li>
-<li>The runoff coefficient, <span class="math inline">\(c\)</span>, for the ‘storm’ event.</li>
+<li>Total rainfall volume (cm<sup>3</sup> or L),</li>
+<li>Total runoff volume (cm<sup>3</sup> or L),</li>
+<li>Average rainfall intensity (L/min),</li>
+<li>The runoff coefficient, <span class="math inline">\(c\)</span>, for the ‘storm’ event (fraction of rain that left as streamflow).</li>
 </ol>
 </div>
 <div id="L3_12" class="section level4 unnumbered hasAnchor">
@@ -387,7 +396,7 @@ And once this pre-event component is known, we can calculate the event component
 <div id="L3_13" class="section level3 unnumbered hasAnchor">
 <h3>Interpretation and conclusions<a href="L3_1.html#L3_13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><p>Create a summary plot that nicely shows the runoff and indicates the fraction leavign the catchment that is “baseflow” (i.e. aquifer water).</p></li>
+<li><p>Create a summary plot that nicely shows the runoff and indicates the fraction leaving the catchment that is “baseflow” (i.e. aquifer water).</p></li>
 <li><p>How do the relative amounts of pre-event and event water change over time? Is the change in <span class="math inline">\(Q_{\text{pre-event}}/Q_{\text{event}}\)</span> over time what you would expect?</p></li>
 <li><p>How could attributes of the experimental setup have increased or decreased the baseflow contribution?</p></li>
 <li><p>How would the results have changed if we ran the experiment again, starting with a wetted-up unsaturated zone?</p></li>
