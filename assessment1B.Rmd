@@ -1,6 +1,6 @@
 ---
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -403,17 +403,19 @@ Introduction [1 page maximum]
 
 Assessment methodology [1 page : be concise!]
 
--   Desktop assessment, historical data sources -- external data/info that has been
-    referred to. A table can be convenient to summarise, or a list.
+-   Desktop assessment, data sources (historical and present) -- UWA and external data/info that has been
+    referred to. A table can be convenient to summarise, or a structured list.
 
 -   Data analysis approach, as relevant -- any processing or "higher"
-    analysis we did to the data
+    analysis that was done to the data to make the assessment possible.
 
-Results and findings [3 pages max]
+Results and findings [~3 pages]
 
 -   Map of surface water salinity
 
--   Time-series graphs of water levels, flows and salinities (or EC)
+-   Time-series graphs of climate, water levels, flows and salinities (or EC)
+
+-   Transect of water level and salinity data across the site
 
 -   Conceptual model of surface and groundwater flow and salt pathways;
     consider all information in this, including past data and reports
@@ -421,7 +423,7 @@ Results and findings [3 pages max]
 
 Discussion and conclusions [\<1 page]
 
--   Interpretation of the above data in light of the observed
+-   Interpretation of the data presented in light of the observed
     tree-decline locations
 
 -   Suggestions for improved monitoring and further investigations;
@@ -442,10 +444,7 @@ riparian decline: Ecohydrology and hydro-climatological change in the
 Upper Swan estuary. The University of Western Australia, Perth,
 Australia. 51pp.
 
-### Optional: Site visit to Helena River floodplain {#A2B_11 .unnumbered}
+### Note: Site visit to Helena River floodplain {#A2B_11 .unnumbered}
 
 If you are in Perth you can visit the study site just outside of the
-Guildford town center. See "Helena River Site Visit".
-
-
-
+Guildford town centre. See "Helena River Site Visit".
