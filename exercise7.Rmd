@@ -17,7 +17,7 @@ He shares with us a video below providing some background to the [Yule Brook](ht
 
 <center>
  <video width="100%" height="100%" controls>
-  <source src="images/Dan-Paraska-Yule-Brook-Mapping.mp4" type="video/mp4">
+  <source src="images/exercise7/Dan-Paraska-Yule-Brook-Mapping.mp4" type="video/mp4">
  </video>
 </center>
 
