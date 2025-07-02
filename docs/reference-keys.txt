@@ -8,6 +8,10 @@ fig:E1Aimage4
 tab:E1Atable2
 tab:E1Atable3
 tab:E1Btable1
+fig:A2Aimage1
+tab:A2Atable1
+eq:A2Aequation1
+tab:A2Atable2
 eq:E3Bequation1
 eq:E3Bequation2
 fig:E3Bimage1
@@ -79,10 +83,6 @@ fig:L3image4
 fig:L3image5
 fig:L3imageY
 fig:image04-11
-fig:A2Aimage1
-tab:A2Atable1
-eq:A2Aequation1
-tab:A2Atable2
 fig:A2Bimage4
 fig:A2Bimage7
 fig:A2Bimage8

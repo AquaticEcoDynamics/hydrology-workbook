@@ -1,4 +1,4 @@
-# (PART) EXERCISES {.unnumbered}
+# (PART) ACTIVITIES {.unnumbered}
 
 # Exercise 1 -- Spatial rainfall variability {#E1A .unnumbered}
 

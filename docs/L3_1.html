@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Lab 3 - Groundwater and surface water interaction | Hydrology Workbook</title>
   <meta name="description" content="Lab 3 - Groundwater and surface water interaction | Hydrology Workbook" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Lab 3 - Groundwater and surface water interaction | Hydrology Workbook" />
   <meta property="og:type" content="book" />
@@ -51,13 +51,39 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
-<script src="libs/panelset-0.2.6/panelset.js"></script>
+<link href="libs/panelset-0.3.0/panelset.css" rel="stylesheet" />
+<script src="libs/panelset-0.3.0/panelset.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -75,20 +101,23 @@
 <li><a href="./"><b>Hydrology Workbook</b></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Overview</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_2"><i class="fa fa-check"></i>Recommended study plan</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#AI_32"><i class="fa fa-check"></i>Further information</a></li>
 </ul></li>
-<li class="part"><span><b>I EXERCISES</b></span></li>
-<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1 – Spatial rainfall variability</a><ul>
+<li class="part"><span><b>I ACTIVITIES</b></span></li>
+<li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html"><i class="fa fa-check"></i>Exercise 1 – Spatial rainfall variability</a>
+<ul>
 <li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
 <li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
 <li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
 <li class="chapter" data-level="" data-path="E1A.html"><a href="E1A.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 2 - Sourcing rainfall and flow data</a><ul>
+<li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html"><i class="fa fa-check"></i>Exercise 2 - Sourcing rainfall and flow data</a>
+<ul>
 <li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
 <li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
@@ -96,8 +125,18 @@
 <li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
 <li class="chapter" data-level="" data-path="E1B.html"><a href="E1B.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="E3.html"><a href="E3.html"><i class="fa fa-check"></i>Exercise 3 – Runoff generation</a></li>
-<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html"><i class="fa fa-check"></i>Exercise 4 - Visualising groundwater</a><ul>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html"><i class="fa fa-check"></i>Exercise 4 - Visualising groundwater</a>
+<ul>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
@@ -106,21 +145,26 @@
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 5 - Undertaking a water balance</a>
+<ul>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_1"><i class="fa fa-check"></i>The water balance and principle of conservation</a></li>
-<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>1D (vertical) water balance at the plot/landscape scale</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_2"><i class="fa fa-check"></i>1D (vertical) water balance at the plot/landscape scale</a>
+<ul>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_3"><i class="fa fa-check"></i>Example: Calculate the water balance for a hillslope</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_4"><i class="fa fa-check"></i>The water balance for a watershed</a></li>
-<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>The water balance for a wetland</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_5"><i class="fa fa-check"></i>The water balance for a wetland</a>
+<ul>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_6"><i class="fa fa-check"></i>Example: Calculate the water balance for an irrigation dam</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_7"><i class="fa fa-check"></i>Tracking the volume of a lake over time</a><ul>
+<li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_7"><i class="fa fa-check"></i>Tracking the volume of a lake over time</a>
+<ul>
 <li class="chapter" data-level="0.0.1" data-path="E5.html"><a href="E5.html#E5_88.unnumbered"><i class="fa fa-check"></i><b>0.0.1</b> Defining the system</a></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html#E5_9"><i class="fa fa-check"></i>Activity: Simulating the system</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a><ul>
+<li class="chapter" data-level="" data-path="E6.html"><a href="E6.html"><i class="fa fa-check"></i>Exercise 6 - Managed aquifer recharge</a>
+<ul>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_1"><i class="fa fa-check"></i>Objectives</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_2"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
@@ -129,15 +173,18 @@
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
 <li class="chapter" data-level="" data-path="E6.html"><a href="E6.html#E6_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a><ul>
+<li class="chapter" data-level="" data-path="E7.html"><a href="E7.html"><i class="fa fa-check"></i>Exercise 7 – Land-use mapping</a>
+<ul>
 <li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#yule-brook-catchment-background"><i class="fa fa-check"></i>Yule Brook catchment background</a></li>
 <li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#yule-brook-mapping-exercise---qgis"><i class="fa fa-check"></i>Yule Brook mapping exercise - <strong>QGIS</strong></a></li>
 <li class="chapter" data-level="" data-path="E7.html"><a href="E7.html#summary"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 – Lake nutrient assessment</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html"><i class="fa fa-check"></i>Exercise 8 – Lake nutrient assessment</a>
+<ul>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#indicators-of-wetland-health"><i class="fa fa-check"></i>Indicators of wetland health</a></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#water-quality-attributes-of-interest"><i class="fa fa-check"></i>Water quality attributes of interest</a></li>
-<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#turning-data-into-information"><i class="fa fa-check"></i>Turning data into information</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#turning-data-into-information"><i class="fa fa-check"></i>Turning data into information</a>
+<ul>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#guidelines-and-thresholds"><i class="fa fa-check"></i>Guidelines and thresholds</a></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#linking-water-quality-indicators-to-environmental-values"><i class="fa fa-check"></i>Linking water quality indicators to environmental values</a></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#trigger-values"><i class="fa fa-check"></i>Trigger values</a></li>
@@ -145,32 +192,39 @@
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#time-series-trends"><i class="fa fa-check"></i>Time-series trends</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#wetland-data-case-study-yellagonga"><i class="fa fa-check"></i>Wetland data case study : Yellagonga</a></li>
-<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#quantifying-wetland-function"><i class="fa fa-check"></i>Quantifying wetland function</a><ul>
+<li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#quantifying-wetland-function"><i class="fa fa-check"></i>Quantifying wetland function</a>
+<ul>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#wetland-retention-time"><i class="fa fa-check"></i>Wetland retention time</a></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#nutrient-assimilation-efficiency"><i class="fa fa-check"></i>Nutrient assimilation efficiency</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E8.html"><a href="E8.html#getting-further-info-on-wetlands"><i class="fa fa-check"></i>Getting further info on wetlands</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html"><i class="fa fa-check"></i>Exercise 10 - Assessing environmental flow impacts</a><ul>
+<li class="chapter" data-level="" data-path="E10.html"><a href="E10.html"><i class="fa fa-check"></i>Exercise 10 - Assessing environmental flow impacts</a>
+<ul>
 <li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_1"><i class="fa fa-check"></i>Objectives</a></li>
 <li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_2"><i class="fa fa-check"></i>What are environmental flows?</a></li>
 <li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_3"><i class="fa fa-check"></i>Classifying e-flow benefits case study : MDB</a></li>
 <li class="chapter" data-level="" data-path="E10.html"><a href="E10.html#E7_9"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E11.html"><a href="E11.html"><i class="fa fa-check"></i>Exercise 11</a></li>
-<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a><ul>
-<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#pump-test-calculation-exercise"><i class="fa fa-check"></i>1. Pump test calculation exercise</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html"><i class="fa fa-check"></i>Exercise 12 – Mine dewatering</a>
+<ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#pump-test-calculation-exercise"><i class="fa fa-check"></i>1. Pump test calculation exercise</a>
+<ul>
 <li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise"><i class="fa fa-check"></i>Exercise:</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#mine-de-watering-application"><i class="fa fa-check"></i>2. Mine de-watering application</a><ul>
+<li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#mine-de-watering-application"><i class="fa fa-check"></i>2. Mine de-watering application</a>
+<ul>
 <li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#exercise-1"><i class="fa fa-check"></i>Exercise:</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E12.html"><a href="E12.html#conclusions"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
 <li class="part"><span><b>II LABS</b></span></li>
-<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html"><i class="fa fa-check"></i>Lab 1 - Desktop catchments</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html"><i class="fa fa-check"></i>Lab 1 - Desktop catchments</a>
+<ul>
 <li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
-<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_2"><i class="fa fa-check"></i>Building a “Desktop Catchment”</a><ul>
+<li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_2"><i class="fa fa-check"></i>Building a “Desktop Catchment”</a>
+<ul>
 <li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_3"><i class="fa fa-check"></i>Step 1 : Catchment Setup</a></li>
 <li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_4"><i class="fa fa-check"></i>Step 2 : Characterising soil moisture</a></li>
 <li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_8"><i class="fa fa-check"></i>Step 3 : Collect experimental data</a></li>
@@ -178,18 +232,22 @@
 </ul></li>
 <li class="chapter" data-level="" data-path="L1.html"><a href="L1.html#L1_14"><i class="fa fa-check"></i>What did we learn?</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html"><i class="fa fa-check"></i>Lab 2 - Streamflow analysis</a><ul>
-<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html"><i class="fa fa-check"></i>Lab 2 - Streamflow analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
 <li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
 <li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a><ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
 <li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
 <li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html"><i class="fa fa-check"></i>Lab 3 - Groundwater and surface water interaction</a><ul>
+<li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html"><i class="fa fa-check"></i>Lab 3 - Groundwater and surface water interaction</a>
+<ul>
 <li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3_3"><i class="fa fa-check"></i>Background</a></li>
 <li class="chapter" data-level="" data-path="L3_1.html"><a href="L3_1.html#L3__4"><i class="fa fa-check"></i>Experimental Method</a></li>
@@ -199,15 +257,8 @@
 <li class="chapter" data-level="" data-path="F1_1.html"><a href="F1_1.html"><i class="fa fa-check"></i>Helena River Site Visit - Sampling Activities</a></li>
 <li class="part"><span><b>III ASSESSMENTS</b></span></li>
 <li class="chapter" data-level="" data-path="A1.html"><a href="A1.html"><i class="fa fa-check"></i>Assessment 1 - Data Analysis</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a><ul>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a><ul>
+<li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a>
+<ul>
 <li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_2"><i class="fa fa-check"></i>Background</a></li>
 <li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_3"><i class="fa fa-check"></i>Helena River Study Site</a></li>
@@ -221,7 +272,8 @@
 <li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#references"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="A2B.html"><a href="A2B.html#A2B_11"><i class="fa fa-check"></i>Note: Site visit to Helena River floodplain</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a><ul>
+<li class="chapter" data-level="" data-path="A2.html"><a href="A2.html"><i class="fa fa-check"></i>Assessment 2 - Yule Brook Catchment Report</a>
+<ul>
 <li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_1"><i class="fa fa-check"></i>Overview of scheduled group project activities</a></li>
 <li class="chapter" data-level="" data-path="A2.html"><a href="A2.html#A2_2"><i class="fa fa-check"></i>Introduction &amp; Assessent Summary</a></li>
 </ul></li>
@@ -251,7 +303,7 @@
 <h1>Lab 3 - Groundwater and surface water interaction<a href="L3_1.html#L3_1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="L3_2" class="section level3 unnumbered hasAnchor">
 <h3>Learning Objectives<a href="L3_1.html#L3_2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In this experiment, you will use data from a physical model of a catchment during a simulated rainfall event to demonstrate the relative contributions of pre-event (‘old’) and event (‘new’) water to the observed streamflow. The real-world setting for the experiment is a gaining stream (Figure <a href="L3_1.html#fig:L3image1">45</a>).</p>
+<p>In this experiment, you will use data from a physical model of a catchment during a simulated rainfall event to demonstrate the relative contributions of pre-event (‘old’) and event (‘new’) water to the observed streamflow. The real-world setting for the experiment is a gaining stream (Figure <a href="L3_1.html#fig:L3image1">46</a>).</p>
 <p>At the conclusion of this exercise students will have demonstrated an ability to:</p>
 <ul>
 <li><p>analyse measured experimental data to characterize the key properties of a rainfall event.</p></li>
@@ -266,16 +318,16 @@
 <div class="figure"><span style="display:block;" id="fig:L3image1"></span>
 <img src="images/exercise4/image1.png" alt="Groundwater discharge to a gaining stream." width="60%" />
 <p class="caption">
-Figure 45: Groundwater discharge to a gaining stream.
+Figure 46: Groundwater discharge to a gaining stream.
 </p>
 </div>
 </center>
 <p>Groundwater usually has different chemical characteristics to storm runoff during a rainfall event and we can use this chemical signal as a tracer for groundwater contribution. In this experiment you will demonstrate how groundwater (pre-event or ‘old’ water) contribution to river flow changes over the course of a storm event, relative to water that fell as rain during the storm event (event or ‘new’ water). You will use the tracer dilution technique with salinity (measured as electrical conductivity, <span class="math inline">\(EC\)</span>) as the groundwater tracer.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3imageX"></span>
-<img src="images/lab3/pictureX.png" alt="Schematic of interactions and different water sources being explored in this lab activity. Note that in this case the rain has 0ppt salinity and the groundwater has 10ppt salinity. What is the salinity in the outflowing water going to be?" width="1040" height="70%" />
+<img src="images/lab3/pictureX.png" alt="Schematic of interactions and different water sources being explored in this lab activity. Note that in this case the rain has 0ppt salinity and the groundwater has 10ppt salinity. What is the salinity in the outflowing water going to be?" height="70%" />
 <p class="caption">
-Figure 46: Schematic of interactions and different water sources being explored in this lab activity. Note that in this case the rain has 0ppt salinity and the groundwater has 10ppt salinity. What is the salinity in the outflowing water going to be?
+Figure 47: Schematic of interactions and different water sources being explored in this lab activity. Note that in this case the rain has 0ppt salinity and the groundwater has 10ppt salinity. What is the salinity in the outflowing water going to be?
 </p>
 </div>
 </center>
@@ -284,37 +336,37 @@ Figure 46: Schematic of interactions and different water sources being explored 
 <h3>Experimental Method<a href="L3_1.html#L3__4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="L3__5" class="section level4 unnumbered hasAnchor">
 <h4>Set up of apparatus<a href="L3_1.html#L3__5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The experimental set-up consists of a tray of soil, the ability to add rainfall at a controlled rate (via a connection to the tap), and discharge outlets at the bottom of the catchment. During the experiment loggers are set up to measure the rainfall flow amount as well as the streamflow volume and EC of the catchment outlet water over time (Figure <a href="L3_1.html#fig:L3image2">47</a>). The loggers for rainfall, streamflow and EC that are connected to a computer.</p>
+<p>The experimental set-up consists of a tray of soil, the ability to add rainfall at a controlled rate (via a connection to the tap), and discharge outlets at the bottom of the catchment. During the experiment loggers are set up to measure the rainfall flow amount as well as the streamflow volume and EC of the catchment outlet water over time (Figure <a href="L3_1.html#fig:L3image2">48</a>). The loggers for rainfall, streamflow and EC that are connected to a computer.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3image2"></span>
 <img src="images/exercise4/image2.png" alt="Experimental setup showing the catchment tray, rainfall, sprinklers and logger location." width="90%" />
 <p class="caption">
-Figure 47: Experimental setup showing the catchment tray, rainfall, sprinklers and logger location.
+Figure 48: Experimental setup showing the catchment tray, rainfall, sprinklers and logger location.
 </p>
 </div>
 </center>
 </div>
 <div id="E4_6" class="section level4 unnumbered hasAnchor">
 <h4>Create the aquifer<a href="L3_1.html#E4_6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The first step is to create the “aquifer” by loading the bottom of the tray with river sand. The top surface is set to be smoothed so that it has an even thickness laterally across the catchment, and shaped like a wedge, so then the volume of this layer can be estimated. Importantly, the top of aquifer sits below the top line of outlets as shown in Figure <a href="L3_1.html#fig:L3image3">48</a>. At this step compute the volume of soil added in the aquifer layer, and note it down.</p>
+<p>The first step is to create the “aquifer” by loading the bottom of the tray with river sand. The top surface is set to be smoothed so that it has an even thickness laterally across the catchment, and shaped like a wedge, so then the volume of this layer can be estimated. Importantly, the top of aquifer sits below the top line of outlets as shown in Figure <a href="L3_1.html#fig:L3image3">49</a>. At this step compute the volume of soil added in the aquifer layer, and note it down.</p>
 <p>To create the aquifer (pre-event) groundwater, the sand should be saturated with saline water (making sure to note the initial EC of the starting saline solution; it should be about 10ppt). Note the volume of water added to fill the aquifer. Remove any excess ponded water removed with a syringe before proceeding.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3image3"></span>
 <img src="images/exercise4/picture3.png" alt="Saturated aquifer correctly set up within catchment model." width="90%" />
 <p class="caption">
-Figure 48: Saturated aquifer correctly set up within catchment model.
+Figure 49: Saturated aquifer correctly set up within catchment model.
 </p>
 </div>
 </center>
 </div>
 <div id="L3__7" class="section level4 unnumbered hasAnchor">
 <h4>Create the unsaturated zone<a href="L3_1.html#L3__7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>This saturated aquifer layer is then overlain with a second layer of <strong>dry</strong> soil, being careful not to disturb the original aquifer layer. This upper layer can be shaped into the form of a catchment (e.g., concave) so that when the subsurface fills up there is a stream flowing towards the catchment outlet (Figure <a href="L3_1.html#fig:L3image4">49</a>). The middle outlet should not be covered with soil, but the soil should be just below this outlet (this is your riverbed). At this step you could see some capillary rise of aquifer water into the vadose zone (upper soil layer).</p>
+<p>This saturated aquifer layer is then overlain with a second layer of <strong>dry</strong> soil, being careful not to disturb the original aquifer layer. This upper layer can be shaped into the form of a catchment (e.g., concave) so that when the subsurface fills up there is a stream flowing towards the catchment outlet (Figure <a href="L3_1.html#fig:L3image4">50</a>). The middle outlet should not be covered with soil, but the soil should be just below this outlet (this is your riverbed). At this step you could see some capillary rise of aquifer water into the vadose zone (upper soil layer).</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3image4"></span>
-<img src="images/exercise4/picture4.png" alt="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet." width="254" height="70%" />
+<img src="images/exercise4/picture4.png" alt="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet." height="70%" />
 <p class="caption">
-Figure 49: Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet.
+Figure 50: Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet.
 </p>
 </div>
 </center>
@@ -322,13 +374,13 @@ Figure 49: Unsaturated zone on to of aquifer. Topography should slope towards th
 <div id="L3_8" class="section level4 unnumbered hasAnchor">
 <h4>Make it rain<a href="L3_1.html#L3_8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The rainfall outlets should then be brought close to the catchment surface, to avoid “raining” outside the catchment, and then the tubes at the bottom of the catchment checked to ensure they are not blocked and directed into the PVC drain where the outflow is measured.</p>
-<p>Start the logger logging. And now the rain! The apparatus should then be left with the rain on for approximately 15-20 minutes until the catchment has filled up, streamflow has begun and the EC at the catchment outlet has clearly decreased (Figure <a href="L3_1.html#fig:L3image5">50</a>). To finish, turn the rain off but leave the loggers still running for another 15-20 minutes, or until streamflow ceased, so you can measure what happens after the rain has stopped.</p>
+<p>Start the logger logging. And now the rain! The apparatus should then be left with the rain on for approximately 15-20 minutes until the catchment has filled up, streamflow has begun and the EC at the catchment outlet has clearly decreased (Figure <a href="L3_1.html#fig:L3image5">51</a>). To finish, turn the rain off but leave the loggers still running for another 15-20 minutes, or until streamflow ceased, so you can measure what happens after the rain has stopped.</p>
 <p>Once all is done save the logger data as a *.csv file and share with your team.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3image5"></span>
-<img src="images/exercise4/picture5.png" alt="Streamflow at the catchment outlet." width="316" height="30%" />
+<img src="images/exercise4/picture5.png" alt="Streamflow at the catchment outlet." height="30%" />
 <p class="caption">
-Figure 50: Streamflow at the catchment outlet.
+Figure 51: Streamflow at the catchment outlet.
 </p>
 </div>
 </center>
@@ -338,9 +390,9 @@ Figure 50: Streamflow at the catchment outlet.
 <p>To find out how much of the initial salinity is left after the storm, after the rain has ceased, take two samples from the catchment for soil EC analysis - one from the aquifer near to the upper and lower areas. Follow the provided handout for instructions on measuring soil EC.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:L3imageY"></span>
-<img src="images/lab3/pictureY.png" alt="Look for the instruction sheet on how to measure soil EC" width="913" height="40%" />
+<img src="images/lab3/pictureY.png" alt="Look for the instruction sheet on how to measure soil EC" height="40%" />
 <p class="caption">
-Figure 51: Look for the instruction sheet on how to measure soil EC
+Figure 52: Look for the instruction sheet on how to measure soil EC
 </p>
 </div>
 </center>
@@ -390,7 +442,6 @@ And once this pre-event component is known, we can calculate the event component
 <span class="math inline">\(Q_{\text{event}} = Q_{\text{out}} - Q_{\text{pre-event}}\)</span>
 </center>
 </div>
-
 </div>
 </div>
 <div id="L3_13" class="section level3 unnumbered hasAnchor">
@@ -426,43 +477,51 @@ And once this pre-event component is known, we can calculate the event component
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": false
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": [["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"], ["downloads/Walyunga_139985.zip", "Walyunga Streamflow Data from WIR"], ["downloads/Walyunga.xlsx", "Walyunga Streamflow Data from WIR - NEW"], ["downloads/Assignment 1B - Helena Data.zip", "Assign 1B - Helena Data"], ["downloads/Exercise 7 YuleGIS.zip", "Exercise 7 - Yule Brook GIS"], ["downloads/Exercise 8 Data.zip", "Exercise 8 - WQ Data"], ["downloads/Exercise_10_eFlow_Table.docx", "Exercise 10 Answer Sheet"]],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-},
-"info": true
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": false
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": [
+    ["downloads/Exercise_1_Answer_Sheet.docx", "Exercise 1 Answer Sheet"],
+    ["downloads/Walyunga_139985.zip", "Walyunga Streamflow Data from WIR"],
+    ["downloads/Walyunga.xlsx", "Walyunga Streamflow Data from WIR - NEW"],
+    ["downloads/Assignment 1B - Helena Data.zip", "Assign 1B - Helena Data"],
+    ["downloads/Exercise 7 YuleGIS.zip", "Exercise 7 - Yule Brook GIS"],
+    ["downloads/Exercise 8 Data.zip", "Exercise 8 - WQ Data"],
+    ["downloads/Exercise_10_eFlow_Table.docx", "Exercise 10 Answer Sheet"]
+  ],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  },
+  "info": true
 });
 });
 </script>
@@ -473,7 +532,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
