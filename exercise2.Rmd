@@ -4,7 +4,7 @@ The variation in rainfall, between seasons, over decades and around the continen
 
 
 ```{block2, noteM1-1, type='rmdnote2'}
-Note that this exercise forms the first out of three sessions associated with your Assignment 1A. You will be required to share a summary of your data to a compiled version of the class data, which will be needed in subsequent exeercises to complete your assignment.
+Note that this exercise forms the first out of three sessions associated with your Assignment 1A. You will be required to share a summary of your data to a compiled version of the class data, which will be needed in subsequent exercises to complete your assignment.
 ```
 
 
@@ -33,14 +33,14 @@ The [previous exercise](#E1A) focused on estimating rainfall and runoff at catch
 Before moving forward with our analysis of this site, just open the dataset and make sure the site has a suitable period of data. Ideally, we need to be choosing a site with >30 years of data - the more the better. Also, refer to the "*Data available for the selected station*" small infographic on the site-selection panel to check what (complete) years of data you have.
 
 ```{block2, noteM1-2, type='rmdnote2'}
-Whislt this exercise is focused around using the raw data from BOM, other useful resoruces for accessing rainfall data include [SILO](https://www.longpaddock.qld.gov.au/silo/), and [openmeteo](https://open-meteo.com/en/docs/historical-weather-api)
+Whilst this exercise is focused around using the raw data from BOM, other useful resoruces for accessing rainfall data include [SILO](https://www.longpaddock.qld.gov.au/silo/), and [openmeteo](https://open-meteo.com/en/docs/historical-weather-api).
 ```
 
 ## Statistical properties of rainfall data {#E1B_4 -}
 
-**2)** Now, let’s plot the time series of DAILY rainfall. Clean up the plot as required and add to your activity sheet. Describe the main features of this data set. Consider: what is the most appropriate type of graph for rainfall data (bar, scatter, line)?
+**2)** Now, let’s plot the time series of DAILY rainfall. Lets do a 'quick-and-dirty' plot by selecting the date and rainfall amount columns, and then inserting a chart. Describe the main features of this data set. Consider: what is the most appropriate type of graph for rainfall data (bar, scatter, line)? 
 
-**3)** Calculate the annual SUM of rainfall, for each year. But note, we want to ensure that there are only whole years to calculate the sums or else the incomplete years will be in error (the sum will be artificially low due to missing data). We can do this without having to delete rows by making a PIVOT table.
+**3)** We'll now make a more 'human-readable' plot by now focusing on annual rain amounts. SO in this step we will calculate the annual SUM of rainfall, for each year. But note, we want to ensure that there are *only whole years* to calculate the sums or else the incomplete years will be in error (the sum will be artificially low due to missing data). We can do this without having to delete rows by making a PIVOT table and counting number of good data days in each year.
 
 **3a)** To explore each year's data, select the required data across multiple columns (year column C to rainfall amount column F). Then click insert PIVOT table (select "Create a new tab" when prompted). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. (If it appears, left click on the “Sum of Year” in the VALUES box and remove it). You can select "COUNT" as the operation on the rainfall values to see how many entries are given for each year. Years with more than 10% of days missing (e.g <330 days counted per year), are unreliable to include in our analysis so see if your station has any incomplete years. Now add the Rainfall to the VALUES box again, but this time make the operation on the data the a SUM. 
 
