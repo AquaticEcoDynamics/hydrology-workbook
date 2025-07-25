@@ -1,8 +1,10 @@
 # Exercise 3 -- Drivers of streamflow  {#E3 .unnumbered}
 
+The amount of water moving through a stream is a product of the interactions between climate, catchment geomorphological properties (slope, soils, etc) and vegetation. Importantly, in Western Australia, streamflow is also contributed to from both surface water runoff, and from groundwater discharge. In this exercise we will look at streamflow data from nearby to your site of interest and determine the strength of the relationship between annual rainfall and annual streamflow.
+
 
 ```{block2, noteM1-3, type='rmdnote2'}
-Please note that this exercise is a continuation of the work in Exercise 2. Before attempting this exercise you must first source and analysis the relevant rainfall data as described within that exercise.
+Please note that this exercise is a continuation of the work in Exercise 2. Before attempting this exercise you must first source the relevant rainfall data as described within Question 3 of that exercise.
 ```
 
 
