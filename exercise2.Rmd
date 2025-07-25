@@ -47,7 +47,6 @@ Whilst this exercise is focused around using the raw data from BOM, other useful
 **3b)** Once you are satisfied which years have good data, plot the annual sums as a timeseries. Clean up the plot of the annual sum of rainfall as required (and labels etc). What are the main features of this annual data set? What variability can you see? 
 
 
-
 **4)** Now we have a "clean" dataset, we want to explore some statistics. Use the *Data Analysis* add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools->Add-ins->Analysis ToolPack*).
 
 **5)** Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? 

@@ -1,12 +1,14 @@
 # Exercise 3 -- Drivers of streamflow  {#E3 .unnumbered}
 
-... this is a continuation of the work in Exercise 2.
+
+```{block2, noteM1-3, type='rmdnote2'}
+Please note that this exercise is a continuation of the work in Exercise 2. Before attempting this exercise you must first source and analysis the relevant rainfall data as described within that exercise.
+```
 
 
+## Getting streamflow data {#E1B_5 -}
 
-## B. Getting Streamflow Data {#E1B_5 -}
-
-7) In your Assessment 1A we will need to examine the relationship between annual rainfall and annual streamflow (aka runoff) for a chosen catchment. Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
+7) As part of your analysis, we also will examine the relationship between annual rainfall and annual streamflow (aka runoff) for a chosen catchment. Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
 
 <center>
 <video width="85%" height="85%" controls>
@@ -16,7 +18,7 @@
 
 8) Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?
 
-## C. Relationship between rainfall and runoff {#A2A_5 .unnumbered}
+## Relationship between rainfall and streamflow {#A2A_5 .unnumbered}
 
 Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 2](#E1B_1) activity for details on how to source the data - make sure the site you have chosen has streamflow data by checking the data availability and the request the report for **water levels and flow - continuous** to get the flow data). *(If WIR website is not working, a file for Walyunga (Avon River) is available via the download button : Walyunga_139985.zip)*
 
