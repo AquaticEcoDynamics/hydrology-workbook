@@ -44,16 +44,18 @@ Before moving forward with our analysis of this site, just open the dataset and 
 
 
 **4)** Now we have a "clean" dataset, we want to explore some statistics. Use the *Data Analysis* add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools->Add-ins->Analysis ToolPack*).
-Copy the results [here](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing) and complete Table \@ref(tab:E1Btable1) for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? 
-
-<!-- Old link: -->
-<!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing -->
 
 **5)** Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? 
 
 **6a)** Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select **Month** and **Rainfall** amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required.
 
-**6b)** How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)? 
+**6b)** Copy the results to the class shared EXCEL sheet, where you will be completing a table that looks something like Table \@ref(tab:E1Btable1).  for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? 
+
+<!-- Old link: -->
+<!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing -->
+
+**6c)** Looking at your site and others from around Western Australia, how would you describe the seasonal pattern of rainfall (hint consider the climate type)? What factors may influence it (hint, think about earth orbit)? 
+
 
 <center>
 ```{r E1Btable1, echo=FALSE, message=FALSE, warning=FALSE}
@@ -61,7 +63,7 @@ library(knitr)
 library(kableExtra)
 options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
 table1.csv <- read.csv("tables/exercise1B/table1.csv", check.names=FALSE)
-kable(table1.csv,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete a row in the table for your site [here](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing).",
+kable(table1.csv,"html", escape = F, align = rep('c', 5), caption = "Example Bureau of Meteorology Automatic Weather Station data for various station IDs across WA. You will need to complete a row in the online table for your site [refer to file on Teams].",
       bootstrap_options = "hover") %>%
   kable_styling(table1.csv, bootstrap_options = "hover", "striped",
                 full_width = F, position = "center",
@@ -82,11 +84,16 @@ kable(table1.csv,"html", escape = F, align = rep('c', 5), caption = "Bureau of M
 
 ## Temporal trends in rainfall {#A2A_2 .unnumbered}
 
-Prior to starting this work, make sure you have completed the [Exercise 2](#E1B_1) activity.
+Prior to starting this work, make sure you have completed the Steps 1 to 6 above!
 
-**7)** For your chosen site, calculate the trend in rainfall for the **last 5 years**. Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) to a new location for plotting or calculate manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear -- discuss? (You can do this same analysis by adding a trend-line to the data, as described below).
+Now we have explored the basic statistics of the rainfall time-series (including describing mean, variance, and seasonality), lets investigate if there are any long-term trends.
 
-**8)** Now, calculate the trend in rainfall for **all** years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r^2^) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table \@ref(tab:A2Atable1) and the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing)).
+**7a)** For your chosen site, calculate the trend in rainfall for the **last 5 years**. Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) to a new location for plotting or calculate manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting for your site? Is this long enough for a reliable trend? Is the relationship really linear? (You can do this same analysis by adding a trend-line to the data, as described below).
+
+**7b)** OK, so 5 years is not really useful fro trend assessment. Let's now calculate the trend in rainfall for **all** years available at your chosen site. You can calculate that annual total rainfall using a PIVOT table (include the year and Rainfall amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient ($r^2$) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). 
+
+**7c)** As before, add the information you have computed for your site into [shared spreadsheet](), which will have headings as per Table \@ref(tab:A2Atable1) and.
+
 
 <center>
 ```{r A2Atable1, echo=FALSE, message=FALSE, warning=FALSE}
@@ -113,7 +120,7 @@ kable(table1,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 <br>
 
-**9)** Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table \@ref(tab:A2Atable1). The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.
+**8)** Looking at your plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis using the ToolPak regeression option. These results  inclue a **t-statistic** (t Stat) and **p-value**, which tell us if the trend is statistically significant. Please also enter them also into the shared spreasheet, such as shown in Table \@ref(tab:A2Atable1). The null hypothesis is the the rainfall did NOT change over time. If the p-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.
 
 
 
