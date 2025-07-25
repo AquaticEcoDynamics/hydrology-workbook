@@ -1,6 +1,6 @@
 # Exercise 3 -- Drivers of streamflow  {#E3 .unnumbered}
 
-The amount of water moving through a stream is a product of the interactions between climate, catchment geomorphological properties (slope, soils, etc) and vegetation. Importantly, in Western Australia, streamflow is also contributed to from both surface water runoff, and from groundwater discharge. In this exercise we will look at streamflow data from nearby to your site of interest and determine the strength of the relationship between annual rainfall and annual streamflow.
+The amount of water moving through a stream is a product of the interactions between climate, catchment geomorphological properties (slope, soils, etc) and vegetation. Importantly, in Western Australia, streamflow is also contributed to from both surface water runoff, and from groundwater discharge. In this exercise we will look at streamflow data from a river nearby to your site of interest, and then determine the strength of the relationship between annual rainfall and annual streamflow.
 
 
 ```{block2, noteM1-3, type='rmdnote2'}
@@ -10,7 +10,7 @@ Please note that this exercise is a continuation of the work in Exercise 2. Befo
 
 ## Getting streamflow data {#E1B_5 -}
 
-7) As part of your analysis, we also will examine the relationship between annual rainfall and annual streamflow (aka runoff) for a chosen catchment. Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
+**12)** As part of your analysis, we also will examine the relationship between annual rainfall and annual streamflow (aka runoff) for a chosen catchment. Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
 
 <center>
 <video width="85%" height="85%" controls>
@@ -18,23 +18,25 @@ Please note that this exercise is a continuation of the work in Exercise 2. Befo
 </video>
 </center>
 
-8) Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?
+**13)** Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?
 
 ## Relationship between rainfall and streamflow {#A2A_5 .unnumbered}
 
 Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 2](#E1B_1) activity for details on how to source the data - make sure the site you have chosen has streamflow data by checking the data availability and the request the report for **water levels and flow - continuous** to get the flow data). *(If WIR website is not working, a file for Walyunga (Avon River) is available via the download button : Walyunga_139985.zip)*
 
-8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
+**14)** Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
 
 
 # Exercise 4 -- Data synthesis  {#E4a .unnumbered}
 
-... this is a continuation of the work in Exercise 2 & 3.
+In the past two exercises we have processes rainfall data and streamflow data. This exercise is to  explore the shared data-set that spans sites across Western Australia, and to synthesise how this looks, in order to prepare our data analysis report.
+
+```{block2, noteM1-4, type='rmdnote2'}
+Please note that this exercise is a continuation of the work in Exercise 2 and 3. Before attempting this exercise you must first complete the steps/questions in those from 1 to 14.
+```
 
 
-In this activity we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:A2Aimage1)). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.
-
-In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. We will be sharing our data using an online spreadsheet. Please make sure that you upload your data as soon as possible so that others can include it in their analysis.
+Our overarching goal in prepaing our analysis is to summarise our findings on the nature of rainfall and runoff data we have explored across the state of Western Australia. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:A2Aimage1)). In Exercise 2, we examined rainfall trends and have explored how different modes of climate variability can explain patterns in annual rainfall. In Exercise 3, we have looked to see if we can find how strong the relationship is between (annual) rainfall and streamflow. 
 
 <center>
 ```{r A2Aimage1, echo=FALSE, fig.cap="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net).", out.width = '80%'}
@@ -43,12 +45,14 @@ knitr::include_graphics("images/assessment2A/image1.png")
 </center>
 
 
+So far, you have explored data from an individual site. But for our final data synthesis (and your assignment), we will make use of a larger number of sites across WA, to quantify the variability of rainfall and streamflow in space and time. Let's start by making a summary of the spatial variability in rainfall.
+
 
 ## Spatial patterns in rainfall {#A2A_3 .unnumbered}
 
-4)  Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) [Google Sheets version](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
+**15)** Inspect the results of everyone's analysis in the shared data table(s).  Are there statistically significant changes in rainfall? Which station(s) have a statistically significant slope? Are they consistent across WA? What may be causing the changes?
 
-5)  Take the information in Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+**16)** Take the information in tables and record the values onto a map of Western Australia. 
 
 <center>
 ```{r A2Aimage2, echo=FALSE, fig.cap="", out.width = '90%'}
@@ -56,13 +60,30 @@ knitr::include_graphics("images/assessment2A/image2.png")
 ```
 </center>
 
+**17)** Now you have some nice visualisations of the *spatial patterns* (rather than the temporal ones), for different metrics. What spatial patterns do you notice? Do they match what you would expect? What may be causing these spatial patterns?
 
-## Submission {#A2A_6 .unnumbered}
 
-Your submission for this assessment is a summary report outlining the results of the analysis and questions posed in questions 1-8, above. This should include the figures and tables you created, summarising the data from your chosen site and the broader class data-set.
+## Contexualising your work {#A2A_13 .unnumbered}
 
-Your report should have a title and the information should be grouped into numbered headings and sub-headings, like a scientific journal article. Start with an introduction, then you will have 4 data sections: 1) temporal trends in rainfall, 2) spatial patterns in rainfall, 3) interannual variability in rainfall and 4) relationships between rainfall and runoff. Finally, you should write a conclusion that summarizes the main findings and links back to the objectives you stated in your introduction.
+Until now, we have undertaken our own analysis of available rain and streamflow data. When writing up our work it is important for us to also contexualise our analysis relative to the prior work of others (i.e. how do our conclusions compare to what has previously been reported).
 
-Make sure that all the text in your figures is legible. For charts, all axes should be clearly labeled and units given where appropriate. Make sure to include appropriate captions to describe your tables and figures, and cite these in the text (Figure captions go below the figure. Table captions go above the table).
+**18)** Spend some time to identify prior papers and reports that explain the climatology of Western Australia and any that have reported on rainfall changes and/or changes in streamflow. Try comapring search results from different portals such as traditional searches in UWA's OneSearch, Google Scholar, and even AI-assisted searches through Chat-GPT. Do you notice the main refernces being consistent across the search methods? These may yield a lot of entries so now you must critically consider which ones are most relevant to include. Could you identify some that are more relevant than others? Consider things spatial relevance, and citations and age.
+
+**19)** Once you have identified a strong list, consider how you can use these within the discussion of your report to place your work in context.
+
+
+
+## Assignment 1A submission {#A2A_6 .unnumbered}
+
+Your submission for this assessment is a summary report outlining the results of the analysis and questions posed in steps 1-19, spanning across Exercises 2,3 and 4. This should include figures and tables you have created, summarising the data from your chosen site, and also using the broader class data-set where appropriate.
+
+:::: {.redbox2}
+
+Your report should have a title and the information should be grouped into numbered headings and sub-headings, like a scientific journal article. It will start with an introduction, and have 4 data sections: 1) temporal trends in rainfall, 2) spatial patterns in rainfall, 3) interannual variability in rainfall and 4) relationship between rainfall and runoff. Finally, you should write a conclusion that summarizes the main findings and links back to the objectives you stated in your introduction. A draft template to get you started is provided in the download link.
+
+Make sure that all the text in your figures is legible and up to scientific standard. For charts, all axes should be clearly labeled and units given where appropriate. Make sure to include appropriate captions to describe your tables and figures, and cite these in the text (Figure captions go below the figure. Table captions go above the table).
 
 You will be assessed according to the rubric provided on LMS. Be sure to submit your report via the Turnitin Link on LMS by the due date and time. Late submissions will attract penalties in line with UWA policy.
+
+::::
+
