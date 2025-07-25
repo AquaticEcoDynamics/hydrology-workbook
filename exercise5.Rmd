@@ -1,4 +1,4 @@
-# Exercise 5 - Undertaking a water balance {#E5 .unnumbered}
+# Exercise 6 - Undertaking a water balance {#E5 .unnumbered}
 
 ## The water balance and principle of conservation {#E5_1 .unnumbered}
 

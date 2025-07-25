@@ -1,4 +1,4 @@
-# (PART) ACTIVITIES {.unnumbered}
+# (PART) WORKSHOPS {.unnumbered}
 
 # Exercise 1 -- Spatial rainfall variability {#E1A .unnumbered}
 
@@ -12,7 +12,7 @@ A fundamental of **hydrology** is working out how much rain turns into streamflo
 -   the nature of the rainfall quantity (storm event, daily, monthly),
 -   the characteristics of the local storm patterns (convective versus low intensity events).
 
-Most hydrological analysis at the catchment scale requires knowledge of the areal distribution of precipitation in the form of an average depth (mm) of water for the entire catchment over a specified time period, using information from a set of unevenly placed rain-gauges spread around the area. In order to calculate the flow discharge produced by a large storm (convective type) in the catchment in, it is necessary to calculate the **average depth of rainfall** (**ADR**) over the catchment.
+Most hydrological analysis at the catchment scale requires knowledge of the areal distribution of precipitation in the form of an average depth (mm) of water for the entire catchment over a specified time period, using information from a set of unevenly placed rain-gauges spread around the area. In order to calculate the flow discharge produced by a large storm (convective type) in the catchment, it is necessary to calculate the **average depth of rainfall** (**ADR**) over the catchment.
 
 Three approaches are currently used for estimating the total rainfall:
 
@@ -71,7 +71,7 @@ The average depth of rainfall (ADR) over the entire catchment can be calculated 
 \end{equation}
 </center>
 
-Where $A_{i}$ is the polygon area (km^2^), $P_{i}$ is the rainfall (mm) corresponding to the $i$ polygon, and $\sum{A_{i}}$ is the catchment area (km^2^).
+where $A_{i}$ is the polygon area (km^2^), $P_{i}$ is the rainfall (mm) corresponding to the $i$ polygon, and $\sum{A_{i}}$ is the catchment area (km^2^). 
 
 #### Isohyetal Method {#E1A_6 .unnumbered}
 

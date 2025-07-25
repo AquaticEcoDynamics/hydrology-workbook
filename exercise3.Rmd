@@ -1,4 +1,64 @@
-# Exercise 3 -- Runoff generation {#E3 .unnumbered}
+# Exercise 3 -- Drivers of streamflow  {#E3 .unnumbered}
 
-The exercise will be made available prior to scheduled session for this activity.
+... this is a continuation of the work in Exercise 2.
 
+
+
+## B. Getting Streamflow Data {#E1B_5 -}
+
+7) In your Assessment 1A we will need to examine the relationship between annual rainfall and annual streamflow (aka runoff) for a chosen catchment. Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
+
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1B/video1.mp4" type="video/mp4">
+</video>
+</center>
+
+8) Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?
+
+## C. Relationship between rainfall and runoff {#A2A_5 .unnumbered}
+
+Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 2](#E1B_1) activity for details on how to source the data - make sure the site you have chosen has streamflow data by checking the data availability and the request the report for **water levels and flow - continuous** to get the flow data). *(If WIR website is not working, a file for Walyunga (Avon River) is available via the download button : Walyunga_139985.zip)*
+
+8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
+
+
+# Exercise 4 -- Data synthesis  {#E4a .unnumbered}
+
+... this is a continuation of the work in Exercise 2 & 3.
+
+
+In this activity we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:A2Aimage1)). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.
+
+In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. We will be sharing our data using an online spreadsheet. Please make sure that you upload your data as soon as possible so that others can include it in their analysis.
+
+<center>
+```{r A2Aimage1, echo=FALSE, fig.cap="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net).", out.width = '80%'}
+knitr::include_graphics("images/assessment2A/image1.png")
+```
+</center>
+
+
+
+## Spatial patterns in rainfall {#A2A_3 .unnumbered}
+
+4)  Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) [Google Sheets version](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
+
+5)  Take the information in Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+
+<center>
+```{r A2Aimage2, echo=FALSE, fig.cap="", out.width = '90%'}
+knitr::include_graphics("images/assessment2A/image2.png")
+```
+</center>
+
+
+## Submission {#A2A_6 .unnumbered}
+
+Your submission for this assessment is a summary report outlining the results of the analysis and questions posed in questions 1-8, above. This should include the figures and tables you created, summarising the data from your chosen site and the broader class data-set.
+
+Your report should have a title and the information should be grouped into numbered headings and sub-headings, like a scientific journal article. Start with an introduction, then you will have 4 data sections: 1) temporal trends in rainfall, 2) spatial patterns in rainfall, 3) interannual variability in rainfall and 4) relationships between rainfall and runoff. Finally, you should write a conclusion that summarizes the main findings and links back to the objectives you stated in your introduction.
+
+Make sure that all the text in your figures is legible. For charts, all axes should be clearly labeled and units given where appropriate. Make sure to include appropriate captions to describe your tables and figures, and cite these in the text (Figure captions go below the figure. Table captions go above the table).
+
+You will be assessed according to the rubric provided on LMS. Be sure to submit your report via the Turnitin Link on LMS by the due date and time. Late submissions will attract penalties in line with UWA policy.

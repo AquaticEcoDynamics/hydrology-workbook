@@ -1,4 +1,4 @@
-# Lab 3 - Groundwater and surface water interaction {#L3_1 .unnumbered}
+# Week 4 - Groundwater and surface water interaction {#L3_1 .unnumbered}
 
 ### Learning Objectives {#L3_2 .unnumbered}
 

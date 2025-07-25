@@ -1,4 +1,4 @@
-# Exercise 10 - Assessing environmental flow impacts {#E10 -}
+# Exercise 11 - Assessing environmental flow impacts {#E10 -}
 
 ## Objectives {#E7_1 -}
 

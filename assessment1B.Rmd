@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# Part B - Groundwater and surface water interaction: A case study on the Helena River {#A2B .unnumbered}
+# Week 6 - Groundwater and surface water interaction: A case study on the Helena River {#A2B .unnumbered}
 
 ### Learning Objectives {#A2B_1 .unnumbered}
 
