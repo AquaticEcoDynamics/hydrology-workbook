@@ -1,6 +1,15 @@
 # (PART) ASSESSMENTS {.unnumbered}
 
-# Assessment 1 - Data Analysis {#A1 .unnumbered}
+Assessment #1 is conducted in two parts. Both parts are designed to assess your skill and knowledge in data analysis associated with hydrologically relevant monitoring data and scientific presentation of your results.
 
-This assessment consists of two parts. Part A focuses on rainfall and streamflow data, and you will complete this during week 1 and 2 of the unit. Part B extends our focus to the subsurface, linking surface water and groundwater hydrology.
+# Assessment 1A - Rainfall and streamflow analysis {#A1Aa .unnumbered}
 
+Part A focuses on rainfall and streamflow data, and you will complete this during weeks 2, 3 and 4 of the unit when undertaking Exercises 2-4 in the workshops. 
+
+Refer to [this section](#A2A_6) for submission information. .
+
+# Assessment 1B - Helena field site inspection {#A1Bb .unnumbered}
+
+Part B extends our focus to the subsurface, linking surface water and groundwater hydrology. You will complete this during weeks 5 and 6 of the unit in the labs. 
+
+Refer to [this section](#A2B_10) for submission information.

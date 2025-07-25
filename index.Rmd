@@ -1,6 +1,6 @@
 --- 
 title: "Hydrology Workbook"
-author: "Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight"
+author: "Matt Hipsey, Sarah Bourke, Jason Beringer, Giles Knight and Malvina Chmielarski"
 date: "Last updated: `r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book

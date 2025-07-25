@@ -4,9 +4,11 @@ editor_options:
     wrap: 72
 ---
 
-# Week 6 - Groundwater and surface water interaction: A case study on the Helena River {#A2B .unnumbered}
+# Week 6 - Helena River data analysis {#A2B .unnumbered}
 
 ### Learning Objectives {#A2B_1 .unnumbered}
+
+The practical activity for this week is designed to consolidate our knowledge of groundwater and surface water interactions, in the context of the Helena River site data-set (refer to [Exercise 5](#F1_1)).
 
 This assessment will require students to understand how hydrologic
 monitoring of can inform the conceptual models of ecosystems that
@@ -444,7 +446,3 @@ riparian decline: Ecohydrology and hydro-climatological change in the
 Upper Swan estuary. The University of Western Australia, Perth,
 Australia. 51pp.
 
-### Note: Site visit to Helena River floodplain {#A2B_11 .unnumbered}
-
-If you are in Perth you can visit the study site just outside of the
-Guildford town centre. See "Helena River Site Visit".
