@@ -119,8 +119,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html"><i class="fa fa-check"></i>Exercise 2 - Rainfall data analysis</a>
 <ul>
 <li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#E1B_3"><i class="fa fa-check"></i>Sourcing Rainfall Data</a></li>
-<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#E1B_3"><i class="fa fa-check"></i>Sourcing rainfall data</a></li>
+<li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#E1B_4"><i class="fa fa-check"></i>Statistical properties of rainfall data</a></li>
 <li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
 <li class="chapter" data-level="" data-path="A1A.html"><a href="A1A.html#A2A_4"><i class="fa fa-check"></i>Explaining the interannual variability</a></li>
 </ul></li>
@@ -305,8 +305,8 @@ Note that this exercise forms the first out of three sessions associated with yo
 </ul>
 </div>
 <div id="E1B_3" class="section level2 unnumbered hasAnchor">
-<h2>Sourcing Rainfall Data<a href="A1A.html#E1B_3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The <a href="E1A.html#E1A">previous exercise</a> focused on estimating rainfall and runoff at catchment scales during a <em>single</em> (daily) storm event. In this exercise we will learn how to access long time-series of rain data, and examine the nature of rainfall data and use some simple statistics in Excel to describe these data.</p>
+<h2>Sourcing rainfall data<a href="A1A.html#E1B_3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <a href="E1A.html#E1A">previous exercise</a> focused on estimating rainfall and runoff at catchment scales during a <em>single</em> (daily) storm event. In this exercise we will learn how to access long time-series of rain data in Australia, and examine the nature of rainfall data and use some simple statistics in Excel to describe these data.</p>
 <p><strong>1)</strong> Start by downloading the daily rainfall data for a chosen BOM site from the <a href="http://www.bom.gov.au/climate/data/">Bureau of Meteorology</a> web site. Choose a site of interest in Western Australia. Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that you can then open in Excel.</p>
 <center>
 <video width="100%" height="100%" controls>
@@ -314,9 +314,13 @@ Note that this exercise forms the first out of three sessions associated with yo
 </video>
 </center>
 <p>Before moving forward with our analysis of this site, just open the dataset and make sure the site has a suitable period of data. Ideally, we need to be choosing a site with &gt;30 years of data - the more the better. Also, refer to the “<em>Data available for the selected station</em>” small infographic on the site-selection panel to check what (complete) years of data you have.</p>
+
+<div class="rmdnote2">
+Whislt this exercise is focused around using the raw data from BOM, other useful resoruces for accessing rainfall data include <a href="https://www.longpaddock.qld.gov.au/silo/">SILO</a>, and <a href="https://open-meteo.com/en/docs/historical-weather-api">openmeteo</a>
+</div>
 </div>
 <div id="E1B_4" class="section level2 unnumbered hasAnchor">
-<h2>Statistical Properties of Rainfall Data<a href="A1A.html#E1B_4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Statistical properties of rainfall data<a href="A1A.html#E1B_4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>2)</strong> Now, let’s plot the time series of DAILY rainfall. Clean up the plot as required and add to your activity sheet. Describe the main features of this data set. Consider: what is the most appropriate type of graph for rainfall data (bar, scatter, line)?</p>
 <p><strong>3)</strong> Calculate the annual SUM of rainfall, for each year. But note, we want to ensure that there are only whole years to calculate the sums or else the incomplete years will be in error (the sum will be artificially low due to missing data). We can do this without having to delete rows by making a PIVOT table.</p>
 <p><strong>3a)</strong> To explore each year’s data, select the required data across multiple columns (year column C to rainfall amount column F). Then click insert PIVOT table (select “Create a new tab” when prompted). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. (If it appears, left click on the “Sum of Year” in the VALUES box and remove it). You can select “COUNT” as the operation on the rainfall values to see how many entries are given for each year. Years with more than 10% of days missing (e.g &lt;330 days counted per year), are unreliable to include in our analysis so see if your station has any incomplete years. Now add the Rainfall to the VALUES box again, but this time make the operation on the data the a SUM.</p>
@@ -1261,8 +1265,8 @@ Narrogin
 <div id="A2A_4" class="section level2 unnumbered hasAnchor">
 <h2>Explaining the interannual variability<a href="A1A.html#A2A_4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>OK, so we have looked at the long term trend, but we do see year-to-year variability in annual totals. We can think about WHY do we see this variation - is it just random, or is it related to specific features of the climate system.</p>
-<p>So, here we determine how rainfall correlates with known modes of climate variability (i.e., Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO).</p>
-<p>We use climatic indicators of these phenonemna to explore the temporal variability (look for cyclic patterns). In particular, we want to know if rainfall totals correlate with known modes of climate variability (i.e. for ENSO we use the Southern Oscillation Index, SOI). The SOI is calculated as follows.</p>
+<p>So, here we determine how rainfall correlates with known modes of climate variability - for Western Australia, these will include the Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO). We use climatic indicators of these phenomena to explore their temporal variability (and look for cyclic patterns). In particular, we want to know if rainfall totals at our site of interest correlate with these known modes of climate variability.</p>
+<p>For ENSO we use the Southern Oscillation Index (SOI), which is calculated as follows.</p>
 <center>
 <span class="math display" id="eq:A2Aequation1">\[\begin{equation}
 \text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
@@ -1275,15 +1279,15 @@ Narrogin
 <li><span class="math inline">\(P_{\text{diffav}}\)</span> = long term average of <span class="math inline">\(P_{\text{diff}}\)</span> for the month in question, and</li>
 <li><span class="math inline">\(SD(P_{\text{diff}})\)</span> = long term standard deciation of <span class="math inline">\(P_{\text{diff}}\)</span> for the month in question.</li>
 </ul>
-<p>IOD is calculated by anomalous Sea Surface Temperature gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin, denoted the DMI.</p>
+<p>For IOD, this is calculated by quantifying the anomalous Sea Surface Temperature (SST) gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin - this index is denoted as the DMI.</p>
 <p>We will use the extremely useful <a href="https://climexp.knmi.nl/start.cgi?id=someone@somewhere">Climate Explorer</a> for the next section. First you will need to register so you can save data series. Access the rainfall from the previous site that you used in the previous section. Click on “<strong>Monthly Station Data</strong>” (right hand menu), select “precipitation” from the “GHCN-M (all)” column, search for your station (e.g. type BROOME in the “Select stations” section), and then press “Get stations”. If the selection works you will see relevant stations listed, and then click “<strong>get data</strong>”. You will then see graphs and options for further integrating the data. Make a name to save the data (the default should be fine). Click “<strong>Add to list</strong>”.</p>
 <center>
 <video width="85%" height="85%" controls>
 <source src="images/assessment2A/video1.mp4" type="video/mp4">
 </video>
 </center>
-<p>Now get the first climate index for the IOD called the DMI. Go to “<strong>Monthly climate indices</strong>” and then select DMI. Note any trend and variability in the index.</p>
-<p>To correlate the index and rainfall select “<strong>Correlate with other time series</strong>”. And tick your previously saved rainfall timeseries and then press “<strong>Correlate</strong>” and copy the results into Table <a href="A1A.html#tab:A2Atable2">6</a> and the appropriate tab in the <a href="https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing">online spreadsheet</a>.</p>
+<p><strong>9a)</strong> Now get the first climate index for the IOD called the DMI. Go to “<strong>Monthly climate indices</strong>” and then select DMI. Note any trend and variability in the index.</p>
+<p><strong>9b)</strong> To correlate the index and rainfall select “<strong>Correlate with other time series</strong>”. And tick your previously saved rainfall timeseries and then press “<strong>Correlate</strong>” and copy the results into a local spreadsheet with data similar to Table <a href="A1A.html#tab:A2Atable2">6</a></p>
 <center>
 <video width="85%" height="85%" controls>
 <source src="images/assessment2A/video2.mp4" type="video/mp4">
@@ -1477,19 +1481,16 @@ Dec
 </div>
 </center>
 <p><br></p>
-<ol start="10" style="list-style-type: decimal">
-<li>Highlight any months that have a significant p-value (&lt;0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?</li>
-</ol>
-<p>We can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using reanalysis information) to investigate the whole of Australia. Click on “<strong>Monthly observations</strong>” and go to <strong>Precipitation CRU TS 0.5</strong>.</p>
+<p><strong>9c)</strong> As before, goto the shared class spreadsheet, and add your results to your row - the row for your site.</p>
+<p><strong>10)</strong> Highlight any months that have a significant p-value (&lt;0.05). What relationships do you see between rainfall and climate mode. Why are some months having a stronger correlation that others? Do they correlate in specific seasons? How strong are these correlations really? When comparing to other stations in the class has reported, are the trends you see consistent or different across WA?</p>
+<p>Note that analysis we did above has its own rainfall data and it is not exactly using your BOM station data. In fact the tool has all rain data for any location in the globe. So we can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using climate model “reanalysis” information), and investigate these correlations for the whole of Australia! Lets do this, by clicking on “<strong>Monthly observations</strong>” and go to <strong>Precipitation CRU TS 0.5</strong>.</p>
 <center>
 <video width="85%" height="85%" controls>
 <source src="images/assessment2A/video3.mp4" type="video/mp4">
 </video>
 </center>
-<p>We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on “Correlate with a time series” and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations are being done online and the graph returned for viewing). Do the same for both SOI and DMI.</p>
-<ol start="11" style="list-style-type: decimal">
-<li>For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?</li>
-</ol>
+<p>We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on “<em>Correlate with a time series</em>” and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations (i.e. regression of index and rain) are being done online and then a graph is returned for viewing). Do the same for both SOI and DMI.</p>
+<p><strong>11)</strong> For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?</p>
 
 </div>
 </div>
