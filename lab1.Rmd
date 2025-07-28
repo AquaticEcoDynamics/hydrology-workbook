@@ -4,7 +4,7 @@
 
 ## Learning Objectives {#L1_1 .unnumbered}
 
--   To be able to conceptualise how catchment water stores respond to rainfall.
+-   To be able to conceptualise how catchments store and release water in response to rainfall
 -   To understand that the relationship between rainfall and runoff depends on soil and catchment conditions.
 -   Develop skills related to laboratory data analysis and interpretation.
 
@@ -35,14 +35,19 @@ In the lab you will be introdcued to the desktop cacthment setup.
 Start by filling the catchment with soil. Estimate the volume of soil that was added - start by making a regualr shape to compute the volume and then shape the catchment to be more realistic.
 
 <center>
-```{r L1imageB, echo=FALSE, fig.cap="Photo of the desktop catchment.", out.height = '50%'}
+```{r L1imageBb, echo=FALSE, fig.cap="Photo of the desktop catchment.", out.height = '50%'}
+knitr::include_graphics("images/lab1/DTC1.jpg")
+```
+</center>
+<center>
+```{r L1imageB, echo=FALSE, fig.cap="Rain falling on the desktop catchment.", out.height = '50%'}
 knitr::include_graphics("images/exercise4/picture5.png")
 ```
 </center>
 
 Across the class we will compare different settings, comparing a) catchment slope and b) antecedent conditions (in the form of different soil moisture amounts).
 
-Depending on your allocated settings, prepare your cacthment. 
+Depending on your allocated settings, prepare your catchment! 
 
 -  Adjust slope with blocks provided. 
 -  Add an initial amount of moisture using the watering can as guided.
@@ -78,7 +83,7 @@ You should also make a brief description of the soil - what colour is it (in rea
 
 For each sample use a balance to record the sample weight, making sure you correctly blank the balance to account for the sample container weight. Record the dimensions and volume of your samples. Then place them onto a tray that is suitable for going into the oven. Then place the tray into the oven for drying at \~105˚C. Leave in the oven until the sample is totally dry and then re-weigh (check after for 1-2 hours; in the meantime goto Step 3).
 
-Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. Repeat for the replicates of each soil and enter your sample details and your results into the online [Google sheet](https://docs.google.com/spreadsheets/d/1-uqLeyqEiVMupbM7Rx8RWGWMT_RRkHUbVe1b-ce5BfU/edit?usp=sharing). Make sure to enter your data on the correct sheet for this teaching period.
+Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. 
 
 <center>
 ```{r E3BimageA, echo=FALSE, fig.cap="A soil sample (core) collected using a kitchen measuring cup.", out.width = '50%'}
@@ -117,11 +122,19 @@ S_{max}=\ \phi{\ V}_{soil}
 
 ### Step 3 : Collect experimental data {#L1_8 .unnumbered}
 
-Once you have prepared the experimental setup, and taken the soil samples to the oven, you are now ready to go. Start the logger on the computer, and then start the rainfall (i.e., turn the tap on). 
+Once you have prepared the experimental setup, and taken the soil samples to the oven, you are now ready to go. Refer to the local instructions,  start the logger on the computer, and then start the rainfall (i.e., turn the tap on). 
 
-The rain should occur for around 10-15 minutes, or at least long enough for the catchment flow to be occuring. 
+The rain should occur for around 15-30 minutes, or at least long enough for the catchment flow to be occurring. 
 
-After you turn off the rainfall tap, keep the system logging, and wait for the soil to keeping draining. After 10 or so minutes stop the logger and export the data as a csv or xls file.
+<center>
+```{r L1imageBc, echo=FALSE, fig.cap="Data logging system.", out.height = '50%'}
+knitr::include_graphics("images/lab1/Screen.png")
+```
+</center>
+
+After you turn off the rainfall tap, **keep the system logging**, and wait for the soil to keep draining. After 15 or so minutes stop the logger and export the data as a csv or xls file.
+
+
 
 ### Step 4 : Data analysis {#L1_9 .unnumbered}
 
