@@ -18,6 +18,20 @@ Please note that this exercise is a continuation of the work in Exercise 2. Befo
 </video>
 </center>
 
+<br>
+```{block2, noteM1-8, type='rmdnote2'}
+**UPDATE 4 AUG 2025**
+For the last few weeks the WIR data for WA has not been available. A mirror of this data is available via the BOM water data portal - which sumamrises streamflow data also for Australia (State Governments provide their data to BOM - its the same data, but different portal). You can access this one here: [BOM water data portal](http://www.bom.gov.au/waterdata/). 
+
+When using this website, select the parameter as "Water Course Discharge", and then search for a site in a catchment near to your rainfall station. As mentioned above, ensure that the station you select has 10-20 years of available data, that overlaps with the rainfall station data.
+
+```
+
+
+
+
+
+
 ## Processing streamflow data {#E1B_60 -}
 
 **13)** Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Use the techniques introduced above to summarise the data (e.g., create a PIVOT table) in order to get annual streamflow volumes. Plot the data and compute the annual mean. 
