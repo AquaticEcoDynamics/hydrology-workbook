@@ -23,7 +23,11 @@ Please note that this exercise is a continuation of the work in Exercise 2. Befo
 **UPDATE 4 AUG 2025**
 For the last few weeks the WIR data for WA has not been available. A mirror of this data is available via the BOM water data portal - which sumamrises streamflow data also for Australia (State Governments provide their data to BOM - its the same data, but different portal). You can access this one here: [BOM water data portal](http://www.bom.gov.au/waterdata/). 
 
-When using this website, select the parameter as "Water Course Discharge", and then search for a site in a catchment near to your rainfall station. As mentioned above, ensure that the station you select has 10-20 years of available data, that overlaps with the rainfall station data.
+When using this website, select the parameter as "Water Course Discharge", and then search for a site in a catchment near to your rainfall station. As mentioned above, ensure that the station you select has 10-20 years of available data, that overlaps with the rainfall station data. When downloading select "daily mean", so that in Excel you can "SUM" the daily data to get annual total.
+
+<center>
+  <img src="images/exercise1B/BearDrain.png" alt="Downloading from BOM" width="500" >
+</center>
 
 ```
 
@@ -38,9 +42,9 @@ When using this website, select the parameter as "Water Course Discharge", and t
 
 ## Relationship between rainfall and streamflow {#A2A_5 .unnumbered}
 
-Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Make sure the site you have chosen has streamflow data by checking the data availability and the request the report for **water levels and flow - continuous** to get the flow data). *(If WIR website is not working, a file for Walyunga (Avon River) is available via the download button : Walyunga_139985.zip)*
+Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Make sure the site you have chosen has streamflow data by checking the data availability and the request the report for **water levels and flow - continuous** to get the flow data). *(If WIR website is not working for this download, see note above)*. Please note you will need to SUM the daily mean of data to get an annual total - check the units to be sure the uits make sense.
 
-**14)** Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the shared class spreadsheet, so we can look at the whole data set - are there consistent relationships across WA? 
+**14)** Plot a scatter plot of **annual** streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the shared class spreadsheet, so we can look at the whole data set - are there consistent relationships across WA? 
 
 
 # Exercise 4 -- Data synthesis  {#E4a .unnumbered}
