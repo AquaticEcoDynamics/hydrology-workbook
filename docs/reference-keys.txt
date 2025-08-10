@@ -12,9 +12,13 @@ tab:A2Atable1
 eq:A2Aequation1
 tab:A2Atable2
 fig:A2Aimage1
-fig:A1Aimage9
+fig:A1Amap1
 fig:A1Aimage10
-fig:A1Aimage11
+fig:A1Amap2
+fig:A1Amap3
+fig:A1Amap4
+fig:A1Amap5
+fig:A1Amap6
 fig:A1Aimage12
 eq:E3Bequation1
 eq:E3Bequation2

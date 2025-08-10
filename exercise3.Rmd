@@ -84,63 +84,92 @@ Let's create a map to visualise the spatial
 variation in our selected rainfall properties across the state - let's face it, maps are cooler than tables. The following instructions are to guide you through the steps to do this in QGIS, which can be downloaded [here](https://qgis.org/en/site/). If you are proficient in ArcGIS you
 can use that instead to create your map. Or if you prefer not to use GIS for this assignment, then you can also create a map in Google Earth and manually add some pins.
 
-a)  Let's start by importing our rainfall data of interest. Go to *Layer -\> Add
-    Layer -\> Add Delimited Text Layer*.
-
-b)  Under *File name* navigate to a csv file of the rainfall data
-
-    -   Make sure under *File Format* 'CSV' is selected
-    -   Under *Geometry Definition* set the *X field* to the Easting
-        column of you EC data and the *Y field* to the Northing column
-    -   Set the *Geometry CRS* to "EPSG:32750 - WGS84/UTM zone 50S"
-    -   Click *Add*
-
-<center>
-```{r A1Aimage9, echo=FALSE, fig.cap="Importing your rainfall data.", out.width='100%'}
-knitr::include_graphics("images/assessment2B/image9.png")
-```
-</center>
-
-```{block2, A1Ahint1, type='rmdnote2'}
-Make sure your data takes this form in Excel. Save it as a CSV:
-<center>
-![](images/assessment_2B/image15.png){width=45%}
-</center>
-```
-
-You'll now see the point data added to your screen, however, we have no
-spatial context - let's add a basemap.
-
-c)  Go to the QuickMapServices (QMS) button in the toolbar and
+a) In QGIS, start by adding a base-map. Go to the QuickMapServices (QMS) button in the toolbar and
     browse/search for a basemap that you think would be appropriate
     (e.g. search "satellite" and browse the different satellite basemap
-    providers).
+    providers). 
 
-d)  Add one to the map.
+```{block2, A1Ahint2a, type='rmdnote2'}
+If you do not have the QMS button in your toolbar go *Plugins -> Manage and Install Plugins* and search ‘QuickMapServices’ to install it.
+```
 
+<center>
+```{r A1Amap1, echo=FALSE, fig.cap="QuickMapServices.", out.width='90%'}
+knitr::include_graphics("images/exercise1A/map1.png")
+```
+</center>
 <center>
 ```{r A1Aimage10, echo=FALSE, fig.cap="The QMS buttons in the QGIS toolbar.", out.width='50%'}
 knitr::include_graphics("images/assessment2B/image10.png")
 ```
 </center>
 
-```{block2, A1Ahint2, type='rmdnote2'}
-If you do not have the QMS button in your toolbar go *Plugins -> Manage and Install Plugins* and search ‘QuickMapServices’ to install it.
-```
-
-Now we have a basemap and our points - let's change the symbology of the
-points to better communicate the variation in EC.
-
-e)  Right click on the point data in the layer window and go *Properties
-    -\> Symbology*.
-f)  Set the symbol type to *Graduated* and specifying the values to
-    graduate by as our rainfall property column of interest.
-g)  Now set the *Method* to *Size*, and the *Mode* to *Natural Breaks
-    (Jenks)*, click *Classify*.
+b)    Click on the Search QMS icon. A search box will appear at the bottom right corner of your screen. Type satellite, select from one of the options. Click add.
 
 <center>
-```{r A1Aimage11, echo=FALSE, fig.cap="Changing the symbology of our point data.", out.width='100%'}
-knitr::include_graphics("images/assessment2B/image11.png")
+```{r A1Amap2, echo=FALSE, fig.cap="QMS search.", out.width='90%'}
+knitr::include_graphics("images/exercise1A/map2.png")
+```
+</center>
+
+
+```{block2, A1Ahint1, type='rmdnote2'}
+Before importing your data it needs to be in a "clean" format. Make sure your data takes the form of regular columns with a single header row in Excel. Save it as a CSV:
+<center>
+![](images/assessment_2B/image15.png){width=45%}
+</center>
+```
+
+c) To add the spreadsheet data, go to *Layer -\> Add
+    Layer -\> Add Delimited Text Layer*.
+
+<center>
+```{r A1Amap3, echo=FALSE, fig.cap="Finding data to add to the map.", out.width='90%'}
+knitr::include_graphics("images/exercise1A/map3.png")
+```
+</center>
+    
+d)  Under *File name* navigate to the csv file which has the rainfall data
+
+    -   Make sure under *File Format* 'CSV' is selected
+    -   Under *Geometry Definition* set the *X field* to the Long
+        column of your data and the *Y field* to the Lat column
+    -   Make sure all the numerical values that have decimals are classified decimals in the Sample Data menu (check the table at the bottom)
+    -   Now make sure you use the right *Geometry CRS*. In our case: "EPSG:7844 - GDA2020".
+    -   (If you don't have the right CRS, click on the icon on the right side of the CRS field and search for GDA2020)
+    -   Click *Add*
+
+<center>
+```{r A1Amap4, echo=FALSE, fig.cap="Settings to import data to the map.", out.width='90%'}
+knitr::include_graphics("images/exercise1A/map4.png")
+```
+</center>
+
+
+
+e)  Once the layer is added check the points are in the right place
+*Right click -\> Zoom to layer*
+
+<center>
+```{r A1Amap5, echo=FALSE, fig.cap="Zoom to layer on your map.", out.width='90%'}
+knitr::include_graphics("images/exercise1A/map5.png")
+```
+</center>
+
+f) Now we have a basemap and our points - let's change the symbology of the
+points to better communicate the variation in EC.
+
+    -    Right click on the point data in the layer window and go *Properties
+    -\> Symbology*.
+    -   Set the symbol type to *Graduated* and specifying the values to
+    graduate by as our rainfall property column of interest.
+    -   Now set the *Method* to *Size*, and the *Mode* to *Natural Breaks
+    (Jenks)*, click *Classify*.
+    -   To change colours Right click *Symbol -\> Change colour*.
+
+<center>
+```{r A1Amap6, echo=FALSE, fig.cap="Setting symbology of the layer.", out.width='90%'}
+knitr::include_graphics("images/exercise1A/map6.png")
 ```
 </center>
 
@@ -156,11 +185,13 @@ h)  Finally, create a map output by clicking the *New Layout* button in
 
 <center>
 ```{r A1Aimage12, echo=FALSE, fig.cap="Example map from your QGIS output.", out.width='100%'}
-knitr::include_graphics("images/assessment2B/image12.jpg")
+knitr::include_graphics("images/exercise1A/map7.png")
 ```
 </center>
 
 **17)** OK - you beauty! Now you have some nice visualisations of the *spatial patterns* (rather than the temporal ones), for different metrics of interest to our analysis. What spatial patterns do you notice? Do they match what you would expect? What may be causing these spatial patterns?
+
+
 
 
 ## Contexualising your work {#A2A_13 .unnumbered}

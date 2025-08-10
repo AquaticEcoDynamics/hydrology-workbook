@@ -304,41 +304,23 @@ Figure 5: A guide to the timescales applicable to weather, climate variability a
 variation in our selected rainfall properties across the state - let’s face it, maps are cooler than tables. The following instructions are to guide you through the steps to do this in QGIS, which can be downloaded <a href="https://qgis.org/en/site/">here</a>. If you are proficient in ArcGIS you
 can use that instead to create your map. Or if you prefer not to use GIS for this assignment, then you can also create a map in Google Earth and manually add some pins.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Let’s start by importing our rainfall data of interest. Go to <em>Layer -&gt; Add
-Layer -&gt; Add Delimited Text Layer</em>.</p></li>
-<li><p>Under <em>File name</em> navigate to a csv file of the rainfall data</p>
-<ul>
-<li>Make sure under <em>File Format</em> ‘CSV’ is selected</li>
-<li>Under <em>Geometry Definition</em> set the <em>X field</em> to the Easting
-column of you EC data and the <em>Y field</em> to the Northing column</li>
-<li>Set the <em>Geometry CRS</em> to “EPSG:32750 - WGS84/UTM zone 50S”</li>
-<li>Click <em>Add</em></li>
-</ul></li>
+<li>In QGIS, start by adding a base-map. Go to the QuickMapServices (QMS) button in the toolbar and
+browse/search for a basemap that you think would be appropriate
+(e.g. search “satellite” and browse the different satellite basemap
+providers).</li>
 </ol>
+
+<div class="rmdnote2">
+If you do not have the QMS button in your toolbar go <em>Plugins -&gt; Manage and Install Plugins</em> and search ‘QuickMapServices’ to install it.
+</div>
 <center>
-<div class="figure"><span style="display:block;" id="fig:A1Aimage9"></span>
-<img src="images/assessment2B/image9.png" alt="Importing your rainfall data." width="100%" />
+<div class="figure"><span style="display:block;" id="fig:A1Amap1"></span>
+<img src="images/exercise1A/map1.png" alt="QuickMapServices." width="90%" />
 <p class="caption">
-Figure 6: Importing your rainfall data.
+Figure 6: QuickMapServices.
 </p>
 </div>
 </center>
-
-<div class="rmdnote2">
-Make sure your data takes this form in Excel. Save it as a CSV:
-<center>
-<img src="images/assessment_2B/image15.png" style="width:45.0%" />
-</center>
-</div>
-<p>You’ll now see the point data added to your screen, however, we have no
-spatial context - let’s add a basemap.</p>
-<ol start="3" style="list-style-type: lower-alpha">
-<li><p>Go to the QuickMapServices (QMS) button in the toolbar and
-browse/search for a basemap that you think would be appropriate
-(e.g. search “satellite” and browse the different satellite basemap
-providers).</p></li>
-<li><p>Add one to the map.</p></li>
-</ol>
 <center>
 <div class="figure"><span style="display:block;" id="fig:A1Aimage10"></span>
 <img src="images/assessment2B/image10.png" alt="The QMS buttons in the QGIS toolbar." width="50%" />
@@ -347,25 +329,86 @@ Figure 7: The QMS buttons in the QGIS toolbar.
 </p>
 </div>
 </center>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Click on the Search QMS icon. A search box will appear at the bottom right corner of your screen. Type satellite, select from one of the options. Click add.</li>
+</ol>
+<center>
+<div class="figure"><span style="display:block;" id="fig:A1Amap2"></span>
+<img src="images/exercise1A/map2.png" alt="QMS search." width="90%" />
+<p class="caption">
+Figure 8: QMS search.
+</p>
+</div>
+</center>
 
 <div class="rmdnote2">
-If you do not have the QMS button in your toolbar go <em>Plugins -&gt; Manage and Install Plugins</em> and search ‘QuickMapServices’ to install it.
+Before importing your data it needs to be in a “clean” format. Make sure your data takes the form of regular columns with a single header row in Excel. Save it as a CSV:
+<center>
+<img src="images/assessment_2B/image15.png" style="width:45.0%" />
+</center>
 </div>
-<p>Now we have a basemap and our points - let’s change the symbology of the
-points to better communicate the variation in EC.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>To add the spreadsheet data, go to <em>Layer -&gt; Add
+Layer -&gt; Add Delimited Text Layer</em>.</li>
+</ol>
+<center>
+<div class="figure"><span style="display:block;" id="fig:A1Amap3"></span>
+<img src="images/exercise1A/map3.png" alt="Finding data to add to the map." width="90%" />
+<p class="caption">
+Figure 9: Finding data to add to the map.
+</p>
+</div>
+</center>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><p>Under <em>File name</em> navigate to the csv file which has the rainfall data</p>
+<ul>
+<li>Make sure under <em>File Format</em> ‘CSV’ is selected</li>
+<li>Under <em>Geometry Definition</em> set the <em>X field</em> to the Long
+column of your data and the <em>Y field</em> to the Lat column</li>
+<li>Make sure all the numerical values that have decimals are classified decimals in the Sample Data menu (check the table at the bottom)</li>
+<li>Now make sure you use the right <em>Geometry CRS</em>. In our case: “EPSG:7844 - GDA2020”.</li>
+<li>(If you don’t have the right CRS, click on the icon on the right side of the CRS field and search for GDA2020)</li>
+<li>Click <em>Add</em></li>
+</ul></li>
+</ol>
+<center>
+<div class="figure"><span style="display:block;" id="fig:A1Amap4"></span>
+<img src="images/exercise1A/map4.png" alt="Settings to import data to the map." width="90%" />
+<p class="caption">
+Figure 10: Settings to import data to the map.
+</p>
+</div>
+</center>
 <ol start="5" style="list-style-type: lower-alpha">
+<li>Once the layer is added check the points are in the right place
+<em>Right click -&gt; Zoom to layer</em></li>
+</ol>
+<center>
+<div class="figure"><span style="display:block;" id="fig:A1Amap5"></span>
+<img src="images/exercise1A/map5.png" alt="Zoom to layer on your map." width="90%" />
+<p class="caption">
+Figure 11: Zoom to layer on your map.
+</p>
+</div>
+</center>
+<ol start="6" style="list-style-type: lower-alpha">
+<li><p>Now we have a basemap and our points - let’s change the symbology of the
+points to better communicate the variation in EC.</p>
+<ul>
 <li>Right click on the point data in the layer window and go <em>Properties
 -&gt; Symbology</em>.</li>
 <li>Set the symbol type to <em>Graduated</em> and specifying the values to
 graduate by as our rainfall property column of interest.</li>
 <li>Now set the <em>Method</em> to <em>Size</em>, and the <em>Mode</em> to <em>Natural Breaks
 (Jenks)</em>, click <em>Classify</em>.</li>
+<li>To change colours Right click <em>Symbol -&gt; Change colour</em>.</li>
+</ul></li>
 </ol>
 <center>
-<div class="figure"><span style="display:block;" id="fig:A1Aimage11"></span>
-<img src="images/assessment2B/image11.png" alt="Changing the symbology of our point data." width="100%" />
+<div class="figure"><span style="display:block;" id="fig:A1Amap6"></span>
+<img src="images/exercise1A/map6.png" alt="Setting symbology of the layer." width="90%" />
 <p class="caption">
-Figure 8: Changing the symbology of our point data.
+Figure 12: Setting symbology of the layer.
 </p>
 </div>
 </center>
@@ -381,9 +424,9 @@ of this
 </ol>
 <center>
 <div class="figure"><span style="display:block;" id="fig:A1Aimage12"></span>
-<img src="images/assessment2B/image12.jpg" alt="Example map from your QGIS output." width="100%" />
+<img src="images/exercise1A/map7.png" alt="Example map from your QGIS output." width="100%" />
 <p class="caption">
-Figure 9: Example map from your QGIS output.
+Figure 13: Example map from your QGIS output.
 </p>
 </div>
 </center>
