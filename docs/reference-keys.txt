@@ -20,6 +20,13 @@ fig:A1Amap4
 fig:A1Amap5
 fig:A1Amap6
 fig:A1Aimage12
+fig:E2image4
+fig:E2image5
+eq:E2equation3
+fig:E2image6
+tab:E2table2
+eq:E2equation4
+eq:E2equation5
 eq:E3Bequation1
 eq:E3Bequation2
 fig:E3Bimage1

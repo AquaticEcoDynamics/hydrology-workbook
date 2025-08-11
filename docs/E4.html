@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="E4a.html"/>
+<link rel="prev" href="L2.html"/>
 <link rel="next" href="E5.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -135,6 +135,12 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E4a.html"><a href="E4a.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
 <li class="chapter" data-level="" data-path="E4a.html"><a href="E4a.html#A2A_13"><i class="fa fa-check"></i>Contexualising your work</a></li>
 <li class="chapter" data-level="" data-path="E4a.html"><a href="E4a.html#A2A_6"><i class="fa fa-check"></i>Assignment 1A submission</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html"><i class="fa fa-check"></i>(Lecture 4 - Streamflow analysis)</a>
+<ul>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="L2.html"><a href="L2.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html"><i class="fa fa-check"></i>Exercise 5 - Visualising groundwater</a>
 <ul>
@@ -293,13 +299,13 @@ div.csl-indent {
 <p>As a first step lets consider the flux law for groundwater flow. Groundwater flow is driven by the distribution of water pressure (hydraulic head, which has units of length) within the groundwater system. The flow of groundwater follows a flux law;</p>
 <center>
 <span class="math display" id="eq:E3Bequation1">\[\begin{equation}
-q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         \tag{4}
+q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                                         \tag{7}
 \end{equation}\]</span>
 </center>
 <p>Where <span class="math inline">\(q\)</span> is the specific discharge (or Darcy Flux) with units of L T<sup>-1</sup>, <span class="math inline">\(Q\)</span> is the volumetric flow rate (L<sup>3</sup> T<sup>-1</sup>), <span class="math inline">\(A\)</span> is the cross-sectional area through which the water flow (L<sup>2</sup>), and <span class="math inline">\(\frac{\Delta h}{ \Delta l}\)</span> is the hydraulic gradient. This gradient is simply the change in water pressure (<span class="math inline">\(h_1-h_2\)</span>) over a given distance (L/L, unitless). The key system property in this flux law is the hydraulic conductivity (<span class="math inline">\(K\)</span>), which has units of L T<sup>-1</sup>. In natural groundwater systems the value of hydraulic conductivity can vary over 12 orders of magnitude. Even though this water flux <span class="math inline">\(q\)</span> has units of L T<sup>-1</sup>, it’s not actually the velocity of the groundwater, because the water wasn’t flowing through the whole area, just the pore space. To correct for this and calculate the average velocity we need to use the area of the pore space (<span class="math inline">\(An\)</span>, where <span class="math inline">\(n\)</span> is porosity), instead of the total area. This gives us;</p>
 <center>
 <span class="math display" id="eq:E3Bequation2">\[\begin{equation}
-\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           \tag{5}
+\bar{v}=\ \frac{Q}{An}=-\frac{K}{n} \frac{\Delta h}{\Delta l}                                           \tag{8}
 \end{equation}\]</span>
 </center>
 <p>Where <span class="math inline">\(\bar{v}\)</span> is the average linear velocity of the water flowing through the porous media.</p>
@@ -308,7 +314,7 @@ q=\frac{Q}{A}=-K \frac{\Delta h}{\Delta l}                                      
 <div class="figure"><span style="display:block;" id="fig:E3Bimage1"></span>
 <img src="images/exercise3B/picture1.png" alt="a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation" width="100%" />
 <p class="caption">
-Figure 14: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation
+Figure 17: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy’s Law Equation
 </p>
 </div>
 </center>
@@ -330,7 +336,7 @@ Figure 14: a) Photo of simple Darcy Tube and b) diagram showing terms in Darcy�
 <div class="figure"><span style="display:block;" id="fig:E4imageX"></span>
 <img src="images/exercise4/pictureX.png" alt="Water table and topography of a idealised hillslope" width="80%" />
 <p class="caption">
-Figure 15: Water table and topography of a idealised hillslope
+Figure 18: Water table and topography of a idealised hillslope
 </p>
 </div>
 </center>
@@ -346,7 +352,7 @@ Figure 15: Water table and topography of a idealised hillslope
 <div class="figure"><span style="display:block;" id="fig:E4imageY"></span>
 <img src="images/exercise4/pictureY.png" alt="Creating a hillslope flow-net. For an overview, check out this youtube instruction video [here](https://www.youtube.com/watch?v=d9f4iTh09bo)." width="80%" />
 <p class="caption">
-Figure 16: Creating a hillslope flow-net. For an overview, check out this youtube instruction video <a href="https://www.youtube.com/watch?v=d9f4iTh09bo">here</a>.
+Figure 19: Creating a hillslope flow-net. For an overview, check out this youtube instruction video <a href="https://www.youtube.com/watch?v=d9f4iTh09bo">here</a>.
 </p>
 </div>
 </center>
@@ -361,7 +367,7 @@ Figure 16: Creating a hillslope flow-net. For an overview, check out this youtub
 <div class="figure"><span style="display:block;" id="fig:E3Bimage2"></span>
 <img src="images/exercise3B/picture4.png" alt="Section of a map of the watertable across Perth" width="100%" />
 <p class="caption">
-Figure 17: Section of a map of the watertable across Perth
+Figure 20: Section of a map of the watertable across Perth
 </p>
 </div>
 </center>
@@ -369,7 +375,7 @@ Figure 17: Section of a map of the watertable across Perth
 <div id="E3B_3" class="section level2 unnumbered hasAnchor">
 <h2>Physical model of groundwater system<a href="E4.html#E3B_3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this part of the exercise we will look at a model of a layered groundwater system. Each layer has a different hydraulic conductivity, <span class="math inline">\(K\)</span>, forming two aquifers and an aquitard. Within each layer there will also be variation in hydraulic conductivity. This spatial variation is called “heterogeneity”, and it is an important feature of real groundwater systems.</p>
-<p>Start by annotating the photo of this model (Figure <a href="E4.html#fig:E3Bimage2">17</a>) to show the following;</p>
+<p>Start by annotating the photo of this model (Figure <a href="E4.html#fig:E3Bimage2">20</a>) to show the following;</p>
 <ol style="list-style-type: decimal">
 <li><p>Aquifers and aquitards</p></li>
 <li><p>Recharge and discharge zones</p></li>
@@ -381,7 +387,7 @@ Figure 17: Section of a map of the watertable across Perth
 <div class="figure"><span style="display:block;" id="fig:E3Bimage3"></span>
 <img src="images/exercise3B/picture2.png" alt="Physical model of a layered groundwater system." width="80%" />
 <p class="caption">
-Figure 18: Physical model of a layered groundwater system.
+Figure 21: Physical model of a layered groundwater system.
 </p>
 </div>
 </center>
@@ -392,7 +398,7 @@ Figure 18: Physical model of a layered groundwater system.
 <div class="figure"><span style="display:block;" id="fig:E3Bimage4"></span>
 <img src="images/exercise3B/picture3.png" alt="Physical model of a layered groundwater system." width="80%" />
 <p class="caption">
-Figure 19: Physical model of a layered groundwater system.
+Figure 22: Physical model of a layered groundwater system.
 </p>
 </div>
 </center>
@@ -421,7 +427,7 @@ Figure 19: Physical model of a layered groundwater system.
 <div class="figure"><span style="display:block;" id="fig:E4imageZ"></span>
 <img src="images/exercise4/pictureZ.png" alt="Plan and cross sectional view of a river valley" width="80%" />
 <p class="caption">
-Figure 20: Plan and cross sectional view of a river valley
+Figure 23: Plan and cross sectional view of a river valley
 </p>
 </div>
 </center>
@@ -432,7 +438,7 @@ Figure 20: Plan and cross sectional view of a river valley
 <center>
 <span class="math display" id="eq:E4equation2">\[\begin{equation}
 Transmissivity = T = Aquifer Depth * K
-\tag{6}
+\tag{9}
 \end{equation}\]</span>
 </center>
 <p>Start by drawing a diagram and annotate with the information that you know.</p>
@@ -444,7 +450,7 @@ Transmissivity = T = Aquifer Depth * K
           </div>
         </div>
       </div>
-<a href="E4a.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="L2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="E5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
