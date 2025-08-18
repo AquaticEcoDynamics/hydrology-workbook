@@ -28,22 +28,73 @@ their ability to:
 -   effectively communicate their understanding of a hydrological system
     through a written report
     
--   synthesie the information to make effective recommendations for managers.
+-   synthesize the information to make effective recommendations for managers.
 
 The specific requirements of this assessment are located [at the end](#A2B_10) of this page.
 
-### Background {#A2B_2 .unnumbered}
+### Our task {#A2B_4 .unnumbered}
 
-The degradation of freshwater systems by increasing salinity is a major
-challenge facing Western Australia. Salinisation of the Avon river,
-which enters the Upper Swan river at Walyunga National Park, arose due
-to poor land-management leading to secondary salinity in the inland
-wheatbelt catchments. Whilst secondary salinity is not an issue in the
-Swan Coastal Plain where our study site is, the salt loads from the Avon
-in addition to rising sea levels and decreasing rainfall trend have been
-driving changes in the seasonal movement of brackish estuarine water, with
-increasing penetration of the salt wedge further inland from the ocean
-(Huang et al. 2018).
+Our job when visiting this site is to use available data to us in order to delineate the
+hydrologic pathways (surface and sub-surface) that determine the
+distribution of water and salt in this floodplain ecosystem. 
+
+Changing salinity within river systems can cause shifts in floodplain vegetation
+which arise because of river water interaction with the floodplain.
+Depending on the salinity increase and the salt tolerance of the
+floodplain tree species, this can cause shifts in community structure.
+*Eucalyptus rudis* is important species that has a natural range along
+the Swan river and its tributaries. This species has been reported to be
+in decline for over 15 years along the Swan river (Clay & Majer 2001),
+and more recently along one of the tributaries of the Swan river: the
+Guildford floodplains of the Helena river (Dundas 2011). It is currently
+unknown the exact role of water availability and salinity in the
+observed decline, and alternate hypothesis related to tree pathogens
+(e.g. *Phytophthora*) are also considered to be drivers of decline
+You will use this information to develop a hydrological conceptual model of this
+site and develop a report that describes the context of the
+investigation and summarise the findings and observations as suitable
+for a reader such as the City of Swan Environmental Management team.
+
+After your analysis you should be able to:
+
+-   Identify the surface water flow regime - where and when does surface
+    water pond or flow
+-   Articulate the key features of the groundwater system - water level
+    trends, groundwater flow directions, and surface water - groundwater
+    interaction areas
+-   Assess the distribution of salinity in groundwater wells
+    (piezometers) and surface water
+-   Conceptualise the hydrologic processes influencing salt movement and
+    accumulation across the site
+-   Identify the distressed and dead trees at the site and articulate possible links between the hydroloigcal system and
+    declining health of *E. Rudis*
+
+The data you need for the assessment is a mix of previously collected data, and new data that is collected during the ENVT2251 field visit. The existing data is in the file *Helena Data Combined.xlsx*.
+
+
+
+
+### 1. Investigating the site and vegetation change {#A2B_6 .unnumbered}
+
+There are now a range of spatial data products that have been generated
+from aerial imagery and remote sensing methods that we can use to help
+understand hydrological processes. One of these products is Nearmap,
+which allows us to access aerial imagery to investigate the changes in
+vegetation (and surface water distribution) over time.
+
+Nearmap can be accessed at: <http://maps.au.nearmap.com> (login via UWA
+library Onesearch - see this
+[webpage](https://guides.library.uwa.edu.au/c.php?g=569441&p=3958857)
+for details). Once you have successfully logged into Nearmap you can
+find the study site by searching for Guildford and then identifying the
+confluence of the Helena and Swan Rivers.
+
+<center>
+```{r A2Bimage7, echo=FALSE, fig.cap="In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)", out.width='90%'}
+knitr::include_graphics("images/assessment2B/image7.png")
+```
+</center>
+
 
 The City of Swan has identified our focus site on the Helena River near
 Guildford as an area of concern due to the decline of *Eucalyptus rudis*.
@@ -60,31 +111,22 @@ knitr::include_graphics("images/assessment2B/image1.png")
 ```
 </center>
 
-Specifically, a goal of ours is to understand the variability in salinity in the focus site. Salinisation of river systems can cause shifts in floodplain vegetation
-which arise because of river water interaction with the floodplain.
-Depending on the salinity increase and the salt tolerance of the
-floodplain tree species, this can cause shifts in community structure.
-*Eucalyptus rudis* is important species that has a natural range along
-the Swan river and its tributaries. This species has been reported to be
-in decline for over 15 years along the Swan river (Clay & Majer 2001),
-and more recently along one of the tributaries of the Swan river: the
-Guildford floodplains of the Helena river (Dundas 2011). It is currently
-unknown the exact role of water availability and salinity in the
-observed decline, and alternate hypothesis related to tree pathogens
-(e.g. *Phytophthora*) are also considered to be drivers of decline.
+Zoom in so that you can see the vegetation canopy clearly and then use
+the time bar at the top to look at changes over time (play button will
+scroll through all available images, clock icon will split the screen so
+you can compare two different dates.
 
-### Helena River Study Site {#A2B_3 .unnumbered}
+-   What seasonal changes can you see in the images?
 
+-   How has the vegetation changed between the oldest and the most
+    recent images (compare similar times of year)?
 
+-   As you scroll through time does there seem to be a period of more
+    rapid decline? Are there any periods of recovery?
 
-<center>
-```{r A2Bimage2, echo=FALSE, fig.cap="", out.width='65%'}
-knitr::include_graphics("images/assessment2B/image2.png")
-```
-</center>
 
 The natural surface drainage of the site has been altered by artificial
-surface drainage channels.
+surface drainage channels. 
 
 <center>
 ```{r A2Bimage3, echo=FALSE, fig.cap="",out.width='45%', out.height='25%', fig.show='hold'}
@@ -92,6 +134,48 @@ knitr::include_graphics(c("images/assessment2B/image3_1.png",
                           "images/assessment2B/image3_2.png"))
 ```
 </center>
+
+
+You can also see the distribution of surface water on the Nearmap
+imagery - compare what you see with the following mapping of surface
+water inundation at the site.
+
+<center>
+```{r A2Bimage8, echo=FALSE, fig.cap="Example inundation pattern. Which way is the water flowing?", out.width='65%'}
+knitr::include_graphics("images/assessment2B/image8.png")
+```
+</center>
+
+### 2. Time-series data for assessing water levels and salinity {#A2B_8 .unnumbered}
+
+You are provided with a spreadsheet that summarise the timeseries data
+collected by various agencies (e.g., UWA and DWER (via
+[WIR](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx))).
+This files includes numerous sheets with the following data notes :
+
+-   **GW Levels**: This includes the UWA piezometer level data (converted
+    into mAHD) for the main wells: HW1, HW2, and HW3. Bore 7 is also
+    included which is denoted as Jeremy on the map.
+
+-   **GW Salinity**: This has the UWA salinity measurements from inside the
+    Piezometers. These data are in mS/cm.
+
+-   **Helena River**: River Corrected data is the water level of Helena
+    River under the nearby Traffic Bridge. So you can think of this as
+    the water level at the river-end of the piezometer transect. "Poison
+    Lease" (upstream in Helena River to the east of our site). It also
+    has the discharge (Q) at this site, based on a rating curve.
+
+-   **Swan River**: This has WIR data from the station MSB data as above,
+    including the daily min and mix, showing the tidal amplitude of the
+    Swan River over time. The "*Vitox*" Salinity data is from the WIR
+    website for the nearby location which is just to the west of our
+    site (on the other side of Kings Meadow Oval). This data indicates
+    the river/estuary salinity and would be very similar to the salinity
+    of the surface water in Helena River near our site also. Note its
+    seasonality, compared to the groundwater.
+
+#### 2a. Groundwater levels and salinity {.unnumbered}
 
 A series of monitoring wells have previously been installed at the site.
 The following [LIDAR](https://en.wikipedia.org/wiki/Lidar) image shows
@@ -114,8 +198,8 @@ what are the dimensions (depth and diameter) of the well? The well
 dimensions will determine the equipment you need to sample it. Secondly,
 across what depth range (and more importantly, elevation) is the screen
 interval (the area where slots are present)? This is the actual
-elevation of your groundwatre pressure measurement; it's important that
-you know this so that you can compare your measurement with existing
+elevation of your groundwate pressure measurement; it's important that
+you know this so that you carn compare your measurement with existing
 data. Once you get to a well, the first thing to do is measure the depth
 to water - from this measurement you can work out the elevation of the
 watertable, and also how much water is sitting in the well (standing
@@ -132,89 +216,35 @@ knitr::include_graphics(c(
 ```
 </center>
 
-### Your task {#A2B_4 .unnumbered}
+Remember, when working with groundwater data you need to be careful to
+distinguish between groundwater levels that are reported as a depth to
+water (from the ground level or top of casing) as opposed to groundwater
+levels the **Australian Height Datum (AHD)**. If there are measured values
+of depth to water you need to convert these to elevations in m AHD so
+they can be compared with the prior data and WIR data. To do this we
+need to know the ground level elevation at the measurement point, in
+mAHD (or the elevation of the top of casing, if this was the origin for
+the measurement).
 
-During this assessment you will use existing data to delineate the
-hydrologic pathways (surface and sub-surface) that determine the
-distribution of water and salt in this floodplain system. You will use
-this information to develop a hydrological conceptual model of this
-site. Your assessment report should describe the context of the
-investigation and summarise your findings and observations as suitable
-for a reader such as the City of Swan Environmental Management team.
+Raw data is often not perfect, so think of some ways to present the
+data. For example,a PIVOT table is useful to look at monthly
+values. When interpreting the data we would like to highlight
+seasonality, and also relative differences between sites. 
 
-After your analysis you should be able to:
+#### 2b. Comparing groundwater and surface water changes {.unnumbered}
 
--   Identify the distressed and dead trees at the site
--   Identify the surface water flow regime - where and when does surface
-    water pond or flow
--   Articulate the key features of the groundwater system - water level
-    trends, groundwater flow directions, and surface water - groundwater
-    interaction areas
--   Assess the distribution of salinity in groundwater wells
-    (piezometers) and surface water
--   Conceptualise the hydrologic processes influencing salt movement and
-    accumulation across the site
--   Articulate possible links between this conceptualization and
-    declining health of *E. Rudis*
+Now we want to try to find a way to bring togteher the different data into a single plot
+to help our interpretation of the what is happening at the system. That is, we have surface water data, and some groundwater data from different sources, but it is nice for us to compare them with each other so we can understand the nature of surface-groundwater interaction.
 
-The data you need for the assessment is in the file *Helena Data Combined.xlsx*
 
-### 1. Literature review {#A2B_5 .unnumbered}
+#### 2c. Preparing a transect plot  {.unnumbered}
 
-Start by reading this report by UWA researchers to learn more about the
-history of scientific studies at this site and recent findings:
 
-<center>
-```{r A2Bimage6, echo=FALSE, fig.cap="", out.width='55%'}
-knitr::include_graphics("images/assessment2B/image6.png")
-```
-</center>
-
-### 2. Mapping vegetation change {#A2B_6 .unnumbered}
-
-There are now a range of spatial data products that have been generated
-from aerial imagery and remote sensing methods that we can use to help
-understand hydrological processes. One of these products is Nearmap,
-which allows us to access aerial imagery to investigate the changes in
-vegetation (and surface water distribution) over time.
-
-Nearmap can be accessed at: <http://maps.au.nearmap.com> (login via UWA
-library Onesearch - see this
-[webpage](https://guides.library.uwa.edu.au/c.php?g=569441&p=3958857)
-for details). Once you have successfully logged into Nearmap you can
-find the study site by searching for Guildford and then identifying the
-confluence of the Helena and Swan Rivers.
-
-<center>
-```{r A2Bimage7, echo=FALSE, fig.cap="In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)", out.width='90%'}
-knitr::include_graphics("images/assessment2B/image7.png")
-```
-</center>
-
-Zoom in so that you can see the vegetation canopy clearly and then use
-the time bar at the top to look at changes over time (play button will
-scroll through all available images, clock icon will split the screen so
-you can compare two different dates.
-
--   What seasonal changes can you see in the images?
-
--   How has the vegetation changed between the oldest and the most
-    recent images (compare similar times of year)?
-
--   As you scroll through time does there seem to be a period of more
-    rapid decline? Are there any periods of recovery?
-
-You can also see the distribution of surface water on the Nearmap
-imagery - compare what you see with the following mapping of surface
-water inundation at the site.
-
-<center>
-```{r A2Bimage8, echo=FALSE, fig.cap="Example inundation pattern. Which way is the water flowing?", out.width='65%'}
-knitr::include_graphics("images/assessment2B/image8.png")
-```
-</center>
+If we recall [Darcy's Law](#E4_2), it is teh hydraulic gradient that can inform us which way water will flow. For example, if the water levels in the piezometer are higher than the mean river level, then aquifer water will discharge into the river. To visualise this gradient, we can plot the slope in the water table. At this site, if we compare the water table transect in different seasons, we can see the direction of flow reverses in some months.  
 
 ### 3. Mapping salinity (EC) in QGIS {#A2B_7 .unnumbered}
+
+Specifically, a goal of ours is to understand the variability in salinity in the focus site.
 
 Surface water samples from across the site have previously been
 collected and analysed for electrical conductivity (EC), which is a
@@ -300,64 +330,19 @@ knitr::include_graphics("images/assessment2B/image12.jpg")
 ```
 </center>
 
-### 4. Time-series data for assessing groundwater levels and salinity {#A2B_8 .unnumbered}
+### 4. Conceptualising Surface-Groundwater interaction  {#A2B_9 .unnumbered}
 
-You are provided with a spreadsheet that summarise the timeseries data
-collected by various agencies (e.g., UWA and DWER (via
-[WIR](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx))).
-This files includes numerous sheets with the following data notes :
+Start by reading this report by UWA researchers to learn more about the
+history of scientific studies at this site and recent findings:
 
--   **Weather**: There was a "Baro" dataset, which is a UWA logger measuring
-    atmospheric pressure, in kPa. We measure this as the water levels in
-    the piezometers may vary due to atmospheric pressure fluctuations.
-    For your report you do not need to present this, just bear in mind
-    it was used to "correct" the piezometer water level data. The
-    rainfall provided is from the nearby [DPIRD
-    South-Perth](https://weather.agric.wa.gov.au) weather station.
-
--   **GW Levels**: This includes the UWA piezometer level data (converted
-    into mAHD) for the main wells: HW1, HW2, and HW3. Bore 7 is also
-    included which is denoted as Jeremy on the map.
-
--   **GW Salinity**: This has the UWA salinity measurements from inside the
-    Piezometers. These data are in mS/cm.
-
--   **Helena River**: River Corrected data is the water level of Helena
-    River under the nearby Traffic Bridge. So you can think of this as
-    the water level at the river-end of the piezometer transect. "Poison
-    Lease" (upstream in Helena River to the east of our site). It also
-    has the discharge (Q) at this site, based on a rating curve.
-
--   **Swan River**: This has WIR data from the station MSB data as above,
-    including the daily min and mix, showing the tidal amplitude of the
-    Swan River over time. The "*Vitox*" Salinity data is from the WIR
-    website for the nearby location which is just to the west of our
-    site (on the other side of Kings Meadow Oval). This data indicates
-    the river/estuary salinity and would be very similar to the salinity
-    of the surface water in Helena River near our site also. Note its
-    seasonality, compared to the groundwater.
-
-Remember, when working with groundwater data you need to be careful to
-distinguish between groundwater levels that are reported as a depth to
-water (from the ground level or top of casing) as opposed to groundwater
-levels the Australian Height Datum (AHD). If there are measured values
-of depth to water you need to convert these to elevations in m AHD so
-they can be compared with the prior data and WIR data. To do this we
-need to know the ground level elevation at the measurement point, in
-mAHD (or the elevation of the top of casing, if this was the origin for
-the measurement).
-
-Raw data is often not perfect, so think of some ways to presnet the
-data. For example, you could make a PIVOT table to look at monthly
-values. When interpreting the data we would like to highlight
-seasonality, and also relative differences between sites. Importantly,
-is there a way to bring togteher the different data into a single plot
-to help our interpretation of the what is happening at the system.
-
-### 5. Conceptualising Surface-Groundwater interaction {#A2B_9 .unnumbered}
+<center>
+```{r A2Bimage6, echo=FALSE, fig.cap="", out.width='55%'}
+knitr::include_graphics("images/assessment2B/image6.png")
+```
+</center>
 
 Now that you have an understanding of the previous studies at the site,
-and have plotted the existing data, the next step is to develop your
+and have plotted the available data, the next step is to develop your
 conceptual model of surface water - groundwater interaction. When trying
 to make sense of all this data from different locations and time periods
 some guiding questions can help focus your analyses:
@@ -377,15 +362,32 @@ some guiding questions can help focus your analyses:
     piezometers vary relative to surface water. Think here Darcy's Law
     and Hydraulic gradient.
 
--   Are is the unsaturated zone (vadose zone) adequate for the tree
+
+### 5. Reccomendations {#A2B_9 .unnumbered}
+
+The degradation of freshwater systems by increasing salinity is a major
+challenge facing Western Australia. Salinisation of the Avon river,
+which enters the Upper Swan river at Walyunga National Park, arose due
+to poor land-management leading to secondary salinity in the inland
+wheatbelt catchments. Whilst secondary salinity is not an issue in the
+Swan Coastal Plain where our study site is, the salt loads from the Avon
+in addition to rising sea levels and decreasing rainfall trend have been
+driving changes in the seasonal movement of brackish estuarine water, with
+increasing penetration of the salt wedge further inland from the ocean
+(Huang et al. 2018). 
+
+Can you think about monitoring or other research that could now be undertaken to further understand the situation? For example:
+
+-   Are the unsaturated zone (vadose zone) conditions adequate for the tree
     roots? i.e., is the water table depth deep enough to contain
     non-salty soil moisture for them, or must they rely on water from
     salty groundwater? Look here at areas in nearmap where tree loss has
     occurred.
 
--   What are the salinity tolerances reported for E. rudis, based on
-    lab/field trials? And how does our data compare to sort of data
-    (historical and our class data).
+-   What are the salinity tolerances reported for *E. rudis*, based on
+    lab/field trials in the literature? How does data we collected compare to the sort of data where salinity is known to impact the species?
+    
+
 
 ### Submission {#A2B_10 .unnumbered}
 
@@ -442,4 +444,4 @@ Whitwell, C., and Zhai, S., (2020). Understanding and predicting
 riparian decline: Ecohydrology and hydro-climatological change in the
 Upper Swan estuary. The University of Western Australia, Perth,
 Australia. 51pp.
-
+.

@@ -85,9 +85,9 @@ fig:L3image4
 fig:L3image5
 fig:L3imageY
 fig:image04-11
-fig:A2Bimage4
 fig:A2Bimage7
 fig:A2Bimage8
+fig:A2Bimage4
 fig:A2Bimage9
 fig:A2Bimage10
 fig:A2Bimage11
