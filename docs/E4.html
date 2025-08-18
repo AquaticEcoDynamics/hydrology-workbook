@@ -147,7 +147,12 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E4_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Using Darcy’s Law to calculate flow to a stream</a></li>
-<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Creating a flow net</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_3"><i class="fa fa-check"></i>Groundwater flow concepts</a>
+<ul>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#creating-a-flow-net"><i class="fa fa-check"></i>Creating a flow net</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#interpreting-a-flow-net"><i class="fa fa-check"></i>Interpreting a flow net</a></li>
+<li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#transmissivity"><i class="fa fa-check"></i>Transmissivity</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="E4.html"><a href="E4.html#E3B_4"><i class="fa fa-check"></i>Example calculation of groundwater baseflow to a river</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E5.html"><a href="E5.html"><i class="fa fa-check"></i>Exercise 6 - Undertaking a water balance</a>
@@ -345,8 +350,10 @@ Figure 18: Water table and topography of a idealised hillslope
 </ol>
 </div>
 <div id="E3B_3" class="section level2 unnumbered hasAnchor">
-<h2>Creating a flow net<a href="E4.html#E3B_3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Groundwater flow concepts<a href="E4.html#E3B_3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can trace the path of a “parcel” of water at any point in a groundwater system by creating a “flow net”. To do this we map the lines of “<strong>equipotential</strong>” (i.e., lines of constant head), like height contours on a topographic map, but instead of land height, its water height. Based on the gradient in water height (hydraulic gradient) we can work out the path that a parcel of water would take, as water will flow from high to low pressure.</p>
+<div id="creating-a-flow-net" class="section level3 unnumbered hasAnchor">
+<h3>Creating a flow net<a href="E4.html#creating-a-flow-net" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before we go further, lets check out this cool flow-net tool called “<a href="https://tdpfonline.net/topodrive.html">TopoDrive</a>”. This is an online interactive tool that allows you to visulise groundwater flow nets!</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:E4imageY"></span>
@@ -360,6 +367,9 @@ Figure 19: Creating a hillslope flow-net. For an overview, check out this youtub
 <li>Create a hypothetical hillslope water table cross-section with the tool. Use the tool to show the water flow pathways. Make a note of your observations - is there anything unexpected? Depending on your flow-net you may be surprised that water does not always flow in a straight line!</li>
 </ol>
 <p>One thing to note with flow-lines (or sometimes we call them <strong>streamlines</strong>), water flow paths must cross lines of equipotetnial at right-angles (i.e. perpendicular).</p>
+</div>
+<div id="interpreting-a-flow-net" class="section level3 unnumbered hasAnchor">
+<h3>Interpreting a flow net<a href="E4.html#interpreting-a-flow-net" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol start="4" style="list-style-type: decimal">
 <li>Now look at the below image - a plan view of the water table contours around Perth. Given the sort of hydraulic conductivities estimated above, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, <a href="https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf">HG20</a>) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (8). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). <em>Note that it’s probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.</em></li>
 </ol>
@@ -372,6 +382,28 @@ Figure 20: Section of a map of the watertable across Perth
 </div>
 </center>
 </div>
+<div id="transmissivity" class="section level3 unnumbered hasAnchor">
+<h3>Transmissivity<a href="E4.html#transmissivity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The transmissivity of an aquifer is the <strong>depth-integrated hydraulic conductivity</strong>, computed as:</p>
+<center>
+<span class="math display" id="eq:E4equation2">\[\begin{equation}
+Transmissivity = T = Aquifer Depth * K
+\tag{9}
+\end{equation}\]</span>
+</center>
+<ol start="5" style="list-style-type: decimal">
+<li>Using the diagram below, find the Transmissivity, T, of the system.</li>
+</ol>
+<center>
+<div class="figure"><span style="display:block;" id="fig:E3Bimage2aa"></span>
+<img src="images/exercise4/transmissivity.png" alt="Annotated cross section of an aquifer" width="60%" />
+<p class="caption">
+Figure 21: Annotated cross section of an aquifer
+</p>
+</div>
+</center>
+</div>
+</div>
 <div id="E3B_4" class="section level2 unnumbered hasAnchor">
 <h2>Example calculation of groundwater baseflow to a river<a href="E4.html#E3B_4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this section is an example of how we can apply Darcy’s Law to work out how an aquifer is “working”, i.e., how much water it is conducting and entering the river as baseflow. Consider the following.</p>
@@ -380,21 +412,16 @@ Figure 20: Section of a map of the watertable across Perth
 <div class="figure"><span style="display:block;" id="fig:E4imageZ"></span>
 <img src="images/exercise4/pictureZ.png" alt="Plan and cross sectional view of a river valley" width="80%" />
 <p class="caption">
-Figure 21: Plan and cross sectional view of a river valley
+Figure 22: Plan and cross sectional view of a river valley
 </p>
 </div>
 </center>
 <p>Between the stations, the river receives water from both sides, from an unconfined aquifer, and the equipotentials are assumed to be parallel to the river.</p>
 <p>The slope of the water table (hydraulic gradient) on average is approximately 1/1000 (m/m).</p>
-<p>Based on this information, use Darcy’s Law to determine the transmissivity of the aquifer, in m2/s.</p>
-<p>Note that, Transmissivity of an aquifer is the depth integrated hydraulic conductivity</p>
-<center>
-<span class="math display" id="eq:E4equation2">\[\begin{equation}
-Transmissivity = T = Aquifer Depth * K
-\tag{9}
-\end{equation}\]</span>
-</center>
-<p>Start by drawing a diagram and annotate with the information that you know.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Based on this information, use Darcy’s Law to determine the transmissivity of the aquifer, in m2/s.</li>
+</ol>
+<p>Start by drawing your own diagram and annotate with the information that you know.</p>
 
 </div>
 </div>

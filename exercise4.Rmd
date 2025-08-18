@@ -79,9 +79,11 @@ knitr::include_graphics("images/exercise4/pictureX.png")
 
 2.  Consider the diagram above. If the slope of the water table hydraulic gradient perpendicular to the stream is on average approximately 1/1000 (m/m), what is the Darcy flux, q, of groundwater towards the river? Use a hydraulic conductivity, K, of 1 m /day.
 
-## Creating a flow net {#E3B_3 .unnumbered}
+## Groundwater flow concepts {#E3B_3 .unnumbered}
 
 We can trace the path of a "parcel" of water  at any point in a groundwater system by creating a "flow net". To do this we map the lines of "**equipotential**" (i.e., lines of constant head), like height contours on a topographic map, but instead of land height, its water height. Based on the gradient in water height (hydraulic gradient) we can work out the path that a parcel of water would take, as water will flow from high to low pressure.
+
+### Creating a flow net  {.unnumbered}
 
 Before we go further, lets check out this cool flow-net tool called "[TopoDrive](https://tdpfonline.net/topodrive.html)". This is an online interactive tool that allows you to visulise groundwater flow nets! 
 
@@ -97,6 +99,7 @@ knitr::include_graphics("images/exercise4/pictureY.png")
 
 One thing to note with flow-lines (or sometimes we call them **streamlines**), water flow paths must cross lines of equipotetnial at right-angles (i.e. perpendicular). 
 
+### Interpreting a flow net {.unnumbered}
 
 4.  Now look at the below image - a plan view of the water table contours around Perth. Given the sort of hydraulic conductivities estimated above, what would the range of linear velocity we could expect in a groundwater system like the Gnangara Mound? Use the following watertable map (taken from Davidson and Yu 2008, [HG20](https://www.water.wa.gov.au/__data/assets/pdf_file/0015/5280/71802.pdf)) to estimate a hydraulic conductivity, and then calculate linear velocity using Eq (8). You will need to assume a porosity - look these up, or just use 0.25 (which is a good indicative value for back-of-the-envelope calculations in aquifer materials - why not in clays?). *Note that it's probably ok to assume a porosity value because the range of porosity is within one order of magnitude, whereas hydraulic conductivity will vary by multiple orders of magnitude, even within the same type of material, so this will be the larger source of uncertainty in your calculation.*
 
@@ -108,6 +111,31 @@ knitr::include_graphics("images/exercise3B/picture4.png")
 
 </center>
 
+### Transmissivity {.unnumbered}
+
+The transmissivity of an aquifer is the **depth-integrated hydraulic conductivity**, computed as:
+
+<center>
+
+```{=tex}
+\begin{equation}
+Transmissivity = T = Aquifer Depth * K 
+(\#eq:E4equation2)
+\end{equation}
+```
+</center>
+
+
+5.  Using the diagram below, find the Transmissivity, T,  of the system.
+ 
+ <center>
+
+```{r E3Bimage2aa, echo=FALSE, fig.cap="Annotated cross section of an aquifer", out.width = '60%'}
+knitr::include_graphics("images/exercise4/transmissivity.png")
+```
+</center>
+
+ 
 ## Example calculation of groundwater baseflow to a river {#E3B_4 .unnumbered}
 
 In this section is an example of how we can apply Darcy's Law to work out how an aquifer is "working", i.e., how much water it is conducting and entering the river as baseflow. Consider the following.
@@ -127,18 +155,6 @@ Between the stations, the river receives water from both sides, from an unconfin
 
 The slope of the water table (hydraulic gradient) on average is approximately 1/1000 (m/m).
 
-Based on this information, use Darcy’s Law to determine the transmissivity of the aquifer, in m2/s. 
+6.  Based on this information, use Darcy’s Law to determine the transmissivity of the aquifer, in m2/s. 
 
-Note that, Transmissivity of an aquifer is the depth integrated hydraulic conductivity 
-
-<center>
-
-```{=tex}
-\begin{equation}
-Transmissivity = T = Aquifer Depth * K 
-(\#eq:E4equation2)
-\end{equation}
-```
-</center>
-
-Start by drawing a diagram and annotate with the information that you know.
+Start by drawing your own diagram and annotate with the information that you know.

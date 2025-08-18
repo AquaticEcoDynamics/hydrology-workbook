@@ -33,8 +33,9 @@ fig:E3Bimage1
 fig:E4imageX
 fig:E4imageY
 fig:E3Bimage2
-fig:E4imageZ
 eq:E4equation2
+fig:E3Bimage2aa
+fig:E4imageZ
 eq:E5eq1
 eq:E5eq2
 fig:E5image1
