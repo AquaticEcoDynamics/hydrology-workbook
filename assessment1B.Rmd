@@ -4,22 +4,21 @@ editor_options:
     wrap: 72
 ---
 
-# Week 6 - Helena River data analysis {#A2B .unnumbered}
+# Week 6  (now week 5!) - Helena River data analysis {#A2B .unnumbered}
 
 ### Learning Objectives {#A2B_1 .unnumbered}
 
-The practical activity for this week is designed to consolidate our knowledge of groundwater and surface water interactions, in the context of the Helena River site data-set (refer to [Exercise 5](#F1_1)).
+The practical activity for this week is designed to consolidate our knowledge of groundwater and surface water interactions, in the context of the Helena River site data-set (collected as part of [Week 5](#F1_1) field visit).
 
 This assessment will require students to understand how hydrologic
-monitoring of can inform the conceptual models of ecosystems that
-underpin solutions to management challenges. The data set that you will
-work on is part of a long-term research investigation being undertaken
-with the WA Department of Biodiversity, Conservation and Attractions
-(DBCA) and UWA. The goal of this research is to understand the drivers
-of decline of *E. rudis* in relation to the changing hydrology regime at
-the Guildford floodplains along the Helena river.
+monitoring can inform conceptual models of ecosystems, and how this can underpin solutions to management challenges. 
 
-At the completion of this assessment students will have demonstrated
+The data set that you will work on is part of a long-term research investigation being undertaken
+with the WA Department of Biodiversity, Conservation and Attractions
+(DBCA) and UWA. The broader goal of this research is to understand the drivers
+of decline of [*E. rudis*](https://en.wikipedia.org/wiki/Eucalyptus_rudis) in relation to the changing hydrology regime at the Guildford floodplains at the terminus of [Helena River](https://en.wikipedia.org/wiki/Helena_River).
+
+At the completion of this activity, students will prepare an assessment that will demonstrate
 their ability to:
 
 -   analyse and interpret measured hydrological data
@@ -28,6 +27,10 @@ their ability to:
 
 -   effectively communicate their understanding of a hydrological system
     through a written report
+    
+-   synthesie the information to make effective recommendations for managers.
+
+The specific requirements of this assessment are located [at the end](#A2B_10) of this page.
 
 ### Background {#A2B_2 .unnumbered}
 
@@ -38,19 +41,18 @@ to poor land-management leading to secondary salinity in the inland
 wheatbelt catchments. Whilst secondary salinity is not an issue in the
 Swan Coastal Plain where our study site is, the salt loads from the Avon
 in addition to rising sea levels and decreasing rainfall trend have been
-driving changes in the seasonal movement of marine waters, with
+driving changes in the seasonal movement of brackish estuarine water, with
 increasing penetration of the salt wedge further inland from the ocean
 (Huang et al. 2018).
 
 The City of Swan has identified our focus site on the Helena River near
-Guildford as an area of concern due to the decline of Eucalyptus rudis.
-*E. rudis* plays a vital role in the riparian ecosystem. Riparian
+Guildford as an area of concern due to the decline of *Eucalyptus rudis*.
+This tree, termed the 'flooded gum' plays a vital role in the riparian ecosystem. Riparian
 woodland species are important filters that reduce nutrient transfers
 from the land into the river, which is a significant issue in the Swan
 river and its tributaries (excessive nutrients have historically
 resulted in noxious algal blooms). There is therefore a need to better
-understand what drives decline and if projected drying conditions for
-the region will make the pressures worse.
+understand what drives decline and if projected drying conditions brought about by climate change will make the pressures worse.
 
 <center>
 ```{r A2Bimage1, echo=FALSE, fig.cap="", out.width='85%'}
@@ -58,7 +60,7 @@ knitr::include_graphics("images/assessment2B/image1.png")
 ```
 </center>
 
-Salinisation of river systems can cause shifts in floodplain vegetation
+Specifically, a goal of ours is to understand the variability in salinity in the focus site. Salinisation of river systems can cause shifts in floodplain vegetation
 which arise because of river water interaction with the floodplain.
 Depending on the salinity increase and the salt tolerance of the
 floodplain tree species, this can cause shifts in community structure.
@@ -69,16 +71,11 @@ and more recently along one of the tributaries of the Swan river: the
 Guildford floodplains of the Helena river (Dundas 2011). It is currently
 unknown the exact role of water availability and salinity in the
 observed decline, and alternate hypothesis related to tree pathogens
-(e.g. Phytophthora) are also as drivers of decline are also under
-investigation.
+(e.g. *Phytophthora*) are also considered to be drivers of decline.
 
 ### Helena River Study Site {#A2B_3 .unnumbered}
 
-Start by watching [this
-video](https://echo360.org.au/media/a8e04685-0067-42ec-8524-4d97602a2e0e/public)
-recorded by Matt Hipsey to give you an introduction to the Helena River
-site. You can see the key features of the site marked on this aerial
-photo.
+
 
 <center>
 ```{r A2Bimage2, echo=FALSE, fig.cap="", out.width='65%'}
