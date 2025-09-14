@@ -95,29 +95,41 @@ Land cover
     -	Go to Web and open up a map, such as `OSM Standard`
 -	Add the flow gauges
 
-**External resources**
+**External mapping resources**
 
--	Using a web-browser, such as the program Microsoft Edge, which is the new version of Internet Explorer, go to
-[WIR](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx).
-This is where you could get flow and water quality data if you wanted to. Track down the flow gauges on this map.
--	Go to the Intramaps website:
+-	Go to the **Intramaps** website:
 https://www.gosnells.wa.gov.au/About_our_City/Maps/Map_Module_List.  
 Pick any local government area, and dig into the local data on stormwater drainage. To see which local government area you want, use the shapefile LGA.shp. Turn on the labels using the Label with `WA_LGA_s_3`. You can make the shape transparent using *Symbology > Opacity*.
--	Go to the floodplain mapping tool:
+<br>
+-	Go to the **floodplain mapping tool**:
 https://www.water.wa.gov.au/maps-and-data/maps/flood-maps
 Examine the bottom of the catchment and the floodplain layers. The menus at the top right give you access to the legend, different layers that you can turn on and off and different base maps.
 -	Compare Land Use, Land Cover, the aerial photography from Google, Intramaps layers and Floodplain Mapping.
+
+**Viewing water quality data**
+
+-	Nowadays you know all about [WIR](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx), 
+which is where you could get flow and water quality data. Track down the flow gauges on this map. *NOTE : THIS SITE IS DOWN @ 15 SEP 2025*
+<br>
+- Checkout the [Swan-Canning dashboard](https://scevodash-sce.azurewebsites.net). This was made by some UWA students, and is super useful for exploring data related to hydrology, water quality and other stuff. Give it some time to load and then :
+a) Hit the "Water Quality" section. In the "Catchment" tab, navigate to find the Site called YULEB. Zoom into the highlighted site on the map, and check the "Subcatchments" box. Select the key nutrient variables of interest (e.g., TN and TP), and plot how they look over the last 5 years. What about over a 20 year period?
+b) Search for another catchment on the map that has different looking land-cover (e.g. Bennett Brook), and now add that to the site list. Which one has higher TN or TP? Can you think why that might be?
+c) If you change the variable to TON (which is nitrate), or PO4, how do things look? 
+d) OK, now change to the "Profiles: Live" tab. This section takes raw profile data from a water quality sonde that is dropped at different sites, and is contoured to show the spatial patterns. In this section, set the region to Canning, and then choose a year (e.g. 2023) and a month. Then click plot, and wait. You can zoom in on the map to Canning River while you wait and check the "profile" item on the map. Now you can see the water quality parameters, like salinity, oxygen, and chlorophyll-a through a "slice" of the river. Try to idnetify where the Yule Brook intercepts the river and enters.
 
 ## Summary {-}
 
 Now you have a clear idea of different types of geospatial data relevant to catchments:
 
+- Drainage lines and sub-catchment areas.
 - Land cover
 - Land use
 - Monitoring sites
-- Drainage lines and sub-catchment areas.
 - Groundwater
 - Stormwater
 - Flood inundation risk
 
 Some data is from State Government public resources and some is available through local councils; bringing these information sources together will be useful later when preparing your report.
+
+In addition, we also have explored some local water quality data, relavent to Yule Brook. 
+
